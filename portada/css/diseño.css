@@ -24,7 +24,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     opacity: 0; /* Inicialmente invisible */
-    transition: opacity 4s ease; /* Transición para la opacidad */
+    transition: opacity 3s ease; /* Transición para la opacidad */
     z-index: -1; /* Asegura que la imagen esté detrás del contenido */
 }
 
@@ -45,12 +45,15 @@ body {
 
    
 .gifts{
-    transition: opacity 45s ease;/* Transición para la opacidad */
-    flex-direction: row;
+    opacity: 0;
+    transition: opacity 2s ease; /* Transición suave para hacer visible gifts */
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+.show-gifts .gifts {
+    opacity: 1; /* Hace visible los elementos de gifts */
 }
 
 .loader{
@@ -59,7 +62,7 @@ body {
 }
 .dino1{
     position: relative;
-    animation: mover-lado 7s ease-in-out infinite; /* Duración de 4 segundos, movimiento suave, infinito */
+    animation: mover-lado 10s ease-in-out infinite; /* Duración de 4 segundos, movimiento suave, infinito */
     margin-left: -18%;
 }
 @keyframes mover-lado {
