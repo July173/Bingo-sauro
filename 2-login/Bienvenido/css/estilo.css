@@ -1,0 +1,87 @@
+body {
+    margin: 0;/*elimina cualquier espacio o margen externo alrededor del elemento*/
+    background-image: url('../img/fondo.jpeg');
+    position: fixed;/*hace que el elemento esté "fijo" respecto al viewport */
+    width: 100%;/*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100%;/*establece la altura del elemento en el 100% de la altura visible del viewport*/
+    background-size: cover;/*ajusta la imagen de fondo,la hace responsive.*/
+    background-repeat: no-repeat; /*No se repite.*/
+    background-attachment: fixed; /*Permanece fija mientras se hace scroll.*/
+    
+}
+#todo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;/*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100vh;    
+}
+.hojas{
+    width: 70%;
+    height: 70%; 
+    background-size: 20%;
+    margin-bottom: -30%;
+  
+}
+.bien{
+     color: rgb(9, 255, 9);
+     font-family: "Kavoon", serif;
+     font-size: 3vw;
+     margin-top: 5%;
+     margin-bottom: 3%;
+}
+.logo{
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    opacity: 0.7; /* 50% de transparencia */   
+   
+    
+}
+.cuadro{
+    background-color: rgba(1, 61, 46, 0.5);
+    width: 35vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.inicio{
+    font-family: "Kavoon", serif;
+    background-color: rgb(255, 254, 207);
+    border-radius: 1.2rem ;
+    border: none;
+    margin-top: 2vw;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    cursor: pointer;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+    
+}
+
+   
+.registro{
+    font-family: "Kavoon", serif;
+    background-color: rgb(255, 254, 207);
+    border-radius: 1.2rem ;
+    border: none;
+    margin-top: 3%;
+    padding: 1vw 3vw;
+    font-size: 2vw;
+    cursor: pointer;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+}
+   
+
+
+
+
+
