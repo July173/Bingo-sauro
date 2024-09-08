@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="container">
+    <div id="contenedor">
+      <div class="hojas">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+          background="transparent"
+          speed="2"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="hojas-2">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+          background="transparent"
+          speed="2"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="hojas-3">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+          background="transparent"
+          speed="2"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Registrarse</div>
+        <div class="logo"></div>
+        
+        <label for="Nombre" class="Name fw-bold">Nombre</label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png" alt="user-male-circle"/>
+        <input type="text" class="input" id="Nombre" required min="4" placeholder="Pepito" />
+      </div>
+
+        <label for="Correo" class="email fw-bold">Correo electrónico </label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png" alt="letter-with-email-sign"/>
+                  <input type="text" class="input" id="Correo" required min="4" placeholder="correo@gmail.com"/>
+      </div>
+
+        <label for="contra" class="password fw-bold">Contraseña</label>
+        <div class="input-container">
+          <img class="i"  width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock"/>
+                  <input type="text " class="input fs-5" id="contrase" required min="4" placeholder="***********" />
+      </div>
+      <div class="contenedor-2">
+        <div id="miCuadro" class="cuadroAceptar" ></div>
+        <p class="texto text-light  ">Aceptar terminos y condiciones</p>
+    </div>
+      
+        <button class="enviar">Registrarse</button>
+        <div class="Tienecuenta text-light ">Ya tengo una cuenta</div>
+   
+   
+    <script src="src-js/registro.js"></script>
+  </body>
+</html>
