@@ -14,7 +14,6 @@ body {
     /*No se repite.*/
     background-attachment: fixed;
     /*Permanece fija mientras se hace scroll.*/
-
 }
 
 #contenedor {
@@ -46,17 +45,12 @@ body {
     z-index: 99;
    margin-right: 72vw;
    position: absolute;
-
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
-  margin-top: 22vw;
-    
-  
-    
-
+    margin-top: 22vw;
 }
 .hojas-3 {
     width: 33vw;
@@ -71,10 +65,7 @@ body {
     /* Volteo horizontal */
     transform: rotate(90deg);
     /* Opcional: ajusta el contenedor si es necesario */
-    
     margin-bottom: 20vw;
-    
-
 }
 
 .titulo {
@@ -82,7 +73,6 @@ body {
     font-family: "Kavoon", serif;
     font-size: 2.5vw;
     margin-top: 0.5vw;
-
 }
 
 .logo {
@@ -95,9 +85,9 @@ body {
     opacity: 0.6;
     margin-top: -2vw;
     margin-bottom: -2vw;
-    
-   
 }
+
+
 
 .Name{
     font-size: 1.8vw ;
@@ -141,7 +131,7 @@ body {
     padding: 4% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
     
 }
-#contrase{
+#contraseña{
     padding: 7% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
 }
 
@@ -159,6 +149,7 @@ body {
 .Tienecuenta{
     margin-top: 0.5vw;
     margin-bottom: 1vw;
+    cursor: pointer;
 }
 .contenedor-2 {
     display: flex; /* Activa Flexbox */
@@ -193,7 +184,72 @@ body {
     align-items: center;
    border:0cap;
 }
+.textoATC{
+    cursor: pointer;
+}
 
+.modal-header {
+    background-color:  rgba(35, 80, 69, 0.5) ;  /* Fondo verde translúcido */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+
+}
+.logoModal {
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 17%;
+    height: 22%;
+    opacity: 0.6;
+    margin-top: 0.5vw;
+}
+.modal-body {
+    background-color:rgba(35, 80, 69, 0.5) ; 
+    padding-top: 1vw;
+}
+
+
+.modal-title{
+    color: rgb(9, 255, 9);
+    font-family: "Kavoon", serif;
+    font-size: 2.5vw;
+    margin-left: 3vw;
+}
+ 
+.contexto{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.3rem;
+    padding: 1.5vw;
+    width: 25vw;
+    margin-left: 4vw;
+    font-family: "Kavoon", serif;
+    margin-top: -1vw;
+
+}
+
+.custom-close {
+    background-image: url('../img/cerrar.png'); /* Reemplaza por la ruta de tu icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.Bingo{
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 30vw;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+}
 /*modificaciones para una pantalla vertical*/
 @media (orientation:portrait) {
 
