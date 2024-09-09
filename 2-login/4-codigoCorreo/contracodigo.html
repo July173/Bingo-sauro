@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicar sesión</title>
     <script src="bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="css/InicarSesion.css" />
+    <link rel="stylesheet" href="css/codigo.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     
     <link
@@ -58,34 +58,26 @@
         ></dotlottie-player>
       </div>
       <div class="cuadro">
-        <div class="titulo">Inicio sesión</div>
-        <div class="logo"></div>
-        
       
+        <div class="logo"></div>
+        <img src="img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
 
-        <label for="Correo" class="email fw-bold">Correo electrónico </label>
+        <div class="cuadro-texto">Se envió un código a tu correo, revísalo
+          e ingresa lo en los siguientes cuadros.</div>
+        
         <div class="input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png" alt="letter-with-email-sign"/>
-                  <input type="text" class="input" id="Correo" required min="4" placeholder="correo@gmail.com"/>
-      </div>
+                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
+                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
+                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
+                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
+                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
 
-        <label for="contra" class="password fw-bold">Contraseña</label>
-        <div class="input-container">
-          <img class="i"  width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock"/>
-                  <input type="text " class="input fs-5" id="Contraseña" required min="4" placeholder="***********" />
       </div>
      
-        <p class="textoOC text-light" >
-          ¿Olvidaste tu Contraseña?
-        </p>
-     
-   
-  <button class="enviar">Iniciar sesión</button>
-  <div class="registrar text-light ">Registrarse</div>
-  <img src="/2-login/inicioSesion/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
+  <button class="enviar">Enviar</button>
+  <div class="reenviar text-light  ">Reenviar código </div>
 
 
-
-    <script src="src-js/iniciarSesion.js"></script>
+    <script src="src-js/codigo.js"></script>
   </body>
 </html>
