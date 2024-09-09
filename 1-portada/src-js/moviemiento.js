@@ -12,7 +12,7 @@ function cambiarFondo() {
 setTimeout(cambiarFondo, 2000);
 
 function redirigirOtraPantalla() {
-    window.location.href = "../2-login/Bienvenido/pag2.html"; // Cambia  por el nombre de tu archivo HTML
+    window.location.href = "/2-login/0-Bienvenido/pag2.html"; // Cambia  por el nombre de tu archivo HTML
 }
 
 // Redirigir después de 5 segundos (5000 milisegundos)
