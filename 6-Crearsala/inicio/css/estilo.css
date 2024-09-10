@@ -109,7 +109,30 @@ body {
     width: 6vw;
     height: 6vw;
     
- 
+}
+.carton2{
+    background-image: url('../img/CARTON2.PNG');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 100%;
+    width: 6vw;
+    height: 6vw;
+}
+.carton3{
+    background-image: url('../img/CARTON3.PNG');
+    background-repeat: no-repeat; 
+    background-position: 100px;
+    background-size: 100%;
+    width: 6vw;
+    height: 6vw;
+}
+.carton4{
+    background-image: url(');
+    background-repeat: no-repeat; 
+    background-position: 100px;
+    background-size: 100%;
+    width: 6vw;
+    height: 6vw;
 }
 .contenedor {
     font-family: "Kavoon", serif;
