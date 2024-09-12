@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse</title>
+    <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/registro.css" />
+    <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="container">
+    <div id="contenedor">
+      <div class="hojas">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+          background="transparent"
+          speed="2"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="hojas-2">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+          background="transparent"
+          speed="2"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="hojas-3">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+          background="transparent"
+          speed="2"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Registrarse</div>
+        <div class="logo"></div>
+        
+        <label for="Nombre" class="Name fw-bold">Nombre</label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png" alt="user-male-circle"/>
+        <input type="text" class="input" id="Nombre" required min="4" placeholder="Pepito" />
+      </div>
+
+        <label for="Correo" class="email fw-bold">Correo electrónico </label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png" alt="letter-with-email-sign"/>
+                  <input type="text" class="input" id="Correo" required min="4" placeholder="correo@gmail.com"/>
+      </div>
+
+        <label for="contra" class="password fw-bold">Contraseña</label>
+        <div class="input-container">
+          <img class="i"  width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock"/>
+                  <input type="text " class="input fs-5" id="Contraseña" required min="4" placeholder="***********" />
+      </div>
+      <div class="contenedor-2">
+        <div id="miCuadro" class="cuadroAceptar" ></div>
+        <p class="textoATC text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Aceptar terminos y condiciones
+        </p>
+      </div>
+   
+  <button id="redirigirIniciar" class="enviar">Registrarse</button>
+  <div id="redirigir" class="Tienecuenta text-light ">Ya tengo una cuenta</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-scrollable" >
+        <div class="modal-content bg-transparent" >
+      <div class="modal-header   ">
+       
+        <h1 class="modal-title fs-3 " id="staticBackdropLabel">Términos y condiciones</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="display:none;"></button>
+        <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div>
+                  <img src="/Generales/img/logo.png" alt= "Logo"class="logoModal">
+        
+      </div>
+     
+
+      <div class="modal-body ">
+       <div class="contexto">
+        El juego Bingo-Saurio está creado con fines de entretenimiento y diversión para poder compartir un rato agradable con tus familiares o amigos 
+        Este juego podra ser jugado por toda la población, tanto niños como personas adultas ya que está orientedo para la diversión de todos, el único requisito es registrarse mediante un correo electrónico.
+        Se espera que este juego sea jugando mientras los jugadores estén cercanos unos de otros para que estos se puedan comunicar fácilmente y sea más fácil la interacción entre ellos y así el juego tenga una mayor taza de diversión.
+        Al  ganar una partida el jugador ganador obtendrá una recompensa con monedas del propio juego que después podra gastar comprando los objetos de la tienda en el juego, en caso de no ganar la partida el jugador no obtendrá ninguna recompensa. También habrán premios diarios por ingresar todos los días.
+        Tus datos personales se utilizan solo para entender nuestra audiencia y mejorar la experiencia de juego, no compartiremos tus datos personales con terceros sin tu consentimiento explícito. 
+        En caso de que se llegase a presentar un conflicto entre los jugadores, estos mismos serán los que tendrán que resolverlo entre ellos de manera respetuosa y pacifica, el creador del juego no se hace responsable de conflictos entre jugadores.
+        El creador del juego puede hacer cambios y actualizaciones en el juego cuando sea necesario para mejorar la experiencia de juego o corregir errores.
+        Los jugadores serán notificados de cualquier cambio significativo en los Términos y Condiciones.
+        Al registrarse y jugar Bingo-Saurio, los jugadores aceptan estos Términos y Condiciones en su totalidad.
+        Es responsabilidad del jugador leer y comprender estos Términos y Condiciones antes de jugar.
+       </div>
+       <img src="/Generales/img/bingo.png" alt= "Bolas que dicen bingo"class="Bingo">
+
+      </div>
+     
+    </div>
+    </div >
+  </div>
+
+
+    <script src="src-js/registro.js"></script>
+  </body>
+</html>
