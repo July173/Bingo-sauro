@@ -71,6 +71,7 @@ body {
     width: 60vw;
     height: 20vw;
     margin-top: 1vw;
+    overflow-y: auto;
    
 }
 .cuadro {
@@ -145,6 +146,24 @@ body {
 
    
 }
+.amigo {
+    padding: 10px;
+    font-family: "Kavoon", serif;
+    display: flex;
+    background-color: #949494; /* Color de fondo opcional */
+    margin: 5px 5vw;
+    border-radius: 0.5rem;
+    font-size: 2vw;
+    color: #fff;
+  }
+  
+  .mensaje-vacio {
+    color: rgb(151, 151, 151);
+    font-size: 1.5rem;
+    font-family: "Kavoon", serif;
+    text-align: center;
+    font-weight: bold;
+  }
 @media (orientation:portrait) {
 
     .logo {
