@@ -1,3 +1,10 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
@@ -69,6 +76,8 @@ body {
     border-radius: 0.5rem;
     width: 76vw;
     height: 30vw;
+    overflow-y: auto;
+    z-index: 10;
 }
 .titulo-contenedor {
     color: rgb(0, 0, 0);
@@ -101,8 +110,55 @@ body {
     align-items: center;
     
 }
+.subtitulos{
+    display: flex;
+    color: rgb(151, 151, 151);
+    font-size: 3vw;
+    font-family: "Kavoon", serif;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.sub{
+    margin: 1vw;
+    margin-right: 5vw;
+    margin-left: 10vw;
+}
 
+.mensaje-vacio {
+    color: rgb(151, 151, 151);
+    font-size: 3vw;
+    font-family: "Kavoon", serif;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffffffe3;
+  }
+  .partida {
+   padding: 10px;
+    font-family: "Kavoon", serif;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10vw;
+    font-size: 2vw;
+    margin-left: 7vw;
+    
+  }
+  
+  .ganado {
+    color: green;
+    font-size: 3vw;
+  }
+  .perdido {
+    color: red;
+    font-size: 3vw;
 
+  }
+  .carton-imagen {
+    width: 50px; /* Tamaño de los cartones */
+    height: auto; /* Mantiene la proporción */
+  }
 
 
 @media (orientation:portrait) {
