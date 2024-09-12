@@ -1,0 +1,23 @@
+
+.Columna{
+    border-right: solid black 0.1vw;
+    cursor: pointer;
+
+}
+.cinco{
+    border-right: none;
+}
+.tabla{
+    width: 90vw;
+    height: 5vw;
+    margin-top: 2vw;
+    text-align: center;
+    background-color: rgb(60, 255, 0, 0.5);
+    font-family: "Kavoon", serif;
+    font-size: 2.5vw;
+    color: black;
+    
+}
+.cambiado{
+    background-color: rgba(0, 195, 255, 0.5);
+}
