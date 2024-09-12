@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url('../img/fondo.jpeg');
+    background-image: url("/Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -89,7 +89,7 @@ body {
 }
 
 .logo {
-    background-image: url('../img/logo.png');
+    background-image: url("/Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
@@ -99,49 +99,80 @@ body {
     
    
 }
-
-
-.carton1{
-    background-image: url('../img/CARTON1.1.PNG');
-    background-repeat: no-repeat;
-    background-position: 10px;
-    background-size: 100%;
-    width: 6vw;
-    height: 6vw;
-    
-}
-.carton2{
-    background-image: url('../img/CARTON2.PNG');
-    background-repeat: no-repeat;
-    background-position: 10px;
-    background-size: 100%;
-    width: 6vw;
-    height: 6vw;
-}
-.carton3{
-    background-image: url('../img/CARTON3.PNG');
-    background-repeat: no-repeat; 
-    background-position: 100px;
-    background-size: 100%;
-    width: 6vw;
-    height: 6vw;
-}
-.carton4{
-    background-image: url(');
-    background-repeat: no-repeat; 
-    background-position: 100px;
-    background-size: 100%;
-    width: 6vw;
-    height: 6vw;
-}
 .contenedor {
     font-family: "Kavoon", serif;
     background-color: rgb(204, 204, 192);
     border-radius: 1.0rem;
     border: none;
-    padding: 12.0vw 22.0vw;
+    padding: 6.0vw 12.0vw;
     font-size: 2vw;
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+   
+    
+}
+.carton1{
+    background-image: url("/Generales/img/CARTON.1..PNG");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 6vw;
+    height: 7vw;
+    margin: 5px;
+
+}
+.carton2{
+    background-image: url("/Generales/img/CARTON2.PNG");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 6.1vw;
+    height: 6.7vw;
+    margin: 5px;
+}
+.carton3{
+    background-image: url("/Generales/img/CARTON3.PNG");
+    background-repeat: no-repeat; 
+    background-position: 0px;
+    background-size: 100%;
+    width: 6vw;
+    height: 7vw;
+    margin: 5px;
+}
+.carton4{
+    background-image: url("/Generales/img/CARTON.4.PNG");
+    background-repeat: no-repeat; 
+    background-position: 0px;
+    background-size: 100%;
+    width: 6vw;
+    height: 7vw;
+    margin: 5px;
+}
+.carton5{
+    background-image: url("/Generales/img/CARTON_5.PNG");
+    background-repeat: no-repeat; 
+    background-position: 0px;
+    background-size: 100%;
+    width: 6vw;
+    height: 7vw;
+    margin: 5px;
+}
+.carton6{
+    background-image: url("/Generales/img/CARTON.6..PNG");
+    background-repeat: no-repeat; 
+    background-position: 0px;
+    background-size: 100%;
+    width: 6vw;
+    height: 7vw;
+    margin: 5px;
+}
+.carton7{
+    background-image: url("/Generales/img/CARTON.7..PNG");
+    background-repeat: no-repeat; 
+    background-position: 0px;
+    background-size: 100%;
+    width: 6vw;
+    height: 7vw;
+    margin: 5px;
 }
 
 .cuadro {
@@ -155,7 +186,31 @@ body {
     justify-self: center;
     margin-left: 50px;
 }
-
+.cuadrodeabajito{
+    font-family: "Kavoon", serif;
+    background-color: rgb(171, 171, 165);
+    border-radius: 1.0rem;
+    border: none;
+    padding: 4.8vw 3vw;
+    font-size: 2vw;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    margin-top: 40px;
+}
+.cuadrodeabajo{
+    font-family: "Kavoon", serif;
+    background-color: rgb(138, 138, 116);
+    border-radius: 1.5rem;
+    border: none;
+    padding: 3.0vw 0vw;
+    font-size: 2vw;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    margin-top: 100px;
+}
+.imagenes{
+    display: flex;
+}
 /*modificaciones para una pantalla vertical*/
 @media (orientation:portrait) {
 
@@ -172,7 +227,6 @@ body {
         margin-top: -38vw;
         
    
-
     }
     .titulo{
         font-size: 10vw;
