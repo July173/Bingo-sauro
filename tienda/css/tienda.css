@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
@@ -64,12 +65,20 @@ body {
     transform: rotate(90deg);
     margin-bottom: 20vw;
 }
-
-.titulo {
-    color: rgb(0, 255, 0);
+.contenedor-gris{
+    background-color: #ffffffe3;
+    border-radius: 0.5rem;
+    width: 76vw;
+    height: 30vw;
+    overflow-y: auto;
+    z-index: 10;
+}
+.titulo-contenedor {
+    color: rgb(0, 0, 0);
     font-family: "Kavoon", serif;
-    font-size: 4vw;
+    font-size: 3vw;
     margin-top: 0.5vw;
+    text-align: center;
 }
 
 .logo {
@@ -77,9 +86,11 @@ body {
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
-    width: 18vw;
-    height: 18vw;
+    width: 10vw;
+    height: 10vw;
     opacity: 0.6;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 
 }
 
@@ -93,22 +104,30 @@ body {
     align-items: center;
     
 }
-
-
-.enviar{
+.subtitulos{
+    font-size: 2.5vw;
     font-family: "Kavoon", serif;
-    background-color: rgb(178, 227, 85);
-    border-radius: 1.2rem;
-    border: none;
-    margin-top: 2%;
-    padding: 0.5vw 2vw;
-    font-size: 2vw;
-    cursor: pointer;    
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7)
+    position: relative;
+    color: rgb(128, 128, 128);
 }
-.unirme{
-    padding: 0.5vw 3.2vw;
+.sub{
+    margin-left: 10vw;
 }
+
+.dino{
+    background-image: url(/Generales/img/dinovolteado.png);
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 35vw;
+    margin-top: -10vw;
+    
+}
+
+
+
 
 @media (orientation:portrait) {
 
@@ -128,7 +147,7 @@ body {
         height: 80%;   
        
     }
-    .titulo{
+    .titulo-contenedor{
         font-size: 8vw;
     }
 
