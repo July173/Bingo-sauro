@@ -31,10 +31,10 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
+   z-index: 10;
   
 }
 

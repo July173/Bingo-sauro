@@ -42,13 +42,14 @@ body {
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
+   z-index: 10;
   
 }
 
 .hojas-2 {
     width: 33vw;
     height: 33vw;
-    opacity: 0.3;
+    opacity: 0.8;
     z-index: 99;
    margin-right: 72vw;
    position: absolute;
@@ -58,6 +59,7 @@ body {
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
+    z-index: 10;
 }
 .hojas-3 {
     width: 33vw;
@@ -67,7 +69,7 @@ body {
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
-    z-index: 1;
+    z-index: 10;
     transform: rotate(90deg);
     margin-bottom: 20vw;
 }
@@ -78,6 +80,7 @@ body {
     height: 30vw;
     overflow-y: auto;
     z-index: 10;
+
 }
 .titulo-contenedor {
     color: rgb(0, 0, 0);
@@ -126,12 +129,11 @@ body {
 }
 
 .mensaje-vacio {
-    color: rgb(151, 151, 151);
+    color: rgb(33, 78, 52);
     font-size: 3vw;
     font-family: "Kavoon", serif;
     text-align: center;
     font-weight: bold;
-    background-color: #ffffffe3;
   }
   .partida {
    padding: 10px;
