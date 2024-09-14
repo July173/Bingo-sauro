@@ -1,3 +1,38 @@
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 30vh;
+    width: 4vw;
+    margin-left: 85vw;
+    margin-top: 0.5vw;
+    position: absolute;
+    z-index: 10;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambio de fondo al pasar el mouse */
+}
+.icon i, .icon span {
+    font-size: 30px;
+    color: black;
+}
+
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
@@ -81,7 +116,6 @@ body {
     width: 18vw;
     height: 18vw;
     opacity: 0.6;
-
 }
 
 .cuadro {
