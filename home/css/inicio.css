@@ -31,7 +31,7 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
+    z-index: 1;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
@@ -41,8 +41,8 @@ body {
 .hojas-2 {
     width: 33vw;
     height: 33vw;
-    opacity: 0.3;
-    z-index: 99;
+    opacity: 0.8;
+    z-index: 1;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
@@ -56,7 +56,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
@@ -92,6 +91,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
     
 }
 

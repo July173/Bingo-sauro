@@ -31,7 +31,7 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
+    z-index: 1;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
@@ -42,7 +42,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
@@ -56,13 +55,23 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
     z-index: 1;
     transform: rotate(90deg);
     margin-bottom: 20vw;
+}
+.cuadro {
+    background-color: rgba(14, 78, 62, 0.5);
+    width: 32vw;
+    height: 45vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:0cap;
+    z-index: 10;
 }
 
 .titulo {
@@ -172,16 +181,7 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el div */
 }
-.cuadro {
-    background-color: rgba(14, 78, 62, 0.5);
-    width: 32vw;
-    height: 45vw;   
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   border:0cap;
-}
+
 .textoATC{
     cursor: pointer;
 }

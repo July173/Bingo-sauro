@@ -31,10 +31,10 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
+   z-index: 1;
   
 }
 
@@ -42,7 +42,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
@@ -56,7 +55,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
@@ -72,6 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
     
 }
 .logo {
@@ -167,7 +166,7 @@ input[type="number"]::-webkit-inner-spin-button {
     .cuadro{
         width: 100%;
         height: 80%;   
-       
+       z-index: 10;
     }
     .cerrar {
         width: 10vw;
