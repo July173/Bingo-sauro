@@ -28,7 +28,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 280px;
+    width: 320px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header {
@@ -44,23 +44,18 @@ body, html {
     margin: 0;
 }
 .close-btn {
-    color: #FF0000;
-    font-size: 28px;
-    background: none;
-    border: none;
     cursor: pointer;
 }
 .mascot {
     background-image: url("/Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
-    background-size: 100%;
+    background-size: contain;
     width: 18vw;
     height: 18vw;
     opacity: 0.6;
     border-radius: 50%;
     margin: 0 auto 20px;
-    position: relative;
     overflow: hidden;
 }
 
@@ -73,10 +68,12 @@ body, html {
     background-color: #FFF9C4;
     border-radius: 10px;
     padding: 10px;
+    width: 95%;
 }
 .option-text {
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
+    margin-left: -6vw;
 }
 .toggle {
     width: 50px;
@@ -94,29 +91,32 @@ body, html {
     border-radius: 50%;
     background-color: white;
     top: 2px;
-    left: 2px;
+    right: 2px;
     transition: 0.2s;
 }
 .toggle.off {
     background-color: #F44336;
 }
 .toggle.off::before {
-    transform: translateX(20px);
+    transform: translateX(-20px);
 }
 .btn {
-    background-color: #E0E0E0;
+    background-color: #FFF9C4;
     border: none;
     text-align: left;
     padding: 12px;
     margin-bottom: 10px;
     width: 100%;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     cursor: pointer;
+    
 }
 .btn-logout {
-    background-color: #F44336;
-    color: white;
-    font-weight: bold;
+        font-weight: bold;
+}
+.boton{
+    margin-left: 20vw;
+    margin-top: -5vw;
 }
