@@ -1,0 +1,18 @@
+[
+    {
+        "fecha": "2024-09-01",
+        "carton": "carton1.png",
+        "resultado": "Ganó"
+      },
+      {
+        "fecha": "2024-09-02",
+        "carton": "carton2.png",
+        "resultado": "Perdió"
+      },
+      {
+        "fecha": "2024-09-03",
+        "carton": "carton3.png",
+        "resultado": "Ganó"
+      }
+    
+  ]
