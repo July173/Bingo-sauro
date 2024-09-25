@@ -1,19 +1,12 @@
 body {
     margin: 0;
-    /*elimina cualquier espacio o margen externo alrededor del elemento*/
     background-image: url("/Generales/img/fondo.jpeg");
     position: fixed;
-    /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
-    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
     height: 100%;
-    /*establece la altura del elemento en el 100% de la altura visible del viewport*/
     background-size: cover;
-    /*ajusta la imagen de fondo,la hace responsive.*/
     background-repeat: no-repeat;
-    /*No se repite.*/
     background-attachment: fixed;
-    /*Permanece fija mientras se hace scroll.*/
 }
 
 #contenedor {
@@ -23,7 +16,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
     height: 100vh;
 }
 
@@ -31,60 +23,56 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-   z-index: 1;
-  
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -16vw;
+    z-index: 1;
 }
 
 .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
-    /* 50% de transparencia */
+    margin-right: 72vw;
+    position: absolute;
     z-index: 1;
-    /* Volteo horizontal */
     transform: rotate(-150deg);
-    /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
 }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    margin-left:66vw;
+    margin-left: 66vw;
     position: absolute;
     margin-top: 12vw;
     z-index: 1;
     transform: rotate(90deg);
     margin-bottom: 20vw;
 }
+
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     width: 90vw;
-    height: 43vw;   
+    height: 43vw;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 10;
-    
 }
 
-.contenedor-gris{
+.contenedor-gris {
     background-color: #cececee3;
     border-radius: 0.7rem;
     width: 58vw;
     height: 18vw;
     margin-top: 1vw;
     margin-left: 1vw;
-  
-   
 }
-.datos{
+
+.datos {
     background-color: rgb(133, 131, 131);
     font-family: "Kavoon", serif;
     border-radius: 1.2rem;
@@ -95,58 +83,55 @@ body {
     margin-top: 2vw;
     margin-left: 4vw;
     display: flex;
-
-    
 }
 
-.editar{
+.editar {
     width: 4vw;
     height: 4vw;
     background-color: rgb(255, 249, 195);
     border-radius: 1rem;
     background-image: url(/Generales/img/editar.png);
-    background-size: 3vw; /* Ajusta la imagen sin deformarla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
+    background-size: 3vw;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
 }
-.edi-nom{
+
+.edi-nom {
     margin-top: 0.5vw;
     margin-left: 1vw;
     margin-right: 22vw;
 }
-.texto-correo{
+
+.texto-correo {
     margin-left: 1vw;
 }
-.texto-contraseña{
+
+.texto-contraseña {
     margin-right: 7vw;
     margin-left: 1vw;
-    
 }
-.usuario{
+
+.usuario {
     background-color: rgb(243, 243, 243);
     font-family: "Kavoon", serif;
     border-radius: 1.2rem;
     border: none;
-    padding: 0.6vw 1vw ;
+    padding: 0.6vw 1vw;
     font-size: 1.7vw;
     margin-left: 1vw;
     height: 4vw;
-    width: 22vw;
-    color:black;
+    width: 20vw;
+    color: black;
 }
 
-
-.contenedor-3{
+.contenedor-3 {
     display: flex;
     margin-right: 13vw;
     margin-bottom: -5vw;
-
-   
 }
 
-
-.avatarvoid{
+.avatarvoid {
     width: 10vw;
     height: 10vw;
     background-color: rgb(228, 226, 226);
@@ -154,76 +139,128 @@ body {
     margin-bottom: 1vw;
     border-radius: 1rem;
     background-image: url(/Generales/img/usuario.png);
-    background-size: contain; /* Ajusta la imagen sin deformarla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-   
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.nombre-usuario{
+.nombre-usuario {
     font-family: "Kavoon", serif;
     background-color: rgb(149, 247, 110);
     border-radius: 1.2rem;
     border: none;
-    width: 68vw;
+    width: 50vw;
     font-size: 2vw;
     display: flex;
-    
-    
+    margin:10 auto; /* Esto centrará horizontalmente el elemento */
 }
 
-.nombre{
+.nombre {
     margin-top: 1vw;
-    
 }
-.dino{
+
+.dino {
     background-image: url("/Generales/img/dinosaurio-cute.png");
     background-repeat: no-repeat;
-    background-position: 70px;
-    background-size: 100%;
+    background-position: 130% center; /* Mueve la imagen un poco hacia la derecha */
+    background-size: 70%;
     width: 22vw;
     height: 22vw;
-
-   
 }
 
-#navbar-container{
+
+#navbar-container {
     margin-top: 2.5vw;
 }
-@media (orientation:portrait) {
 
-    #contenedor{
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .cuadro {
+        width: 95vw;
+        height: auto;
+    }
+
+    .hojas, .hojas-2, .hojas-3 {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .contenedor-gris {
+        width: 80vw;
+        height: auto;
+    }
+
+    .datos {
+        font-size: 4vw;
+        width: 70vw;
+        margin-top: 5vw;
+        padding: 2vw;
+    }
+
+    .usuario {
+        width: 60vw;
+        height: auto;
+        font-size: 3.5vw;
+    }
+
+    .avatarvoid {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .nombre-usuario {
+        width: 80vw;
+        font-size: 3vw;
+    }
+
+    .editar {
+        width: 6vw;
+        height: 6vw;
+        background-size: 5vw;
+    }
+
+    .dino {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+@media (orientation: portrait) {
+    #contenedor {
         width: 100%;
     }
-    .cuadro{
+    
+    .cuadro {
         width: 100%;
-        height: 80%;   
-       
+        height: 80%;
     }
-    .titulo-contenedor{
+
+    .titulo-contenedor {
         font-size: 8vw;
     }
 
-    .hojas{
-       position: absolute;
-       width: 70vw;
-       height: 80vw;
-       margin-top: -93vw;
-       opacity: 0.6;
+    .hojas {
+        position: absolute;
+        width: 70vw;
+        height: 80vw;
+        margin-top: -93vw;
+        opacity: 0.6;
     }
-    .hojas-2{  position: absolute;
+
+    .hojas-2 {
+        position: absolute;
         width: 70vw;
         height: 80vw;
         margin-top: 90vw;
         margin-left: 10vw;
     }
 
-    .hojas-3{  position: absolute;
+    .hojas-3 {
+        position: absolute;
         width: 70vw;
         height: 80vw;
-       margin-right: 20vw;
-       margin-top: -17vw;
-
+        margin-right: 20vw;
+        margin-top: -17vw;
     }
 }
 
