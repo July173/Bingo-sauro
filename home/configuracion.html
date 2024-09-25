@@ -21,19 +21,15 @@
                 src="https://img.icons8.com/emoji/48/cross-mark-button-emoji.png" alt="cross-mark-button-emoji" />
         </div>
         <div class="mascot"></div>
+
         <div class="contenedor-recuadros">
             <div class="option">
                 <img width="35" height="30" src="https://img.icons8.com/ios-filled/50/audio-wave--v1.png" alt="audio-wave--v1" />
                 <span class="option-text">Sonido</span>
-                <button id="toggleButton"><div class="toggle"id="soundToggle"></div></button>
+                <div class="toggle"id="soundToggle" id="toggleButton"></div>
             </div>
-            <div class="option">
-                <img width="30" height="30"
-                    src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/external-smartphone-vibrate-forming-the-wave-pattern-layout-mobile-bold-tal-revivo.png"
-                    alt="external-smartphone-vibrate-forming-the-wave-pattern-layout-mobile-bold-tal-revivo" />
-                <span class="option-text">Vibración</span>
-                <div class="toggle" id="vibrationToggle"></div>
-            </div>
+
+            
 
             <!-- Botón para abrir el modal de Términos y Condiciones -->
             <button class="botonn" data-bs-toggle="modal" data-bs-target="#modalTerminos">
@@ -101,15 +97,6 @@
             </a>
         </div>
     </div>
-
-    <!-- <audio id="audioPlayer">
-        <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
-        Tu navegador no soporta la reproducción de audio.
-      </audio> -->
-
-      <button id="toggleButton">
-        <div class="toggle" id="soundToggle"></div>
-      </button>
     
       <!-- Audio que queremos controlar -->
       <audio id="audioPlayer">
@@ -119,6 +106,7 @@
     
 
     <script src="/Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="src-js/config.js"></script>
 </body>
 

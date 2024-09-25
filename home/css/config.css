@@ -70,10 +70,10 @@ body, html {
     background-image: url("/Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
-    background-size: 90%;
+    background-size: 80%;
     width: 15vw;
     height: 15vw;
-    opacity: 0.6;
+    opacity: 0.4;
     overflow: hidden;
     margin-left: 8vw;
 }
@@ -94,31 +94,7 @@ body, html {
     color: #333;
     margin-left: -4vw;
 }
-.toggle {
-    width: 50px;
-    height: 30px;
-    background-color: #4CAF50;
-    border-radius: 15px;
-    position: relative;
-    cursor: pointer;
-}
-.toggle::before {
-    content: '';
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background-color: white;
-    top: 2px;
-    right: 2px;
-    transition: 0.2s;
-}
-.toggle.off {
-    background-color: #F44336;
-}
-.toggle.off::before {
-    transform: translateX(-20px);
-}
+
 .botonn {
     background-color: #FFF9C4;
     border: none;
@@ -147,7 +123,6 @@ body, html {
     background-color: red;
 }
 
-/* Estilos del botón toggle */
 .toggle {
     width: 50px;
     height: 30px;
@@ -155,9 +130,10 @@ body, html {
     border-radius: 15px;
     position: relative;
     cursor: pointer;
-  }
+    transition: background-color 0.2s ease; /* Transición rápida */
+}
 
-  .toggle::before {
+.toggle::before {
     content: '';
     position: absolute;
     width: 26px;
@@ -166,13 +142,13 @@ body, html {
     background-color: white;
     top: 2px;
     right: 2px;
-    transition: 0.2s;
-  }
+    transition: transform 0.2s ease; /* Transición rápida */
+}
 
-  .toggle.off {
-    background-color: #F44336;
-  }
+.toggle.off {
+    background-color: #F44336; /* Rojo */
+}
 
-  .toggle.off::before {
+.toggle.off::before {
     transform: translateX(-20px);
-  }
+}
