@@ -147,3 +147,32 @@ body, html {
     background-color: red;
 }
 
+/* Estilos del botón toggle */
+.toggle {
+    width: 50px;
+    height: 30px;
+    background-color: #4CAF50;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toggle::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    right: 2px;
+    transition: 0.2s;
+  }
+
+  .toggle.off {
+    background-color: #F44336;
+  }
+
+  .toggle.off::before {
+    transform: translateX(-20px);
+  }

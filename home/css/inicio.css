@@ -44,7 +44,7 @@ body {
     /*establece la altura del elemento en el 100% de la altura visible del viewport*/
     background-size: cover;
     /*ajusta la imagen de fondo,la hace responsive.*/
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   
     /*No se repite.*/
     background-attachment: fixed;
     /*Permanece fija mientras se hace scroll.*/
@@ -188,5 +188,35 @@ body {
 
     }
 }
+/*contenedor de monedas y trofeos*/
+.contenedor-monedas-trofeos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f7e7af; /* Light yellowish background */
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    margin-left: -43vw;
+    margin-top: -1vw;
+}
+.image-item {
+    text-align: center;
+}
+.monedas {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
 
-    
+.trofeos {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.image-item img {
+    width: 40px;
+    height: 40px;
+}

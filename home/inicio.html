@@ -43,12 +43,13 @@
       <div class="container icon-container">
         <!-- Botón de Configuración -->
         <a href="configuracion.html" class="icon">
-          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings"/>
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
 
         <!-- Botón de Ayuda -->
         <a href="ayuda.html" class="icon">
-          <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question"/>
+          <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/ask-question.png"
+            alt="ask-question" />
         </a>
 
         <!-- Botón RG -->
@@ -57,8 +58,24 @@
         </a>
       </div>
 
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <div class="contenedor-monedas-trofeos">
+              <div class="image-item">
+                <span class="monedas">25</span>
+              </div>
+              <div class="image-item">
+                <span class="trofeos">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="titulo">BIENVENIDOS</div>
-      
+
       <div class="logo"></div>
 
       <button class=" enviar Crearsala">Crear sala</button>
@@ -69,7 +86,13 @@
         loadNavbar();
       </script>
     </div>
-    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+
+    <audio id="audioPlayer" loop>
+      <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+     <script src="../Generales/bootstrap/js/bootstrap.js"></script>
     <script src="src-js/inicio.js"></script>
 </body>
 
