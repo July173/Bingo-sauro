@@ -40,6 +40,37 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
+
+      <!-- Contenedor del contador -->
+      <div class="counter-container">
+        <!-- Contador 25 -->
+        <div class="separador">
+          <div class="counter">
+            <span>25</span>
+            <img src="/Generales/img/dinomonedas.png" alt="Imagen Dinosaura">
+          </div>
+        </div>
+
+        <!-- Contador 1 con modal -->
+        <div class="separador fondo">
+          <div class="counter counter-1 " data-bs-toggle="modal" data-bs-target="#dinoModal">
+            <span>1</span>
+            <img src="/Generales/img/dinoTrofeos.png" alt="Dino">
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="dinoModal" tabindex="-1" aria-labelledby="dinoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p class="letra">Los dino-trofeos se obtienen al ganar y representan estas partidas ganadas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container icon-container">
         <!-- Botón de Configuración -->
         <a href="configuracion.html" class="icon">
@@ -56,21 +87,6 @@
         <a href="rd.html" class="icon">
           <span style="font-size: 24px;">R<sup>D</sup></span>
         </a>
-      </div>
-
-      <div class="container mt-5">
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <div class="contenedor-monedas-trofeos">
-              <div class="image-item">
-                <span class="monedas">25</span>
-              </div>
-              <div class="image-item">
-                <span class="trofeos">1</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
 
@@ -92,8 +108,8 @@
       Tu navegador no soporta la reproducción de audio.
     </audio>
 
-     <script src="../Generales/bootstrap/js/bootstrap.js"></script>
-     <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="src-js/inicio.js"></script>
 </body>
 
