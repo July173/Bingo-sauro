@@ -15,6 +15,115 @@ body {
   background-attachment: fixed;
   /*Permanece fija mientras se hace scroll.*/
 }
+body {
+  margin: 0;
+  background-image: url("/Generales/img/fondo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#contenedor {
+  position: relative;
+}
+
+.hojas, .hojas-2, .hojas-3 {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.hojas-2 {
+  transform: rotate(-150deg);
+}
+
+.hojas-3 {
+  transform: rotate(90deg);
+}
+
+.cuadro {
+  background-color: rgba(1, 61, 46, 0.5);
+  width: 90vw;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.titulo {
+  color: rgb(9, 255, 83);
+  font-family: "Kavoon", serif;
+  font-size: 3vw;
+}
+
+.logo {
+  background-image: url("/Generales/img/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 8vw;
+  height: 8vw;
+  opacity: 0.6;
+}
+
+.contenedor-gris {
+  background-color: rgb(204, 204, 192);
+  border-radius: 1rem;
+  box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carton1, .carton2, .carton3, .carton4, .carton5, .carton6, .carton7 {
+  background-size: cover;
+  width: 6vw;
+  height: 7vw;
+  margin: 5px;
+}
+
+.cuadrodeabajito, .cuadrodeabajo {
+  font-family: "Kavoon", serif;
+  background-color: rgb(171, 171, 165);
+  border-radius: 1rem;
+  box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  margin-top: 40px;
+}
+
+@media (orientation: portrait) {
+  .logo {
+    width: 50%;
+    height: 50%;
+  }
+  .titulo {
+    font-size: 10vw;
+  }
+  .hojas, .hojas-2, .hojas-3 {
+    width: 80vw;
+    height: auto;
+  }
+}
+
+
+/* Mejoras en pantallas muy pequeñas o móviles */
+@media (max-width: 480px) {
+  .contenedor-gris {
+    width: 100%;  /* Ajusta el ancho para ocupar toda la pantalla */
+    font-size: 3vw; /* Texto más grande para móviles */
+  }
+  .titulo {
+    font-size: 8vw; /* Aumenta el tamaño del título para pantallas móviles */
+  }
+  .hojas, .hojas-2, .hojas-3 {
+    width: 50vw; /* Reduce el tamaño de los gráficos */
+    height: 50vw;
+  }
+}
 
 #contenedor {
   position: relative;

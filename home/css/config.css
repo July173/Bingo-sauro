@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    /*elimina cualquier espacio o margen externo alrededor del elemento*/
+    background-image: url("/Generales/img/fondo.jpeg");
+    position: fixed;
+    /*hace que el elemento esté "fijo" respecto al viewport */
+    width: 100%;
+    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100%;
+    /*establece la altura del elemento en el 100% de la altura visible del viewport*/
+    background-size: cover;
+    /*ajusta la imagen de fondo,la hace responsive.*/
+    background-repeat: no-repeat;
+    /*No se repite.*/
+    background-attachment: fixed;
+    /*Permanece fija mientras se hace scroll.*/
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.settings-container {
+    background-color: rgba(14, 78, 62, 0.5);
+    height: 43vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.settings-title {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0;
+}
+.close-btn {
+    color: #FF0000;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.mascot {
+    background-image: url("/Generales/img/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 18vw;
+    height: 18vw;
+    opacity: 0.6;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #FFF9C4;
+    border-radius: 10px;
+    padding: 10px;
+}
+.option-text {
+    font-size: 18px;
+    color: #333;
+}
+.toggle {
+    width: 50px;
+    height: 30px;
+    background-color: #4CAF50;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: 0.2s;
+}
+.toggle.off {
+    background-color: #F44336;
+}
+.toggle.off::before {
+    transform: translateX(20px);
+}
+.btn {
+    background-color: #E0E0E0;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+.btn-logout {
+    background-color: #F44336;
+    color: white;
+    font-weight: bold;
+}
