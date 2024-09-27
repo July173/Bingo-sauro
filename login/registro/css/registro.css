@@ -65,7 +65,7 @@ body {
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     width: 32vw;
-    height: 45vw;   
+    height: 46.3vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -193,6 +193,9 @@ body {
 
 .textoATC{
     cursor: pointer;
+    text-decoration: underline #b5c3ff;
+    font-style: italic;
+    color: #b5c3ff;
 }
 
 .modal-header {

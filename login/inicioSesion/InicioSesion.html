@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicar sesión</title>
-    <script src="/Generales/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="css/InicarSesion.css" />
-    <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="container">
-    <div id="contenedor">
-      <div class="hojas">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicar sesión</title>
+  <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <link rel="stylesheet" href="css/InicarSesion.css" />
+  <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+</head>
+
+<body class="container">
+  <div id="contenedor">
+    <div class="hojas">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+
+    <div class="hojas-2">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+
+    <div class="hojas-3">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="cuadro">
+      <div class="titulo">Inicio sesión</div>
+      <div class="logo"></div>
+      <div id="error-animation" style="display: none;">
+        <dotlottie-player src="https://lottie.host/1a766c67-0f84-4893-bc7d-5a194e550e6f/swmFcahnNg.json"
+          background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay>
+        </dotlottie-player>
       </div>
 
-      <div class="hojas-2">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
+      <form id="redirigirHome" class=" needs-validation" novalidate>
 
-      <div class="hojas-3">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
-      <div class="cuadro">
-        <div class="titulo">Inicio sesión</div>
-        <div class="logo"></div>
-        
-      
 
-        <label for="Correo" class="email fw-bold">Correo electrónico </label>
+        <label for=" Correo validationCustom" class=" email fw-bold form-label">Correo electronico</label>
+        <div class=" has-validation input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
+            alt="letter-with-email-sign" />
+          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
+          <div class="invalid-tooltip">
+            Por favor digitar correctamente el correo electronico.
+          </div>
+        </div>
+
+
+        <label for=" contra validationCustom03" class=" password fw-bold form-label">Contraseña</label>
         <div class="input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png" alt="letter-with-email-sign"/>
-                  <input type="text" class="input" id="Correo" required min="4" placeholder="correo@gmail.com"/>
-      </div>
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+          <input type="password" class=" input fs-5 form-control" id="password" required minlength="8"
+            placeholder="********">
+            <div class="invalid-tooltip">
+              La contraseña debe tener al menos 8 caracteres y contener al menos un número.         
+          </div>
+        </div>
 
-        <label for="contra" class="password fw-bold">Contraseña</label>
-        <div class="input-container">
-          <img class="i"  width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock"/>
-                  <input type="password" class="input fs-5" id="Contraseña" required min="4" placeholder="***********" />
-      </div>
-     
-        <p id="redirigirOlvidasteContra" class="textoOC text-light" >
-          ¿Olvidaste tu Contraseña?
-        </p>
-     
+
+           <p id="redirigirOlvidasteContra" class="textoOC text-light">
+        ¿Olvidaste tu Contraseña?
+      </p>
+
+
+      <button id="redirigirHome" class="enviar" type="submit">Iniciar sesión</button>
+  
+      </form>
+
+
    
-  <button id="redirigirHome" class="enviar">Iniciar sesión</button>
-  <div id="redirigirRegistro" class="registrar text-light ">Registrarse</div>
-  <img src="/Generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
+
+      <div id="redirigirRegistro" class="registrar text-light ">Registrarse</div>
+      <img src="/Generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
 
 
+      <script src="src-js/iniciarSesion.js"></script>
+      <script src="src-js/validationIniciarSesion.js"></script>
 
-    <script src="src-js/iniciarSesion.js"></script>
-  </body>
+</body>
+
 </html>
