@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
   <link rel="stylesheet" href="/home/css/inicio.css" />
+  <link rel="stylesheet" href="/Generales/monedas/monedas-trofeos.css">
   <script src="/Generales/barraNavegacion/navbar.js"></script>
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -40,6 +41,11 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
+
+      <div id="">
+
+      </div>
+
       <div class="container icon-container">
         <!-- Botón de Configuración (Engranaje) -->
         <a href="configuracion.html" class="icon">
@@ -69,7 +75,15 @@
         loadNavbar();
       </script>
     </div>
+
+    <!-- Audio que queremos controlar -->
+    <audio id="audioPlayer">
+      <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+    
     <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="src-js/inicio.js"></script>
 </body>
 
