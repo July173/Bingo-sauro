@@ -46,15 +46,7 @@ body, html {
 .close-btn {
     cursor: pointer;
 }
-.dinChibi{
-    background-image: url("/Generales/img/dinosaurio-cute.png");
-    background-repeat: no-repeat;
-    background-position: -100px;
-    background-size: 100%;
-    width: 15vw;
-    height: 15vw;
-    overflow: hidden;
-}
+
 .dinochibi{
     background-image: url("/Generales/img/dinosaurio-cute.png");
     background-repeat: no-repeat;
@@ -77,8 +69,6 @@ body, html {
     overflow: hidden;
     margin-left: 8vw;
 }
-
-
 .option {
     display: flex;
     justify-content: space-between;
