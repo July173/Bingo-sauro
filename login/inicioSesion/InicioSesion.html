@@ -9,6 +9,7 @@
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <link rel="stylesheet" href="css/InicarSesion.css" />
   <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="/Generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
@@ -56,14 +57,16 @@
           </div>
         </div>
 
-
-        <label for=" contra validationCustom03" class=" password fw-bold form-label">Contraseña</label>
-        <div class="input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-          <input type="password" class=" input fs-5 form-control" id="password" required minlength="8"
+        <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
+        <div class="input-container position-relative">
+          <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png"
+            alt="lock" />
+          <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
             placeholder="********">
-            <div class="invalid-tooltip">
-              La contraseña debe tener al menos 8 caracteres y contener al menos un número.         
+          <i class="fa-solid fa-eye-slash" id="togglePassword"
+            style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+          <div class="invalid-tooltip">
+            La contraseña debe tener al menos 8 caracteres y contener al menos un número.
           </div>
         </div>
 
@@ -89,7 +92,7 @@
       <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
       <script src="src-js/iniciarSesion.js"></script>
       <script src="src-js/validationIniciarSesion.js"></script>
-
+      <script src="/Generales/jsGenerales/VerContrasña.js"></script>
 </body>
 
 </html>
