@@ -1,83 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codigo a correo</title>
-    <script src="/Generales/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="css/codigo.css" />
-    <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="container">
-    <div id="contenedor">
-      <div class="hojas">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codigo a correo</title>
+  <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="css/codigo.css" />
+  <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
 
-      <div class="hojas-2">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+</head>
 
-      <div class="hojas-3">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
-      <div class="cuadro">
-      
-        <div class="logo"></div>
-        <img id="redirigirOlvidar" src="/Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
+<body class="container">
+  <div id="contenedor">
+    <div class="hojas">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
 
-        <div class="cuadro-texto">Se envió un código a tu correo, revísalo
-          e ingresa lo en los siguientes cuadros.</div>
-        
-        <div class="input-container">
-                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
-                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
-                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
-                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
-                  <input type="number" class="input fw-bold fs-5"  required min="1"/>
+    <div class="hojas-2">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+
+    <div class="hojas-3">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="cuadro">
+
+      <div class="logo"></div>
+      <img id="redirigirOlvidar" src="/Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
+
+      <div class="cuadro-texto">Se envió un código a tu correo, revísalo
+        e ingresa lo en los siguientes cuadros.</div>
+
+      <div class="input-container">
+        <input type="number" class="input fw-bold fs-5" required min="1" />
+        <input type="number" class="input fw-bold fs-5" required min="1" />
+        <input type="number" class="input fw-bold fs-5" required min="1" />
+        <input type="number" class="input fw-bold fs-5" required min="1" />
+        <input type="number" class="input fw-bold fs-5" required min="1" />
 
       </div>
-     
-  <button id="redirigirCambiar" class="enviar">Enviar</button>
-  <div class="reenviar text-light  ">Reenviar código </div>
 
+      <button id="redirigirCambiar" class="enviar">Enviar</button>
+      <div class="reenviar text-light  ">Reenviar código </div>
 
-    <script src="src-js/codigo.js"></script>
-  </body>
+      <!-- Audio que queremos controlar -->
+      <audio id="audioPlayer">
+        <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+
+      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="src-js/codigo.js"></script>
+</body>
+
 </html>

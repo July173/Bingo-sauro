@@ -1,0 +1,60 @@
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kavoon', serif;
+    font-size: 36px;
+    color: black;
+    position: relative;
+  }
+
+  .counter img {
+    width: 60px;
+    margin-left: 10px;
+  }
+
+  .counter-1 {
+    cursor: pointer;
+  }
+
+  .modal-content img {
+    width: 100%;
+  }
+
+  .modal-dialog {
+    position: fixed;
+    top: 3%;
+    left: 12%;
+    transform: translate(-30%, -30%);
+    margin: 0;
+    max-width: 800px;
+    max-height: 600px; 
+  }
+  
+  .letra{
+    font-family: "Kavoon", serif;
+  }
+
+  .modal-body {
+    height: 6vw;
+    width: 18vw;
+    overflow-y: auto;
+  }
+
+  .separador{
+    background-color: #f9e79f;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 0.5vw;
+  }
+
+  .fondo{
+    background-color: rgb(255,245,211);
+  }

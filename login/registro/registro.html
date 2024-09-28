@@ -37,6 +37,7 @@
     <div class="cuadro">
       <div class="titulo">Registrarse</div>
       <div class="logo"></div>
+      
       <div id="error-animation" style="display: none;">
         <dotlottie-player src="https://lottie.host/1a766c67-0f84-4893-bc7d-5a194e550e6f/swmFcahnNg.json"
           background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay>
@@ -154,18 +155,16 @@
             </div>
           </div>
         </div>
+      <!-- Audio que queremos controlar -->
+      <audio id="audioPlayer">
+        <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
 
 
-        <!-- Audio que queremos controlar -->
-        <audio id="audioPlayer">
-          <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
-          Tu navegador no soporta la reproducción de audio.
-        </audio>
-
-
-        <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-        <script src="src-js/registro.js"></script>
-        <script src="src-js/validation.js"></script>
+      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="src-js/registro.js"></script>
+      <script src="src-js/validation.js"></script>
 </body>
-
+    
 </html>
