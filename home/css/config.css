@@ -20,7 +20,7 @@ body, html {
     justify-content: center;
     align-items: center;
 }
-.settings-container {
+.cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     height: 43vw;   
     position: relative;
@@ -28,7 +28,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 280px;
+    width: 520px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header {
@@ -38,30 +38,44 @@ body, html {
     margin-bottom: 20px;
 }
 .settings-title {
-    color: #4CAF50;
-    font-weight: bold;
-    font-size: 28px;
+    font-family: "Kavoon", serif;
+    color:  rgb(0, 255, 0);
+    font-size: 2.4vw;
     margin: 0;
 }
 .close-btn {
-    color: #FF0000;
-    font-size: 28px;
-    background: none;
-    border: none;
     cursor: pointer;
+}
+.dinChibi{
+    background-image: url("/Generales/img/dinosaurio-cute.png");
+    background-repeat: no-repeat;
+    background-position: -100px;
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    overflow: hidden;
+}
+.dinochibi{
+    background-image: url("/Generales/img/dinosaurio-cute.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 22vw;
+    height: 22vw;
+    margin-right: 23vw;
+    margin-top: 16vw;
+    position: absolute;
 }
 .mascot {
     background-image: url("/Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
-    background-size: 100%;
-    width: 18vw;
-    height: 18vw;
-    opacity: 0.6;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    position: relative;
+    background-size: 80%;
+    width: 15vw;
+    height: 15vw;
+    opacity: 0.4;
     overflow: hidden;
+    margin-left: 8vw;
 }
 
 
@@ -73,11 +87,48 @@ body, html {
     background-color: #FFF9C4;
     border-radius: 10px;
     padding: 10px;
+    width: 100%;
 }
 .option-text {
-    font-size: 18px;
-    color: #333;
+    font-size: 20px;
+    color: black;
+    margin-left: -6vw;
 }
+
+.option-text-2 {
+    font-size: 20px;
+    color: black;
+    margin-left: -7.4vw;
+}
+
+.botonn {
+    background-color: #FFF9C4;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.bot-logout {
+    font-weight: bold;
+}
+.boton{
+    margin-left: 32vw;
+    margin-top: -5vw;
+}
+
+.contenedor-recuadros{
+    width: 22vw;
+    margin-left: 12vw;
+}
+
+.rojo{
+    background-color: red;
+}
+
 .toggle {
     width: 50px;
     height: 30px;
@@ -85,7 +136,9 @@ body, html {
     border-radius: 15px;
     position: relative;
     cursor: pointer;
+    transition: background-color 0.2s ease; /* Transición rápida */
 }
+
 .toggle::before {
     content: '';
     position: absolute;
@@ -94,29 +147,14 @@ body, html {
     border-radius: 50%;
     background-color: white;
     top: 2px;
-    left: 2px;
-    transition: 0.2s;
+    right: 2px;
+    transition: transform 0.2s ease; /* Transición rápida */
 }
+
 .toggle.off {
-    background-color: #F44336;
+    background-color: #F44336; /* Rojo */
 }
+
 .toggle.off::before {
-    transform: translateX(20px);
-}
-.btn {
-    background-color: #E0E0E0;
-    border: none;
-    text-align: left;
-    padding: 12px;
-    margin-bottom: 10px;
-    width: 100%;
-    border-radius: 10px;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-}
-.btn-logout {
-    background-color: #F44336;
-    color: white;
-    font-weight: bold;
+    transform: translateX(-20px);
 }
