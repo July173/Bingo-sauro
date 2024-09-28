@@ -8,6 +8,7 @@
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <link rel="stylesheet" href="css/registro.css" />
+  <link rel="stylesheet" href="css/validation.css">
   <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
@@ -45,21 +46,17 @@
       </div>
 
 
-      <form class=" needs-validation" novalidate>
+      <form id="redirigirIniciar" class=" needs-validation" novalidate>
 
         <label for="Nombre novalidationCustom01" class="Name fw-bold form-label">Nombre</label>
         <div class="input-container">
           <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
             alt="user-male-circle" />
-          <input type="text" class="input form-control" id=" Nombre validationCustom01" value="" required
+          <input type="text" class=" input form-control" id="username" value="" required minlength="5"
             placeholder="Pepito">
           <div class="invalid-tooltip">
-            Por favor digitar un nombre.
-          </div>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-
+            El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
+           </div>
         </div>
 
 
@@ -67,7 +64,7 @@
         <div class=" has-validation input-container">
           <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
             alt="letter-with-email-sign" />
-          <input type="email" class=" input form-control" id=" Correo validationCustom" required>
+          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
           <div class="invalid-tooltip">
             Por favor digitar correctamente el correo electronico.
           </div>
@@ -78,18 +75,17 @@
         <label for=" contra validationCustom03" class=" password fw-bold form-label">Contraseña</label>
         <div class="input-container">
           <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-          <input type="password" class=" input fs-5 form-control" id=" Contraseña validationCustom03" required
-            placeholder="*****">
+          <input type="password" class=" input fs-5 form-control" id="password" required minlength="8"
+            placeholder="********">
           <div class="invalid-tooltip">
-            Por favor digitar una contraseña
-          </div>
+            La contraseña debe tener al menos 8 caracteres y contener al menos un número. </div>
         </div>
 
 
         <div class="contenedor-2">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class=" textoATC text-light form-check-label" for="invalidCheck" data-bs-toggle="modal"
+            <label class=" textoATC  form-check-label" for="invalidCheck" data-bs-toggle="modal"
               data-bs-target="#staticBackdrop">
               Aceptar terminos y condiciones
             </label>
@@ -99,60 +95,64 @@
 
         <div class="centrar">
           <button id="redirigirIniciar" class="enviar" type="submit">Registrarse</button>
+
           <div id="redirigir" class="Tienecuenta text-light ">Ya tengo una cuenta</div>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content bg-transparent">
-              <div class="modal-header   ">
-
-                <h1 class="modal-title fs-3 " id="staticBackdropLabel">Términos y condiciones</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                  style="display:none;"></button>
-                <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div>
-                <img src="/Generales/img/logo.png" alt="Logo" class="logoModal">
-
-              </div>
 
 
-              <div class="modal-body ">
-                <div class="contexto">
-                  El juego Bingo-Saurio está creado con fines de entretenimiento y diversión para poder compartir un
-                  rato
-                  agradable con tus familiares o amigos
-                  Este juego podra ser jugado por toda la población, tanto niños como personas adultas ya que está
-                  orientedo para la diversión de todos, el único requisito es registrarse mediante un correo
-                  electrónico.
-                  Se espera que este juego sea jugando mientras los jugadores estén cercanos unos de otros para que
-                  estos
-                  se puedan comunicar fácilmente y sea más fácil la interacción entre ellos y así el juego tenga una
-                  mayor
-                  taza de diversión.
-                  Al ganar una partida el jugador ganador obtendrá una recompensa con monedas del propio juego que
-                  después
-                  podra gastar comprando los objetos de la tienda en el juego, en caso de no ganar la partida el jugador
-                  no obtendrá ninguna recompensa. También habrán premios diarios por ingresar todos los días.
-                  Tus datos personales se utilizan solo para entender nuestra audiencia y mejorar la experiencia de
-                  juego,
-                  no compartiremos tus datos personales con terceros sin tu consentimiento explícito.
-                  En caso de que se llegase a presentar un conflicto entre los jugadores, estos mismos serán los que
-                  tendrán que resolverlo entre ellos de manera respetuosa y pacifica, el creador del juego no se hace
-                  responsable de conflictos entre jugadores.
-                  El creador del juego puede hacer cambios y actualizaciones en el juego cuando sea necesario para
-                  mejorar
-                  la experiencia de juego o corregir errores.
-                  Los jugadores serán notificados de cualquier cambio significativo en los Términos y Condiciones.
-                  Al registrarse y jugar Bingo-Saurio, los jugadores aceptan estos Términos y Condiciones en su
-                  totalidad.
-                  Es responsabilidad del jugador leer y comprender estos Términos y Condiciones antes de jugar.
-                </div>
-                <img src="/Generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
+      </form>
 
-              </div>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content bg-transparent">
+            <div class="modal-header   ">
+
+              <h1 class="modal-title fs-3 " id="staticBackdropLabel">Términos y condiciones</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                style="display:none;"></button>
+              <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div>
+              <img src="/Generales/img/logo.png" alt="Logo" class="logoModal">
 
             </div>
+
+
+            <div class="modal-body ">
+              <div class="contexto">
+                El juego Bingo-Saurio está creado con fines de entretenimiento y diversión para poder compartir un
+                rato
+                agradable con tus familiares o amigos
+                Este juego podra ser jugado por toda la población, tanto niños como personas adultas ya que está
+                orientedo para la diversión de todos, el único requisito es registrarse mediante un correo
+                electrónico.
+                Se espera que este juego sea jugando mientras los jugadores estén cercanos unos de otros para que
+                estos
+                se puedan comunicar fácilmente y sea más fácil la interacción entre ellos y así el juego tenga una
+                mayor
+                taza de diversión.
+                Al ganar una partida el jugador ganador obtendrá una recompensa con monedas del propio juego que
+                después
+                podra gastar comprando los objetos de la tienda en el juego, en caso de no ganar la partida el jugador
+                no obtendrá ninguna recompensa. También habrán premios diarios por ingresar todos los días.
+                Tus datos personales se utilizan solo para entender nuestra audiencia y mejorar la experiencia de
+                juego,
+                no compartiremos tus datos personales con terceros sin tu consentimiento explícito.
+                En caso de que se llegase a presentar un conflicto entre los jugadores, estos mismos serán los que
+                tendrán que resolverlo entre ellos de manera respetuosa y pacifica, el creador del juego no se hace
+                responsable de conflictos entre jugadores.
+                El creador del juego puede hacer cambios y actualizaciones en el juego cuando sea necesario para
+                mejorar
+                la experiencia de juego o corregir errores.
+                Los jugadores serán notificados de cualquier cambio significativo en los Términos y Condiciones.
+                Al registrarse y jugar Bingo-Saurio, los jugadores aceptan estos Términos y Condiciones en su
+                totalidad.
+                Es responsabilidad del jugador leer y comprender estos Términos y Condiciones antes de jugar.
+              </div>
+              <img src="/Generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
+
+            </div>
+
           </div>
         </div>
       <!-- Audio que queremos controlar -->
