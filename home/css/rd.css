@@ -20,6 +20,42 @@ body {
     justify-content: center;
     align-items: center;
 }
+.hojas {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    z-index: 1;
+   margin-right: 70vw;
+   position: absolute;
+   margin-top: -16vw;
+  
+}
+
+.hojas-2 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    z-index: 1;
+   margin-right: 72vw;
+   position: absolute;
+    /* 50% de transparencia */
+    z-index: 1;
+    /* Volteo horizontal */
+    transform: rotate(-150deg);
+    /* Opcional: ajusta el contenedor si es necesario */
+    margin-top: 22vw;
+}
+.hojas-3 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    margin-left:66vw;
+   position: absolute;
+   margin-top: 12vw;
+    z-index: 1;
+    transform: rotate(90deg);
+    margin-bottom: 20vw;
+}
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     height: 30vw;   
@@ -32,10 +68,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-.cuadro h2, .cuadro h3 {
-    color: #00FF00; /* Color verde brillante */
-    font-family: 'Comic Sans MS', sans-serif;
-}
+
 .social-icon {
     width: 50px;
     margin-right: 6px;
@@ -70,6 +103,7 @@ body {
     font-family: "Kavoon", serif;
     color:  rgb(0, 255, 0);
     font-size: 2.7vw;
+    font-weight: 300;
     margin: 0;
 }
 .mascot {
