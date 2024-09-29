@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cambiar contraseña</title>
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <link rel="stylesheet" href="css/cambiarcontra.css" />
   <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
-
+  <link rel="stylesheet" href="/Generales/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
@@ -37,22 +39,35 @@
     <div class="cuadro">
       <div class="titulo">Cambiar constraseña</div>
       <img id="redirigirCodigo" src="/Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
-      <div class="logo"></div>
+      <div id="ocultar" class="logo"></div>
 
-      <label for="contra" class="password fw-bold">Nueva contraseña</label>
-      <div class="input-container">
-        <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-        <input type="password" class="input fs-5" id="Contraseña" required min="4" placeholder="***********" />
+      <div id="error-animation" style="display: none;">
+        <dotlottie-player src="https://lottie.host/1a766c67-0f84-4893-bc7d-5a194e550e6f/swmFcahnNg.json"
+          background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay>
+        </dotlottie-player>
       </div>
 
-      <label for="contra" class="password  dos fw-bold">Confirmar contraseña</label>
-      <div class="input-container">
-        <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-        <input type="password" class="input fs-5" id="Contraseña" required min="4" placeholder="***********" />
-      </div>
+      <form id="redirigirIniciar" class=" needs-validation" novalidate>
 
+        <label for=" contra validationCustom03" class=" password fw-bold form-label">Nueva contraseña</label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+          <input type="password" class=" input fs-5 form-control" id="password" required minlength="8"
+            placeholder="********">
+          <div class="invalid-tooltip">
+            La contraseña debe tener al menos 8 caracteres y contener al menos un número.
+          </div>
+        </div>
 
-      <button id="redirigirIniciar" class="enviar">Cambiar</button>
+        <label for=" contra validationCustom03" class=" password fw-bold form-label">Confirmar contraseña</label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+          <input type="password" class=" input fs-5 form-control" id="passwordDos" required minlength="8"
+            placeholder="********">
+          <div class="invalid-tooltip">
+            La contraseña no coincide.
+          </div>
+        </div>
 
 
       <!-- Audio que queremos controlar -->
@@ -61,8 +76,14 @@
         Tu navegador no soporta la reproducción de audio.
       </audio>
 
-      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+        <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
+
+      </form>
+
+
       <script src="src-js/cambiar.js"></script>
+      <script src="src-js/valiacionContraseña.js"></script>
+      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>

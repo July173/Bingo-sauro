@@ -5,6 +5,3 @@ document.getElementById('redirigirRegistro').addEventListener('click', function(
 document.getElementById('redirigirOlvidasteContra').addEventListener('click', function(){
     window.location.href = "/login/forgotPassword/forgotpassword.html"
 });
-document.getElementById('redirigirHome').addEventListener('click', function(){
-    window.location.href = "/home/inicio.html"
-});

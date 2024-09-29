@@ -42,8 +42,8 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 72vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
