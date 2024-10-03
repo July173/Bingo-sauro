@@ -37,7 +37,7 @@
             <h2 class="settings-title">AJUSTES</h2>
         </div>
         <div class="boton">
-            <img class="close-btn" onclick="location.href='inicio.html'" width="48" height="48"
+            <img class="close-btn" onclick="location.href = sessionStorage.getItem('previousPage') || history.back();" width="48" height="48"
                 src="/Generales/img/cerrar.png" alt="cross-mark-button-emoji" />
         </div>
         <div class="mascot"></div>
@@ -127,7 +127,7 @@
                             <h1 class="modal-title fs-3" id="modalDosLabel">Ayuda y soporte</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                             style="display:none;"></button>
-                          <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div>                            <img src="/Generales/img/logo.png" alt="Logo" class="logoModal">
+                          <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div><img src="/Generales/img/logo.png" alt="Logo" class="logoModal">
                         </div>
                         <div class="modal-body">
                             <div class="contexto">
@@ -153,16 +153,14 @@
             </div>
 
             <!-- Audio que queremos controlar -->
-            <audio id="audioPlayer">
+            <audio id="audioPlayer" loop autoplay>
                 <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
                 Tu navegador no soporta la reproducción de audio.
             </audio>
 
-
             <script src="/Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
             <script src="/Generales/vibracion/vibracion.js"></script>
             <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-            <script src="src-js/config.js"></script>
+            <script src="/Generales/configuracion/config.js"></script>
 </body>
-
 </html>
