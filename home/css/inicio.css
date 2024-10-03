@@ -11,7 +11,6 @@
     position: absolute;
     z-index: 10;
 }
-
 .icon {
     width: 50px;
     height: 50px;
@@ -26,18 +25,15 @@
     transition: background-color 0.3s ease;
     text-decoration: none;
 }
-
 .icon:hover {
     background-color: rgba(0, 0, 0, 0.8);
     /* Cambio de fondo al pasar el mouse */
 }
-
 .icon i,
 .icon span {
     font-size: 30px;
     color: black;
 }
-
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
@@ -55,7 +51,6 @@ body {
     background-attachment: fixed;
     /*Permanece fija mientras se hace scroll.*/
 }
-
 #contenedor {
     position: relative;
     display: flex;
