@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css">
 <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="monedas-trofeos.css">
+<link rel="stylesheet" href="css/monedas-trofeos.css">
 
 <body>
     <div id="mostrar-esto">
@@ -24,10 +24,12 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="dinoModal" tabindex="-1" aria-labelledby="dinoModalLabel" aria-hidden="true">
+        <div class="modal fade" id="dinoModal" data-bs-backdrop="false" tabindex="-1" aria-labelledby="dinoModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
+                    
                     <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <p class="letra">Los dino-trofeos se obtienen al ganar y representan estas partidas ganadas</p>
                     </div>
                 </div>
