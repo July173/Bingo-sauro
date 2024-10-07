@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cambiar nombre de usuario </title>
+  <title>Editar correo de usuario </title>
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="css/cambiarNombre.css" />
+  <link rel="stylesheet" href="css/cambiarCorreo.css" />
   <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="/Generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -36,7 +36,7 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
-      <div class="titulo">Editar nombre de usuario</div>
+      <div class="titulo">Editar correo electronico</div>
       <img id="redirigirPerfil" src="/Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
       <div id="ocultar" class="logo"></div>
 
@@ -48,27 +48,24 @@
 
       <form  class=" needs-validation" novalidate>
 
-        <label for="Nombre novalidationCustom01" class="Name fw-bold form-label">Nombre de usuario nuevo</label>
-        <div class="input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
-            alt="user-male-circle" />
-          <input type="text" class=" input form-control" id="username" value="" required minlength="5"
-            placeholder="Pepito">
+        <label for=" Correo validationCustom" class=" email fw-bold form-label">Nuevo correo electronico</label>
+        <div class=" has-validation input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
+            alt="letter-with-email-sign" />
+          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
           <div class="invalid-tooltip">
-            El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
-           </div>
+            Por favor digitar correctamente el correo electronico.
+          </div>
         </div>
 
-
-        <label for="Nombre novalidationCustom01" class="Name fw-bold form-label">Confirmar nuevo nombre</label>
-        <div class="input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
-            alt="user-male-circle" />
-          <input type="text" class=" input form-control" id="username" value="" required minlength="5"
-            placeholder="Pepito">
+        <label for=" Correo validationCustom" class=" email fw-bold form-label">Confirmar correo electronico</label>
+        <div class=" has-validation input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
+            alt="letter-with-email-sign" />
+          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
           <div class="invalid-tooltip">
-            El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
-           </div>
+            Por favor digitar correctamente el correo electronico.
+          </div>
         </div>
 
 
@@ -83,7 +80,7 @@
       </form>
 
       <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-      <script src="./src-js/cambiarNombre.js"></script>
+      <script src="./src-js/cambiarCorreo.js"></script>
 </body>
 
 </html>

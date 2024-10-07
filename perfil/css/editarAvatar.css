@@ -74,86 +74,8 @@ body {
     
 }
 
-.contenedor-gris{
-    background-color: #cececee3;
-    border-radius: 0.7rem;
-    width: 58vw;
-    height: 18vw;
-    margin-top: 1vw;
-    margin-left: 1vw;
-  
-   
-}
-.datos{
-    background-color: rgb(133, 131, 131);
-    font-family: "Kavoon", serif;
-    border-radius: 1.2rem;
-    border: none;
-    padding: 0.5vw;
-    font-size: 2vw;
-    width: 50vw;
-    margin-top: 2vw;
-    margin-left: 4vw;
-    display: flex;
-
-    
-}
-
-.editar{
-    width: 4vw;
-    height: 4vw;
-    background-color: rgb(255, 249, 195);
-    border-radius: 0.6rem;
-    background-image: url(/Generales/img/editar.png);
-    background-size: 3vw; /* Ajusta la imagen sin deformarla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-    cursor: pointer;
-}
-.editar:hover{
-    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
-}
-.editarimagen{
-    display: flex;
-}
-.edi-avatar{
-    margin: 5vw 3vw 0 -5vw;
-   
-}
-.edi-nom{
-    margin-top: 0.5vw;
-    margin-left: 1vw;
-    margin-right: 22vw;
-}
-.texto-correo{
-    margin-left: 1vw;
-}
-.texto-contraseña{
-    margin-right: 7vw;
-    margin-left: 1vw;
-    
-}
-.usuario{
-    background-color: rgb(243, 243, 243);
-    font-family: "Kavoon", serif;
-    border-radius: 1.2rem;
-    border: none;
-    padding: 0.6vw 1vw ;
-    font-size: 1.7vw;
-    margin-left: 1vw;
-    height: 4vw;
-    width: 22vw;
-    color:black;
-}
 
 
-.contenedor-3{
-    display: flex;
-    margin-right: 13vw;
-    margin-bottom: -5vw;
-
-   
-}
 
 
 .avatarvoid{
@@ -170,36 +92,73 @@ body {
    
 }
 
-.nombre-usuario{
+.elegir{
     font-family: "Kavoon", serif;
     background-color: rgb(149, 247, 110);
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     border: none;
-    width: 68vw;
+    width: 18vw;
+    text-align: center;
     font-size: 2vw;
+}
+.texto{
+    color: black;
+    margin-top: 0.5vw;
+    margin-bottom: -0rem;
+}
+
+.cuadro-gris{
+    background-color: #cececee3;
+    border-radius: 0.7rem;
+    width: 83vw;
+    height: 19vw;
+    margin-top: 2vw;
     display: flex;
-    
-    
+ 
+}
+.cerrar{
+   margin-left: 85vw;
+   margin-top: 1vw;
+   cursor: pointer;
 }
 
-.nombre{
-    margin-top: 1vw;
-    
-}
-.dino{
-    background-image: url("/Generales/img/dinosaurio-cute.png");
-    background-repeat: no-repeat;
-    background-position: 70px;
-    background-size: 100%;
-    width: 22vw;
-    height: 22vw;
-
+.avatares {
+    width: 14vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suaviza la transición */
+    margin-top: 2.5vw;
    
 }
-
-#navbar-container{
-    margin-top: 2.5vw;
+.primeravatar{
+    margin-left: 2.5vw;
 }
+
+.avatares:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Agrega sombra */
+    z-index: 3; /* Asegúrate de que esté en el frente */
+}
+.comprar{
+    opacity: 0.4;
+}
+
+.imagen-con-icono {
+    position: relative; /* Para que el ícono se posicione relativo a este contenedor */
+
+}
+
+
+.fa-lock {
+    position: absolute; /* Para posicionar el ícono de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que esté exactamente en el centro */
+    font-size: 6vw; /* Tamaño del ícono */
+    
+}
+
+
 @media (orientation:portrait) {
 
     #contenedor{
@@ -209,9 +168,6 @@ body {
         width: 100%;
         height: 80%;   
        
-    }
-    .titulo-contenedor{
-        font-size: 8vw;
     }
 
     .hojas{
@@ -236,5 +192,3 @@ body {
 
     }
 }
-
-    
