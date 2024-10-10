@@ -3,6 +3,8 @@
     justify-content: space-around;
     align-items: center;
     width: 250px;
+    margin-right: 70vw;
+    margin-bottom: -7vw;
   }
 
   .counter {
@@ -13,6 +15,7 @@
     font-size: 36px;
     color: black;
     position: relative;
+    
   }
 
   .counter img {

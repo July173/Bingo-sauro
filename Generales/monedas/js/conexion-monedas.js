@@ -3,6 +3,7 @@ function cargarContenido() {
         .then(response => response.text())
         .then(data => {
             const tempDiv = document.createElement('div');
+            document.getElementById('monedas').innerHTML = data;
             tempDiv.innerHTML = data;
 
             // Insertar el contenido dinámico
@@ -20,5 +21,3 @@ function cargarContenido() {
         })
         .catch(error => console.error('Error al cargar el contenido:', error));
 }
-
-window.onload = cargarContenido;
