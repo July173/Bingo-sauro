@@ -3,25 +3,25 @@ const amigosDiv = document.getElementById('AmigosRegistro'); // Referencia al co
 let amigosData = [
   {
     "id": 1,
-    "imagen": "/Generales/img/avatar3.jpeg",
+    "imagen": "../Generales/img/avatar3.jpeg",
     "nombre": "Juan",
     "cantidad_premios": 5
   },
   {
     "id": 2,
-    "imagen": "/Generales/img/avatarCuatro.jpeg",
+    "imagen": "../Generales/img/avatarCuatro.jpeg",
     "nombre": "María",
     "cantidad_premios": 3
   },
   {
     "id": 3,
-    "imagen": "/Generales/img/avatarDosGafas.jpeg",
+    "imagen": "../Generales/img/avatarDosGafas.jpeg",
     "nombre": "Carlos",
     "cantidad_premios": 7
   },
   {
     "id": 4,
-    "imagen": "/Generales/img/avatarUnoRojo.jpeg",
+    "imagen": "../Generales/img/avatarUnoRojo.jpeg",
     "nombre": "Lucía",
     "cantidad_premios": 2
   }
@@ -47,7 +47,7 @@ function mostrarAmigos(amigos) {
       <div class="separador ranking fondo">
         <div class="counter counter-1" data-bs-toggle="modal" data-bs-target="#dinoModal">
           <span class="numero">${amigo.cantidad_premios}</span>
-          <img src="/Generales/img/dinoTrofeos.png" alt="Dino">
+          <img src="../Generales/img/dinoTrofeos.png" alt="Dino">
         </div>
       </div>
     `;

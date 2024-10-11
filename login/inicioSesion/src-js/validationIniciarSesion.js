@@ -51,7 +51,7 @@
             // Si el formulario es válido y tiene el id "redirigirIniciar", redirige
             if (form.checkValidity() && customValid && form.id === 'redirigirHome') {
                 event.preventDefault(); // Evita la acción por defecto (no recargar la página)
-                    window.location.href = "/home/inicio.html"; // Redirige después de un retraso
+                    window.location = "/Bingo-sauro/home/inicio.html"; // Redirige después de un retraso
                 
             }
   

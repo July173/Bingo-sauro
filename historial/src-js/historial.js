@@ -1,5 +1,5 @@
 const historialDiv = document.getElementById('historialJugar');
-const url= '/historial/historial.json';
+const url= '../historial/historial.json';
 // Función para cargar el historial desde el archivo PHP
 function cargarHistorial() {
   fetch(url)

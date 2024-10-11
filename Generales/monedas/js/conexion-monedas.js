@@ -1,5 +1,5 @@
 function cargarContenido() {
-    fetch('/Generales/monedas/index.html')
+    fetch('http://localhost/Bingo-sauro/Generales/monedas/monedas.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('monedas').innerHTML = data;

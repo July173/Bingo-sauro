@@ -32,7 +32,7 @@
 
 }
 .custom-close {
-  background-image: url("/Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+  background-image: url("../../img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.8vw;

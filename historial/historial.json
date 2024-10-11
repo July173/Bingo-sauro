@@ -1,32 +1,32 @@
 [
     {
         "fecha": "2024-09-01",
-        "carton": "/Generales/img/cartoncitoHistorial.png",
+        "carton": "../Generales/img/cartoncitoHistorial.png",
         "resultado": "Ganó"
       },
       {
         "fecha": "2024-09-02",
-        "carton": "/Generales/img/cartoncitoHistorial.png",
+        "carton": "../Generales/img/cartoncitoHistorial.png",
         "resultado": "Perdió"
       },
       {
         "fecha": "2024-09-03",
-        "carton":"/Generales/img/cartoncitoHistorial.png",
+        "carton":"../Generales/img/cartoncitoHistorial.png",
         "resultado": "Ganó"
       },
       {
         "fecha": "2024-09-01",
-        "carton":"/Generales/img/cartoncitoHistorial.png",
+        "carton":"../Generales/img/cartoncitoHistorial.png",
         "resultado": "Ganó"
       },
       {
         "fecha": "2024-09-02",
-        "carton": "/Generales/img/cartoncitoHistorial.png",
+        "carton": "../Generales/img/cartoncitoHistorial.png",
         "resultado": "Perdió"
       },
       {
         "fecha": "2024-09-03",
-        "carton": "/Generales/img/cartoncitoHistorial.png",
+        "carton": "../Generales/img/cartoncitoHistorial.png",
         "resultado": "Ganó"
       }
     
