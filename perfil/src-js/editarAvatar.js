@@ -122,11 +122,11 @@ fetch('/perfil/avatarComprar.json')
   .then(data => {
     const avatarList = document.getElementById('avatarList');
     
-    data.avatares.forEach(avatar => {
+    data.avatars.forEach(avatar => {
       // Crear un contenedor para cada avatar
       const avatarDiv = document.createElement('div');
       avatarDiv.classList.add('imagen-con-icono');
-      avatarDiv.innerHTML = `<img src="${avatar.src}" alt="${avatar.alt}" class="${avatar.locked ? 'avatar' : 'avatar comprar'}">`;
+      avatarDiv.innerHTML = `<img src="${avatar.src}" alt="${avatar.alt}" class="${avatar.locked ? 'avatar comprar' : 'avatar comprado'}">`;
 
       avatarDiv.addEventListener('click', () => selectAvatar(avatar));
 
@@ -149,6 +149,7 @@ function selectAvatar(avatar) {
     selectBtn.textContent = 'Comprar este avatar';
   } else {
     selectBtn.textContent = 'Avatar Seleccionado';
+    selectBtn.style.width= '25vw'
   }
 
   // Guardar avatar seleccionado en localStorage
