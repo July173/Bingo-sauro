@@ -7,6 +7,7 @@
   <title>Inicio</title>
   <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
   <link rel="stylesheet" href="/home/css/inicio.css" />
   <script src="/Generales/barraNavegacion/navbar.js"></script>
@@ -44,7 +45,7 @@
 
       <!-- <div id="contenido-cargado"></div> -->
 
-      <div class="container icon-container">
+      <div class="icon-container">
         <!-- Botón de Configuración (Engranaje) -->
         <a href="/Generales/configuracion/configuracion.html" class="icon">
           <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
@@ -62,7 +63,11 @@
           <span style="font-size: 24px;">R<sup>D</sup></span>
         </a>
       </div>
-
+      <div id='monedas'></div>
+      <script src="/Generales/monedas/js/conexion-monedas.js"></script>
+    <script>
+      cargarContenido();
+  </script>
       <div class="titulo">BIENVENIDOS</div>
 
       <div class="logo"></div>

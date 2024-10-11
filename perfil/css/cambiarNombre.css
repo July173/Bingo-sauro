@@ -25,7 +25,6 @@ body {
     width: 100vw;
     /*establece el ancho del elemento al 100% del ancho de su contenedor*/
     height: 100vh;
-  
 }
 
 .hojas {
@@ -36,6 +35,7 @@ body {
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
+
   
 }
 
@@ -43,10 +43,10 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 1;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
+    z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
@@ -63,114 +63,116 @@ body {
     transform: rotate(90deg);
     margin-bottom: 20vw;
 }
-
-.contenedor-gris{
-    background-color: #ffffffe3;
-    border-radius: 0.7rem;
-    width: 60vw;
-    height: 20vw;
-    margin-top: 1vw;
-    overflow-y: auto;
-    z-index: 10;
-   
-}
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
-    width: 90vw;
-    height: 43vw;   
+    width: 34vw;
+    height: 37vw;   
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
-    
+   border:0cap;
+   z-index: 10;
 }
-
-.contenedor-3{
-    display: flex;
-    margin-right: 10vw
-}
-.titulo-contenedor {
-    color: rgb(0, 0, 0);
+.titulo {
+    color: rgb(0, 255, 0);
     font-family: "Kavoon", serif;
-    font-size: 2.3vw;
+    font-size: 2vw;
     margin-top: 0.5vw;
-    text-align: center;
-    margin-left: 20vw;
 }
-.text-trofeo{
-    font-family: "Kavoon", serif;
-    font-size: 1.8vw;
-    margin-top: 1.5vw;
-    margin-left: 15vw;
-    
-}
-.texto-contenedor{
-    display: flex;
-    text-align: center;
-
-}
+.cerrar {
+    position: absolute;
+    margin-left: 31vw;
+    width: 2.3vw;
+    margin-top: 0.5vw;
+    cursor: pointer;
+  }
 .logo {
     background-image: url("/Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
-    width: 8vw;
-    height: 10vw;
+    width: 25%;
+    height: 30%;
     opacity: 0.6;
-    margin-top: 1vw;
-    margin-left: 5vw;
-   
+    margin-top: -1vw;
+    
+}
+
+
+.Name{
+    font-size: 1.5vw ;
+    margin-right: 6vw;
+    color: black;
+}    
+
+.dos{
+    margin-left: 3vw;
+}
+
+.input{
+    width: 23vw;
+    height: 4vw;
+    background-color: rgb(255, 254, 207);
+    border-radius: 0.4rem;
+    border: none;
+    margin-bottom: 1vw;;
 
 }
 
-.invitarAmigo{
+.input-container {
+    position: relative;
+}
+
+.i {
+    position: absolute;
+    left: 4%;
+    top: 45%;
+    transform: translateY(-50%);
+    color: #aaa;
+   
+}
+
+
+.input-container input {
+    padding: 4% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
+    
+}
+#contraseña{
+    padding: 7% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
+}
+
+.enviar{
     font-family: "Kavoon", serif;
-    background-color: rgb(149, 247, 110);
+    background-color: rgb(189, 230, 115);
     border-radius: 1.2rem;
     border: none;
-    padding: 0.5vw 22vw;
+    margin-top: 4%;
+    padding: 0.5vw 2vw;
     font-size: 2vw;
-    cursor: pointer;    
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
-    margin-left: 12vw;
+    cursor: pointer;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 5rem;
 }
-
-.dino{
-    background-image: url("/Generales/img/dinosaurio-cute.png");
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
+}
+.Bingo{
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
-    width: 22vw;
-    height: 22vw;
-
-   
+    width: 30vw;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
 }
-.amigo {
-    padding: 10px;
-    font-family: "Kavoon", serif;
-    display: flex;
-    background-color: #949494; /* Color de fondo opcional */
-    margin: 5px 5vw;
-    border-radius: 0.5rem;
-    font-size: 2vw;
-    color: #fff;
-  }
-  
-  .mensaje-vacio {
-    color: rgb(151, 151, 151);
-    font-size: 1.5rem;
-    font-family: "Kavoon", serif;
-    text-align: center;
-    font-weight: bold;
-  }
+/*modificaciones para una pantalla vertical*/
 @media (orientation:portrait) {
 
     .logo {
-        width: 32vw;
-        height: 47vw;
-       margin-top: -8vw;
-       margin-bottom: -7vw;
+        width: 28vw;
+        height: 43vw;
+       margin-bottom: -4vw;
+       margin-top: -5vw;
      
 
     }
@@ -179,14 +181,50 @@ body {
     }
     .cuadro{
         width: 100%;
-        height: 80%;   
+        height: 70%;   
         z-index: 10;
        
     }
-    .titulo-contenedor{
-        font-size: 5vw;
+    .titulo{
+        font-size: 6vw;
+        margin-top: 4vw;
+    }
+    .cerrar {
+        width: 8vw;
+        margin-left: 80vw;
+      } 
+  
+    .password{
+        font-size: 5vw ;
+        margin-right: 32vw;
+        margin-bottom: 0.5vw;
+        margin-left: 34vw;
+        width: 60vw;
+    }    
+   
+    .input{
+        width: 60vw;
+        height: 9vw;
+        margin-bottom: 4vw;;
+    
+    }
+   
+    .i {
+        left: 4%;
+        top: 42%;
+        width: 5vw;
+        height: 5vw;
+    }
+  
+    .enviar{
+       
+        padding: 2vw 6vw;
+        font-size: 6vw;
+        margin-bottom: 1vw;
+        border-radius: 0.8rem;
 
     }
+  
 
     .hojas{
        position: absolute;
@@ -210,5 +248,3 @@ body {
 
     }
 }
-
-    

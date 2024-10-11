@@ -65,7 +65,7 @@ body {
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     width: 90vw;
-    height: 43vw;   
+    height: 44vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -103,12 +103,22 @@ body {
     width: 4vw;
     height: 4vw;
     background-color: rgb(255, 249, 195);
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     background-image: url(/Generales/img/editar.png);
     background-size: 3vw; /* Ajusta la imagen sin deformarla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el div */
     cursor: pointer;
+}
+.editar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
+}
+.editarimagen{
+    display: flex;
+}
+.edi-avatar{
+    margin: 5vw 3vw 0 -5vw;
+   
 }
 .edi-nom{
     margin-top: 0.5vw;
@@ -188,7 +198,7 @@ body {
 }
 
 #navbar-container{
-    margin-top: 2.5vw;
+    margin-top: 2.3vw;
 }
 @media (orientation:portrait) {
 
