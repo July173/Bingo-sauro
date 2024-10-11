@@ -2,12 +2,30 @@ const amigosDiv = document.getElementById('AmigosRegistro'); // Referencia al co
 
 // Simulamos cargar el archivo JSON
 const amigosData = [
-  { Nombres: 'Juanito' },
-  { Nombres: 'Ana' },
-  { Nombres: 'Luis' },
-  { Nombres: 'Carlos' },
-  { Nombres: 'Marta' },
-  { Nombres: 'Sofia' }
+  {
+    "id": 1,
+    "imagen": "/Generales/img/avatar3.jpeg",
+    "nombre": "Juan",
+    "cantidad_premios": 5
+  },
+  {
+    "id": 2,
+    "imagen": "/Generales/img/avatarCuatro.jpeg",
+    "nombre": "María",
+    "cantidad_premios": 3
+  },
+  {
+    "id": 3,
+    "imagen": "/Generales/img/avatarDosGafas.jpeg",
+    "nombre": "Carlos",
+    "cantidad_premios": 7
+  },
+  {
+    "id": 4,
+    "imagen": "/Generales/img/avatarUnoRojo.jpeg",
+    "nombre": "Lucía",
+   "cantidad_premios": 2
+    }
 ];
 
 // Función para mostrar los amigos
@@ -23,7 +41,15 @@ function mostrarAmigos(amigos) {
     amigoDiv.classList.add('amigo'); // Clase para el estilo
 
     amigoDiv.innerHTML = `
-      <span>${amigo.Nombres}</span>
+      
+      <img src="${amigo.imagen}" alt="Avatar de ${amigo.nombre}" class="avatar-imagen">
+      <span  class="nombre-amigo">${amigo.nombre}</span>
+      <div class="separador ranking fondo">
+        <div class="counter counter-1" data-bs-toggle="modal" data-bs-target="#dinoModal">
+          <span class="numero">${amigo.cantidad_premios}</span>
+          <img src="/Generales/img/dinoTrofeos.png" alt="Dino">
+        </div>
+      </div>
     `;
 
     amigosDiv.appendChild(amigoDiv);

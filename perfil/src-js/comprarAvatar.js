@@ -29,20 +29,18 @@ if (selectedAvatar) {
   const avatarContainer = document.querySelector('.contenedorAvatar');
   const precioContainer = document.querySelector('.precio');
   
-  avatarContainer.innerHTML = `<img src="${selectedAvatar.src}" alt="${selectedAvatar.alt}">`;
-  precioContainer.textContent = `Precio: ${selectedAvatar.price}`;
+  avatarContainer.innerHTML = `<img src="${selectedAvatar.src}" alt="${selectedAvatar.alt}" class="avatar-imagen">`;
+  precioContainer.innerHTML = `<span class="precio-texto">Precio: ${selectedAvatar.price}</span>`;
 
   // Manejar el clic en el botón de comprar
   document.getElementById('comprarBtn').addEventListener('click', () => {
     if (selectedAvatar.locked) {
-      // Lógica para realizar la compra
       alert('Avatar comprado!');
-      // Actualizar estado del avatar (desbloquearlo)
       selectedAvatar.locked = false;
       localStorage.setItem('selectedAvatar', JSON.stringify(selectedAvatar));
-      // Redirigir a la pantalla anterior o perfil
       window.location.href = '/perfil/perfil.html';
     }
   });
 }
+
 

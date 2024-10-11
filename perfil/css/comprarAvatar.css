@@ -75,9 +75,9 @@ body {
 }
 
 
-.ContenedorAvatar {
-    width: 20vw;
-    height: 20vw;
+.avatar-imagen   {
+    width: 25vw;
+    height: 25vw;
     background-color: rgb(228, 226, 226);
     margin-top: 1.5vw;
     margin-bottom: 1vw;
@@ -100,13 +100,13 @@ body {
     margin-top: 0.5vw;
     margin-bottom: -0rem;
 }
-.precio{
+.precio-texto, .precio{
     font-family: "Kavoon", serif;
     background-color: #FFF48D;
     border-radius: 1rem;
     border: none;
-    width: 10vw;
-    height: 5vw;
+    width: 12vw;
+    height: auto;
     text-align: center;
     font-size: 2vw;
     cursor: pointer;
