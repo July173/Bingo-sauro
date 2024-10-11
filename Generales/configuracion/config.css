@@ -1,0 +1,249 @@
+body, html {
+    margin: 0;
+    /*elimina cualquier espacio o margen externo alrededor del elemento*/
+    background-image: url("/Generales/img/fondo.jpeg");
+    position: fixed;
+    /*hace que el elemento esté "fijo" respecto al viewport */
+    width: 100%;
+    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100%;
+    /*establece la altura del elemento en el 100% de la altura visible del viewport*/
+    background-size: cover;
+    /*ajusta la imagen de fondo,la hace responsive.*/
+    background-repeat: no-repeat;
+    /*No se repite.*/
+    background-attachment: fixed;
+    /*Permanece fija mientras se hace scroll.*/
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hojas {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    z-index: 1;
+   margin-right: 70vw;
+   position: absolute;
+   margin-top: -16vw;
+  
+}
+
+.hojas-2 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    z-index: 1;
+   margin-right: 72vw;
+   position: absolute;
+    /* 50% de transparencia */
+    z-index: 1;
+    /* Volteo horizontal */
+    transform: rotate(-150deg);
+    /* Opcional: ajusta el contenedor si es necesario */
+    margin-top: 22vw;
+}
+.hojas-3 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    margin-left:66vw;
+   position: absolute;
+   margin-top: 12vw;
+    z-index: 1;
+    transform: rotate(90deg);
+    margin-bottom: 20vw;
+}
+
+.cuadro {
+    background-color: rgba(14, 78, 62, 0.5);
+    height: 43vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 520px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.settings-title {
+    font-family: "Kavoon", serif;
+    color:  rgb(0, 255, 0);
+    font-size: 2.4vw;
+    margin: 0;
+}
+.close-btn {
+    cursor: pointer;
+}
+
+.dinochibi{
+    background-image: url("/Generales/img/dinosaurio-cute.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 22vw;
+    height: 22vw;
+    margin-right: 23vw;
+    margin-top: 16vw;
+    position: absolute;
+}
+.mascot {
+    background-image: url("/Generales/img/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 80%;
+    width: 15vw;
+    height: 15vw;
+    opacity: 0.4;
+    overflow: hidden;
+    margin-left: 8vw;
+}
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #FFF9C4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.option-text {
+    font-size: 20px;
+    color: black;
+    margin-left: -6vw;
+}
+
+.option-text-2 {
+    font-size: 20px;
+    color: black;
+    margin-left: -7.4vw;
+}
+
+.botonn {
+    background-color: #FFF9C4;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.bot-logout {
+    font-weight: bold;
+}
+.boton{
+    margin-left: 32vw;
+    margin-top: -5vw;
+}
+
+.contenedor-recuadros{
+    width: 22vw;
+    margin-left: 12vw;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.toggle {
+    width: 50px;
+    height: 30px;
+    background-color: #4CAF50;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Transición rápida */
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    right: 2px;
+    transition: transform 0.2s ease; /* Transición rápida */
+}
+
+.toggle.off {
+    background-color: #F44336; /* Rojo */
+}
+
+.toggle.off::before {
+    transform: translateX(-20px);
+}
+.modal-header {
+    background-color:  rgba(35, 80, 69, 0.5) ;  /* Fondo verde translúcido */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+
+}
+.logoModal {
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 17%;
+    height: 22%;
+    opacity: 0.6;
+    margin-top: 0.5vw;
+}
+.modal-body {
+    background-color:rgba(35, 80, 69, 0.5) ; 
+    padding-top: 1vw;
+}
+
+
+.modal-title{
+    color: rgb(9, 255, 9);
+    font-family: "Kavoon", serif;
+    font-size: 2.5vw;
+    margin-left: 3vw;
+}
+ 
+.contexto{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.3rem;
+    padding: 1.5vw;
+    width: 80%;
+    margin-left: 4vw;
+    font-family: "Kavoon", serif;
+    margin-top: -1vw;
+
+}
+
+.custom-close {
+    background-image: url("/Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.Bingo{
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 30vw;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+}

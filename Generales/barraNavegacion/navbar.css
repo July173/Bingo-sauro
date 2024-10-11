@@ -2,7 +2,7 @@
 .Columna{
     border-right: solid black 0.1vw;
     cursor: pointer;
-
+    color:black;
 }
 .cinco{
     border-right: none;
@@ -12,12 +12,13 @@
     height: 5vw;
     margin-top: 2vw;
     text-align: center;
-    background-color: rgb(60, 255, 0, 0.5);
+    background-color: #51ff007a;
     font-family: "Kavoon", serif;
     font-size: 2.5vw;
     color: black;
-    
+   
 }
+
 .cambiado{
     background-color: rgba(13, 90, 114, 0.8);
 }

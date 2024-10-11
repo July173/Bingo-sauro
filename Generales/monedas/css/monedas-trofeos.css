@@ -1,0 +1,66 @@
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    margin-right: 70vw;
+    margin-bottom: -7vw;
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kavoon', serif;
+    font-size: 36px;
+    color: black;
+    position: relative;
+    
+  }
+ 
+  .counter img {
+    width: 60px;
+    margin-left: 10px;
+  }
+
+  .counter-1 {
+    cursor: pointer;
+  }
+  .modal-dialog {
+    margin-left: 20vw !important;
+    margin-top: 5vw !important;
+
+}
+.custom-close {
+  background-image: url("/Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.8vw;
+  height: 1.8vw;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+}
+  
+  .letra{
+    font-family: "Kavoon", serif;
+    
+  }
+
+  .modal-body {
+    height: 6vw;
+    width: 17vw;
+    overflow-y: auto;
+  }
+
+  .separador{
+    background-color: #f9e79f;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+    margin: 0.5vw;
+  }
+
+  .fondo{
+    background-color: rgba(216, 216, 216, 0.911);
+  }

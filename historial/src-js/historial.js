@@ -19,6 +19,7 @@ const historialDiv = document.getElementById('historialJugar');
 
   // Referencia al contenedor donde se mostrará el historial
   function mostrarHistorial(historial) {
+    
     historialDiv.innerHTML = ''; // Limpiar contenido previo
     if (historial.length === 0) {
       historialDiv.innerHTML = '<p class="mensaje-vacio">No hay partidas jugadas.</p>';
