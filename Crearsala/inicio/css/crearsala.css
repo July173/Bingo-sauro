@@ -207,10 +207,10 @@ body {
 .contenedor-gris {
   font-family: "Kavoon", serif;
   width: 85vw;
-  height: 40vw;
+  height: 28vw;
   background-color: rgb(204, 204, 192);
   border-radius: 1rem;
-  padding: 6px 12px;
+  padding: 6px 6px;
   overflow-y: auto;
   font-size: 2vw;
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
@@ -308,24 +308,24 @@ body {
 .cuadrodeabajito {
   font-family: "Kavoon", serif;
   background-color: rgb(171, 171, 165);
-  border-radius: 1rem;
+  border-radius: 2rem;
   border: none;
-  padding: 4.8vw 3vw;
-  font-size: 2vw;
+  padding: 4.8px 4.8px;
+  font-size: 1.5vw;
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
   display: flex;
-  margin-top: 40px;
+  margin-top: 20vw;
 }
 .cuadrodeabajo {
   font-family: "Kavoon", serif;
   background-color: rgb(138, 138, 116);
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   border: none;
-  padding: 3vw 0vw;
+  padding: 3vw 20vw;
   font-size: 2vw;
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
   display: flex;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 .imagenes {
   display: flex;
