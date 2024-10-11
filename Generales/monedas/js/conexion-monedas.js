@@ -2,19 +2,16 @@ function cargarContenido() {
     fetch('/Generales/monedas/index.html')
         .then(response => response.text())
         .then(data => {
-            const tempDiv = document.createElement('div');
             document.getElementById('monedas').innerHTML = data;
-            tempDiv.innerHTML = data;
 
-            // Insertar el contenido dinámico
-            const contenidoInteresante = tempDiv.querySelector('#mostrar-esto').innerHTML;
-            document.getElementById('contenido-cargado').innerHTML = contenidoInteresante;
-
-            // Reinicializar el modal después de cargar el contenido
-            const modalElement = document.getElementById('dinoModal');
+            // Aplicar estilos después de cargar el contenido
+            const modalElement = document.querySelector('.modal-content');
             if (modalElement) {
-                const modalInstance = new bootstrap.Modal(modalElement);
-                console.log('Modal reinicializado correctamente');
+                
+                modalElement.style.width = '17vw';
+                modalElement.style.backgroundColor = '#FFF5D3';
+                
+                console.log('Estilos aplicados correctamente');
             } else {
                 console.error('El modal no fue encontrado');
             }
