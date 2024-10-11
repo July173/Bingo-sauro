@@ -102,12 +102,13 @@ body {
     font-family: "Kavoon", serif;
     font-size: 1.8vw;
     margin-top: 1.5vw;
-    margin-left: 15vw;
+    margin-left: 13vw;
     
 }
 .texto-contenedor{
     display: flex;
     text-align: center;
+    margin-bottom: -2vw;
 
 }
 .logo {
@@ -151,15 +152,16 @@ body {
     font-family: "Kavoon", serif;
     display: flex;
     background-color: #949494; /* Color de fondo opcional */
-    margin: 5px 5vw;
+    margin: 1vw 5vw;
     border-radius: 0.5rem;
     font-size: 2vw;
     color: #fff;
+    cursor: pointer;
   }
  
   
   .avatar-imagen {
-    width: 5.5vw; /* Ajusta el tamaño de la imagen del avatar */
+    width: 6vw; /* Ajusta el tamaño de la imagen del avatar */
     height: auto; /* Mantiene la proporción */
     margin-left: 1vw;
     margin-right: 3vw;

@@ -10,8 +10,10 @@
   <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css" />
   <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="css/amigos.css" />
+  <link rel="stylesheet" href="css/modales-delete.css">
   <link rel="stylesheet" href="/Generales/configuracion/posicion.css">
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="/Generales/bootstrap/js/bootstrap.bundle.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
@@ -74,6 +76,33 @@
       <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
       Tu navegador no soporta la reproducción de audio.
     </audio>
+
+<!-- Modal que se abre al hacer clic en un amigo -->
+<div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-center">
+          <button id="elimi" class="botones-modal" data-bs-target="#confirmModal" data-bs-toggle="modal">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Confirmación de Eliminación -->
+<div class="modal fade" id="confirmModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>¿Estás seguro de que deseas eliminar a este amigo?</p>
+        <button class="botones-modal" id="confirmarEliminacion">Sí</button>
+        <button class="botones-modal" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <script src="src-js/amigos.js"></script>
     <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
