@@ -1,0 +1,32 @@
+{
+    "cartones": [
+      {
+        "id": 1,
+        "src": "/Generales/img/carton-naranja.png",
+        "price": "25",
+        "locked": false,
+        "alt": "carton 1"
+      },
+      {
+        "id": 2,
+        "src": "/Generales/img/carton-verde.png",
+        "price": "30",
+        "locked": true,
+        "alt": "carton 2"
+      },
+      {
+        "id": 3,
+        "src": "/Generales/img/carton-azul.png",
+        "price": "40",
+        "locked": true,
+        "alt": "carton 3"
+      },
+      {
+        "id": 4,
+        "src": "/Generales/img/carton-rosa.png",
+        "price": "45",
+        "locked": true,
+        "alt": "carton 4"
+      }
+    ]
+}
