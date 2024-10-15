@@ -25,10 +25,10 @@
             <div class="precio"></div>
             <div id="comprar" class="comprarAvatar">Comprar avatar</div> -->
 
-      
 
-        <!-- Audio que queremos controlar -->
-     <!--   <audio id="audioPlayer">
+
+<!-- Audio que queremos controlar -->
+<!--   <audio id="audioPlayer">
             <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
             Tu navegador no soporta la reproducción de audio.
         </audio>
@@ -42,17 +42,27 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comprar Avatar</title>
-  <link rel="stylesheet" href="css/comprarAvatar.css">
-</head>
-<body>
-  <div class="contenedorAvatar"></div>
-  <div class="precio"></div>
-  <button id="comprarBtn">Comprar</button>
 
-  <script src="src-js/comprarAvatar.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Avatar</title>
+    <link rel="stylesheet" href="css/comprarAvatar.css">
+</head>
+
+<body>
+    <div class="contenedorAvatar"></div>
+    <div class="precio"></div>
+    <button id="comprarBtn">Comprar</button>
+
+    <!-- Audio que queremos controlar -->
+    <audio id="audioPlayer" loop autoplay>
+        <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="src-js/comprarAvatar.js"></script>
 </body>
+
 </html>
