@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amigos</title>
+  <title>Perfil</title>
 
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css" />
-  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
-  <link rel="stylesheet" href="css/amigos.css" />
-  <link rel="stylesheet" href="/Generales/configuracion/posicion.css">
+  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="css/comprarCarton.css">
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+
 </head>
 
 <body class="container">
@@ -37,46 +37,37 @@
     </div>
     <div class="cuadro">
 
-      <div class="icon-container">
-        <!-- Botón de Configuración (Engranaje) -->
-        <a href="/Generales/configuracion/configuracion.html" class="icon">
-          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
-        </a>
-      </div>
+
       <div id='monedas'></div>
       <script src="/Generales/monedas/js/conexion-monedas.js"></script>
       <script>
         cargarContenido();
       </script>
-      <div class="logo"></div>
 
-      <button class="invitarAmigo">Invitar un amigo</button>
-      <div class="contenedor-3">
-        <div class="dino"></div>
-        <div class="contenedor-gris">
-          <div class="texto-contenedor">
-            <div class="titulo-contenedor">Amigos</div>
-            <p class="text-trofeo text-secondary">Dino-trofeos</p>
-          </div>
-          <div id="AmigosRegistro"></div>
+
+      <div class="carton">
+        <div id="detallesCarton">
+          <!-- Los detalles del cartón (imagen, precio y botón) se agregarán aquí dinámicamente -->
+           <div></div>
+          <div class="imagen-contenedor"></div>
+          <div class="precio-contenedor"></div>
+          <div class="boton-contenedor"></div>
         </div>
       </div>
 
-      <div id="navbar-container">
-        <script src="/Generales/barraNavegacion/navbar.js"></script>
-        <script>
-          loadNavbar();
-        </script>
-      </div>
+
     </div>
 
-    <audio id="audioPlayer" loop>
+    <!-- Audio que queremos controlar -->
+    <audio id="audioPlayer">
       <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
       Tu navegador no soporta la reproducción de audio.
     </audio>
 
-    <script src="src-js/amigos.js"></script>
+    <script src="/Crearsala/inicio/js/compraCartonSala.js"></script>
     <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="es">

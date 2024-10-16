@@ -1,4 +1,3 @@
-
 // Cargar cartones desde el JSON
 fetch('/tienda/comprarCarton.json')
   .then(response => response.json())

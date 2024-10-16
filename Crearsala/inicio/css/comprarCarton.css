@@ -190,41 +190,51 @@ body {
 
 
 
-#contenedorCartonSeleccionado {
-    display: flex;
-    justify-content: center; /* Centrar el contenido horizontalmente */
-    align-items: center; /* Centrar el contenido verticalmente */
-    margin: 20px; /* Espaciado alrededor del contenedor */
+
+#detallesCarton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carton {
     padding: 15px;
-    background-color: #f9f9f9; /* Color de fondo claro */
-    border: 1px solid #ccc; /* Bordes suaves */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px;
+    display: inline-block;
 }
 
-.carton-item-seleccionado {
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en columna */
-    align-items: center; /* Centra los elementos */
-    text-align: center; /* Alinear el texto al centro */
+
+.imagen-contenedor {
+    border-radius: 1vw;
+    margin-top: 6vw;
+    margin-bottom: 1vw;
+    background-color: gray;
+    width: 18vw;
+    height: 18vw;
 }
 
-.imagen-seleccionada-contenedor {
-    margin-bottom: 10px; /* Espaciado inferior */
+.precio-contenedor {
+    margin-bottom: 10px;
+    background-color: yellow;
 }
 
-.carton-seleccionado {
-    width: 200px; /* Ancho de la imagen */
-    height: auto; /* Altura automática */
-    border-radius: 5px; /* Bordes redondeados para la imagen */
+.boton-contenedor {
+    margin-bottom: 10px;
 }
 
-.precio-seleccionado-contenedor {
-    margin-top: 10px; /* Espaciado superior */
+.imagen-carton {
+    width: 200px;
+    height: auto;
 }
 
-.precio-seleccionado-contenedor p {
-    font-size: 18px; /* Tamaño de fuente para el precio */
-    font-weight: bold; /* Negrita para el precio */
-    color: #333; /* Color del texto */
+.boton-comprar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-comprar:hover {
+    background-color: #218838;
 }

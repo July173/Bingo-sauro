@@ -1,31 +1,23 @@
-document.getElementById('redirigirTienda').addEventListener('click', function(){
-  window.location.href = "/tienda/tienda.html";
-});
-
-// Cargar avatar seleccionado desde localStorage
+// Recuperar el cartón seleccionado desde el localStorage
 const selectedCarton = JSON.parse(localStorage.getItem('selectedCarton'));
 
+// Verificar si existe un cartón seleccionado y mostrarlo
 if (selectedCarton) {
-const cartonContainer = document.querySelector('.contenedorCarton');
-const precioContainer = document.querySelector('.precio');
+  const contenedorSeleccionado = document.getElementById('contenedorCartonSeleccionado');
 
-cartonContainer.innerHTML = `<img src="${selectedCarton.src}" alt="${selectedCarton.alt} class="carton-imagen"">`;
-precioContainer.innerHTML = `<span class="precio-texto">Precio: ${selectedCarton.price}</span>`;
+  // Crear un contenedor para mostrar el cartón seleccionado
+  const cartonSeleccionadoDiv = document.createElement('div');
+  cartonSeleccionadoDiv.classList.add('carton-item-seleccionado');
+  cartonSeleccionadoDiv.innerHTML = `
+    <div class="imagen-seleccionada-contenedor">
+      <img src="${selectedCarton.src}" alt="${selectedCarton.alt}" class="carton-seleccionado">
+    </div>
+    <div class="precio-seleccionado-contenedor">
+      <p>${selectedCarton.price}</p>
+    </div>
+  `;
 
-// Manejar el clic en el botón de comprar
-document.getElementById('comprarBtn').addEventListener('click', () => {
-  if (selectedCarton.locked) {
-    // Lógica para realizar la compra
-    alert('Carton comprado!');
-    // Actualizar estado del avatar (desbloquearlo)
-    selectedCarton.locked = false;
-    localStorage.setItem('selectedCarton', JSON.stringify(selectedCarton));
-    // Redirigir a la pantalla anterior o perfil
-    window.location.href = '/tienda/tienda.html';
-  }
-});
-}
-
-else{
-  console.error('no hay ningun carton seleccionado')
+  contenedorSeleccionado.appendChild(cartonSeleccionadoDiv);
+} else {
+  console.error('No se encontró ningún cartón seleccionado.');
 }
