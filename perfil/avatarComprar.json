@@ -1,44 +1,39 @@
 {
-    "avatars": [
-      {
-        "id": 1,
-        "name": "Avatar Uno",
-        "imageUrl": "/Generales/img/avatar3.jpeg",
-        "price": "23",
-        "comprado":true
-
-      },
-      {
-        "id": 2,
-        "name": "Avatar Dos",
-        "imageUrl": "/Generales/img/avatarCuatro.jpeg",
-        "price": "27",
-        "comprado":false
-      },
-      {
-        "id": 3,
-        "name": "Avatar Tres",
-        "imageUrl": "/Generales/img/avatarCinco.jpeg",
-        "price": "32",
-        "comprado":false
-      }
-    ],
-    "historial": 3,
-    "avatares": [
-        {
-            "id":1,
-            "src": "/Generales/img/avatar3.jpeg",
-            "price": "10",
-            "locked": true,  
-            "alt": "Avatar 1"
-        },
-        {
-            "id":2,
-            "src": "/Generales/img/avatarCuatro.jpeg",
-            "price": "20",
-            "locked": false,
-            "alt": "Avatar 2"
-        }
-    ]
-  }
-  
+  "avatars": [
+    {
+      "id": 1,
+      "src": "/Generales/img/avatarUnoRojo.jpeg",
+      "price": "27",
+      "locked": false,
+      "alt": "Avatar 1"
+    },
+    {
+      "id": 2,
+      "src": "/Generales/img/avatarDosGafas.jpeg",
+      "price": "27",
+      "locked": false,
+      "alt": "Avatar 2"
+    },
+    {
+      "id": 3,
+      "src": "/Generales/img/avatar3.jpeg",
+      "price": "23",
+      "locked": true,
+      "alt": "Avatar 3"
+    },
+    {
+      "id": 4,
+      "src": "/Generales/img/avatarCuatro.jpeg",
+      "price": "27",
+      "locked": true,
+      "alt": "Avatar 4"
+    },
+    {
+      "id": 5,
+      "src": "/Generales/img/avatarCinco.jpeg",
+      "price": "35",
+      "locked": true,
+      "alt": "Avatar 5"
+    }
+  ]
+}
