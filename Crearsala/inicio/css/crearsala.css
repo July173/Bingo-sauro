@@ -1,7 +1,7 @@
 body {
   margin: 0;
   /*elimina cualquier espacio o margen externo alrededor del elemento*/
-  background-image: url("/Generales/img/fondo.jpeg");
+  background-image: url("../../../Generales/img/fondo.jpeg");
   position: fixed;
   /*hace que el elemento esté "fijo" respecto al viewport */
   width: 100%;
@@ -14,111 +14,6 @@ body {
   /*No se repite.*/
   background-attachment: fixed;
   /*Permanece fija mientras se hace scroll.*/
-}
-body {
-  margin: 0;
-  background-image: url("/Generales/img/fondo.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-#contenedor {
-  position: relative;
-}
-
-.hojas, .hojas-2, .hojas-3 {
-  width: 100%;
-  height: auto;
-  opacity: 0.8;
-  z-index: 1;
-  margin-top: 20px;
-}
-
-.hojas-2 {
-  transform: rotate(-150deg);
-}
-
-.hojas-3 {
-  transform: rotate(90deg);
-}
-
-.cuadro {
-  background-color: rgba(1, 61, 46, 0.5);
-  width: 90vw;
-  padding: 20px;
-  border-radius: 10px;
-  z-index: 10;
-}
-
-.titulo {
-  color: rgb(9, 255, 83);
-  font-family: "Kavoon", serif;
-  font-size: 3vw;
-}
-
-.logo {
-  background-image: url("/Generales/img/logo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 8vw;
-  height: 8vw;
-  opacity: 0.6;
-}
-
-
-
-.imagenes {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.carton1, .carton2, .carton3, .carton4, .carton5, .carton6, .carton7 {
-  background-size: cover;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
-}
-
-.cuadrodeabajito, .cuadrodeabajo {
-  font-family: "Kavoon", serif;
-  background-color: rgb(171, 171, 165);
-  border-radius: 1rem;
-  box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-  margin-top: 40px;
-}
-
-@media (orientation: portrait) {
-  .logo {
-    width: 50%;
-    height: 50%;
-  }
-  .titulo {
-    font-size: 10vw;
-  }
-  .hojas, .hojas-2, .hojas-3 {
-    width: 80vw;
-    height: auto;
-  }
-}
-
-
-/* Mejoras en pantallas muy pequeñas o móviles */
-@media (max-width: 480px) {
-  .contenedor-gris {
-    width: 100%;  /* Ajusta el ancho para ocupar toda la pantalla */
-    font-size: 3vw; /* Texto más grande para móviles */
-  }
-  .titulo {
-    font-size: 8vw; /* Aumenta el tamaño del título para pantallas móviles */
-  }
-  .hojas, .hojas-2, .hojas-3 {
-    width: 50vw; /* Reduce el tamaño de los gráficos */
-    height: 50vw;
-  }
 }
 
 #contenedor {
@@ -136,67 +31,187 @@ body {
   width: 33vw;
   height: 33vw;
   opacity: 0.8;
-  z-index: 1;
-  margin-right: 60vw;
+  margin-right: 70vw;
   position: absolute;
   margin-top: -16vw;
-  /* 50% de transparencia */
+  z-index: 1;
+
 }
 
 .hojas-2 {
   width: 33vw;
-  height: 330vw;
+  height: 33vw;
   opacity: 0.8;
-  margin-right: 40vw;
+  margin-right: 72vw;
   position: absolute;
   /* 50% de transparencia */
   z-index: 1;
   /* Volteo horizontal */
   transform: rotate(-150deg);
   /* Opcional: ajusta el contenedor si es necesario */
-  margin-top: 28vw;
+  margin-top: 22vw;
 }
+
 .hojas-3 {
   width: 33vw;
   height: 33vw;
   opacity: 0.8;
-  margin-left: 70vw;
+  margin-left: 66vw;
   position: absolute;
   margin-top: 12vw;
-  /* 50% de transparencia */
   z-index: 1;
-  /* Volteo horizontal */
   transform: rotate(90deg);
-  /* Opcional: ajusta el contenedor si es necesario */
-  margin-right: -559px;
   margin-bottom: 20vw;
 }
 
 .cuadro {
-  background-color: rgba(1, 61, 46, 0.5);
+  background-color: rgba(14, 78, 62, 0.5);
   width: 90vw;
-  height: 45vw;
+  height: 44vw;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
+
 }
+
+.logo {
+  background-image: url(../../../Generales/img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-size: 100%;
+  width: 9vw;
+  height: 9vw;
+  opacity: 0.6;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+
+}
+
+/*cartones*/
+
+.carton {
+  width: 9vw;
+  height: 9vw;
+  border-radius: 10px;
+}
+
+#contenedorCartonesSala {
+  display: flex;
+  /* Cambia el diseño a un contenedor flexible */
+  flex-wrap: wrap;
+  /* Permite que los elementos se muevan a la siguiente línea si no caben */
+  gap: 2px;
+  /* Espacio entre cada carton */
+}
+
+.cartonn-sala {
+  flex: 1 0 auto;
+  /* Mantiene el tamaño de cada carton según su contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codigo {
+  font-size: 3vw;
+  margin-left: 3vw;
+}
+
+.comoLlenar {
+  font-size: 2vw;
+  margin-left: 24vw;
+  margin-top: -2vw;
+}
+
+
+.contenedorCantidadMaximaDeCartones {
+  margin-left: -0.6vw;
+}
+
+.cantidadMaximaCartones {
+  width: 18vw;
+  font-size: 1.3vw;
+}
+
+.numCartonesPorJugador {
+  margin-left: 2vw;
+  width: 10vw;
+  background-color: white;
+  font-size: 1.3vw;
+  border-radius: 1vw;
+}
+
+.contenedorCantidadMaximaDeMonedas {
+  margin-left: 11vw;
+}
+
+.cantidadMaximaMonedas {
+  width: 16vw;
+  font-size: 1.3vw;
+}
+
+.numMonedasPorJugador {
+  margin-left: 1.5vw;
+  width: 10vw;
+  background-color: white;
+  font-size: 1.3vw;
+  border-radius: 1vw;
+}
+
+.botonesEleccion {
+  margin-left: 6vw;
+  width: 10vw;
+  font-size: 1.3vw;
+}
+
+.botonJugador {
+  background-color: #efe7c4;
+  width: 10vw;
+  border-radius: 1vw;
+  margin-left: 0.5vw;
+  margin-bottom: 1vw;
+}
+
+.botonAdministrador {
+  background-color: #efe7c4;
+  width: 11vw;
+  border-radius: 1vw;
+}
+
+.atras {
+  margin-left: -80vw;
+  margin-top: 7vw;
+  position: absolute;
+}
+
 .titulo {
   color: rgb(9, 255, 83);
   font-family: "Kavoon", serif;
   font-size: 3vw;
-  margin-top: 3vw;
 }
 
-.logo {
-  background-image: url("/Generales/img/logo.png");
-  background-repeat: no-repeat;
-  background-position: 0px;
-  background-size: 100%;
-  width: 10vw;
-  height: 10vw;
-  opacity: 0.4;
+.cuadrodeabajito,
+.cuadrodeabajo {
+  font-family: "Kavoon", serif;
+  background-color: rgb(171, 171, 165);
+  border-radius: 1rem;
+  box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  margin-top: 40px;
+}
+
+
+#contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  /*establece el ancho del elemento al 100% del ancho de su contenedor*/
+  height: 100vh;
 }
 
 .contenedor-gris {
@@ -210,6 +225,7 @@ body {
   font-size: 2vw;
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
 }
+
 .cuadroGrisOscuro {
   margin-left: 4vw;
   align-items: center;
@@ -224,6 +240,7 @@ body {
   display: flex;
   margin-top: 40px;
 }
+
 .cuadrodeabajo {
   font-family: "Kavoon", serif;
   background-color: rgb(138, 138, 116);
@@ -235,24 +252,27 @@ body {
   display: flex;
   margin-top: 100px;
 }
-.imagenes {
-  display: flex;
-}
+
+
+
 /*modificaciones para una pantalla vertical*/
 @media (orientation: portrait) {
   .logo {
     width: 30%;
     height: 70vw;
   }
+
   .cuadro {
     width: 100%;
     height: 70%;
     margin-top: -38vw;
   }
+
   .titulo {
     font-size: 10vw;
     margin-top: 10vw;
   }
+
   .inicio {
     padding: 2vw 3vw;
     font-size: 7vw;
@@ -266,6 +286,7 @@ body {
     margin-bottom: 1vw;
     border-radius: 0.8rem;
   }
+
   .hojas {
     position: absolute;
     width: 70vw;
@@ -273,6 +294,7 @@ body {
     margin-top: -140vw;
     opacity: 0.6;
   }
+
   .hojas-2 {
     position: absolute;
     width: 70vw;
@@ -290,86 +312,44 @@ body {
   }
 }
 
+@media (orientation: portrait) {
+  .logo {
+    width: 50%;
+    height: 50%;
+  }
 
-/*cartones*/
+  .titulo {
+    font-size: 10vw;
+  }
 
-.carton {
-  width: 9vw;
-  height: 9vw;
-  border-radius: 10px;
-}
-
-#contenedorCartonesSala {
-  display: flex; /* Cambia el diseño a un contenedor flexible */
-  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben */
-  gap: 2px; /* Espacio entre cada carton */
-}
-
-.cartonn-sala {
-  flex: 1 0 auto; /* Mantiene el tamaño de cada carton según su contenido */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.codigo{
-  font-size: 3vw;
-  margin-left: 3vw;
-}
-.comoLlenar{
-  font-size: 2vw;
-  margin-left: 24vw;
-  margin-top: -2vw;
+  .hojas,
+  .hojas-2,
+  .hojas-3 {
+    width: 80vw;
+    height: auto;
+  }
 }
 
 
-.contenedorCantidadMaximaDeCartones{
-  margin-left: -0.6vw;
-}
-.cantidadMaximaCartones{
-  width: 18vw;
-  font-size: 1.3vw;
-}
-.numCartonesPorJugador{
-  margin-left: 2vw;
-  width: 10vw;
-  background-color: white;
-  font-size: 1.3vw;
-  border-radius: 1vw;
-}
-.contenedorCantidadMaximaDeMonedas{
-  margin-left: 11vw;
-}
-.cantidadMaximaMonedas{
-  width: 16vw;
-  font-size: 1.3vw;
-}
-.numMonedasPorJugador{
-  margin-left: 1.5vw;
-  width: 10vw;
-  background-color: white;
-  font-size: 1.3vw;
-  border-radius: 1vw;
-}
-.botonesEleccion{
-  margin-left: 6vw;
-  width: 10vw;
-  font-size: 1.3vw;
-}
-.botonJugador{
-  background-color: #efe7c4;
-  width: 10vw;
-  border-radius: 1vw;
-  margin-left: 0.5vw;
-  margin-bottom: 1vw;
-}
-.botonAdministrador{
-  background-color: #efe7c4;
-  width: 11vw;
-  border-radius: 1vw;
-}
-.atras{
-  margin-left: -80vw;
-  margin-top: 7vw;
-  position: absolute;
+/* Mejoras en pantallas muy pequeñas o móviles */
+@media (max-width: 480px) {
+  .contenedor-gris {
+    width: 100%;
+    /* Ajusta el ancho para ocupar toda la pantalla */
+    font-size: 3vw;
+    /* Texto más grande para móviles */
+  }
+
+  .titulo {
+    font-size: 8vw;
+    /* Aumenta el tamaño del título para pantallas móviles */
+  }
+
+  .hojas,
+  .hojas-2,
+  .hojas-3 {
+    width: 50vw;
+    /* Reduce el tamaño de los gráficos */
+    height: 50vw;
+  }
 }
