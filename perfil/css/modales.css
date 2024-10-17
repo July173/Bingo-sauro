@@ -9,14 +9,14 @@
 }
 .modal-body{
     background-color: rgb(255, 249, 195);
+   width: 23vw;
    
    
 }
 .modal-dialog{
     margin-top: 10vw;
     margin-left: 8vw;
-    max-width: 23vw;
-    max-height: 5vw;
+    max-width: 22vw;
 }
 .modal-content{
     border: none;

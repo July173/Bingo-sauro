@@ -1,3 +1,3 @@
 document.getElementById('redirigirPerfil').addEventListener('click', function(){
-    window.location.href = "/perfil/perfil.html"
+    window.location = "/Bingo-sauro/perfil/perfil.html"
 });

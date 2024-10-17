@@ -1,33 +1,23 @@
 const amigosDiv = document.getElementById('AmigosRegistro'); // Referencia al contenedor donde se mostrarán los amigos
 
-let amigosData = [
-  {
-    "id": 1,
-    "imagen": "../Generales/img/avatar3.jpeg",
-    "nombre": "Juan",
-    "cantidad_premios": 5
-  },
-  {
-    "id": 2,
-    "imagen": "../Generales/img/avatarCuatro.jpeg",
-    "nombre": "María",
-    "cantidad_premios": 3
-  },
-  {
-    "id": 3,
-    "imagen": "../Generales/img/avatarDosGafas.jpeg",
-    "nombre": "Carlos",
-    "cantidad_premios": 7
-  },
-  {
-    "id": 4,
-    "imagen": "../Generales/img/avatarUnoRojo.jpeg",
-    "nombre": "Lucía",
-    "cantidad_premios": 2
-  }
-];
-
+let amigosData = []; // Inicializar amigosData como un array vacío
 let amigoAEliminar = null; // Variable para guardar el amigo a eliminar
+
+// Función para cargar los amigos desde PHP
+function cargarAmigos() {
+  fetch('/amigos/json/amigos.php') // Ajusta la ruta según tu estructura de carpetas
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error en la respuesta de la red');
+      }
+      return response.json();
+    })
+    .then(data => {
+      amigosData = data; // Asignar los datos cargados a amigosData
+      mostrarAmigos(amigosData); // Mostrar amigos en la UI
+    })
+    .catch(error => console.error('Error al cargar el PHP:', error));
+}
 
 // Función para mostrar los amigos
 function mostrarAmigos(amigos) {
@@ -70,7 +60,7 @@ function eliminarAmigo() {
     amigosData = amigosData.filter(amigo => amigo.id !== amigoAEliminar); // Filtrar al amigo seleccionado
     mostrarAmigos(amigosData); // Actualizar la lista de amigos en la UI
 
-   
+    // Aquí podrías agregar código para enviar la eliminación al servidor, si es necesario
 
     amigoAEliminar = null; // Reiniciar la variable
   }
@@ -83,6 +73,5 @@ document.getElementById('confirmarEliminacion').addEventListener('click', () => 
   confirmModal.hide(); // Cerrar el modal de confirmación
 });
 
-// Llamada a la función con los datos simulados
-mostrarAmigos(amigosData);
-
+// Llamada a la función para cargar amigos desde PHP
+cargarAmigos();

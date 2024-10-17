@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url("/Generales/img/fondo.jpeg");
+    background-image: url("../../Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -104,7 +104,7 @@ body {
     height: 4vw;
     background-color: rgb(255, 249, 195);
     border-radius: 0.6rem;
-    background-image: url(/Generales/img/editar.png);
+    background-image: url(../../Generales/img/editar.png);
     background-size: 3vw; /* Ajusta la imagen sin deformarla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el div */
@@ -163,11 +163,10 @@ body {
     margin-top: 1.5vw;
     margin-bottom: 1vw;
     border-radius: 1rem;
-    background-image: url(/Generales/img/usuario.png);
     background-size: contain; /* Ajusta la imagen sin deformarla */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el div */
-   
+    background-image: url(../../Generales/img/usuario.png);
 }
 
 .nombre-usuario{

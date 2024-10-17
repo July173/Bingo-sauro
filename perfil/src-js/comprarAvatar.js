@@ -1,5 +1,5 @@
 document.getElementById('redirigirPerfil').addEventListener('click', function(){
-    window.location.href = "/perfil/editarAvatar.html";
+    window.location = "/Bingo-sauro/perfil/editarAvatar.html";
 });
 // // nueva pantalla de compra
 // window.onload = function() {
@@ -26,8 +26,8 @@ document.getElementById('redirigirPerfil').addEventListener('click', function(){
 const selectedAvatar = JSON.parse(localStorage.getItem('selectedAvatar'));
 
 if (selectedAvatar) {
-  const avatarContainer = document.querySelector('.contenedorAvatar');
-  const precioContainer = document.querySelector('.precio');
+  const avatarContainer = document.querySelector('contenedorAvatar');
+  const precioContainer = document.querySelector('precio');
   
   avatarContainer.innerHTML = `<img src="${selectedAvatar.src}" alt="${selectedAvatar.alt}" class="avatar-imagen">`;
   precioContainer.innerHTML = `<span class="precio-texto">Precio: ${selectedAvatar.price}</span>`;
@@ -38,7 +38,7 @@ if (selectedAvatar) {
       alert('Avatar comprado!');
       selectedAvatar.locked = false;
       localStorage.setItem('selectedAvatar', JSON.stringify(selectedAvatar));
-      window.location.href = '/perfil/perfil.html';
+      window.location = '/Bingo-sauro/perfil/perfil.html';
     }
   });
 }
