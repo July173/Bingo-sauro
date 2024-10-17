@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
-    <link rel="stylesheet" href="css/tienda.css" />
-    <link rel="stylesheet" href="/Generales/configuracion/posicion.css">
+    <link rel="stylesheet" href="../tienda/css/tienda.css" />
+    <link rel="stylesheet" href="../Generales/configuracion/posicion.css">
     <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
-    <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
 </head>
@@ -44,13 +44,13 @@
 
             <div class="icon-container">
                 <!-- Botón de Configuración (Engranaje) -->
-                <a href="/Generales/configuracion/configuracion.html" class="icon">
+                <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.html" class="icon">
                     <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png"
                         alt="settings" />
                 </a>
             </div>
             <div id='monedas'></div>
-            <script src="/Generales/monedas/js/conexion-monedas.js"></script>
+            <script src="../Generales/monedas/js/conexion-monedas.js"></script>
             <script>
                 cargarContenido();
             </script>
@@ -162,7 +162,7 @@
                     <div class="dino">
                         <tr>
                             <td colspan="2">
-                                <img id="rewardImage7" class="img-dino" src="/Generales/img/dinovolteado.png"
+                                <img id="rewardImage7" class="img-dino" src="../Generales/img/dinovolteado.png"
                                     alt="Recompensa Día 7">
 
                                 <div id="rewardMessage7" style="display: none;">
@@ -188,7 +188,7 @@
             </div>
 
             <div id='navbar-container'></div>
-            <script src="/Generales/barraNavegacion/navbar.js"></script>
+            <script src="../Generales/barraNavegacion/navbar.js"></script>
             <script>
                 loadNavbar();
             </script>
@@ -196,11 +196,11 @@
 
         <!-- Audio que queremos controlar -->
         <audio id="audioPlayer" loop>
-            <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
+            <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
             Tu navegador no soporta la reproducción de audio.
         </audio>
 
-        <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+        <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
         <script src="src-js/tienda.js"></script>
         <script src="src-js/recompensaDiaria.js"></script>
 </body>

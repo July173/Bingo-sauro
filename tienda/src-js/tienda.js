@@ -1,5 +1,5 @@
 // Cargar cartones desde el JSON
-fetch('/tienda/comprarCarton.json')
+fetch('../tienda/comprarCarton.json')
   .then(response => response.json())
   .then(data => {
     const contenedorCartones = document.getElementById('contenedorCartones');
@@ -16,7 +16,7 @@ fetch('/tienda/comprarCarton.json')
 
       precioBoton.addEventListener('click', () => {
         localStorage.setItem('selectedCarton', JSON.stringify(carton));
-        window.location.href = '/tienda/comprarCarton.html';
+        window.location = '/Bingo-sauro/tienda/comprarCarton.html';
       });
       
       cartonDiv.appendChild(precioBoton);
