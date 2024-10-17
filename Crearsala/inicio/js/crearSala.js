@@ -1,5 +1,5 @@
 // Cargar cartones desde el JSON
-fetch('/Crearsala/inicio/cartonesSala.json')
+fetch('../../Crearsala/inicio/cartonesSala.json')
   .then(response => response.json())
   .then(data => {
     const contenedorCartonesSala = document.getElementById('contenedorCartonesSala');
