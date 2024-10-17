@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url("/Generales/img/fondo.jpeg");
+    background-image: url("../../../Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -82,7 +82,7 @@ body {
 }
 
 .logo {
-    background-image: url("/Generales/img/logo.png");
+    background-image: url("../../../Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
@@ -185,13 +185,7 @@ body {
     margin-left: 3rem;
 }
 
-.cambiado{
-    background-color: rgb(86, 255, 86);
-    background-image: url("/Generales/img/aceptar.png");
-    background-size: contain; /* Ajusta la imagen sin deformarla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-}
+
 
 .textoATC{
     cursor: pointer;
@@ -244,7 +238,7 @@ body {
 }
 
 .custom-close {
-    background-image: url("/Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+    background-image: url("../../../Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
     background-size: contain;
     background-repeat: no-repeat;
     width: 3vw;

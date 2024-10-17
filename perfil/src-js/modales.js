@@ -10,7 +10,7 @@ const openModal = document.getElementById('openModal');
 
     // Redirigir a otra página si hace clic en "Sí"
     yesBtn.addEventListener('click', () => {
-      window.location.href = '/perfil/cambiarCorreo.html'; // Cambia la URL según la página a la que quieras dirigir
+      window.location = '/Bingo-sauro/perfil/cambiarCorreo.html'; // Cambia la URL según la página a la que quieras dirigir
     });
 
     // Cerrar el modal si hace clic en "No"
@@ -29,7 +29,7 @@ const openModal = document.getElementById('openModal');
     });
 
     yesBtn2.addEventListener('click', () => {
-      window.location.href = '/perfil/editarContraseña.html';
+      window.location = '/Bingo-sauro/perfil/editarContraseña.html';
     });
 
     noBtn2.addEventListener('click', () => {

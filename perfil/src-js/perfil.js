@@ -1,9 +1,9 @@
 document.getElementById('cambiarNombre').addEventListener('click', function(){
-    window.location.href = "/perfil/cambiarNombre.html"
+    window.location = "/Bingo-sauro/perfil/cambiarNombre.html"
 });
 
 document.getElementById('CambiarAvatar').addEventListener('click', function(){
-    window.location.href = "/perfil/editarAvatar.html"
+    window.location = "/Bingo-sauro/perfil/editarAvatar.html"
 });
 
  // Recuperar avatar de localStorage
@@ -18,7 +18,6 @@ document.getElementById('CambiarAvatar').addEventListener('click', function(){
     } else {
         // Si no hay avatar seleccionado, mostrar el avatar por defecto
         const avatarDisplay = document.getElementById('avatarDisplay');
-        avatarDisplay.style.backgroundImage = 'url(/Generales/img/usuario.png)';
         avatarDisplay.style.backgroundSize = 'contain';
         avatarDisplay.style.backgroundRepeat = 'no-repeat';
         avatarDisplay.style.backgroundPosition = 'center';

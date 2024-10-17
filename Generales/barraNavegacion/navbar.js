@@ -1,5 +1,5 @@
 function loadNavbar() {
-    fetch('/Generales/barraNavegacion/navbar.html')
+    fetch('http://localhost/Bingo-sauro/Generales/barraNavegacion/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
@@ -25,22 +25,23 @@ function loadNavbar() {
             switch (event.target.id) {
              
                 case 'inicio':
-                    window.location.href = "/home/inicio.html";
+                    window.location = "../home/inicio.html";
                     break;
                     case 'historial':
-                window.location.href = "/historial/historial.html";
+                window.location = "../historial/historial.html";
                 break;
               case 'amigos':
-                window.location.href = "/amigos/amigos.html";
+                window.location= "../amigos/amigos.html";
                 break;
               case 'perfil':
-                window.location.href = "/perfil/perfil.html";
+                window.location = "../perfil/perfil.html";
                 break;
               case 'tienda':
-                window.location.href = "/tienda/tienda.html";
+                window.location= "../tienda/tienda.html";
                 break;
               default:
                 break;
+                
             }
           });
         });
