@@ -41,6 +41,4 @@ if (selectedAvatar) {
       window.location = '/Bingo-sauro/perfil/perfil.html';
     }
   });
-}
-
 
