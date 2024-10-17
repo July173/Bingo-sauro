@@ -41,6 +41,4 @@ if (selectedAvatar) {
       window.location.href = '/perfil/perfil.html';
     }
   });
-}
-
 
