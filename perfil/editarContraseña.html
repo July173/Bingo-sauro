@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicar sesión</title>
+  <title>Cambiar contraseña</title>
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="css/InicarSesion.css" />
+  <link rel="stylesheet" href="css/editarContra.css" />
   <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="/Generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -36,28 +36,19 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
-      <div class="titulo">Inicio sesión</div>
-      <div class="logo"></div>
+      <div class="titulo">Editar constraseña</div>
+      <img id="redirigirCodigo" src="/Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
+      <div id="ocultar" class="logo"></div>
+
       <div id="error-animation" style="display: none;">
         <dotlottie-player src="https://lottie.host/1a766c67-0f84-4893-bc7d-5a194e550e6f/swmFcahnNg.json"
           background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay>
         </dotlottie-player>
       </div>
 
-      <form id="redirigirHome" class=" needs-validation" novalidate>
+      <form id="redirigirIniciar" class=" needs-validation" novalidate>
 
-
-        <label for=" Correo validationCustom" class=" email fw-bold form-label">Correo electronico</label>
-        <div class=" has-validation input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
-            alt="letter-with-email-sign" />
-          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
-          <div class="invalid-tooltip">
-            Por favor digitar correctamente el correo electronico.
-          </div>
-        </div>
-
-        <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
+        <label for="password" class="password fw-bold form-label">Confirmar nueva contraseña</label>
         <div class="input-container position-relative">
           <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png"
             alt="lock" />
@@ -71,28 +62,33 @@
         </div>
 
 
-           <p id="redirigirOlvidasteContra" class="textoOC text-light">
-        ¿Olvidaste tu Contraseña?
-      </p>
+          <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
+          <div class="input-container position-relative">
+            <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+            <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
+              placeholder="********">
+            <i class="fa-solid fa-eye-slash" id="togglePassword"
+              style="position: absolute; right: 35px; top: 55%; transform: translateY(-50%); cursor: pointer;"></i>
+            <div class="invalid-tooltip">
+              La contraseña debe tener al menos 8 caracteres y contener al menos un número.
+            </div>
+          </div>
 
 
-      <button id="redirigirHome" class="enviar" type="submit">Iniciar sesión</button>
-  
+            <!-- Audio que queremos controlar -->
+            <audio id="audioPlayer">
+              <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+              Tu navegador no soporta la reproducción de audio.
+            </audio>
+
+            <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
+
       </form>
 
-      <div id="redirigirRegistro" class="registrar text-light ">Registrarse</div>
-      <img src="/Generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
-
-      <!-- Audio que queremos controlar -->
-      <audio id="audioPlayer">
-        <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
-        Tu navegador no soporta la reproducción de audio.
-      </audio>
-
-      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-      <script src="src-js/iniciarSesion.js"></script>
-      <script src="src-js/validationIniciarSesion.js"></script>
       <script src="/Generales/jsGenerales/VerContrasña.js"></script>
+      <script src="src-js/editarContra.js"></script>
+      <script src="src-js/valiacionContraseña.js"></script>
+      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>

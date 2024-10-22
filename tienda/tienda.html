@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
   <link rel="stylesheet" href="css/tienda.css" />
+  <link rel="stylesheet" href="/Generales/configuracion/posicion.css">
+  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
@@ -40,6 +42,17 @@
     </div>
     <div class="cuadro">
 
+      <div class="icon-container">
+        <!-- Botón de Configuración (Engranaje) -->
+        <a href="/Generales/configuracion/configuracion.html" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        </a>
+      </div>
+      <div id='monedas'></div>
+      <script src="/Generales/monedas/js/conexion-monedas.js"></script>
+      <script>
+        cargarContenido();
+      </script>
       <div class="logo"></div>
       <div class="contenedor-gris">
         <div class="titulo-contenedor">Ofertas</div>
@@ -62,7 +75,7 @@
     </div>
 
     <!-- Audio que queremos controlar -->
-    <audio id="audioPlayer">
+    <audio id="audioPlayer" loop>
       <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
       Tu navegador no soporta la reproducción de audio.
     </audio>

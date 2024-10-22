@@ -128,11 +128,13 @@ body {
 .i {
     position:absolute;
     left: 4%;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     color: #aaa;
    
 }
+
+
 
 .input-container input {
     padding: 4% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */

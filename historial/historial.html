@@ -8,9 +8,11 @@
 
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
-  <link rel="stylesheet" href="./css/historial.css" />
-
+  <link rel="stylesheet" href="/Generales/configuracion/posicion.css">
+  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="../historial/css/historial.css">
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="/Generales/fontawesome/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
 </head>
@@ -42,6 +44,18 @@
     </div>
     <div class="cuadro">
 
+        <!-- Botón de Configuración (Engranaje) -->
+         <div class="icon-container">
+        <a href="/Generales/configuracion/configuracion.html" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        </a>
+      </div>
+      <div id='monedas'></div>
+        <script src="/Generales/monedas/js/conexion-monedas.js"></script>
+      <script>
+        cargarContenido();
+    </script>
+
       <div class="logo"></div>
       <div class="contenedor-gris">
         <div class="titulo-contenedor">Partidas jugadas</div>
@@ -58,6 +72,7 @@
       <script src="/Generales/barraNavegacion/navbar.js"></script>
       <script>
         loadNavbar();
+
       </script>
     </div>
 

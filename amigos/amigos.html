@@ -1,91 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amigos</title>
 
-    <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css" />
-    <link rel="stylesheet" href="css/amigos.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amigos</title>
 
-    <script src="/Generales/bootstrap/js/bootstrap.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css" />
+  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="css/amigos.css" />
+  <link rel="stylesheet" href="/Generales/configuracion/posicion.css">
+  <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+</head>
 
-  <body class="container">
-    <div id="contenedor">
-      <div class="hojas">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
+<body class="container">
+  <div id="contenedor">
+    <div class="hojas">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="hojas-2">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="hojas-3">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="cuadro">
+
+      <div class="icon-container">
+        <!-- Botón de Configuración (Engranaje) -->
+        <a href="/Generales/configuracion/configuracion.html" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        </a>
       </div>
-      <div class="hojas-2">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
-      <div class="hojas-3">
-        <script
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
-          background="transparent"
-          speed="2"
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
-      <div class="cuadro">
-        <div class="logo"></div>
+      <div id='monedas'></div>
+      <script src="/Generales/monedas/js/conexion-monedas.js"></script>
+      <script>
+        cargarContenido();
+      </script>
+      <div class="logo"></div>
 
-        <button class="invitarAmigo">Invitar un amigo</button>
-        <div class="contenedor-3">
+      <button class="invitarAmigo">Invitar un amigo</button>
+      <div class="contenedor-3">
         <div class="dino"></div>
         <div class="contenedor-gris">
           <div class="texto-contenedor">
+<<<<<<< HEAD
           <div class="titulo-contenedor">Amigos</div>
           <p class="text-trofeo text-light">Dino-Trofeos</p>
         </div>
         <div id="AmigosRegistro"></div>
+=======
+            <div class="titulo-contenedor">Amigos</div>
+            <p class="text-trofeo text-secondary">Dino-trofeos</p>
+          </div>
+          <div id="AmigosRegistro"></div>
+>>>>>>> 401f562eb633a15c5c455023553be7cea9f3ec4f
         </div>
       </div>
 
       <div id="navbar-container">
-      <script src="/Generales/barraNavegacion/navbar.js"></script>
-      <script>
-        loadNavbar();
-      </script>
+        <script src="/Generales/barraNavegacion/navbar.js"></script>
+        <script>
+          loadNavbar();
+        </script>
+      </div>
     </div>
-  </div>
 
-  <audio id="audioPlayer">
-    <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
-    Tu navegador no soporta la reproducción de audio.
-  </audio>
+    <audio id="audioPlayer">
+      <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
 
     <script src="src-js/amigos.js"></script>
     <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-  </body>
+</body>
+
 </html>
