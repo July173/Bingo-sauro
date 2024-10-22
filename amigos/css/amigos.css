@@ -17,7 +17,7 @@ body {
 }
 
 #contenedor {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,8 +101,8 @@ body {
 .text-trofeo{
     font-family: "Kavoon", serif;
     font-size: 1.8vw;
-    margin-top: 1.5vw;
-    margin-left: 15vw;
+    margin-top: 2.5vw;
+    margin-left: 5.0vw;
 
    
 }

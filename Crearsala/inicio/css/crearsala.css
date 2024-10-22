@@ -95,6 +95,28 @@ body {
   margin-top: 40px;
 }
 
+h1 {
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.cuadrodeabajito {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: flex-start; /* Alinea el contenido en la parte superior */
+  
+}
+
+p {
+  font-size: 16px;
+  color: #000;
+}
+
+
+
 @media (orientation: portrait) {
   .logo {
     width: 50%;
@@ -206,7 +228,7 @@ body {
 }
 .contenedor-gris {
   font-family: "Kavoon", serif;
-  width: 76vw;
+  width: 92vw;
   height: 30vw;
   background-color: rgb(204, 204, 192);
   border-radius: 1rem;
@@ -220,89 +242,63 @@ body {
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 .carton2 {
   background-image: url("/Generales/img/CARTON2.PNG");
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6.1vw;
-  height: 6.7vw;
-  margin: 5px;
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 .carton3 {
   background-image: url("/Generales/img/CARTON3.PNG");
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 .carton4 {
   background-image: url("/Generales/img/CARTON.4.PNG");
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 .carton5 {
   background-image: url("/Generales/img/CARTON_5.PNG");
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 .carton6 {
   background-image: url("/Generales/img/CARTON.6..PNG");
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 .carton7 {
   background-image: url("/Generales/img/CARTON.7..PNG");
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
-  width: 6vw;
-  height: 7vw;
-  margin: 5px;
-}
-
-.carton1, .carton2, .carton3, .carton4, .carton5, .carton6, .carton7 {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; /* Asegura que la imagen ocupe todo el contenedor sin perder proporción */
-  width: 15vw; /* Más grandes en pantallas grandes */
-  height: 20vw;
-  margin: 5px;
-  flex: 1 1 20vw; /* Hacemos que los cartones crezcan en función del espacio disponible */
-}
-
-/* En pantallas medianas */
-@media (max-width: 768px) {
-  .carton1, .carton2, .carton3, .carton4, .carton5, .carton6, .carton7 {
-    width: 15vw; /* Aumenta el tamaño en pantallas más pequeñas */
-    height: 15vw;
-  }
-}
-
-/* En pantallas pequeñas */
-@media (max-width: 576px) {
-  .carton1, .carton2, .carton3, .carton4, .carton5, .carton6, .carton7 {
-    width: 15vw; /* Aumenta aún más el tamaño en móviles */
-    height: 15vw;
-  }
+  width: 8vw;
+  height: 10vw;
+  margin: 8px;
 }
 
 .cuadrodeabajito {
@@ -315,6 +311,7 @@ body {
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
   display: flex;
   margin-top: 40px;
+  width: 60vw;
 }
 .cuadrodeabajo {
   font-family: "Kavoon", serif;
