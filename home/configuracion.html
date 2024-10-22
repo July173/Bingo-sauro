@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuracion</title>
+    <link rel="stylesheet" href="css/config.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/Generales/bootstrap/css/bootstrap.css">   
+</head>
+
+<body class="container">
+    <div class="cuadro">
+        <div class="dinochibi"></div>
+        <div class="header">
+            <h2 class="settings-title">AJUSTES</h2>
+        </div>
+        <div class="boton">
+            <img class="close-btn" onclick="location.href='inicio.html'" width="48" height="48"
+                src="/Generales/img/cerrar.png" alt="cross-mark-button-emoji" />
+        </div>
+        <div class="mascot"></div>
+
+        <div class="contenedor-recuadros">
+            <div class="option">
+                <img width="35" height="30" src="https://img.icons8.com/ios-filled/50/audio-wave--v1.png" alt="audio-wave--v1" />
+                <span class="option-text-2"> <b> Sonido </b></span>
+                <div class="toggle"id="soundToggle" id="toggleButton"></div>
+            </div>
+            
+            <div class="option">
+                <img width="30" height="30"
+                    src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/external-smartphone-vibrate-forming-the-wave-pattern-layout-mobile-bold-tal-revivo.png"
+                    alt="external-smartphone-vibrate-forming-the-wave-pattern-layout-mobile-bold-tal-revivo" />
+                <span class="option-text"> <b> Vibración </b></strong></span>
+                <div class="toggle" id="vibrationToggle"></div>
+            </div>
+
+            <!-- Botón para abrir el modal de Términos y Condiciones -->
+            <button class="botonn" data-bs-toggle="modal" data-bs-target="#modalTerminos">
+                <img width="30" height="30"
+                    src="https://img.icons8.com/ios-glyphs/30/terms-and-conditions.png" alt="terms-and-conditions" /> <b>Términos y condiciones</b>
+                    
+            </button>
+
+            <!-- Botón para abrir el modal de Ayuda y Soporte -->
+            <button class="botonn" data-bs-toggle="modal" data-bs-target="#modalAyuda">
+                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/help.png" alt="help" />
+                <b> Ayuda y soporte </b>
+            </button>
+
+            <!-- Modal de Términos y Condiciones -->
+            <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTerminosLabel">Términos y Condiciones</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            Al utilizar esta plataforma, aceptas los siguientes términos y condiciones. Por favor,
+                            léelos cuidadosamente antes de proceder.
+                            <ul>
+                                <li>No está permitido el uso indebido del sistema.</li>
+                                <li>Debes respetar las normas de privacidad y seguridad.</li>
+                                <li>El incumplimiento de estas reglas puede resultar en la suspensión de tu cuenta.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer rojo">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de Ayuda y Soporte -->
+            <div class="modal fade" id="modalAyuda" tabindex="-1" aria-labelledby="modalAyudaLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalAyudaLabel">Ayuda y Soporte</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            Aquí puedes encontrar respuestas a tus preguntas y asistencia técnica para cualquier
+                            problema que encuentres en la plataforma.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/login/Bienvenido/pag2.html">
+                <button class="botonn bot-logout" onclick="">
+                    <img width="32" height="32" src="https://img.icons8.com/color-pixels/32/close-window.png"
+                        alt="close-window" /> <strong>Cerrar sesión</strong>
+                </button>
+            </a>
+        </div>
+    </div>
+    
+      <!-- Audio que queremos controlar -->
+      <audio id="audioPlayer">
+        <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+
+      
+    <script src="/Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Generales/vibracion/vibracion.js"></script>
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="src-js/config.js"></script>
+</body>
+
+</html>

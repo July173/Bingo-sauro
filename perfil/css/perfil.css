@@ -35,9 +35,6 @@ body {
     opacity: 0.8;
     margin-right: 72vw;
     position: absolute;
-    z-index: 1;
-    transform: rotate(-150deg);
-    margin-top: 22vw;
 }
 
 .hojas-3 {

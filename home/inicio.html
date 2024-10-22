@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio</title>
-
+  <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
- <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
+  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
   <link rel="stylesheet" href="/home/css/inicio.css" />
+  <link rel="stylesheet" href="/Generales/monedas/monedas-trofeos.css">
   <script src="/Generales/barraNavegacion/navbar.js"></script>
   <script src="/Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -40,7 +41,30 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
+
+      <div id="">
+
+      </div>
+
+      <div class="container icon-container">
+        <!-- Botón de Configuración (Engranaje) -->
+        <a href="configuracion.html" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings"/>
+        </a>
+
+        <!-- Botón de Ayuda (Signo de pregunta) -->
+        <a href="ayuda.html" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question"/>
+        </a>
+
+        <!-- Botón RG -->
+        <a href="rd.html" class="icon">
+          <span style="font-size: 24px;">R<sup>D</sup></span>
+        </a>
+      </div>
+
       <div class="titulo">BIENVENIDOS</div>
+      
       <div class="logo"></div>
 
       <button class=" enviar Crearsala">Crear sala</button>
@@ -48,11 +72,19 @@
 
       <div id='navbar-container'></div>
       <script>
-         loadNavbar();
-       </script>
+        loadNavbar();
+      </script>
     </div>
 
-      <script src="src-js/inicio.js"></script>
+    <!-- Audio que queremos controlar -->
+    <audio id="audioPlayer">
+      <source src="/Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+    
+    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="src-js/inicio.js"></script>
 </body>
 
 </html>

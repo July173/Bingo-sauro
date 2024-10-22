@@ -106,7 +106,7 @@ body {
 .input{
     width: 23vw;
     height: 4vw;
-    background-color: rgb(255, 254, 207);
+    background-color: #FEFFD3;
     border-radius: 0.3rem;
     border: none;
     margin-bottom: 1vw;;
@@ -119,7 +119,7 @@ body {
 .i {
     position: absolute;
     left: 4%;
-    top: 35%;
+    top: 45%;
     transform: translateY(-50%);
     color: #aaa;
    
@@ -142,7 +142,11 @@ body {
     padding: 0.5vw 2vw;
     font-size: 2vw;
     cursor: pointer;
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-left:2rem;
+}
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
 .registrar{
     margin-top: 0.5vw;

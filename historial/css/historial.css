@@ -156,8 +156,9 @@ body {
 
   }
   .carton-imagen {
-    width: 50px; /* Tamaño de los cartones */
+    width: 60px; /* Tamaño de los cartones */
     height: auto; /* Mantiene la proporción */
+    cursor: pointer;
   }
 
 

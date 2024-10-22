@@ -1,3 +1,38 @@
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 30vh;
+    width: 4vw;
+    margin-left: 85vw;
+    margin-top: 0.5vw;
+    position: absolute;
+    z-index: 10;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambio de fondo al pasar el mouse */
+}
+.icon i, .icon span {
+    font-size: 30px;
+    color: black;
+}
+
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
@@ -80,7 +115,6 @@ body {
     width: 18vw;
     height: 18vw;
     opacity: 0.6;
-
 }
 
 .cuadro {
@@ -98,7 +132,7 @@ body {
 
 .enviar{
     font-family: "Kavoon", serif;
-    background-color: rgb(178, 227, 85);
+    background-color: #C0E780;
     border-radius: 1.2rem;
     border: none;
     margin-top: 2%;
@@ -106,6 +140,9 @@ body {
     font-size: 2vw;
     cursor: pointer;    
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7)
+}
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
 .unirme{
     padding: 0.5vw 3.2vw;
