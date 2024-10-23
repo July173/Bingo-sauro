@@ -34,11 +34,11 @@ body {
     height: 100vh;
 }
 .icon{
-    width: 10vw;
-    height: 10vw;
+    width: 5vw;
+    height: 5vw;
     position: absolute;
-    left: -6vw;
-    top: 10vw;
+    left: -2vw;
+    top: 7vw;
 }
     
 
@@ -179,7 +179,6 @@ body {
         height: 47vw;
        margin-top: -6vw;
        margin-bottom: -5vw;
-     
 
     }
     #contenedor{
@@ -190,6 +189,15 @@ body {
         height: 80%;   
        
     }
+
+    .icon{
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        left: -6vw;
+        top: 10vw;
+    }
+
     .titulo-contenedor{
         font-size: 8vw;
     }
