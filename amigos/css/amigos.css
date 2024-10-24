@@ -124,7 +124,14 @@ body {
    
 
 }
-
+.icon{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: -2vw;
+    top: 6vw;
+}
+    
 .invitarAmigo{
     font-family: "Kavoon", serif;
     background-color: rgb(149, 247, 110);
@@ -200,6 +207,8 @@ body {
     text-align: center;
     font-weight: bold;
   }
+
+
 @media (orientation:portrait) {
 
     .logo {
@@ -208,21 +217,33 @@ body {
        margin-top: -8vw;
        margin-bottom: -7vw;
      
-
     }
     #contenedor{
         width: 100%;
     }
+
     .cuadro{
         width: 100%;
         height: 80%;   
         z-index: 10;
        
     }
+
     .titulo-contenedor{
         font-size: 5vw;
 
     }
+
+    .icon{
+        width: 3vw;
+        height: 3vw;
+        position: absolute;
+        left: -9vw;
+        top: 7vw;
+    }
+}
+        
+
 
     .hojas{
        position: absolute;
@@ -245,6 +266,6 @@ body {
        margin-top: -17vw;
 
     }
-}
 
-    
+
+   
