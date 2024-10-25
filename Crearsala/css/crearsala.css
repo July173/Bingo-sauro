@@ -1,7 +1,7 @@
 body {
   margin: 0;
   /*elimina cualquier espacio o margen externo alrededor del elemento*/
-  background-image: url("../../../Generales/img/fondo.jpeg");
+  background-image: url("../../Generales/img/fondo.jpeg");
   position: fixed;
   /*hace que el elemento esté "fijo" respecto al viewport */
   width: 100%;
@@ -77,7 +77,7 @@ body {
 }
 
 .logo {
-  background-image: url(../../../Generales/img/logo.png);
+  background-image: url(../../Generales/img/logo.png);
   background-repeat: no-repeat;
   background-position: 0px;
   background-size: 100%;
