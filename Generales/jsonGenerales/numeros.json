@@ -3,14 +3,14 @@
       {
         "id": 1,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
+        "tipo": "B",
         "locked": false,
         "alt": "carton 1"
       },
       {
         "id": 2,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
+        "tipo": "B",
         "locked": false,
         "alt": "carton 1"
       },
@@ -18,7 +18,7 @@
       {
         "id": 3,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
+        "tipo": "B",
         "locked": false,
         "alt": "carton 1"
       },

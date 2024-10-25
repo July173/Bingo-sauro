@@ -1,9 +1,9 @@
 document.getElementById('redirigirPerfil').addEventListener('click', function(){
     window.location = "/Bingo-sauro/perfil/editarAvatar.html";
 });
-// // nueva pantalla de compra
-// window.onload = function() {
-//     const avatarInfo = JSON.parse(localStorage.getItem('selectedAvatarInfo'));
+// nueva pantalla de compra
+window.onload = function() {
+    // const avatarInfo = JSON.parse(localStorage.getItem('selectedAvatar'));
 
 //     if (avatarInfo) {
 //         const avatarContainer = document.querySelector('.ContenedorAvatar');
@@ -26,11 +26,22 @@ document.getElementById('redirigirPerfil').addEventListener('click', function(){
 const selectedAvatar = JSON.parse(localStorage.getItem('selectedAvatar'));
 
 if (selectedAvatar) {
-  const avatarContainer = document.querySelector('contenedorAvatar');
+  const avatarContainer = document.querySelector('ContenedorAvatar');
   const precioContainer = document.querySelector('precio');
+
+    // Mostrar la imagen del avatar
+        const avatarImg = document.createElement('img');
+        avatarImg.src = selectedAvatar.src;
+        avatarImg.alt = "Avatar a comprar";
+        avatarImg.style.width = '10vw'; // Ajusta según sea necesario
+        avatarImg.style.height = '10vw'; // Ajusta según sea necesario
+        // avatarContainer.appendChild(avatarImg);
+
+        // Mostrar el precio del avatar
+        precioContainer.textContent = `Precio: $${selectedAvatar.price}`;
   
-  avatarContainer.innerHTML = `<img src="${selectedAvatar.src}" alt="${selectedAvatar.alt}" class="avatar-imagen">`;
-  precioContainer.innerHTML = `<span class="precio-texto">Precio: ${selectedAvatar.price}</span>`;
+  // avatarContainer.innerHTML = `<img src="${selectedAvatar.src}" alt="${selectedAvatar.alt}" class="avatar-imagen">`;
+  // precioContainer.innerHTML = `<span class="precio-texto">Precio: ${selectedAvatar.price}</span>`;
 
   // Manejar el clic en el botón de comprar
   document.getElementById('comprarBtn').addEventListener('click', () => {
@@ -41,4 +52,5 @@ if (selectedAvatar) {
       window.location = '/Bingo-sauro/perfil/perfil.html';
     }
   });
-
+}
+}
