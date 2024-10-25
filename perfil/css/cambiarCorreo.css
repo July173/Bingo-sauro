@@ -84,7 +84,7 @@ body {
     position: absolute;
     margin-left: 31vw;
     width: 2.3vw;
-    margin-top: 0.5vw;
+    margin-top: 0.6vw;
     cursor: pointer;
   }
 .logo {
@@ -152,7 +152,7 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: 6rem;
+    margin-left: 6vw;
 }
 .enviar:hover{
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
@@ -164,6 +164,9 @@ body {
     width: 30vw;
     margin-top: 0.5vw;
     margin-left: 1vw;
+}
+.needs-validation{
+    margin-top: 2vw;
 }
 /*modificaciones para una pantalla vertical*/
 @media (orientation:portrait) {
@@ -188,10 +191,11 @@ body {
     .titulo{
         font-size: 6vw;
         margin-top: 4vw;
+   
     }
     .cerrar {
         width: 8vw;
-        margin-left: 80vw;
+        margin-left: 85vw;
       } 
   
     .password{
@@ -205,7 +209,8 @@ body {
     .input{
         width: 60vw;
         height: 9vw;
-        margin-bottom: 4vw;;
+        margin-bottom: 4vw;
+
     
     }
    
@@ -222,10 +227,10 @@ body {
         font-size: 6vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
+        margin-left: 14vw;
 
     }
   
-
     .hojas{
        position: absolute;
        width: 70vw;
@@ -233,6 +238,7 @@ body {
        margin-top: -93vw;
        opacity: 0.6;
     }
+
     .hojas-2{  position: absolute;
         width: 70vw;
         height: 80vw;
@@ -246,5 +252,8 @@ body {
        margin-right: 20vw;
        margin-top: -17vw;
 
+    }
+    .email {
+        font-size: 4.5vw;
     }
 }
