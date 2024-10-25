@@ -161,10 +161,12 @@ body {
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
 .Tienecuenta{
-    margin-top: 0.5vw;
+    margin-top: vw;
     margin-bottom: 1vw;
     cursor: pointer;
-    margin-left: 2rem;
+    margin-left: -1vw;
+    font-size: 2vw;
+    
 }
 .contenedor-2 {
     display: flex; /* Activa Flexbox */
@@ -248,6 +250,7 @@ body {
     top: 10px;
     right: 10px;
 }
+
 .Bingo{
     background-repeat: no-repeat;
     background-position: 0px;
@@ -256,6 +259,9 @@ body {
     margin-top: 0.5vw;
     margin-left: 1vw;
 }
+
+
+
 /*modificaciones para una pantalla vertical*/
 @media (orientation:portrait) {
 
@@ -310,33 +316,38 @@ body {
         width: 5vw;
         height: 5vw;
     }
-  
+
     .enviar{
        
         padding: 2vw 6vw;
         font-size: 6vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
+        margin-top: 6vw;
+        margin-left: -3vw; /* Cambiado a 0 para alinear a la izquierda */
 
     }
+
     .Tienecuenta{
       font-size: 4vw;
     }
+
     .textoATC{
         font-size: 3.8vw;
     }
+
     .contenedor-2 {
         margin-bottom: -6vw;
         margin-left: 5vw;
         margin-top: 0.7vw;
     }
+
     .cuadroAceptar {
         width:3.6vw; 
         height: 3.6vw;
         margin-right: 1vw;
     }
     
-  
     .hojas{
        position: absolute;
        width: 70vw;
@@ -344,6 +355,7 @@ body {
        margin-top: -93vw;
        opacity: 0.6;
     }
+
     .hojas-2{  position: absolute;
         width: 70vw;
         height: 80vw;
@@ -358,6 +370,11 @@ body {
        margin-top: -17vw;
 
     }
+    .Tienecuenta{
+         margin-left: 2vw; /* Cambiado a 0 para alinear a la izquierda */
+    }
+    .textoATC {
+        margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
+    }
 }
 
-    
