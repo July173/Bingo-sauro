@@ -7,6 +7,7 @@
     <title>Comprar Avatar</title>
     <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
     <link rel="stylesheet" href="../perfil/css/comprarAvatar.css">
     <link rel="stylesheet" href="../Generales/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
@@ -27,6 +28,12 @@
         </div>
 
         <div class="cuadro">
+
+            <div id='monedas'></div>
+            <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+          <script>
+            cargarContenido();
+        </script>
             <img id="redirigirPerfil" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
             <div class="ContenedorAvatar"></div>
             <div class="precio"></div>
