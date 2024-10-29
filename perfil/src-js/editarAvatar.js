@@ -2,84 +2,6 @@ document.getElementById('redirigirPerfil').addEventListener('click', function(){
     window.location = "/Bingo-sauro/perfil/perfil.html";
 });
 
-// // Cargar avatares desde el JSON
-// let selectedAvatar = null;
-// let clickCount = 0;
-
-// // Cargar avatar desde localStorage al iniciar
-// function loadAvatarFromLocalStorage() {
-//   const savedAvatar = localStorage.getItem('selectedAvatar');
-//   if (savedAvatar) {
-//     const avatarDisplay = document.querySelector('.avatarvoid');
-//     avatarDisplay.style.backgroundImage = `url(${savedAvatar})`;
-//     avatarDisplay.style.backgroundSize = 'cover';
-//     avatarDisplay.style.width = '10vw';
-//     avatarDisplay.style.height = '10vw';
-//     selectedAvatar = savedAvatar;
-//   }
-// }
-
-// window.onload = loadAvatarFromLocalStorage;
-
-// // Cargar avatares desde el JSON
-// fetch('../perfil/avatarComprar.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     const avatarList = document.getElementById('avatarList');
-    
-//     data.avatars.forEach(avatar => {
-//       // Crear un contenedor para cada avatar
-//       const avatarDiv = document.createElement('div');
-//       avatarDiv.classList.add('imagen-con-icono');
-//       avatarDiv.innerHTML = `<img src="${avatar.src}" alt="${avatar.alt}" class="${avatar.locked ? 'avatar comprar' : 'avatar comprado'}">`;
-
-//       avatarDiv.addEventListener('click', () => selectAvatar(avatar));
-
-//       avatarList.appendChild(avatarDiv);
-//     });
-//   });
-
-// // Función para manejar la selección de avatar
-// function selectAvatar(avatar) {
-//   const avatarDisplay = document.querySelector('.avatarvoid');
-//   const selectBtn = document.getElementById('selectBtn');
-//   clickCount++;
-
-//   // Si se hace clic dos veces sobre el mismo avatar
-//   if (selectedAvatar === avatar.src && clickCount === 2) {
-//     avatarDisplay.style.backgroundImage = 'url(/Generales/img/usuario.png)'; // Volver a la imagen de usuario original
-//     selectBtn.textContent = 'Elegir Avatar';
-//     selectedAvatar = null;
-//     localStorage.removeItem('selectedAvatar');
-//     clickCount = 0; // Reiniciar contador
-//     return;
-//   }
-
-//   // Mostrar la imagen del avatar seleccionado
-//   avatarDisplay.style.backgroundImage = `url(${avatar.src})`;
-//   avatarDisplay.style.backgroundSize = 'cover';
-//   avatarDisplay.style.position = 'relative';
-
-//   // Cambiar el texto del botón según si está bloqueado o no
-//   if (avatar.locked) {
-//     selectBtn.textContent = 'Comprar este avatar';
-//   } else {
-//     selectBtn.textContent = 'Seleccionar Avatar';
-//   }
-
-//   // Guardar avatar seleccionado en localStorage al presionar el botón
-//   selectBtn.onclick = () => {
-//     if (!avatar.locked) {
-//       selectedAvatar = avatar.src;
-//       avatarDisplay.innerHTML = ''; // Elimina el candado si había uno
-//       localStorage.setItem('selectedAvatar', avatar.src); // Guardar en localStorage
-//       selectBtn.textContent = 'Avatar Seleccionado';
-//     } else {
-//       // Redirigir a la página de compra si está bloqueado
-//       window.location = '/Bingo-sauro/perfil/comprarAvatar.html';
-//     }
-//   };
-// }
 
 // Cargar avatar desde localStorage al iniciar
 function loadAvatarFromLocalStorage() {
@@ -96,9 +18,15 @@ function loadAvatarFromLocalStorage() {
 
 window.onload = loadAvatarFromLocalStorage;
 
-fetch('../perfil/avatarComprar.json')
-.then(response => response.json())
+fetch('./src-js/avatarComprar.json')
+.then(response =>  {
+  if (!response.ok) {
+      throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
 .then(data => {
+  console.log(data);
   const avatarList = document.getElementById('avatarList');
   
   data.avatars.forEach(avatar => {
@@ -123,6 +51,9 @@ fetch('../perfil/avatarComprar.json')
 
     avatarList.appendChild(avatarDiv);
   });
+})
+.catch(error => {
+  console.error('Hubo un problema con la solicitud fetch:', error);
 });
 
 // Función para manejar la selección de avatar

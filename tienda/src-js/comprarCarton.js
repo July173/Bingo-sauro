@@ -1,23 +1,37 @@
-// Recuperar el cartón seleccionado desde el localStorage
-const selectedCarton = JSON.parse(localStorage.getItem('selectedCarton'));
+window.onload = function () {
+  const selectedCarton = JSON.parse(localStorage.getItem('selectedCarton'));
 
-// Verificar si existe un cartón seleccionado y mostrarlo
-if (selectedCarton) {
-  const contenedorSeleccionado = document.getElementById('contenedorCartonSeleccionado');
+  if (selectedCarton) {
+      const cartonContainer = document.querySelector('.contenedorCartonSeleccionado');
+      const precioContainer = document.querySelector('.precio');
 
-  // Crear un contenedor para mostrar el cartón seleccionado
-  const cartonSeleccionadoDiv = document.createElement('div');
-  cartonSeleccionadoDiv.classList.add('carton-item-seleccionado');
-  cartonSeleccionadoDiv.innerHTML = `
-    <div class="imagen-seleccionada-contenedor">
-      <img src="${selectedCarton.src}" alt="${selectedCarton.alt}" class="carton-seleccionado">
-    </div>
-    <div class="precio-seleccionado-contenedor">
-      <p>${selectedCarton.price}</p>
-    </div>
-  `;
+      // Verifica si los contenedores se están seleccionando correctamente
+      if (!cartonContainer || !precioContainer) {
+          console.error('No se encontraron los contenedores en el DOM.');
+          return;
+      }
 
-  contenedorSeleccionado.appendChild(cartonSeleccionadoDiv);
-} else {
-  console.error('No se encontró ningún cartón seleccionado.');
-}
+      // Crear un elemento img para mostrar el cartón
+      const cartonImg = document.createElement('img');
+      cartonImg.src = selectedCarton.src;
+      cartonImg.alt = "Cartón a comprar";
+      cartonImg.style.marginTop = "5vw";
+      cartonImg.style.width = '18vw'; // Ajusta según sea necesario
+      cartonImg.style.height = '18vw'; // Ajusta según sea necesario
+      cartonImg.style.borderRadius = '2rem'; // Redondear bordes
+      cartonContainer.appendChild(cartonImg);
+
+      // Mostrar el precio del cartón
+      precioContainer.textContent = ` ${selectedCarton.price}`; 
+      const priceIcon = document.createElement('img');
+      priceIcon.src = '../Generales/img/moneditas.png'; 
+      priceIcon.style.width = '4vw'; // Ajusta el tamaño según sea necesario
+      priceIcon.style.height = '4vw'; // Ajusta el tamaño según sea necesario
+      priceIcon.style.marginLeft = '5px'; // Espaciado opcional
+
+      // Agregar la imagen al contenedor de precio
+      precioContainer.appendChild(priceIcon);
+  } else {
+      console.error('No se encontró ningún cartón seleccionado en localStorage.');
+  }
+};

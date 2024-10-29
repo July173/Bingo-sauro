@@ -75,18 +75,6 @@ body {
 }
 
 
-.avatar-imagen   {
-    width: 25vw;
-    height: 25vw;
-    background-color: rgb(228, 226, 226);
-    margin-top: 1.5vw;
-    margin-bottom: 1vw;
-    border-radius: 1rem;
-    background-size: contain; /* Ajusta la imagen sin deformarla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-}
-
 .comprarAvatar{
     font-family: "Kavoon", serif;
     background-color: rgb(149, 247, 110);
@@ -103,13 +91,12 @@ body {
 .precio-texto, .precio{
     font-family: "Kavoon", serif;
     background-color: #FFF48D;
-    border-radius: 1rem;
+    border-radius: 2rem;
     border: none;
-    width: 12vw;
+    width: 9vw;
     height: auto;
     text-align: center;
-    font-size: 2vw;
-    cursor: pointer;
+    font-size: 3vw;
     color: black;
     margin-top: 0.5vw;
     margin-bottom: -0rem;
