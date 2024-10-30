@@ -249,6 +249,10 @@ body {
   margin-left: -2vw;
 }
 
+.icon {
+  margin-top: 10vw;
+  margin-left: 25vw;
+}
 
 @media (orientation: portrait) {
   .logo {
@@ -293,5 +297,12 @@ body {
     height: 80vw;
     margin-right: 20vw;
     margin-top: -17vw;
+  }
+  .icon {
+     margin-top:  -35vw;
+     margin-left: -8vw;
+     height: 5;
+     width: 5;
+     
   }
 }
