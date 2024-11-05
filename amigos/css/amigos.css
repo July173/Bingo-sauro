@@ -17,7 +17,7 @@ body {
 }
 
 #contenedor {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,9 +101,10 @@ body {
 .text-trofeo{
     font-family: "Kavoon", serif;
     font-size: 1.8vw;
-    margin-top: 1.5vw;
-    margin-left: 13vw;
-    
+    margin-top: 2.5vw;
+    margin-left: 1.0vw;
+
+   
 }
 .texto-contenedor{
     display: flex;
@@ -165,41 +166,7 @@ body {
     color: #fff;
     cursor: pointer;
   }
- 
   
-  .avatar-imagen {
-    width: 6vw; /* Ajusta el tamaño de la imagen del avatar */
-    height: auto; /* Mantiene la proporción */
-    margin-left: 1vw;
-    margin-right: 3vw;
-    border-radius: 1rem;
-  }
-  .nombre-amigo {
-    font-size: 2rem; /* Tamaño de la fuente */
-    margin-top: 2vw; 
- 
-  }
-  .ranking {
-    display: flex;
-    align-items: center;
-    margin-left: 20vw ;
-    
-  }
-  
-  .counter {
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  .counter img {
-    width: 5vw; /* Tamaño del ícono del trofeo */
-    height: auto;
-  }
-  .numero{
-    font-size: 3.5vw;
-    margin-right: -0.5vw;
-  }
   .mensaje-vacio {
     color: rgb(151, 151, 151);
     font-size: 1.5rem;
