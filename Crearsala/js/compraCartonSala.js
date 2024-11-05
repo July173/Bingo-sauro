@@ -1,36 +1,37 @@
-// Función para obtener el valor del parámetro 'id' de la URL
-function getCartonIdFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('id');
-}
+window.onload = function () {
+  const selectedCarton = JSON.parse(localStorage.getItem('selectedCarton'));
 
-// Obtener el ID del cartón desde la URL
-const cartonId = getCartonIdFromUrl();
+  if (selectedCarton) {
+      const cartonContainer = document.querySelector('.contenedorCartonSeleccionado');
+      const precioContainer = document.querySelector('.precio');
 
-// Cargar el archivo JSON y mostrar los detalles del cartón
-fetch('/Crearsala/inicio/cartonesSala.json')
-  .then(response => response.json())
-  .then(data => {
-    // Buscar el cartón correspondiente al ID
-    const carton = data.cartones.find(c => c.id === parseInt(cartonId));
+      // Verifica si los contenedores se están seleccionando correctamente
+      if (!cartonContainer || !precioContainer) {
+          console.error('No se encontraron los contenedores en el DOM.');
+          return;
+      }
 
-    if (carton) {
-      // Mostrar los detalles del cartón en la página
-      const detallesCartonDiv = document.getElementById('detallesCarton');
+      // Crear un elemento img para mostrar el cartón
+      const cartonImg = document.createElement('img');
+      cartonImg.src = selectedCarton.src;
+      cartonImg.alt = "Cartón a comprar";
+      cartonImg.style.marginTop = "5vw";
+      cartonImg.style.width = '18vw'; // Ajusta según sea necesario
+      cartonImg.style.height = '18vw'; // Ajusta según sea necesario
+      cartonImg.style.borderRadius = '2rem'; // Redondear bordes
+      cartonContainer.appendChild(cartonImg);
 
-      detallesCartonDiv.innerHTML = `
-        <div class="imagen-contenedor">
-          <img src="${carton.src}" alt="${carton.alt}" class="imagen-carton">
-        </div>
-        <div class="precio-contenedor">
-          <p>Precio: $${carton.price}</p>
-        </div>
-        <div class="boton-contenedor">
-          <button class="boton-comprar">Comprar</button>
-        </div>
-      `;
-    } else {
-      console.error('Cartón no encontrado');
-    }
-  })
-  .catch(error => console.error('Error al cargar los detalles del cartón', error));
+      // Mostrar el precio del cartón
+      precioContainer.textContent = ` ${selectedCarton.price}`; 
+      const priceIcon = document.createElement('img');
+      priceIcon.src = '../Generales/img/moneditas.png'; 
+      priceIcon.style.width = '4vw'; // Ajusta el tamaño según sea necesario
+      priceIcon.style.height = '4vw'; // Ajusta el tamaño según sea necesario
+      priceIcon.style.marginLeft = '5px'; // Espaciado opcional
+
+      // Agregar la imagen al contenedor de precio
+      precioContainer.appendChild(priceIcon);
+  } else {
+      console.error('No se encontró ningún cartón seleccionado en localStorage.');
+  }
+};

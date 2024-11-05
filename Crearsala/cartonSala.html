@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil</title>
+  <title>Comprar carton</title>
 
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="css/comprarCarton.css">
-  <script src="/Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
 </head>
@@ -39,21 +39,19 @@
 
 
       <div id='monedas'></div>
-      <script src="/Generales/monedas/js/conexion-monedas.js"></script>
+      <script src="../Generales/monedas/js/conexion-monedas.js"></script>
       <script>
         cargarContenido();
       </script>
 
+      <a href="/Bingo-sauro/Crearsala/crearsala.html">
+        <img src="../Generales/img/cerrar.png" alt="cierre" class="cerrar">
+      </a>
 
-      <div class="carton">
-        <div id="detallesCarton">
-          <!-- Los detalles del cartón (imagen, precio y botón) se agregarán aquí dinámicamente -->
-           <div></div>
-          <div class="imagen-contenedor"></div>
-          <div class="precio-contenedor"></div>
-          <div class="boton-contenedor"></div>
-        </div>
-      </div>
+      <div class="contenedorCartonSeleccionado"></div>
+      <div class="precio"></div>
+      <div id="comprar" class="comprarAvatar">Comprar carton</div>
+
 
 
     </div>
@@ -64,8 +62,9 @@
       Tu navegador no soporta la reproducción de audio.
     </audio>
 
-    <script src="/Crearsala/inicio/js/compraCartonSala.js"></script>
-    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    
+    <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../Crearsala/js/compraCartonSala.js"></script>
 </body>
 
 </html>

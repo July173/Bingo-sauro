@@ -2,52 +2,65 @@
   "cartones": [
     {
       "id": 1,
-      "src": "../../Generales/img/CARTON.1..PNG",
+      "src": "../Generales/img/CARTON.1..PNG",
       "price": "25",
       "locked": false,
-      "alt": "carton 1"
+      "alt": "carton 1",
+      "tipo": "lleno"
     },
     {
       "id": 2,
-      "src": "../../Generales/img/CARTON2.PNG",
+      "src": "../Generales/img/CARTON2.PNG",
       "price": "30",
       "locked": false,
-      "alt": "carton 2"
+      "alt": "carton 2",
+      "tipo": "L"
+
     },
     {
       "id": 3,
-      "src": "../../Generales/img/CARTON3.PNG",
+      "src": "../Generales/img/CARTON3.PNG",
       "price": "40",
       "locked": false,
-      "alt": "carton 3"
+      "alt": "carton 3",
+      "tipo": "X"
+
     },
     {
       "id": 4,
-      "src": "../../Generales/img/CARTON.4.PNG",
+      "src": "../Generales/img/CARTON.4.PNG",
       "price": "45",
       "locked": true,
-      "alt": "carton 4"
+      "alt": "carton 4",
+      "tipo": "O"
+
     },
     {
       "id": 5,
-      "src": "../../Generales/img/CARTON_5.PNG",
+      "src": "../Generales/img/CARTON_5.PNG",
       "price": "45",
       "locked": true,
-      "alt": "carton 5"
+      "alt": "carton 5",
+      "tipo": "E"
+
     },
     {
       "id": 6,
-      "src": "../../Generales/img/CARTON.6..PNG",
+      "src": "../Generales/img/CARTON.6..PNG",
       "price": "45",
       "locked": true,
-      "alt": "carton 6"
+      "alt": "carton 6",
+      "tipo": "U"
+
     },
     {
       "id": 7,
-      "src": "../../Generales/img/CARTON.7..PNG",
+      "src": "../Generales/img/CARTON.7..PNG",
       "price": "45",
       "locked": true,
-      "alt": "carton 7"
+      "alt": "carton 7",
+      "tipo": "N"
+
     }
   ]
 }
