@@ -1,5 +1,5 @@
 [
-    {
+      {
         "fecha": "2024-09-01",
         "carton": "../Generales/img/cartoncitoHistorial.png",
         "resultado": "Ganó"
@@ -30,4 +30,4 @@
         "resultado": "Ganó"
       }
     
-  ]
+]
