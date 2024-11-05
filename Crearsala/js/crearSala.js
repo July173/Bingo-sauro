@@ -76,5 +76,17 @@ botones.forEach(boton => {
 
     // Actualiza la variable con el botón seleccionado
     botonSeleccionado = boton.classList.contains('botonJugador') ? 'jugador' : 'administrador';
+
+    verjugadorapostar();
   });
 });
+
+const verjugadorapostar = () => {
+  const contenedorJugador = document.querySelector('.contenedorapostarjugador');
+  
+  if (botonSeleccionado === 'jugador') {
+      contenedorJugador.classList.remove('hidden'); // Muestra los divs
+  } else {
+      contenedorJugador.classList.add('hidden'); // Oculta los divs
+  }
+};
