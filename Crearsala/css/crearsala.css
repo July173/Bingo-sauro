@@ -177,6 +177,12 @@ body {
   border:none;
 }
 
+.botonJugador:hover ,.activo {
+  background-color: rgb(116, 255, 116);
+}
+.botonAdministrador:hover, .activo {
+  background-color: rgb(116, 255, 116);
+}
 .botonAdministrador {
  width: auto;
 

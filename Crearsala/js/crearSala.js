@@ -62,3 +62,19 @@ fetch('../../../Bingo-sauro/Crearsala/cartonesSala.json')
   })
   .catch(error => console.error('Error al cargar los cartones:', error));
 
+ // Variable para almacenar el botón seleccionado
+let botonSeleccionado = null;
+
+const botones = document.querySelectorAll('.botonJugador, .botonAdministrador');
+
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    // Elimina la clase 'activo' de todos los botones
+    botones.forEach(b => b.classList.remove('activo'));
+    // Agrega la clase 'activo' solo al botón clicado
+    boton.classList.add('activo');
+
+    // Actualiza la variable con el botón seleccionado
+    botonSeleccionado = boton.classList.contains('botonJugador') ? 'jugador' : 'administrador';
+  });
+});
