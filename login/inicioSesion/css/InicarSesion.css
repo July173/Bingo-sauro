@@ -144,6 +144,8 @@ body {
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
     margin-left:4rem;
+    display: block; /* Asegura que el botón ocupe toda la línea y se centre */
+    text-align: center;
 }
 .enviar:hover{
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
@@ -208,7 +210,7 @@ body {
     }
     .password{
         font-size: 5vw ;
-        margin-right: 32vw;
+        margin-right: 32 vw;
         margin-bottom: 0.5vw;
 
     }    
@@ -228,14 +230,15 @@ body {
     }
   
     .enviar{
-       margin-top: -0.1vw;
+        margin: -0.2vw auto 1vw auto; /* Centra el botón horizontalmente */
         padding: 1vw 8vw;
-        font-size: 6vw;
-        margin-bottom: 1vw;
+        font-size: 5vw;
         border-radius: 0.8rem;
-        z-index: 10;
-
+        display: block; /* Asegura que el botón ocupe toda la línea y se centre */
+        text-align: center;
+       
     }
+    
     .registrar{
       font-size: 4vw;
       z-index: 10;
