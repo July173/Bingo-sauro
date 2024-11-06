@@ -1,10 +1,10 @@
 <?php
 // Configuración de la conexión
-$host = "localhost";
-$dbname = "proyecto-bingo-sauro";
-$user = "root";  // Cambiado de "pma" a "root"
-$password = "";  // Asegúrate de que esta sea la contraseña correcta para el usuario root
-$puerto = "3305";
+$host = "bwbup4izlyky4o7s56rs-mysql.services.clever-cloud.com";
+$dbname = "bwbup4izlyky4o7s56rs";
+$user = "ueux843bklbuh0jv";  // usuario root
+$password = "kJ2Xvm2k1YPrn9gEHKK2";  // contraseña de el usuario root
+$puerto = "3306";
 
 try {
     // Crear la conexión PDO

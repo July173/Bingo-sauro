@@ -46,7 +46,6 @@
         </dotlottie-player>
       </div>
 
-
       <form id="redirigirIniciar" action="php/registro.php" method="post" class="needs-validation" novalidate>
 
         <label for="Nombre novalidationCustom01" class="Name fw-bold form-label">Nombre</label>
@@ -75,7 +74,7 @@
         <label for="password" class="password fw-bold form-label">Contraseña</label>
         <div class=" input-container position-relative">
           <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png"
-            alt="lock" />
+            alt="lock"/>
           <input type="password" class="input fs-5 form-control" id="password" name="password" required minlength="8"
             placeholder="********">
           <i class="fa-solid fa-eye-slash" id="togglePassword"
@@ -87,12 +86,12 @@
 
         <div class="contenedor-2">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <input class="form-check-input" type="checkbox" value="1" id="invalidCheck" required>
             <label class=" textoATC  form-check-label" for="invalidCheck" data-bs-toggle="modal"
               data-bs-target="#staticBackdrop">
-              Aceptar terminos y condiciones
+              Aceptar términos y condiciones
             </label>
-
+            <input type="hidden" name="terminos_condiciones" id="terminos_condiciones" value="0">
           </div>
         </div>
 
@@ -167,12 +166,18 @@
 
       <script src="../../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
       <script src="src-js/registro.js"></script>
-      <!-- <script src="../inicioSesion/src-js/validation.js"></script> -->
+      <script src="../registro/src-js/validation.js"></script>
       <script src="../../Generales/jsGenerales/VerContrasña.js"></script>
 
       <script>
         document.getElementById('redirigir').addEventListener('click', function () {
           window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html"; // Asegúrate de que esta ruta sea correcta
+        });
+      </script>
+
+      <script>
+        document.getElementById('invalidCheck').addEventListener('change', function() {
+          document.getElementById('terminos_condiciones').value = this.checked ? '1' : '0';
         });
       </script>
 </body>

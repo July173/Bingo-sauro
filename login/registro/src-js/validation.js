@@ -28,6 +28,19 @@
           password.classList.remove('is-invalid');
       }
 
+      // Validación de campos vacíos
+      const email = document.getElementById('email');
+      if (!email.value || !username.value || !password.value) {
+          email.classList.add('is-invalid');
+          username.classList.add('is-invalid');
+          password.classList.add('is-invalid');
+          valid = false;
+      } else {
+          email.classList.remove('is-invalid');
+          username.classList.remove('is-invalid');
+          password.classList.remove('is-invalid');
+      }
+
       return valid;
   };
 
