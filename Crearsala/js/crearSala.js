@@ -90,3 +90,5 @@ const verjugadorapostar = () => {
       contenedorJugador.classList.add('hidden'); // Oculta los divs
   }
 };
+
+

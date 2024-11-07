@@ -76,6 +76,7 @@
 
 }
 
+
 .logo {
   background-image: url(../../Generales/img/logo.png);
   background-repeat: no-repeat;
@@ -129,6 +130,7 @@
   font-size: 3.5vw;
   margin-left: 15vw;
   margin-top: -2vw;
+  display: flex;
 }
 
 
