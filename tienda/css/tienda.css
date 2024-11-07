@@ -85,7 +85,7 @@ body {
 .contenedor-gris {
   background-color: #ffffffe3;
   border-radius: 0.5rem;
-  width: 60vw;
+  width: 70vw;
   height: 30vw;
   overflow-y: auto;
   z-index: 10;
@@ -128,17 +128,20 @@ body {
 }
 
 .sub {
-  margin-left: 10vw;
+  margin-left: 22vw;
+  
 }
-
+.subtitulos2{
+  margin-left: -5vw;
+}
 #contenedorCartones {
   display: flex;
 }
 
 .carton {
-  margin: 1vw;
+  margin: 2vw;
   width: 12vw;
-  height: 12vw;
+  height: 13vw;
 }
 
 .comprado-carton {
@@ -159,14 +162,14 @@ body {
   font-family: "Kavoon", serif;
   margin-left: 3vw;
   margin-top: 0.5vw;
-  font-size: 2vw;
+  font-size: 3.5vw;
   border-radius: 8px;
   background-color: #f9e79f;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   border: none;
-  width: 8vw;
-  height: 3vw;
+  width: 10vw;
+  height: 5vw;
 }
 
 .price-button::after{
@@ -270,6 +273,10 @@ body {
   margin-top: -5vw;
 }
 
+.icon {
+  margin-top: -1vw;
+  margin-left: -2vw;
+}
 
 @media (orientation: portrait) {
   .logo {
@@ -315,4 +322,30 @@ body {
     margin-right: 20vw;
     margin-top: -17vw;
   }
+  .icon {
+     margin-top: -29vw;
+     margin-left: -11vw;
+ 
+  }
+  .contenedor-gris {
+    background-color: #ffffffe3;
+    border-radius: 0.5rem;
+    width: 70vw;
+    height: 100vw;
+    overflow-y: auto;
+    z-index: 10;
+    overflow-x: hidden;
+  }
+  /*recompensa diaria*/
+.reward-container {
+  width: 120px;
+  height: 190px;
+  background-color: #fff9e8;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 4px;
+}
 }

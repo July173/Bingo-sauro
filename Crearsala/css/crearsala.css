@@ -1,4 +1,4 @@
-body {
+  body {
   margin: 0;
   /*elimina cualquier espacio o margen externo alrededor del elemento*/
   background-image: url("../../Generales/img/fondo.jpeg");
@@ -95,6 +95,10 @@ body {
   width: 9vw;
   height: 9vw;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 #contenedorCartonesSala {
@@ -115,13 +119,13 @@ body {
 }
 
 .codigo {
-  font-size: 3vw;
-  margin-left: 3vw;
+  font-size: 6.0vw;
+  margin-left: 13.0vw;
 }
 
 .comoLlenar {
-  font-size: 2vw;
-  margin-left: 24vw;
+  font-size: 3.5vw;
+  margin-left: 15vw;
   margin-top: -2vw;
 }
 
@@ -251,6 +255,10 @@ body {
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
   display: flex;
   margin-top: 100px;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
 }
 
 
@@ -261,6 +269,63 @@ body {
     width: 30%;
     height: 70vw;
   }
+
+  .codigo {
+    font-size: 5.5vw;
+    margin-left: 13.0vw;
+  }
+  
+  .cantidadMaximaMonedas {
+    width: 16vw;
+    font-size: 2.1vw; /* Aumenta el tamaño de la letra */
+    line-height: 1.0; /* Ajusta el espacio entre líneas si es necesario */
+    margin-bottom: -1rem; /* Añade un margen inferior para mayor separación */
+}
+   .cantidadMaximaCartones {
+   width: 18vw;
+   font-size: 1.9vw; /* Aumenta el tamaño de la letra */
+   line-height: 0.9; /* Ajusta el espacio entre líneas si es necesario */
+   margin-bottom: -1rem; /* Añade un margen inferior para mayor separación */
+}
+    .numMonedasPorJugador {
+  margin-left: 1.5vw;
+  width: 10vw;
+  background-color: white;
+  font-size: 1.5vw;
+  border-radius: 1vw;
+  margin-top: 1rem; /* Añade margen superior para separar de elementos anteriores */
+  margin-bottom: 0.0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
+}
+
+.numCartonesPorJugador {
+  margin-left: 1.5vw;
+  width: 10vw;
+  background-color: white;
+  font-size: 1.5vw;
+  border-radius: 1vw;
+  margin-top: 1rem; /* Añade margen superior para separar de elementos anteriores */
+  margin-bottom: 0.0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
+}
+.botonJugador {
+  background-color: #efe7c4;
+  width: 14vw;
+  border-radius: 1vw;
+  margin-left: 0.0vw;
+  margin-bottom: 1vw;
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  -o-border-radius: 1vw;
+}
+.botonAdministrador {
+  background-color: #efe7c4;
+  width: 14vw;
+  border-radius: 1vw;
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  -o-border-radius: 1vw;
+}
 
   .cuadro {
     width: 100%;
@@ -314,8 +379,8 @@ body {
 
 @media (orientation: portrait) {
   .logo {
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
   }
 
   .titulo {
@@ -334,9 +399,9 @@ body {
 /* Mejoras en pantallas muy pequeñas o móviles */
 @media (max-width: 480px) {
   .contenedor-gris {
-    width: 100%;
+    width: 80%;
     /* Ajusta el ancho para ocupar toda la pantalla */
-    font-size: 3vw;
+    font-size: 100vw;
     /* Texto más grande para móviles */
   }
 
