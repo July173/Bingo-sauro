@@ -73,14 +73,3 @@
       }, false);
   });
 })();
-
-const form = document.querySelector('form'); // Tu formulario
-const errorAnimation = document.getElementById('error-animation');
-
-form.addEventListener('submit', function (event) {
-    if (!form.checkValidity()) { // Si el formulario no es válido
-        event.preventDefault(); // Evita el envío del formulario
-        errorAnimation.style.display = 'block'; // Muestra la animación
-        
-    }
-});
