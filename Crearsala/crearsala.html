@@ -67,7 +67,8 @@
 
         <div class="comoLlenar">
           <p class="codigo " >codigo:</p>
-          <div class="codigo " id="codigoPartida"></div>
+          <div class="codigo " id="codigoPartida" name="codigoPartida"></div>
+          <div class="codigo " id="obtenerCodigo" name="obtenerCodigo"></div>
           <script>
             // Recuperar el código desde localStorage
             const codigo = localStorage.getItem('codigoPartida');
@@ -75,8 +76,11 @@
             // Mostrar el código en la página
             if (codigo) {
                 document.getElementById('codigoPartida').textContent = codigo;
+                console.log(codigo )
             } else {
                 document.getElementById('codigoPartida').textContent = 'Código no disponible';
+                console.log(codigo)
+                console.log("no se llama el codigo")
             }
         </script>
         </div>
@@ -135,6 +139,9 @@
   <script src="src-js/moviemientos.js"></script>
   <script src="js/CodigoPartida.js"></script>
   <script src="js/crearSala.js"></script>
+
+<script src="js/obtener_codigo.js"></script>
+
   <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
