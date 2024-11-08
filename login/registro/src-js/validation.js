@@ -9,7 +9,7 @@
       let valid = true;
 
       // Validación del nombre de usuario (mínimo 5 caracteres y no ofensivo)
-      const username = document.getElementById('username');
+      const username = document.getElementById('primer_nombre');
       const offensiveWords = ['maldicion', 'palabraofensiva', 'putas', 'locas', 'perras']; // Lista de palabras ofensivas
       if (username.value.length < 5 || offensiveWords.some(word => username.value.toLowerCase().includes(word))) {
           username.classList.add('is-invalid');
