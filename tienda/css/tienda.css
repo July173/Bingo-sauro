@@ -126,9 +126,6 @@ body {
     
 }
 
-
-
-
 @media (orientation:portrait) {
 
     .logo {
@@ -172,6 +169,22 @@ body {
        margin-top: -17vw;
 
     }
+    
+    .dino{
+    background-image: url(/Generales/img/dinovolteado.png);
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    margin-left: 55vw;
+    margin-top: -1vw;
+    
 }
 
-    
+.dia{
+    margin-left: 62vw;
+    margin-top: -15vw;
+}
+
+} 
