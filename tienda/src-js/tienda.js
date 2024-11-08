@@ -1,5 +1,5 @@
 // Cargar cartones desde el JSON
-fetch('../tienda/comprarCarton.json')
+fetch('../../../Bingo-sauro/tienda/php/carton.php')
   .then(response => response.json())
   .then(data => {
     const contenedorCartones = document.getElementById('contenedorCartones');

@@ -2,287 +2,247 @@
     "bolas": [
       {
         "id": 1,
-        "src": "../Generales/img/carton-naranja.png",
+        "src": "../img-numeros/numeroUno.png",
         "tipo": "B",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 2,
-        "src": "../Generales/img/carton-naranja.png",
+        "src": "../img-numeros/numeroDos.png",
         "tipo": "B",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
      
       {
         "id": 3,
-        "src": "../Generales/img/carton-naranja.png",
+        "src": "../img-numeros/numeroTres.png",
         "tipo": "B",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
      
       {
         "id": 4,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroCuatro.png",
+        "tipo": "B",
+        "locked": false
       },
      
       {
         "id": 5,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroCinco.png",
+        "tipo": "B",
+        "locked": false
       },
      
       {
         "id": 6,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroSeis.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 7,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroSiete.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 8,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroOcho.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 9,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroNueve.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 10,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDiez.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 11,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numero",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 12,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDoce.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 13,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroTrece.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 14,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroCatorce.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 15,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroQuince.png",
+        "tipo": "B",
+        "locked": false
       },
       {
         "id": 16,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDieciseis.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 17,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDiecisiete.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 18,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDieciocho.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 19,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDiecinueve.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 20,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../Generales/img-numeros/numeroVeinte.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 21,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDoce.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 22,
-        "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "src": "../img-numeros/numeroDoce.png",
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 23,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 24,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 25,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 26,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 27,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 28,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 29,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 30,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 31,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 32,
         "src": "../Generales/img/carton-naranja.png",
-        "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "tipo": "I",
+        "locked": false
       },
       {
         "id": 33,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 34,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 35,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 36,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 37,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 38,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 39,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 40,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 41,
@@ -295,218 +255,187 @@
         "id": 42,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 43,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 44,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 45,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 46,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 47,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 48,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 49,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 50,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 51,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 52,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 53,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 54,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 55,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 56,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 57,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 58,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 59,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 60,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 61,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 62,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 63,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 64,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 65,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 66,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 67,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 68,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 69,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 70,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 71,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 72,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 73,
@@ -519,15 +448,13 @@
         "id": 74,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       },
       {
         "id": 75,
         "src": "../Generales/img/carton-naranja.png",
         "tipo": "25",
-        "locked": false,
-        "alt": "carton 1"
+        "locked": false
       }
      
      

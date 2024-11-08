@@ -58,77 +58,16 @@
         40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
       </div>
 
-      <div class="titulo"></div>
-      <div class="logo"></div>
 
 
       <div class="contenedor-gris">
-        <h6>Eres el creador de la sala </h6>
-
-        <div class="comoLlenar">
-          <p class="codigo " >codigo:</p>
-          <div class="codigo " id="codigoPartida" name="codigoPartida"></div>
-          <div class="codigo " id="obtenerCodigo" name="obtenerCodigo"></div>
-          <script>
-            // Recuperar el código desde localStorage
-            const codigo = localStorage.getItem('codigoPartida');
-    
-            // Mostrar el código en la página
-            if (codigo) {
-                document.getElementById('codigoPartida').textContent = codigo;
-                console.log(codigo )
-            } else {
-                document.getElementById('codigoPartida').textContent = 'Código no disponible';
-                console.log(codigo)
-                console.log("no se llama el codigo")
-            }
-        </script>
+        <h6>Tu eres el administrador  </h6>
+ <div class="cuadroAmigos"></div>
+       <div class="ruleta">
+        <img src="" alt="">
+        <button class="girar">Girar bombo</button>
+       </div>
         </div>
-
-        <p class="comoLlenar">¿Cómo se llenara el carton?</p>
-        <div class="contenedorDelContenedorDeCartonesSala">
-          <div id="contenedorCartonesSala"></div>
-        </div>
-
-        <div class="cuadroGrisOscuro ">
-
-          <div class="contenedorCantidadMaximaDeCartones">
-            <p class="cantidadMaximaCartones">Ingresar la catidad maxima de cartones por jugador</p>
-            <input class="numCartonesPorJugador " placeholder="#">
-            </input>
-          </div>
-
-          <div class="botonesEleccion">
-            <button class="botonJugador">jugador</button>
-            <button class="botonAdministrador">administrador</button>
-          </div>
-
-          <div class="contenedorCantidadMaximaDeMonedas">
-            <p class="cantidadMaximaMonedas">Dino-monedas minimas que se deben apostar</p>
-            <input class="numMonedasPorJugador" placeholder="#">
-            </input>
-          </div>
-        </div>
-
-        <div class="cuadrodeabajo">
-          <h3>Jugadores</h3>
-          <!-- Contenedor de jugadores -->
-          <div id="contenedorJugadores" class="row">
-            <!-- Jugadores se añadirán aquí dinámicamente -->
-          </div>
-        </div>
-
-        <div class="contenedorapostarjugador hidden">
-          <p class="Ndinomontexto">¿Cuantas Dino-monedas apostaras?</p>
-          <input class="numMonedas" placeholder="#">
-          </input>
-        </div>
-
-        <button class="iniciar">Iniciar partida</button>
-      </div>
-
-    </div>
-  </div>
 
   <!-- Audio que queremos controlar -->
   <audio id="audioPlayer" loop>
@@ -139,9 +78,6 @@
   <script src="src-js/moviemientos.js"></script>
   <script src="js/CodigoPartida.js"></script>
   <script src="js/crearSala.js"></script>
-
-<script src="js/obtener_codigo.js"></script>
-
   <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
