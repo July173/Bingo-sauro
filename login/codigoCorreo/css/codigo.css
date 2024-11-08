@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url("/Generales/img/fondo.jpeg");
+    background-image: url("../../../Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -31,10 +31,10 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
+   z-index: 1;
   
 }
 
@@ -42,7 +42,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
@@ -56,7 +55,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
@@ -72,10 +70,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
     
 }
 .logo {
-    background-image: url("/Generales/img/logo.png");
+    background-image: url("../../../Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
@@ -91,10 +90,10 @@ body {
     align-items: center;
 }
 .input{
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 4.5vw;
+    height: 4.5vw;
     background-color: rgb(255, 254, 207);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: none;
     margin-bottom: 1vw;
     margin: 1vw;
@@ -113,10 +112,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .cuadro-texto{
     font-family: "Kavoon", serif;
     background-color: rgb(255, 254, 207);
-    border-radius: 1.2rem;
+    border-radius: 1.1rem;
     padding: 2vw 1.5vw;
     width: 26vw;
-    height: 8vw;
+    height: 20vw;
     margin-top: 2vw;
     margin-bottom: 1vw;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
@@ -132,6 +131,9 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+}
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
 .cerrar {
     position: absolute;
@@ -167,7 +169,7 @@ input[type="number"]::-webkit-inner-spin-button {
     .cuadro{
         width: 100%;
         height: 80%;   
-       
+       z-index: 10;
     }
     .cerrar {
         width: 10vw;

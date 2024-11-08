@@ -1,49 +1,51 @@
-const historialDiv = document.getElementById('historialJugar');  
-  
-  
-  
-  // Simulamos cargar el archivo JSON
-  const historialData = [
-    { fecha: '2024-09-01', carton: '/Generales/img/cartoncitoHistorial.png', resultado: 'Ganó' },
-    { fecha: '2024-09-02', carton: '/Generales/img/cartoncitoHistorial.png', resultado: 'Perdió' }
-    ,
-    { fecha: '2024-09-02', carton: '/Generales/img/cartoncitoHistorial.png', resultado: 'Perdió' }
-    ,
-    { fecha: '2024-09-02', carton: '/Generales/img/cartoncitoHistorial.png', resultado: 'Ganó' }
-    ,
-    { fecha: '2024-09-02', carton: '/Generales/img/cartoncitoHistorial.png', resultado: 'PGanó' }
-    ,
-    { fecha: '2024-09-02', carton: '/Generales/img/cartoncitoHistorial.png', resultado: 'Perdió' }
-      
-  ];
+const historialDiv = document.getElementById('historialJugar');
+const url = '../../../Bingo-sauro/historial/php/partidas.php'; // Ruta actualizada para acceder al PHP
 
-  // Referencia al contenedor donde se mostrará el historial
-  function mostrarHistorial(historial) {
+function cargarHistorial() {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(historialData => {
+            mostrarHistorial(historialData);
+        })
+        .catch(error => {
+            console.error('Error al cargar el historial js:', error);
+            historialDiv.innerHTML = '<p class="mensaje-vacio">No se pudo cargar el historial.</p>';
+        });
+}
+
+function mostrarHistorial(historial) {
+    console.log("se inicia a mostrar el historial");
+    console.log("historial", historial);
     historialDiv.innerHTML = ''; // Limpiar contenido previo
     if (historial.length === 0) {
-      historialDiv.innerHTML = '<p class="mensaje-vacio">No hay partidas jugadas.</p>';
-      return;
+        historialDiv.innerHTML = '<p class="mensaje-vacio">No hay partidas jugadas.</p>';
+        return;
     }
-  
+
     historial.forEach(partida => {
-      const partidaDiv = document.createElement('div');
-      partidaDiv.classList.add('partida');
-  
-      // Verificar el resultado y usar el ícono correspondiente
-      const iconoResultado = partida.resultado === 'Ganó' ? '✔' : '✖';
-      const resultadoClass = partida.resultado === 'Ganó' ? 'ganado' : 'perdido';
-  
-      // Insertar imagen del cartón en lugar de texto
-      const cartonImagen = `<img src="${partida.carton}" alt="Cartón" class="carton-imagen">`;
-  
-      partidaDiv.innerHTML = `
-        <span>${partida.fecha}</span>
-        <span>${cartonImagen}</span>
-        <span class="${resultadoClass}">${iconoResultado}</span>
-      `;
-  
-      historialDiv.appendChild(partidaDiv);
+        const partidaDiv = document.createElement('div');
+        partidaDiv.classList.add('partida');
+
+        const iconoResultado = partida.resultado === 'Ganó' ? '✔' : '✖';
+        const resultadoClass = partida.resultado === 'Ganó' ? 'ganado' : 'perdido';
+        const cartonImagen = `<img src="${partida.carton}" alt="Cartón" class="carton-imagen">`;
+
+        partidaDiv.innerHTML = `
+            <span style="border-bottom: 4px solid #000;">
+                <i class="fa-solid fa-calendar-days"></i> ${partida.fecha}
+            </span>
+            <span>${cartonImagen}</span>
+            <span class="${resultadoClass}">${iconoResultado}</span>
+        `;
+
+        historialDiv.appendChild(partidaDiv);
     });
-  }
-  // Llamada a la función con los datos simulados
-  mostrarHistorial(historialData);  
+}
+
+// Llamada a la función para cargar el historial
+cargarHistorial();

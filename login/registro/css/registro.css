@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url("/Generales/img/fondo.jpeg");
+    background-image: url("../../../Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -31,7 +31,7 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
+    z-index: 1;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
@@ -42,7 +42,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
@@ -56,13 +55,23 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
     z-index: 1;
     transform: rotate(90deg);
     margin-bottom: 20vw;
+}
+.cuadro {
+    background-color: rgba(14, 78, 62, 0.5);
+    width: 32vw;
+    height: 46.3vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:0cap;
+    z-index: 10;
 }
 
 .titulo {
@@ -73,7 +82,7 @@ body {
 }
 
 .logo {
-    background-image: url("/Generales/img/logo.png");
+    background-image: url("../../../Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
@@ -117,13 +126,15 @@ body {
 }
 
 .i {
-    position: absolute;
+    position:absolute;
     left: 4%;
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%);
     color: #aaa;
    
 }
+
+
 
 .input-container input {
     padding: 4% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
@@ -142,12 +153,20 @@ body {
     padding: 0.5vw 2vw;
     font-size: 2vw;
     cursor: pointer;
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    
+    
+}
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
 .Tienecuenta{
-    margin-top: 0.5vw;
+    margin-top: vw;
     margin-bottom: 1vw;
     cursor: pointer;
+    margin-left: -1vw;
+    font-size: 2vw;
+    
 }
 .contenedor-2 {
     display: flex; /* Activa Flexbox */
@@ -164,26 +183,17 @@ body {
     background-color: #e6e4e4;
     cursor: pointer;
 }
+.centrar{
+    margin-left: 3rem;
+}
 
-.cambiado{
-    background-color: rgb(86, 255, 86);
-    background-image: url("/Generales/img/aceptar.png");
-    background-size: contain; /* Ajusta la imagen sin deformarla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-}
-.cuadro {
-    background-color: rgba(14, 78, 62, 0.5);
-    width: 32vw;
-    height: 45vw;   
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   border:0cap;
-}
+
+
 .textoATC{
     cursor: pointer;
+    text-decoration: underline #b5c3ff;
+    font-style: italic;
+    color: #b5c3ff;
 }
 
 .modal-header {
@@ -230,7 +240,7 @@ body {
 }
 
 .custom-close {
-    background-image: url("/Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+    background-image: url("../../../Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
     background-size: contain;
     background-repeat: no-repeat;
     width: 3vw;
@@ -240,6 +250,7 @@ body {
     top: 10px;
     right: 10px;
 }
+
 .Bingo{
     background-repeat: no-repeat;
     background-position: 0px;
@@ -248,6 +259,9 @@ body {
     margin-top: 0.5vw;
     margin-left: 1vw;
 }
+
+
+
 /*modificaciones para una pantalla vertical*/
 @media (orientation:portrait) {
 
@@ -302,33 +316,38 @@ body {
         width: 5vw;
         height: 5vw;
     }
-  
+
     .enviar{
        
         padding: 2vw 6vw;
         font-size: 6vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
+        margin-top: 6vw;
+        margin-left: -3vw; /* Cambiado a 0 para alinear a la izquierda */
 
     }
+
     .Tienecuenta{
       font-size: 4vw;
     }
+
     .textoATC{
         font-size: 3.8vw;
     }
+
     .contenedor-2 {
         margin-bottom: -6vw;
         margin-left: 5vw;
         margin-top: 0.7vw;
     }
+
     .cuadroAceptar {
         width:3.6vw; 
         height: 3.6vw;
         margin-right: 1vw;
     }
     
-  
     .hojas{
        position: absolute;
        width: 70vw;
@@ -336,6 +355,7 @@ body {
        margin-top: -93vw;
        opacity: 0.6;
     }
+
     .hojas-2{  position: absolute;
         width: 70vw;
         height: 80vw;
@@ -350,6 +370,21 @@ body {
        margin-top: -17vw;
 
     }
+    .Tienecuenta{
+         margin-left: 2vw; /* Cambiado a 0 para alinear a la izquierda */
+    }
+    .textoATC {
+        margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
+    }
+}
+
+.error {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
     

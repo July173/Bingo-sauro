@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenido</title>
-    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="../Bienvenido/css/estilo.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
@@ -13,8 +13,6 @@
 
   <body class="container">
 
-   
-    
 
     <div id="todo">
 
@@ -73,6 +71,14 @@
 
       </div>
     </div>
+
+    <!-- Audio que queremos controlar -->
+    <audio id="audioPlayer" loop>
+      <source src="../../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script src="../../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="src-js/bienvenido.js"></script>
   </body>
 </html>

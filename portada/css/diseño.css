@@ -5,7 +5,7 @@ body {
     background-color: black; /* Color de fondo inicial */
 }
 .logo{
-    background-image: url("/Generales/img/logo.png");
+    background-image: url("../../Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/Generales/img/fondo.jpeg"); /* Imagen de fondo */
+    background-image: url(../../Generales/img/fondo.jpeg); /* Imagen de fondo */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -74,5 +74,18 @@ body {
     100% { opacity: 0; } 
 }
 
+@media (orientation:portrait) {
 
+    .dino1{
+        width: 4rem;
+        height: 4rem;
+        margin-left: 0;
+    }
+    .logo{
+        width: 100%;
+        height: 100%;
+        margin-top: -15vw;
+        
+    }
+}
 

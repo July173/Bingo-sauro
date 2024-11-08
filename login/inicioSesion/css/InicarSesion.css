@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url("/Generales/img/fondo.jpeg");
+    background-image: url("../../../Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -31,7 +31,7 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
+    z-index: 1;
    margin-right: 70vw;
    position: absolute;
    margin-top: -16vw;
@@ -42,7 +42,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
    margin-right: 72vw;
    position: absolute;
     /* 50% de transparencia */
@@ -56,7 +55,6 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
     margin-left:66vw;
    position: absolute;
    margin-top: 12vw;
@@ -64,7 +62,17 @@ body {
     transform: rotate(90deg);
     margin-bottom: 20vw;
 }
-
+.cuadro {
+    background-color: rgba(14, 78, 62, 0.5);
+    width: 32vw;
+    height: 45vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    
+}
 .titulo {
     color: rgb(0, 255, 0);
     font-family: "Kavoon", serif;
@@ -73,7 +81,7 @@ body {
 }
 
 .logo {
-    background-image: url("/Generales/img/logo.png");
+    background-image: url("../../../Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
@@ -98,7 +106,7 @@ body {
 .input{
     width: 23vw;
     height: 4vw;
-    background-color: rgb(255, 254, 207);
+    background-color: #FEFFD3;
     border-radius: 0.3rem;
     border: none;
     margin-bottom: 1vw;;
@@ -111,7 +119,7 @@ body {
 .i {
     position: absolute;
     left: 4%;
-    top: 35%;
+    top: 45%;
     transform: translateY(-50%);
     color: #aaa;
    
@@ -134,7 +142,13 @@ body {
     padding: 0.5vw 2vw;
     font-size: 2vw;
     cursor: pointer;
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-left:4rem;
+    display: block; /* Asegura que el botón ocupe toda la línea y se centre */
+    text-align: center;
+}
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
 .registrar{
     margin-top: 0.5vw;
@@ -144,16 +158,7 @@ body {
     font-weight: 600;
 }
 
-.cuadro {
-    background-color: rgba(14, 78, 62, 0.5);
-    width: 32vw;
-    height: 45vw;   
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
+
 .textoOC{
     cursor: pointer;
     font-size: 1.2vw;
@@ -189,7 +194,8 @@ body {
     }
     .cuadro{
         width: 100%;
-        height: 80%;   
+        height: 80%;  
+        z-index: 10; 
        
     }
     .titulo{
@@ -204,7 +210,7 @@ body {
     }
     .password{
         font-size: 5vw ;
-        margin-right: 32vw;
+        margin-right: 32 vw;
         margin-bottom: 0.5vw;
 
     }    
@@ -224,18 +230,22 @@ body {
     }
   
     .enviar{
-       margin-top: -0.1vw;
+        margin: -0.2vw auto 1vw auto; /* Centra el botón horizontalmente */
         padding: 1vw 8vw;
-        font-size: 6vw;
-        margin-bottom: 1vw;
+        font-size: 5vw;
         border-radius: 0.8rem;
-
+        display: block; /* Asegura que el botón ocupe toda la línea y se centre */
+        text-align: center;
+       
     }
+    
     .registrar{
       font-size: 4vw;
+      z-index: 10;
     }
     .textoOC{
         font-size: 3.8vw;
+        z-index: 10;
         
     }
    

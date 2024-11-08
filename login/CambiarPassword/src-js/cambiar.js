@@ -1,6 +1,4 @@
 document.getElementById('redirigirCodigo').addEventListener('click', function(){
-    window.location.href = "/login/codigoCorreo/contracodigo.html"
+    window.location.href = "/Bingo-sauro/login/codigoCorreo/contracodigo.html"
 });
-document.getElementById('redirigirIniciar').addEventListener('click', function(){
-    window.location.href = "/login/inicioSesion/InicioSesion.html"
-});
+

@@ -1,0 +1,25 @@
+.icon {
+    position: absolute;
+    margin-left: 82vw;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Cambio de fondo al pasar el mouse */
+}
+.icon i,
+.icon span {
+    font-size: 30px;
+    color: black;
+}
