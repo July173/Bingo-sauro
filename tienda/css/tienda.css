@@ -73,7 +73,15 @@ body {
   align-items: center;
   z-index: 10;
 }
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
 
+.comprar {
+  opacity: 0.4;
+  position: relative;
+}
 .contenedor-gris {
   background-color: #ffffffe3;
   border-radius: 0.5rem;
@@ -136,6 +144,19 @@ body {
   height: 13vw;
 }
 
+.comprado-carton {
+  font-family: "Kavoon", serif;
+ margin-left: 0.5vw;
+  margin-top: 0.8vw;
+  font-size: 1.4vw;
+  border-radius: 8px;
+  background-color: #f9e79f;
+  border-radius: 15px;
+  padding: 0px 10px 0px 10px;
+  border: none;
+  width: 13vw;
+  height: auto;
+}
 .price-button {
   position: relative;
   font-family: "Kavoon", serif;
@@ -248,8 +269,8 @@ body {
 
 .img-dino {
   width: 45vw;
-  margin-top: 1vw;
   margin-left: -2vw;
+  margin-top: -5vw;
 }
 
 .icon {

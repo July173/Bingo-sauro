@@ -5,7 +5,7 @@ let amigoAEliminar = null; // Variable para guardar el amigo a eliminar
 
 // Función para cargar los amigos desde PHP
 function cargarAmigos() {
-  fetch('/amigos/json/amigos.php') // Ajusta la ruta según tu estructura de carpetas
+  fetch('../../../Bingo-sauro/amigos/json/amigos.php') // Ajusta la ruta según tu estructura de carpetas
     .then(response => {
       if (!response.ok) {
         throw new Error('Error en la respuesta de la red');
