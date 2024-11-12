@@ -265,4 +265,20 @@ body {
         margin-top: -17vw;
 
     }
+    .icon {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        margin-left: -7vw;
+        margin-top: 1vw;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
 }

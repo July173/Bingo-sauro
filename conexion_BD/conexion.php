@@ -1,5 +1,4 @@
 <?php
-
     class Conexion{
         private $servidor;
         private $usuario;
@@ -19,20 +18,15 @@
 
         public function conectar(){
             try {
-                $dsn = "pgsql:host=$this->servidor;port=$this->puerto;dbname=$this->baseDatos";
+                $dsn = "mysql:host=$this->servidor;port=$this->puerto;dbname=$this->baseDatos";
                 $this->pdo = new PDO($dsn, $this->usuario, $this->password, [
-                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Mostrar errores
-                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // Establecer el modo de fetch a asociativo
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                 ]);
-            
-                echo "Conexión exitosa a PostgreSQL";
-            
+                return $this->pdo;
             } catch (PDOException $e) {
-                echo 'Error en la conexión: ' . $e->getMessage();
+                throw new Exception('Error en la conexión: ' . $e->getMessage());
             }
-
-           return $this->pdo;
         }
-
     }
 ?>

@@ -46,30 +46,62 @@
 
   // Loop sobre los formularios y aplicar validación personalizada y la de Bootstrap
   Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
+      form.addEventListener('submit', async event => {
+          event.preventDefault();
+          
           // Validación nativa de Bootstrap
           if (!form.checkValidity()) {
-              event.preventDefault();
               event.stopPropagation();
-          } 
+              form.classList.add('was-validated');
+              return;
+          }
 
           // Validación personalizada
           const customValid = validateCustom(form);
-
           if (!customValid) {
-              event.preventDefault();
               event.stopPropagation();
+              form.classList.add('was-validated');
+              return;
           }
 
-          // Si el formulario es válido y tiene el id "redirigirIniciar", redirige
-          if (form.checkValidity() && customValid && form.id === 'redirigirIniciar') {
-              event.preventDefault(); // Evita la acción por defecto (no recargar la página)
-              setTimeout(() => {
-                  window.location = "/Bingo-sauro/login/inicioSesion/InicioSesion.html"; // Redirige después de un retraso
-              }, 1000); // Espera 1 segundo antes de redirigir
+          // Si todas las validaciones pasan, enviar datos
+          if (form.id === 'redirigirIniciar') {
+              const formData = {
+                  primer_nombre: document.getElementById('primer_nombre').value,
+                  email: document.getElementById('email').value,
+                  password: document.getElementById('password').value,
+                  terminos_condiciones: document.getElementById('terminos_condiciones').value
+              };
+
+              try {
+                  const response = await fetch('php/registro.php', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(formData)
+                  });
+
+                  const data = await response.json();
+
+                  if (data.success) {
+                      // Mostrar mensaje de éxito
+                      alert('Registro exitoso');
+                      // Redirigir después de 1 segundo
+                      setTimeout(() => {
+                        //   window.location.href = "../inicioSesion/InicioSesion.html";
+                      }, 1000);
+                  } else {
+                      // Mostrar errores
+                      alert(data.errors.join('\n'));
+                  }
+              } catch (error) {
+                  console.error('Error:', error);
+                  alert('Error al procesar el registro');
+              }
           }
 
-          form.classList.add('was-validated'); // Aplica estilos de validación de Bootstrap
+          form.classList.add('was-validated');
       }, false);
   });
 })();
