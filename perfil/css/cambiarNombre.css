@@ -32,26 +32,26 @@ body {
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
-  
-}
 
 .hojas-2 {
-    width: 33vw;
-    height: 33vw;
-    opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
-    /* 50% de transparencia */
-    z-index: 1;
-    /* Volteo horizontal */
-    transform: rotate(-150deg);
-    /* Opcional: ajusta el contenedor si es necesario */
-    margin-top: 22vw;
+  width: 33vw;
+  height: 33vw;
+  opacity: 0.8;
+  margin-right: 84vw;
+  position: absolute;
+  /* 50% de transparencia */
+  z-index: 1;
+  /* Volteo horizontal */
+  transform: rotate(-150deg);
+  /* Opcional: ajusta el contenedor si es necesario */
+  margin-top: 22vw;
 }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
