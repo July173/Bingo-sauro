@@ -32,26 +32,25 @@ body {
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-
-  
-}
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
 .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -65,7 +64,7 @@ body {
 }
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
-    width: 32vw;
+    width: 40vw;
     height: 37vw;   
     position: relative;
     display: flex;
@@ -182,7 +181,7 @@ body {
     .cuadro{
         width: 100%;
         height: 70%;   
-        z-index: 10;
+        z-index: 1;
        
     }
     .titulo{
@@ -195,17 +194,17 @@ body {
       } 
   
     .password{
-        font-size: 5vw ;
-        margin-right: 32vw;
-        margin-bottom: 0.5vw;
-        margin-left: 34vw;
-        width: 60vw;
+        font-size: 4vw;
+        margin-right: 4vw;
+        margin-bottom: 1vw;
+        margin-left: 37vw;
+        width: 10vw;
     }    
    
     .input{
-        width: 60vw;
-        height: 9vw;
-        margin-bottom: 4vw;;
+        width: 30vw;
+        height: 12vw;
+        margin-bottom: 4vw;
     
     }
    
@@ -220,12 +219,12 @@ body {
        
         padding: 2vw 6vw;
         font-size: 6vw;
-        margin-bottom: 1vw;
+        margin-bottom: 10vw;
         border-radius: 0.8rem;
+        margin-left: 15vw;
 
     }
   
-
     .hojas{
        position: absolute;
        width: 70vw;
@@ -247,4 +246,5 @@ body {
        margin-top: -17vw;
 
     }
+
 }
