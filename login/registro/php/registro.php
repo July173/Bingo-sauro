@@ -1,37 +1,51 @@
 <?php
+header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
 require_once '../../../conexion_BD/conexion.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $correo = $_POST['email'];
-    $nombre = $_POST['username'];
-    $contrasena = $_POST['password'];
-    $terminos_condiciones = isset($_POST['terminos_condiciones']) ? $_POST['terminos_condiciones'] : '0';
+class registrar {
+    private $pdo;
+    private $response;
 
-    // Verificar si hay campos vacíos
-    if (empty($correo) || empty($nombre) || empty($contrasena)) {
-        echo "Error: Todos los campos son obligatorios."; // Mensaje de error
-        return; // Detener la ejecución si hay campos vacíos
+    public function __construct() {
+        $conexion = new Conexion();
+        $this->pdo = $conexion->conectar();
+        $this->response = ['success' => false, 'errors' => []];
     }
 
-    try {
-        // Verificar si el correo ya existe
-        $stmt = $pdo->prepare("SELECT COUNT(*) FROM credenciales WHERE correo = ?");
-        $stmt->execute([$correo]);
-        $existe = $stmt->fetchColumn();
+    public function registrarUsuario($datos) {
+        try {
+            // Validar que el correo no exista
+            $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM usuario WHERE correo = ?");
+            $stmt->execute([$datos['email']]);
+            if ($stmt->fetchColumn() > 0) {
+                $this->response['errors'][] = "El correo ya está registrado";
+                return $this->response;
+            }
 
-        if ($existe > 0) {
-            echo "<div class='error'>Error: El correo ya está registrado.</div>"; // Mensaje de error debajo del campo
-        } else {
-            $stmt = $pdo->prepare("INSERT INTO credenciales (correo, nombre, contrasena, terminos_condiciones) VALUES (?, ?, ?, ?)");
-            $stmt->execute([$correo, $nombre, $contrasena, $terminos_condiciones]);
-            
-            echo "Usuario registrado con éxito";
-            header("Location: http://localhost/Bingo-sauro/login/inicioSesion/InicioSesion.html");
+            // Hashear la contraseña
+            $passwordHash = password_hash($datos['password'], PASSWORD_DEFAULT);
+
+            // Insertar usuario
+            $stmt = $this->pdo->prepare("INSERT INTO usuario (primer_nombre, correo, contrasena) VALUES (?, ?, ?)");
+            $stmt->execute([$datos['primer_nombre'], $datos['email'], $passwordHash]);
+
+            $this->response['success'] = true;
+            $this->response['message'] = "Usuario registrado exitosamente";
+        } catch (PDOException $e) {
+            $this->response['errors'][] = "Error al registrar: " . $e->getMessage();
         }
-    } catch(PDOException $e) {
-        echo "Error al registrar el usuario: " . $e->getMessage();
+
+        return $this->response;
     }
-} else {
-    echo "Método de solicitud no válido";
+}
+
+// Procesar la petición AJAX
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $datos = json_decode(file_get_contents('php://input'), true);
+    $registro = new registrar();
+    $resultado = $registro->registrarUsuario($datos);
+    
+    echo json_encode($resultado);
+    exit;
 }
 ?>

@@ -1,15 +1,18 @@
-document.getElementById('submitBtn').addEventListener('click', function () {
-    const username = document.getElementById('username').value;
+document.getElementById('submitBtn').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevenir el comportamiento por defecto del botón
+
+    const primer_nombre = document.getElementById('primer_nombre').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    if (username === '' || email === '' || password === '') {
-        alert('Por favor, completa todos los campos antes de enviar.');
+    if (primer_nombre === '' || email === '' || password === '') {
+        const email = document.getElementById('email');
+        
         return;
     }
 
     const data = {
-        username: username,
+        primer_nombre: primer_nombre,
         email: email,
         password: password
     };
@@ -20,18 +23,28 @@ document.getElementById('submitBtn').addEventListener('click', function () {
     fetch('php/registro.php', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json' // Asegúrate de que el Content-Type sea JSON
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data) // Convierte el objeto 'data' a JSON
+        body: JSON.stringify(data)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
     .then(data => {
         console.log("Respuesta del servidor:", data);
-        if (data.message) {
+        if (data.success) {
             alert(data.message);
+            // Redirigir al usuario después de un registro exitoso
+            window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html";
+        } else {
+            alert(data.errors ? data.errors.join('\n') : 'Error en el registro');
         }
     })
     .catch((error) => {
         console.error('Error:', error);
+        alert('Error al procesar el registro');
     });
 });

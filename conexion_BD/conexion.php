@@ -1,23 +1,32 @@
 <?php
-// Configuración de la conexión
-$host = "bwbup4izlyky4o7s56rs-mysql.services.clever-cloud.com";
-$dbname = "bwbup4izlyky4o7s56rs";
-$user = "ueux843bklbuh0jv";  // usuario root
-$password = "kJ2Xvm2k1YPrn9gEHKK2";  // contraseña de el usuario root
-$puerto = "3306";
+    class Conexion{
+        private $servidor;
+        private $usuario;
+        private $password;
+        private $puerto;
+        private $baseDatos;
+        private $pdo;
 
-try {
-    // Crear la conexión PDO
-    $dsn = "mysql:host=$host;port=$puerto;dbname=$dbname;charset=utf8mb4";
-    $pdo = new PDO($dsn, $user, $password);
-    
-    // Configurar el modo de error de PDO para que lance excepciones
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        public function __construct(){
+            $this->servidor="bwbup4izlyky4o7s56rs-mysql.services.clever-cloud.com";
+            $this->usuario="ueux843bklbuh0jv";
+            $this->password="kJ2Xvm2k1YPrn9gEHKK2";
+            $this->puerto="3306";
+            $this->baseDatos="bwbup4izlyky4o7s56rs";
+            $this->pdo=$this->conectar();
+        }
 
-    // La conexión se ha establecido correctamente
-    // echo "Conexión exitosa a la base de datos.";
-
-} catch(PDOException $e) {
-    // echo "Error en la conexión: " . $e->getMessage();
-}
+        public function conectar(){
+            try {
+                $dsn = "mysql:host=$this->servidor;port=$this->puerto;dbname=$this->baseDatos";
+                $this->pdo = new PDO($dsn, $this->usuario, $this->password, [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                ]);
+                return $this->pdo;
+            } catch (PDOException $e) {
+                throw new Exception('Error en la conexión: ' . $e->getMessage());
+            }
+        }
+    }
 ?>
