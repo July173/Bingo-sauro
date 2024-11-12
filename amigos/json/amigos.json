@@ -1,27 +1,26 @@
 [
-    {
-      "id": 1,
-      "imagen": "../Generales/img/avatar3.jpeg",
-      "nombre": "Juan",
-      "cantidad_premios": 5
-    },
-    {
-      "id": 2,
-      "imagen": "../Generales/img/avatarCuatro.jpeg",
-      "nombre": "María",
-      "cantidad_premios": 3
-    },
-    {
-      "id": 3,
-      "imagen": "../Generales/img/avatarDosGafas.jpeg",
-      "nombre": "Carlos",
-      "cantidad_premios": 7
-    },
-    {
-      "id": 4,
-      "imagen": "../Generales/img/avatarUnoRojo.jpeg",
-      "nombre": "Lucía",
-      "cantidad_premios": 2
-    }
-  ]
-  
+  {
+    "id": 1,
+    "imagen": "../Generales/img/avatar3.jpeg",
+    "nombre": "Juan",
+    "cantidad_premios": 5
+  },
+  {
+    "id": 2,
+    "imagen": "../Generales/img/avatarCuatro.jpeg",
+    "nombre": "María",
+    "cantidad_premios": 3
+  },
+  {
+    "id": 3,
+    "imagen": "../Generales/img/avatarDosGafas.jpeg",
+    "nombre": "Carlos",
+    "cantidad_premios": 7
+  },
+  {
+    "id": 4,
+    "imagen": "../Generales/img/avatarUnoRojo.jpeg",
+    "nombre": "Lucía",
+    "cantidad_premios": 2
+  }
+]

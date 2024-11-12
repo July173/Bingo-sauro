@@ -65,7 +65,6 @@ function eliminarAmigo() {
     amigoAEliminar = null; // Reiniciar la variable
   }
 }
-
 // Asignar el evento al botón de confirmación de eliminación
 document.getElementById('confirmarEliminacion').addEventListener('click', () => {
   eliminarAmigo();
@@ -73,5 +72,5 @@ document.getElementById('confirmarEliminacion').addEventListener('click', () => 
   confirmModal.hide(); // Cerrar el modal de confirmación
 });
 
-// Llamada a la función para cargar amigos desde PHP
+// Llamada a la función para cargar amigos desde PHP porque asi debe de ser
 cargarAmigos();

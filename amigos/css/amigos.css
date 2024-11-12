@@ -151,8 +151,6 @@ body {
     background-size: 100%;
     width: 22vw;
     height: 22vw;
-
-   
 }
 .amigo {
     padding: 10px;
@@ -165,8 +163,7 @@ body {
     color: #fff;
     cursor: pointer;
   }
- 
-  
+
   .avatar-imagen {
     width: 6vw; /* Ajusta el tamaño de la imagen del avatar */
     height: auto; /* Mantiene la proporción */
