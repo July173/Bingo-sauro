@@ -31,18 +31,18 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-   z-index: 1;
+    z-index: 1;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
   
-}
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    margin-right: 72vw;
+    margin-right: 84vw;
     position: absolute;
     /* 50% de transparencia */
     z-index: 1;
@@ -50,7 +50,8 @@ body {
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+  
 .hojas-3 {
     width: 33vw;
     height: 33vw;
