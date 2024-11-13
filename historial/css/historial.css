@@ -46,27 +46,27 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 10;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
+    z-index: 1;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
   
-}
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 99;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -175,10 +175,10 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 32vw;
-        height: 47vw;
-       margin-top: -6vw;
-       margin-bottom: -5vw;
+        width: 20vw;
+        height: 20vw;
+       margin-top: 10vw;
+       margin-bottom: 5vw;
 
     }
     #contenedor{
