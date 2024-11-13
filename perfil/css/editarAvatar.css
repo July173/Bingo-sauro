@@ -115,10 +115,11 @@ body {
  
 }
 .cerrar{
-   margin-left: 85vw;
-   margin-top: 1vw;
+   margin-left: 80vw;
+   margin-top: -6vw;
    cursor: pointer;
 }
+
 #avatarList{
     display: flex;
     margin-left: 1.5vw;
@@ -196,4 +197,10 @@ body {
        margin-top: -17vw;
 
     }
+    .separador{
+        margin-left: 20vw;
+    }
+    .counter{
+        margin-left: 2vw;
+    } 
 }
