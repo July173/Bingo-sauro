@@ -1,40 +1,51 @@
-document.getElementById('redirigirHome').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    // Obtener los valores de los campos
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-    // Llamada a la función para validar las credenciales en la base de datos
-    validarCredenciales(email, password);
-});
+    // Validar que los campos no estén vacíos
+    if (!email || !password) {
+        alert('Por favor, complete todos los campos');
+        return;
+    }
 
-function validarCredenciales(email, password) {
-    fetch('../php/ingreso.php', { // Cambia esta URL a la de tu API
+    console.log('Datos a enviar:', { email, password }); // Para depuración
+
+    const formData = new URLSearchParams();
+    formData.append('correo', email);
+    formData.append('contrasena', password);
+
+    fetch('php/ingreso.php', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: new URLSearchParams({
-            'correo': email,
-            'contrasena': password
-        })
+        body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
     .then(data => {
-        if (data.validas) { // Suponiendo que tu API devuelve un objeto con una propiedad 'validas'
-            // Redirigir a la página de inicio si las credenciales son válidas
-            window.location.href = "../inicioSesion/InicioSesion.html"; // Cambia esto a la URL de tu página de inicio
+        console.log('Respuesta del servidor:', data); // Para depuración
+
+        if (data.validas) {
+            window.location.href = "/Bingo-sauro/home/home.html";
         } else {
-            // Mostrar un mensaje de error si las credenciales son incorrectas
             document.getElementById('error-animation').style.display = 'block';
+            alert(data.mensaje || 'Error en la validación');
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        // Manejo de errores en caso de fallo en la llamada a la API
         document.getElementById('error-animation').style.display = 'block';
+        alert('Error al intentar iniciar sesión');
     });
-}
+});
 
 document.getElementById('redirigirRegistro').addEventListener('click', function(){
     window.location.href = "/Bingo-sauro/login/registro/registro.html"
