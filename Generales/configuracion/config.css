@@ -20,31 +20,31 @@ body, html {
     justify-content: center;
     align-items: center;
 }
+
 .hojas {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-  
-}
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 1;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -82,17 +82,16 @@ body, html {
 }
 .close-btn {
     cursor: pointer;
+    margin-left: -2vw;
 }
 
 .dinochibi{
     background-image: url("../../Generales/img/dinosaurio-cute.png");
-    background-repeat: no-repeat;
-    background-position: 0px;
     background-size: 100%;
-    width: 22vw;
-    height: 22vw;
+    width: 18vw;
+    height: 18vw;
     margin-right: 23vw;
-    margin-top: 16vw;
+    margin-top: 22vw;
     position: absolute;
 }
 .mascot{
@@ -114,7 +113,7 @@ body, html {
     background-color: #FFF9C4;
     border-radius: 10px;
     padding: 10px;
-    width: 100%;
+    width: 90%;
 }
 .option-text {
     font-size: 20px;
@@ -134,7 +133,7 @@ body, html {
     text-align: left;
     padding: 12px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
@@ -246,4 +245,73 @@ body, html {
     width: 30vw;
     margin-top: 0.5vw;
     margin-left: 1vw;
+}
+
+
+@media (orientation: portrait){
+
+    .cuadro {
+        background-color: rgba(14, 78, 62, 0.5);
+        height: 120vw;   
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 80vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .close-btn {
+        margin-left: 35vw;
+        margin-top: -12vw;
+        height: 10vw;
+        width: 10vw;
+    }
+    .option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        background-color: #FFF9C4;
+        border-radius: 10px;
+        padding: 10px;
+        width: 50vw;
+        height: 10vw;
+        margin-left: -8vw;
+    }
+    .botonn {
+        background-color: #FFF9C4;
+        border: none;
+        text-align: left;
+        padding: 12px;
+        margin-bottom: 12px;
+        width: 50vw;
+        height: 10vw;
+        border-radius: 10px;
+        font-size: 3vw;
+        cursor: pointer;
+        margin-left: -8vw;
+        
+    }
+
+    .settings-title {
+        font-family: "Kavoon", serif;
+        color:  rgb(0, 255, 0);
+        font-size: 7vw;
+        margin: 0;
+    }
+
+    .dinochibi{
+        background-image: url("../../Generales/img/dinosaurio-cute.png");
+        background-size: 100%;
+        width: 50vw;
+        height: 50vw;
+        margin-right: 23vw;
+        margin-top: 50vw;
+        position: absolute;
+        margin-left: -90px;
+    }
+
+
 }
