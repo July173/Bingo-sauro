@@ -126,7 +126,7 @@ body {
 
     .cuadro {
         background-color: rgba(14, 78, 62, 0.5);
-        height: 180vw;
+        height: 90vw;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -172,6 +172,16 @@ body {
         margin-top: -6vw;
         margin-left: 10vw;
     }
+    .hojas {
+        width: 33vw;
+        height: 33vw;
+        opacity: 0.8;
+        z-index: 1;
+        margin-right: 70vw;
+        position: absolute;
+        margin-top: -60vw;
+        margin-left: 20vw;
+      }
 
     
 }
