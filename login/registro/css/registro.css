@@ -32,25 +32,24 @@ body {
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-  
-}
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -154,6 +153,8 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-left: -1vw;
+    margin-top: 1vw;
     
     
 }
@@ -259,6 +260,10 @@ body {
     margin-top: 0.5vw;
     margin-left: 1vw;
 }
+.Tienecuenta {
+    margin-left: -0vw;
+    font-size: 17px;
+}
 
 
 
@@ -323,7 +328,7 @@ body {
         font-size: 6vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
-        margin-top: 6vw;
+        margin-top: 8vw;
         margin-left: -3vw; /* Cambiado a 0 para alinear a la izquierda */
 
     }
