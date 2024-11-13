@@ -1,5 +1,5 @@
 
- const botonn = document.getElementById('miBoton');
+ const botonn = document.getElementById('miBotonn');
 
 botonn.addEventListener('click', () => {
     generarCodigoPartida();
