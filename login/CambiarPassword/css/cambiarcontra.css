@@ -26,32 +26,31 @@ body {
     /*establece el ancho del elemento al 100% del ancho de su contenedor*/
     height: 100vh;
 }
-
 .hojas {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
   
-}
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -66,7 +65,7 @@ body {
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     width: 32vw;
-    height: 37vw;   
+    height: 40vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -185,6 +184,7 @@ body {
     width: 15vw;
     justify-content: flex-end; /* Alinea el botón a la derecha */
     padding: 1vw;
+    margin-left: 55px;
 
 }
 @media (orientation:portrait) {
@@ -253,7 +253,7 @@ body {
     .hojas{
        position: absolute;
        width: 70vw;
-       height: 80vw;
+       height: 70vw;
        margin-top: -93vw;
        opacity: 0.6; 
     }
