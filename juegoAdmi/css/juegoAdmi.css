@@ -148,6 +148,7 @@ body {
     overflow-y: auto;
     font-size: 2vw;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 8vw;
   }
   
   .flecha{
