@@ -31,26 +31,25 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-   z-index: 1;
-  
-}
+    z-index: 1;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
 .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -78,10 +77,11 @@ body {
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 100%;
-    width: 40%;
-    height: 40%;
+    width: 38%;
+    height: 38%;
     opacity: 0.6;
     margin-bottom: -2vw;
+    margin-top: 2vw;
 }
 .input-container{
     position: relative;
@@ -116,7 +116,7 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 2vw 1.5vw;
     width: 26vw;
     height: 20vw;
-    margin-top: 2vw;
+    margin-top: 4vw;
     margin-bottom: 1vw;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3)
 
