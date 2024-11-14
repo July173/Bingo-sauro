@@ -153,7 +153,7 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: -1vw;
+    margin-left: 2vw;
     margin-top: 1vw;
     
     
@@ -261,8 +261,9 @@ body {
     margin-left: 1vw;
 }
 .Tienecuenta {
-    margin-left: -0vw;
+    margin-left: 4.5vw;
     font-size: 17px;
+    margin-top: 1vw;
 }
 
 
@@ -381,15 +382,24 @@ body {
     .textoATC {
         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
     }
+    .error {
+        color: red;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    
+    .Tienecuenta {
+        margin-left: -1vw;
+        font-size: 14px;
+        margin-top: 1vw;
+    }
 }
 
-.error {
-    color: red;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
+
+
+
 
     
