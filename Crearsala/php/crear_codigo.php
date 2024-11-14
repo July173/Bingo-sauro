@@ -45,6 +45,9 @@ try {
         'last_id' => $lastId,
         'success' => true
     ]);
+
+    
+    
 } catch (PDOException $e) {
     // Manejar errores de base de datos
     echo json_encode([
