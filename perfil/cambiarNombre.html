@@ -46,31 +46,29 @@
         </dotlottie-player>
       </div>
 
-      <form  class=" needs-validation" novalidate>
+      <form action="procesar_cambio_nombre.php" method="POST" class="needs-validation" novalidate>
 
-        <label for="Nombre novalidationCustom01" class="Name fw-bold form-label">Nombre de usuario nuevo</label>
+        <label for="nuevo_nombre" class="Name fw-bold form-label">Nombre de usuario nuevo</label>
         <div class="input-container">
           <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
             alt="user-male-circle" />
-          <input type="text" class=" input form-control" id="username" value="" required minlength="5"
+          <input type="text" class="input form-control" id="nuevo_nombre" name="nuevo_nombre" required minlength="5"
             placeholder="Pepito">
           <div class="invalid-tooltip">
             El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
            </div>
         </div>
 
-
-        <label for="Nombre novalidationCustom01" class="Name fw-bold form-label">Confirmar nuevo nombre</label>
+        <label for="confirmar_nombre" class="Name fw-bold form-label">Confirmar nuevo nombre</label>
         <div class="input-container">
           <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
             alt="user-male-circle" />
-          <input type="text" class=" input form-control" id="username" value="" required minlength="5"
+          <input type="text" class="input form-control" id="confirmar_nombre" name="confirmar_nombre" required minlength="5"
             placeholder="Pepito">
           <div class="invalid-tooltip">
             El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
            </div>
         </div>
-
 
             <!-- Audio que queremos controlar -->
             <audio id="audioPlayer">
