@@ -26,32 +26,31 @@ body {
     /*establece el ancho del elemento al 100% del ancho de su contenedor*/
     height: 100vh;
 }
-
 .hojas {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
   
-}
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -66,7 +65,7 @@ body {
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
     width: 32vw;
-    height: 37vw;   
+    height: 40vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -150,13 +149,16 @@ body {
     background-color: rgb(189, 230, 115);
     border-radius: 1.2rem;
     border: none;
-    margin-top: 4%;
+    margin-top: 5%;
     padding: 0.5vw 2vw;
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: 3.0rem;
+    margin-left: 7vw;
+  
+
 }
+
 .enviar:hover{
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
 }
@@ -181,12 +183,7 @@ body {
     
 }
 
-.enviar{
-    width: 15vw;
-    justify-content: flex-end; /* Alinea el botón a la derecha */
-    padding: 1vw;
 
-}
 @media (orientation:portrait) {
 
     .logo {
@@ -212,7 +209,7 @@ body {
     }
     .cerrar {
         width: 8vw;
-        margin-left: 80vw;
+        margin-left: 83vw;
       } 
   
       .password{
@@ -241,19 +238,11 @@ body {
         height: 5vw;
     }
   
-    .enviar{
-       
-        padding: 10px 20px;
-        font-size: 6vw;
-        margin-bottom: 1.0vw;
-        border-radius: 1rem;
-       
-    }
 
     .hojas{
        position: absolute;
        width: 70vw;
-       height: 80vw;
+       height: 70vw;
        margin-top: -93vw;
        opacity: 0.6; 
     }
@@ -272,12 +261,22 @@ body {
        margin-top: -17vw;
 
     }
+
     .enviar{
-        width: 40vw;
-        justify-content: flex-end; /* Alinea el botón a la derecha */
-        padding: 1vw;
+        font-family: "Kavoon", serif;
+        background-color: rgb(189, 230, 115);
+        border-radius: 1.2rem;
+        border: none;
+        margin-top: 5%;
+        padding: 0.5vw 2vw;
+        font-size: 5.5vw;
+        cursor: pointer;
+        box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+        margin-left: 20vw;
+      
     
     }
+   
 }
 
     
