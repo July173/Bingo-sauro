@@ -29,6 +29,8 @@
                 
                 $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
                 
+                error_log("Datos del usuario de la BD: " . print_r($usuario, true));
+                
                 if (!$usuario) {
                     error_log("Usuario no encontrado: " . $correo);
                     return ['validas' => false, 'mensaje' => 'Usuario no encontrado'];
@@ -38,10 +40,24 @@
                 if (password_verify($contrasena, $usuario['contrasena'])) {
                     $_SESSION['usuario_id'] = $usuario['id'];
                     $_SESSION['correo'] = $usuario['correo'];
-                    return ['validas' => true, 'mensaje' => 'Login exitoso'];
+                    $_SESSION['nombre'] = $usuario['primer_nombre'];
+                    
+                    error_log("Datos a enviar al cliente: " . json_encode([
+                        'nombre' => $usuario['primer_nombre'],
+                        'correo' => $usuario['correo']
+                    ]));
+                    
+                    return [
+                        'validas' => true, 
+                        'mensaje' => 'Login exitoso',
+                        'usuario' => [
+                            'nombre' => $usuario['primer_nombre'],
+                            'correo' => $usuario['correo'],
+                            'contrasena' => $contrasena
+                        ]
+                    ];
                 }
                 
-                return ['validas' => false, 'mensaje' => 'Contraseña incorrecta'];
                 
             } catch (PDOException $e) {
                 error_log("Error en BD: " . $e->getMessage());

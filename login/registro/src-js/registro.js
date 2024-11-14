@@ -8,9 +8,10 @@
     const validateCustom = (form) => {
         let valid = true;
 
-        // Validación del correo
+        // Validación del correo con estructura de correo real
         const email = document.getElementById('email');
-        if (!email.value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para un formato de correo válido
+        if (!email.value || !emailRegex.test(email.value)) {
             email.classList.add('is-invalid');
             valid = false;
         } else {
@@ -28,12 +29,12 @@
         }
 
         // Validación de términos y condiciones
-        const termsCheckbox = document.getElementById('terms');
-        if (!termsCheckbox.checked) {
-            termsCheckbox.classList.add('is-invalid');
+        const invalidCheck = document.getElementById('invalidCheck');
+        if (!invalidCheck.checked) {
+            invalidCheck.classList.add('is-invalid');
             valid = false;
         } else {
-            termsCheckbox.classList.remove('is-invalid');
+            invalidCheck.classList.remove('is-invalid');
         }
 
         return valid;
@@ -46,7 +47,7 @@
             if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
-            } 
+            }
 
             // Validación personalizada
             const customValid = validateCustom(form);
@@ -56,7 +57,7 @@
                 event.stopPropagation();
             }
 
-            // Si el formulario es válido y tiene el id "redirigirIniciar", redirige
+            // Si el formulario es válido y tiene el id "redirigirHome", redirige
             if (form.checkValidity() && customValid && form.id === 'redirigirHome') {
                 event.preventDefault(); // Evita la acción por defecto (no recargar la página)
                 window.location = "/Bingo-sauro/home/inicio.html"; // Redirige después de un retraso
@@ -68,12 +69,16 @@
 
     // Lógica adicional para el botón 'submitBtn'
     document.getElementById('submitBtn').addEventListener('click', async function (e) {
-        e.preventDefault(); // Prevenir el comportamiento por defecto del botón
+        e.preventDefault();
 
         const primer_nombre = document.getElementById('primer_nombre');
         const email = document.getElementById('email');
         const password = document.getElementById('password');
+        const invalidCheck = document.getElementById('invalidCheck');
 
+        // Añadimos la validación de estructura de correo electrónico
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
         // Lista de palabras ofensivas
         const offensiveWords = ['maldicion', 'palabraofensiva', 'putas', 'locas', 'perras'];
         let hasEmptyField = false;
@@ -86,23 +91,40 @@
             primer_nombre.classList.remove('is-invalid');
         }
 
-        // Verificación de campos vacíos para email y password
-        if (email.value === '') {
+        // Modificamos la validación del email
+        if (email.value === '' || !emailRegex.test(email.value)) {
             email.classList.add('is-invalid');
             hasEmptyField = true;
         } else {
             email.classList.remove('is-invalid');
         }
 
-        if (password.value === '') {
+        // Modificamos la validación de la contraseña
+        const passwordRegex = /^(?=.*[0-9]).{8,}$/;
+        if (password.value === '' || !passwordRegex.test(password.value)) {
             password.classList.add('is-invalid');
             hasEmptyField = true;
         } else {
             password.classList.remove('is-invalid');
         }
 
-        // Si hay campos vacíos o el nombre de usuario es inválido, no continuar
-        if (hasEmptyField) return;
+        // Añadimos validación de términos y condiciones
+        if (!invalidCheck.checked) {
+            invalidCheck.classList.add('is-invalid');
+            hasEmptyField = true;
+        } else {
+            invalidCheck.classList.remove('is-invalid');
+        }
+
+        // Si hay campos vacíos o inválidos, no continuar
+        if (hasEmptyField) {
+            // Mostrar la animación de error si existe
+            const errorAnimation = document.getElementById('error-animation');
+            if (errorAnimation) {
+                errorAnimation.style.display = 'block';
+            }
+            return;
+        }
 
         // Crear el objeto de datos a enviar si todos los campos están completos y válidos
         const data = {
