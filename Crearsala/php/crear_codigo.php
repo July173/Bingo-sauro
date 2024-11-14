@@ -29,8 +29,12 @@ try {
     } while ($resultado > 0);
 
     // Insertar nuevo código en la base de datos
-    $stmt = $pdo->prepare("INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones) VALUES (:codigo, 0, 0)");
-    $stmt->bindParam(':codigo', $codigo);
+    $query="INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones) VALUES (:codigo, 0, 0)";
+    $params=[
+        ':codigo'=> $codigo
+    ];
+    $lastId = $conexion->insert($query, $params);
+    echo "Ultimo ID insertado: $lastId";
 
     if ($stmt->execute()) {
         echo json_encode(['codigo_sala' => $codigo, 'success' => true]);
