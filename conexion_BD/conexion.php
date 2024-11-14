@@ -42,6 +42,7 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al insertar: ' . $e->getMessage());
         }
+        
     }
 
     // Función genérica para SELECT
@@ -54,6 +55,7 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al consultar: ' . $e->getMessage());
         }
+
     }
 
     // Función genérica para UPDATE
@@ -65,6 +67,7 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al actualizar: ' . $e->getMessage());
         }
+
     }
 
     // Función genérica para DELETE
@@ -76,6 +79,7 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al eliminar: ' . $e->getMessage());
         }
+
     }
 }
 ?>
