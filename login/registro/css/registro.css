@@ -185,7 +185,7 @@ body {
     cursor: pointer;
 }
 .centrar{
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
 
@@ -261,7 +261,7 @@ body {
     margin-left: 1vw;
 }
 .Tienecuenta {
-    margin-left: 4.5vw;
+    margin-left: 5.5vw;
     font-size: 17px;
     margin-top: 1vw;
 }
@@ -330,12 +330,13 @@ body {
         margin-bottom: 1vw;
         border-radius: 0.8rem;
         margin-top: 8vw;
-        margin-left: -3vw; /* Cambiado a 0 para alinear a la izquierda */
+        margin-left: 2vw; 
 
     }
 
     .Tienecuenta{
       font-size: 4vw;
+      margin-left: 5vw;
     }
 
     .textoATC{
@@ -390,12 +391,11 @@ body {
         margin: 10px 0;
         border-radius: 5px;
     }
-    
-    .Tienecuenta {
-        margin-left: -1vw;
-        font-size: 14px;
-        margin-top: 1vw;
+    .centrar{
+        margin-left: 2rem;
     }
+    
+    
 }
 
 
