@@ -260,8 +260,9 @@ body {
     margin-top: 0.5vw;
     margin-left: 1vw;
 }
+
 .Tienecuenta {
-    margin-left: 5.5vw;
+    margin-left: 4vw;
     font-size: 17px;
     margin-top: 1vw;
 }
@@ -334,10 +335,12 @@ body {
 
     }
 
-    .Tienecuenta{
-      font-size: 4vw;
-      margin-left: 5vw;
+    .text-light {
+        margin-left: 6vw;
+        font-size: 17px;
+        margin-top: 1vw;
     }
+    
 
     .textoATC{
         font-size: 3.8vw;
@@ -378,7 +381,7 @@ body {
 
     }
     .Tienecuenta{
-         margin-left: 2vw; /* Cambiado a 0 para alinear a la izquierda */
+         margin-left: 6vw; /* Cambiado a 0 para alinear a la izquierda */
     }
     .textoATC {
         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
