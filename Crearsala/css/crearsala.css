@@ -124,12 +124,13 @@
   font-size: 3vw;
   margin-left: 3vw;
   margin-bottom: -0.2rem;
+
 }
 
 .comoLlenar {
   font-size: 3.5vw;
   margin-left: 15vw;
-  margin-top: -2vw;
+  margin-top: -1vw;
   display: flex;
 }
 

@@ -1,15 +1,15 @@
-// Generar el código
 // Generar un código aleatorio desde PHP y luego redirigir
 function generarCodigoPartida() {
   fetch("../../../Bingo-sauro/Crearsala/php/crear_codigo.php")
     .then((response) => response.json())
     .then((data) => {
       if (data.success) {
-        const codigo = data.codigo;
+        const codigo = data.codigo_sala; // Asegúrate de usar "codigo_sala" como en tu PHP
 
         // Guardar el código en localStorage para usarlo en la otra pantalla
         localStorage.setItem("codigoPartida", codigo);
-        // Luego, verifica si el código está en localStorage
+
+        // Verifica si el código está en localStorage
         if (localStorage.getItem("codigoPartida")) {
           console.log(
             "El código se ha guardado correctamente:",
@@ -18,6 +18,7 @@ function generarCodigoPartida() {
         } else {
           console.log("El código no se ha guardado en localStorage.");
         }
+
         // Redirigir a la otra pantalla
         window.location = "../../../Bingo-sauro/Crearsala/crearsala.html";
       } else {
