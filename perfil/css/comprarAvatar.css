@@ -110,6 +110,7 @@ body {
 
 
 
+
 @media (orientation:portrait) {
 
     #contenedor{
@@ -159,7 +160,7 @@ body {
      }
      .precio{
         margin-top: 45vw;
-        height: 5vw;
+        height: 7vw;
         width: 10vw;
      }
 
@@ -168,7 +169,7 @@ body {
         background-color: rgb(149, 247, 110);
         border-radius: 1rem;
         border: none;
-        width: 15vw;
+        width: 20vw;
         height: 6vw;
         text-align: center;
         font-size: 2vw;
