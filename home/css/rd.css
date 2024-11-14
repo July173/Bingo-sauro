@@ -25,26 +25,25 @@ body {
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-  
-}
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 1;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+  
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -58,7 +57,7 @@ body {
 }
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
-    height: 30vw;   
+    height: 35vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -80,7 +79,7 @@ body {
 }
 .boton{
     margin-left: 30vw;
-    margin-top: -1vw;
+    margin-top: 1vw;
     cursor: pointer;
 }
 .direccion{
@@ -110,11 +109,24 @@ body {
     background-repeat: no-repeat;
     opacity: 0.4;
 }
+
+.ms-3 {
+    height: 5vw;
+    width: 17vw;
+    margin-left: -10vw;
+}
+.close-btn {
+    margin-left: 17px;
+    margin-top: -23px;
+    height: 3vw;
+    width: 3vw;
+}
+
 @media (orientation:portrait) {
 
     .cuadro {
         background-color: rgba(14, 78, 62, 0.5);
-        height: 180vw;
+        height: 90vw;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -130,8 +142,8 @@ body {
         margin-top: -6px;
     }
     .close-btn {
-        margin-left: 30vw;
-        margin-top: -7vw;
+        margin-left: 35vw;
+        margin-top: -8vw;
         height: 8vw;
         width: 8vw;
     }
@@ -144,8 +156,9 @@ body {
     }
     .ms-3 {
         height: 12vw;
-        width: 43vw;
-        margin-left: 32vw;
+        width: 40vw;
+        margin-left: 35vw;
+        margin-top: -10vw;
         
 
     }
@@ -155,6 +168,20 @@ body {
         margin-left: -2vw;
         margin-top: 1vw;
     }
+    .d-flex {
+        margin-top: -6vw;
+        margin-left: 10vw;
+    }
+    .hojas {
+        width: 33vw;
+        height: 33vw;
+        opacity: 0.8;
+        z-index: 1;
+        margin-right: 70vw;
+        position: absolute;
+        margin-top: -60vw;
+        margin-left: 20vw;
+      }
 
     
 }

@@ -32,25 +32,24 @@ body {
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-  
-}
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -154,6 +153,8 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 2vw;
+    margin-top: 1vw;
     
     
 }
@@ -184,7 +185,7 @@ body {
     cursor: pointer;
 }
 .centrar{
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
 
@@ -260,6 +261,12 @@ body {
     margin-left: 1vw;
 }
 
+.Tienecuenta {
+    margin-left: 4vw;
+    font-size: 17px;
+    margin-top: 1vw;
+}
+
 
 
 /*modificaciones para una pantalla vertical*/
@@ -323,14 +330,17 @@ body {
         font-size: 6vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
-        margin-top: 6vw;
-        margin-left: -3vw; /* Cambiado a 0 para alinear a la izquierda */
+        margin-top: 8vw;
+        margin-left: 2vw; 
 
     }
 
-    .Tienecuenta{
-      font-size: 4vw;
+    .text-light {
+        margin-left: 6vw;
+        font-size: 17px;
+        margin-top: 1vw;
     }
+    
 
     .textoATC{
         font-size: 3.8vw;
@@ -371,20 +381,28 @@ body {
 
     }
     .Tienecuenta{
-         margin-left: 2vw; /* Cambiado a 0 para alinear a la izquierda */
+         margin-left: 6vw; /* Cambiado a 0 para alinear a la izquierda */
     }
     .textoATC {
         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
     }
+    .error {
+        color: red;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    .centrar{
+        margin-left: 2rem;
+    }
+    
+    
 }
 
-.error {
-    color: red;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
+
+
+
 
     

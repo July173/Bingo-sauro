@@ -34,7 +34,7 @@ function mostrarAmigos(amigos) {
     amigoDiv.innerHTML = `
       <img src="${amigo.imagen}" alt="Avatar de ${amigo.nombre}" class="avatar-imagen">
       <span class="nombre-amigo">${amigo.nombre}</span>
-      <div class="separador ranking fondo">
+      <div class="separador ranking fondo mon">
         <div class="counter counter-1" data-bs-toggle="modal" data-bs-target="#dinoModal">
           <span class="numero">${amigo.cantidad_premios}</span>
           <img src="../Generales/img/dinoTrofeos.png" alt="Dino">
