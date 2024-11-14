@@ -1,32 +1,33 @@
-// Generar un código aleatorio desde PHP y luego redirigir
-function generarCodigoPartida() {
-  fetch("../../../Bingo-sauro/Crearsala/php/crear_codigo.php")
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.success) {
-        const codigo = data.codigo_sala; // Asegúrate de usar "codigo_sala" como en tu PHP
-
-        // Guardar el código en localStorage para usarlo en la otra pantalla
-        localStorage.setItem("codigoPartida", codigo);
-
-        // Verifica si el código está en localStorage
-        if (localStorage.getItem("codigoPartida")) {
-          console.log(
-            "El código se ha guardado correctamente:",
-            localStorage.getItem("codigoPartida")
-          );
-        } else {
-          console.log("El código no se ha guardado en localStorage.");
-        }
-
-        // Redirigir a la otra pantalla
-        window.location = "../../../Bingo-sauro/Crearsala/crearsala.html";
-      } else {
-        alert(data.error); // Mostrar mensaje de error si no se generó el código
+// Función asíncrona para generar el código de la partida
+async function generarCodigoPartida() {
+  try {
+      const response = await fetch("../../../Bingo-sauro/Crearsala/php/crear_codigo.php");
+      
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
       }
-    })
-    .catch((error) => console.error("Error:", error));
+
+      const data = await response.json();
+
+      if (data.success) {
+          // Guardar el código en localStorage
+          localStorage.setItem("codigoPartida", data.codigo_sala);
+
+          console.log("El código se ha guardado correctamente:", data.codigo_sala);
+          return true; // Indica que se generó correctamente
+      } else {
+          console.error("Error desde el servidor:", data.error);
+          return false; // Indica que no se generó
+      }
+  } catch (error) {
+      console.error("Error al generar el código:", error);
+      return false;
+  }
 }
+
+
+
+
 
 function unirseAPartida() {
   const codigo = document.getElementById("codigoEntrada").value;
