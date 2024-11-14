@@ -211,7 +211,7 @@ body {
     .logo {
         width: 32vw;
         height: 47vw;
-       margin-top: -8vw;
+       margin-top: 2vw;
        margin-bottom: -7vw;
      
     }
@@ -227,41 +227,100 @@ body {
     }
     .titulo-contenedor{
         font-size: 5vw;
-
+       
     }
 
     .icon{
-        width: 3vw;
-        height: 3vw;
+        width: 2vw;
+        height: 2vw;
         position: absolute;
         left: -9vw;
         top: 7vw;
+       
     }
-}
-        
-
-
+         
     .hojas{
-       position: absolute;
-       width: 70vw;
-       height: 80vw;
-       margin-top: -93vw;
-       opacity: 0.6;
-    }
-    .hojas-2{  position: absolute;
+        position: absolute;
         width: 70vw;
         height: 80vw;
-        margin-top: 90vw;
-        margin-left: 10vw;
+        margin-top: -93vw;
+        opacity: 0.6;
+     }
+     .hojas-2{  position: absolute;
+         width: 70vw;
+         height: 80vw;
+         margin-top: 90vw;
+         margin-left: 10vw;
+     }
+ 
+     .hojas-3{  position: absolute;
+         width: 70vw;
+         height: 80vw;
+        margin-right: 20vw;
+        margin-top: -17vw;
+ 
+     }
+     .separador{
+         margin-left: 3vw;
+     }
+
+     .counter-container{
+         margin-left: -10vw;
+         margin-top: 3vw;
+         height: 10vw;
+         width: 10vw;
+     }
+
+     .invitarAmigo{
+        font-family: "Kavoon", serif;
+        background-color: rgb(149, 247, 110);
+        border-radius: 1.2rem;
+        border: none;
+        padding: 0.5vw 22vw;
+        font-size: 4vw;
+        cursor: pointer;    
+        box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
+        margin-left: 12vw;
+        width: 80vw;
+        
+    }
+    .amigo{
+        height: 11vw;
+        width: 54vw;
+        margin-left: 2vw;
     }
 
-    .hojas-3{  position: absolute;
-        width: 70vw;
-        height: 80vw;
-       margin-right: 20vw;
-       margin-top: -17vw;
-
+    .contenedor-gris{
+        height: 30vw;
+        width: 65vw;
+        margin-top: 5vw;
+        
     }
+    .nombre-amigo{
+        margin-top: -2vw;
+        font-size: 6vw;
+        
+    }
+    .mon{
+        height: 6vw;
+        width: 12vw;
+        margin-left: 5vw;
+        
+    } 
 
-
+    .dino{
+        background-image: url("../../Generales/img/dinosaurio-cute.png");
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 100%;
+        width: 30vw;
+        height: 30vw;
+        margin-top: 20vw;
+    }
+    
+    
+    
    
+  
+ 
+}

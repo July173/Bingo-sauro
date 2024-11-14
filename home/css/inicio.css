@@ -239,6 +239,8 @@ body {
 
     .titulo {
         font-size: 8vw;
+        margin-top: 6vw;
+       
     }
 
     .hojas {
@@ -281,4 +283,12 @@ body {
         transition: background-color 0.3s ease;
         text-decoration: none;
     }
-}
+    .separador{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .counter-container{
+        margin-left: 35vw;
+    }
+
+    }
