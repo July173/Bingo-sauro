@@ -114,7 +114,7 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
-    margin-left: 10vw;
+    margin-left: 8.5vw;
     margin-top: 0.5vw;
    
   }
@@ -167,10 +167,10 @@ body {
 
   .ingresa{
     font-size: 2.5vw;
-    margin-left: 8vw;
+    margin-left: 6vw;
     margin-bottom: 1rem;
     text-align: center;
-    width: 21vw;
+    width: 25vw;
   }
 
   .icon{
@@ -227,7 +227,7 @@ body {
       font-size: 5vw;
       cursor: pointer;
       box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
-      margin-left: 20vw;
+      margin-left: 16vw;
       margin-top: 0.5vw;
     }
     .icon{
