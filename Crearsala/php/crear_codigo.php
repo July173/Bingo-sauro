@@ -20,6 +20,8 @@ function generarCodigo($longitud = 6): string
 
 try {
     $resultado = 0;
+
+    // Generar un código único
     do {
         $codigo = generarCodigo();
         $codigoConsultado = $pdo->prepare("SELECT COUNT(*) as total FROM partida WHERE codigo_sala = :codigo");
@@ -29,18 +31,27 @@ try {
     } while ($resultado > 0);
 
     // Insertar nuevo código en la base de datos
-    $query="INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones) VALUES (:codigo, 0, 0)";
-    $params=[
-        ':codigo'=> $codigo
-    ];
-    $lastId = $conexion->insert($query, $params);
-    echo "Ultimo ID insertado: $lastId";
+    $query = "INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones) VALUES (:codigo, 0, 0)";
+    $params = [':codigo' => $codigo];
+    $insertado = $pdo->prepare($query);
+    $insertado->execute($params);
 
-    if ($stmt->execute()) {
-        echo json_encode(['codigo_sala' => $codigo, 'success' => true]);
-    } else {
-        echo json_encode(['error' => 'Error al generar el código', 'success' => false]);
-    }
+    // Obtener el ID del último registro insertado
+    $lastId = $pdo->lastInsertId();
+
+    // Retornar JSON válido
+    echo json_encode([
+        'codigo_sala' => $codigo,
+        'last_id' => $lastId,
+        'success' => true
+    ]);
+
+    
+    
 } catch (PDOException $e) {
-    echo json_encode(['error' => 'Error en la base de datos: ' . $e->getMessage(), 'success' => false]);
+    // Manejar errores de base de datos
+    echo json_encode([
+        'error' => 'Error en la base de datos: ' . $e->getMessage(),
+        'success' => false
+    ]);
 }
