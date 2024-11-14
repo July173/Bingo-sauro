@@ -1,4 +1,4 @@
-document.getElementById('submitBtn').addEventListener('click', function (e) {
+document.getElementById('submitBtn').addEventListener('click', async function (e) {
     e.preventDefault(); // Prevenir el comportamiento por defecto del botón
 
     const primer_nombre = document.getElementById('primer_nombre');
