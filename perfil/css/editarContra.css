@@ -151,7 +151,7 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: 6rem;
+    margin-left: 8rem;
 }
 .enviar:hover{
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
