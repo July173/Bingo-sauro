@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Validar que los campos no estén vacíos
     if (!email || !password) {
-        alert('Por favor, complete todos los campos');
+       
         return;
     }
 
@@ -17,31 +17,37 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     formData.append('correo', email);
     formData.append('contrasena', password);
 
-    fetch('php/ingreso.php', {
+    fetch('/Bingo-sauro/login/inicioSesion/php/ingreso.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: formData
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la respuesta del servidor');
+    .then(async response => {
+        console.log('Estado de la respuesta:', response.status);
+        const text = await response.text(); // Primero obtener el texto
+        console.log('Respuesta raw:', text); // Log de la respuesta cruda
+        
+        try {
+            return JSON.parse(text); // Intentar parsear el JSON
+        } catch (e) {
+            console.error('Error al parsear JSON:', text);
+            throw new Error('Respuesta inválida del servidor');
         }
-        return response.json();
     })
     .then(data => {
-        console.log('Respuesta del servidor:', data); // Para depuración
+        console.log('Respuesta del servidor:', data);
 
         if (data.validas) {
-            window.location.href = "/Bingo-sauro/home/home.html";
+            window.location.href = "../../home/inicio.html";
         } else {
             document.getElementById('error-animation').style.display = 'block';
             alert(data.mensaje || 'Error en la validación');
         }
     })
     .catch(error => {
-        console.error('Error:', error);
+        console.error('Error detallado:', error);
         document.getElementById('error-animation').style.display = 'block';
         alert('Error al intentar iniciar sesión');
     });

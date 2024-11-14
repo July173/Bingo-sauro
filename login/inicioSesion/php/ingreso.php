@@ -26,13 +26,19 @@ try {
     // Log del resultado
     error_log("Resultado de la validación: " . print_r($resultado, true));
     
+    // Asegurarse de que no haya salida antes del JSON
+    if (ob_get_length()) ob_clean();
+    
     echo json_encode($resultado);
+    exit(); // Asegurarse de que no haya más salida después
     
 } catch (Exception $e) {
     error_log("Error en ingreso.php: " . $e->getMessage());
+    if (ob_get_length()) ob_clean();
     echo json_encode([
         'validas' => false,
         'mensaje' => $e->getMessage()
     ]);
+    exit();
 }
-?> 
+?>
