@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../Generales/configuracion/pocision2.css">
   <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="css/crearsala.css">
+  <link rel="stylesheet" href="../perfil/css/modales.css">
   <script src="../Generales/bootstrap/js/bootstrap.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -48,11 +49,28 @@
       </script>
 
       <div class="atras">
-        <a href="/Bingo-sauro/home/inicio.html">
-          <img src="../Generales/img/atras.png" alt="circulo-atras">
-        </a>
+          <img src="../Generales/img/atras.png" alt="circulo-atras" id="openModal">
+        
       </div>
 
+
+       <!-- Modal -->
+       <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+           </div>
+           <div class="modal-body">
+             <div class="d-flex justify-content-center">
+               <button id="yesBtn" class="botones-modal">Sí</button>
+               <button id="noBtn" class="botones-modal">No</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
       <div class="icon" data-bs-toggle="modal" data-bs-target="#modalPregunta">
         <img width="
         40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
@@ -66,23 +84,23 @@
         <h6>Eres el creador de la sala </h6>
 
         <div class="comoLlenar">
-          <p class="codigo " >codigo:</p>
+          <p class="codigo ">codigo:</p>
           <div class="codigo " id="codigoPartida" name="codigoPartida"></div>
-          <div class="codigo " id="obtenerCodigo" name="obtenerCodigo"></div>
           <script>
             // Recuperar el código desde localStorage
-            const codigo = localStorage.getItem('codigoPartida');
-    
-            // Mostrar el código en la página
-            if (codigo) {
+            document.addEventListener("DOMContentLoaded", () => {
+              const codigo = localStorage.getItem('codigoPartida');
+              if (codigo) {
                 document.getElementById('codigoPartida').textContent = codigo;
-                console.log(codigo )
-            } else {
+                console.log(codigo);
+              } else {
                 document.getElementById('codigoPartida').textContent = 'Código no disponible';
-                console.log(codigo)
-                console.log("no se llama el codigo")
-            }
-        </script>
+                console.log(codigo);
+                console.log("no se llama el codigo");
+              }
+            });
+            console.log(localStorage.getItem('codigoPartida'));
+          </script>
         </div>
 
         <p class="comoLlenar">¿Cómo se llenara el carton?</p>
@@ -136,11 +154,12 @@
     Tu navegador no soporta la reproducción de audio.
   </audio>
 
-  <script src="src-js/moviemientos.js"></script>
+  <!-- <script src="src-js/moviemientos.js"></script> -->
   <script src="js/CodigoPartida.js"></script>
   <script src="js/crearSala.js"></script>
+  <script src="js/modal.js"></script>
 
-<script src="js/obtener_codigo.js"></script>
+  <!-- <script src="js/obtener_codigo.js"></script> -->
 
   <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>

@@ -20,31 +20,32 @@ body, html {
     justify-content: center;
     align-items: center;
 }
+
 .hojas {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
   
-}
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 1;
-   margin-right: 72vw;
-   position: absolute;
+    margin-right: 84vw;
+    position: absolute;
     /* 50% de transparencia */
     z-index: 1;
     /* Volteo horizontal */
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -65,7 +66,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 520px;
+    width: 45vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header {
@@ -82,29 +83,30 @@ body, html {
 }
 .close-btn {
     cursor: pointer;
+    margin-left: 1vw;
 }
 
 .dinochibi{
     background-image: url("../../Generales/img/dinosaurio-cute.png");
-    background-repeat: no-repeat;
-    background-position: 0px;
     background-size: 100%;
-    width: 22vw;
-    height: 22vw;
+    width: 16vw;
+    height: 16vw;
     margin-right: 23vw;
-    margin-top: 16vw;
+    margin-top: 22vw;
     position: absolute;
+    margin-left: -5vw;
 }
 .mascot{
     background-image: url("../../Generales/img/logo.png");
     background-repeat: no-repeat;
     background-position: 0px;
     background-size: 80%;
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     opacity: 0.4;
     overflow: hidden;
-    margin-left: 8vw;
+    margin-left: 1vw;
+    margin-top: -1vw;
 }
 .option {
     display: flex;
@@ -114,7 +116,8 @@ body, html {
     background-color: #FFF9C4;
     border-radius: 10px;
     padding: 10px;
-    width: 100%;
+    width: 25vw;
+    margin-left: -3vw;
 }
 .option-text {
     font-size: 20px;
@@ -134,10 +137,11 @@ body, html {
     text-align: left;
     padding: 12px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 25vw;
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
+    margin-left: -3vw;
 }
 .bot-logout {
     font-weight: bold;
@@ -246,4 +250,119 @@ body, html {
     width: 30vw;
     margin-top: 0.5vw;
     margin-left: 1vw;
+}
+
+
+@media (orientation: portrait){
+
+    .cuadro {
+        background-color: rgba(14, 78, 62, 0.5);
+        height: 120vw;   
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 80vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .close-btn {
+        margin-left: 35vw;
+        margin-top: -20vw;
+        height: 10vw;
+        width: 10vw;
+    }
+    .option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        background-color: #FFF9C4;
+        border-radius: 10px;
+        padding: 15px;
+        width: 52vw;
+        height: 10vw;
+        margin-left: -11vw;
+    }
+    .botonn {
+        background-color: #FFF9C4;
+        border: none;
+        text-align: left;
+        padding: 12px;
+        margin-bottom: 12px;
+        width: 52vw;
+        height: 12vw;
+        border-radius: 10px;
+        font-size: 3.2vw;
+        cursor: pointer;
+        margin-left: -11vw;
+        
+    }
+
+    .settings-title {
+        font-family: "Kavoon", serif;
+        color:  rgb(0, 255, 0);
+        font-size: 7vw;
+        margin: 0;
+    }
+
+    .dinochibi{
+        background-image: url("../../Generales/img/dinosaurio-cute.png");
+        background-size: 100%;
+        width: 40vw;
+        height: 40vw;
+        margin-right: 23vw;
+        margin-top: 70vw;
+        position: absolute;
+        margin-left: -150px;
+    }
+    .mascot{
+        background-image: url("../../Generales/img/logo.png");
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 80%;
+        width: 30vw;
+        height: 30vw;
+        opacity: 0.4;
+        overflow: hidden;
+        margin-left: 5vw;
+        margin-top: -5vw;
+    }
+    .contenedor-recuadros{
+        width: 22vw;
+        margin-left: 12vw;
+    }
+    .option-text-2 {
+        font-size: 17px;
+        color: black;
+        margin-left: -1vw;
+    }
+    .option-text {
+        font-size: 15px;
+        color: black;
+        margin-left: 0.5vw;
+    }
+    .toggle {
+        width: 50px;
+        height: 30px;
+        background-color: #4CAF50;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.2s ease; /* Transición rápida */
+        
+    }
+    .hojas {
+        width: 33vw;
+        height: 33vw;
+        opacity: 0.8;
+        z-index: 1;
+        margin-right: 70vw;
+        position: absolute;
+        margin-top: -90vw;
+        margin-left: 10vw;
+      }
+      
+
 }

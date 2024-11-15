@@ -31,18 +31,17 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-   margin-right: 70vw;
-   position: absolute;
-   margin-top: -16vw;
-   z-index: 1;
-  
-}
+    z-index: 1;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
 
-.hojas-2 {
+  .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    margin-right: 72vw;
+    margin-right: 84vw;
     position: absolute;
     /* 50% de transparencia */
     z-index: 1;
@@ -50,7 +49,8 @@ body {
     transform: rotate(-150deg);
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
-}
+  }
+
 .hojas-3 {
     width: 33vw;
     height: 33vw;
@@ -77,10 +77,10 @@ body {
 .contenedor-gris{
     background-color: #cececee3;
     border-radius: 0.7rem;
-    width: 58vw;
+    width: 65vw;
     height: 18vw;
     margin-top: 1vw;
-    margin-left: 1vw;
+    margin-left: -9vw;   
   
    
 }
@@ -91,9 +91,9 @@ body {
     border: none;
     padding: 0.5vw;
     font-size: 2vw;
-    width: 50vw;
+    width: 59vw;
     margin-top: 2vw;
-    margin-left: 4vw;
+    margin-left: 3vw;
     display: flex;
 
     
@@ -142,7 +142,7 @@ body {
     font-size: 1.7vw;
     margin-left: 1vw;
     height: 4vw;
-    width: 22vw;
+    width: 32vw;
     color:black;
 }
 

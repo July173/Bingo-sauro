@@ -31,17 +31,17 @@
   width: 33vw;
   height: 33vw;
   opacity: 0.8;
+  z-index: 1;
   margin-right: 70vw;
   position: absolute;
-  margin-top: -16vw;
-  z-index: 1;
-
+  margin-top: -21vw;
 }
 
 .hojas-2 {
   width: 33vw;
   height: 33vw;
   opacity: 0.8;
+  z-index: 1;
   margin-right: 72vw;
   position: absolute;
   /* 50% de transparencia */
@@ -124,12 +124,13 @@
   font-size: 3vw;
   margin-left: 3vw;
   margin-bottom: -0.2rem;
+
 }
 
 .comoLlenar {
   font-size: 3.5vw;
   margin-left: 15vw;
-  margin-top: -2vw;
+  margin-top: -1vw;
   display: flex;
 }
 
@@ -235,6 +236,7 @@
   margin-left: -80vw;
   margin-top: 7vw;
   position: absolute;
+  cursor: pointer;
 }
 
 
