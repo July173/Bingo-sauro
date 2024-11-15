@@ -28,16 +28,16 @@ function loadNavbar() {
                     window.location = "../home/inicio.html";
                     break;
                     case 'historial':
-                window.location = "../historial/historial.html";
+                window.location = "../historial/historial.php";
                 break;
               case 'amigos':
-                window.location= "../amigos/amigos.html";
+                window.location= "../amigos/amigos.php";
                 break;
               case 'perfil':
-                window.location = "../perfil/perfil.html";
+                window.location = "../perfil/perfil.php";
                 break;
               case 'tienda':
-                window.location= "../tienda/tienda.html";
+                window.location= "../tienda/tienda.php";
                 break;
               default:
                 break;

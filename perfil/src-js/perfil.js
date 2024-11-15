@@ -4,11 +4,11 @@ console.log('Contenido actual de localStorage:', {
 });
 
 document.getElementById('cambiarNombre').addEventListener('click', function(){
-    window.location = "/Bingo-sauro/perfil/cambiarNombre.html"
+    window.location = "/Bingo-sauro/perfil/cambiarNombre.php"
 });
 
 document.getElementById('CambiarAvatar').addEventListener('click', function(){
-    window.location = "/Bingo-sauro/perfil/editarAvatar.html"
+    window.location = "/Bingo-sauro/perfil/editarAvatar.php"
 });
 
 // Función para cargar datos del usuario

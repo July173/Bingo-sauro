@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +57,7 @@
         cargarContenido();
       </script>
 
-      <a href="/Bingo-sauro/tienda/tienda.html">
+      <a href="/Bingo-sauro/tienda/tienda.php">
         <img src="../Generales/img/cerrar.png" alt="cierre" class="cerrar">
       </a>
 

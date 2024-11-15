@@ -1,13 +1,27 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cambiar contraseña</title>
+  <title>Cambiar nombre de usuario </title>
   <script src="../Generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="../perfil/css/editarContra.css" />
+  <link rel="stylesheet" href="../perfil/css/cambiarNombre.css" />
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -36,8 +50,8 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
-      <div class="titulo">Editar constraseña</div>
-      <img id="redirigirCodigo" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
+      <div class="titulo">Editar nombre de usuario</div>
+      <img id="redirigirPerfil" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
       <div id="ocultar" class="logo"></div>
 
       <div id="error-animation" style="display: none;">
@@ -46,34 +60,29 @@
         </dotlottie-player>
       </div>
 
-      <form id="redirigirIniciar" class=" needs-validation" novalidate>
+      <form action="procesar_cambio_nombre.php" method="POST" class="needs-validation" novalidate>
 
-        <label for="password" class="password fw-bold form-label">Confirmar nueva contraseña</label>
-        <div class="input-container position-relative">
-          <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png"
-            alt="lock" />
-          <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
-            placeholder="********">
-          <i class="fa-solid fa-eye-slash" id="togglePassword"
-            style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+        <label for="nuevo_nombre" class="Name fw-bold form-label">Nombre de usuario nuevo</label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
+            alt="user-male-circle" />
+          <input type="text" class="input form-control" id="nuevo_nombre" name="nuevo_nombre" required minlength="5"
+            placeholder="Pepito">
           <div class="invalid-tooltip">
-            La contraseña debe tener al menos 8 caracteres y contener al menos un número.
-          </div>
+            El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
+           </div>
         </div>
 
-
-          <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
-          <div class="input-container position-relative">
-            <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-            <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
-              placeholder="********">
-            <i class="fa-solid fa-eye-slash" id="togglePassword"
-              style="position: absolute; right: 35px; top: 55%; transform: translateY(-50%); cursor: pointer;"></i>
-            <div class="invalid-tooltip">
-              La contraseña debe tener al menos 8 caracteres y contener al menos un número.
-            </div>
-          </div>
-
+        <label for="confirmar_nombre" class="Name fw-bold form-label">Confirmar nuevo nombre</label>
+        <div class="input-container">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/material-sharp/24/user-male-circle.png"
+            alt="user-male-circle" />
+          <input type="text" class="input form-control" id="confirmar_nombre" name="confirmar_nombre" required minlength="5"
+            placeholder="Pepito">
+          <div class="invalid-tooltip">
+            El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
+           </div>
+        </div>
 
             <!-- Audio que queremos controlar -->
             <audio id="audioPlayer">
@@ -85,10 +94,8 @@
 
       </form>
 
-      <script src="/Generales/jsGenerales/VerContrasña.js"></script>
-      <script src="src-js/editarContra.js"></script>
-      <script src="src-js/valiacionContraseña.js"></script>
       <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="./src-js/cambiarNombre.js"></script>
 </body>
 
 </html>

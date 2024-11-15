@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +55,7 @@
 
       <div class="icon-container">
         <!-- Botón de Configuración (Engranaje) -->
-        <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.html" class="icon">
+        <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.php" class="icon">
           <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
       </div>

@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+$id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +99,8 @@
         <h6>Eres el creador de la sala </h6>
 
         <div class="comoLlenar">
-          <p class="codigo ">codigo:</p>
+          <!--<p class="codigo ">codigo: <?php echo $id_usuario; ?></p>-->
+          <p class="codigo ">codigo: <?php echo $id_usuario; ?></p>
           <div class="codigo " id="codigoPartida" name="codigoPartida"></div>
           <script>
             // Recuperar el código desde localStorage

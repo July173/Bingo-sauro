@@ -1,5 +1,5 @@
 document.getElementById('redirigirPerfil').addEventListener('click', function(){
-    window.location = "/Bingo-sauro/perfil/perfil.html";
+    window.location = "/Bingo-sauro/perfil/perfil.php";
 });
 
 
@@ -82,7 +82,7 @@ localStorage.setItem('selectedAvatar', JSON.stringify(avatar));
 selectBtn.onclick = () => {
   if (avatar.locked) {
     // Redirigir a la página de compra si el avatar está bloqueado
-    window.location = '/Bingo-sauro/perfil/comprarAvatar.html';
+    window.location = '/Bingo-sauro/perfil/comprarAvatar.php';
   } else {
     // Si no está bloqueado, cambiar el texto del botón y guardar el avatar
     selectBtn.textContent = 'Avatar Seleccionado';

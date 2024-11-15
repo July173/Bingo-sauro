@@ -7,7 +7,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Validar que los campos no estén vacíos
     if (!email || !password) {
-        return;
+        document.getElementById('error-animation').style.display = 'block';
+        return; // Evitar la petición si los campos están vacíos
     }
 
     console.log('Datos a enviar:', { email, password }); // Para depuración
@@ -62,25 +63,38 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
             // Redirigir solo si los datos se guardaron
             if (savedData) {
-                window.location.href = "../../home/inicio.html";
+                window.location.href = "../../home/inicio.html"; // Cambiar la URL de redirección según lo necesites
             }
         } else {
+            // Mostrar error dependiendo del mensaje de error del servidor
             document.getElementById('error-animation').style.display = 'block';
             if (data.mensaje === 'Usuario no encontrado') {
                 actualizarMensajeErrorCorreo('El correo no está registrado');
+            } else {
+                actualizarMensajeErrorCorreo(data.mensaje);
             }
         }
     })
     .catch(error => {
         console.error('Error detallado:', error);
         document.getElementById('error-animation').style.display = 'block';
+        actualizarMensajeErrorCorreo('Hubo un problema al procesar tu solicitud. Intenta de nuevo.');
     });
 });
 
+// Función para actualizar el mensaje de error relacionado con el correo
+function actualizarMensajeErrorCorreo(mensaje) {
+    const errorCorreo = document.getElementById('errorCorreo');
+    if (errorCorreo) {
+        errorCorreo.textContent = mensaje;
+    }
+}
+
+// Redirigir al registro o a la recuperación de contraseña
 document.getElementById('redirigirRegistro').addEventListener('click', function(){
-    window.location.href = "/Bingo-sauro/login/registro/registro.html"
+    window.location.href = "/Bingo-sauro/login/registro/registro.html";
 });
 
 document.getElementById('redirigirOlvidasteContra').addEventListener('click', function(){
-    window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html"
+    window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
 });
