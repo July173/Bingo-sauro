@@ -268,11 +268,11 @@ body {
 
     }
     .icon {
-        width: 35px;
+        width: 40px;
         height: 35px;
         display: flex;
-        margin-left: -7vw;
-        margin-top: 1vw;
+        margin-left: -8vw;
+        margin-top: 3vw;
         justify-content: center;
         align-items: center;
         border: 2px solid black;
@@ -282,6 +282,9 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         text-decoration: none;
+        align-items: center;
+        
+       
     }
     .separador{
         margin-left: 10px;
@@ -289,6 +292,21 @@ body {
     }
     .counter-container{
         margin-left: 35vw;
+    }
+    
+    .icon-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Centra verticalmente los iconos dentro del contenedor */
+        justify-content: center; /* Centra horizontalmente si hay espacio adicional */
+        gap: 50px;
+        height: 30vh;
+        width: 6vw;
+        margin-left: 70vw;
+        margin-top: -25vw;
+        position: absolute;
+        z-index: 10;
+        
     }
 
     }
