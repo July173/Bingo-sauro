@@ -110,6 +110,7 @@ body {
 
 
 
+
 @media (orientation:portrait) {
 
     #contenedor{
@@ -141,5 +142,40 @@ body {
        margin-right: 20vw;
        margin-top: -17vw;
 
+    }
+    .counter-container{
+        margin-left: 50vw;
+        margin-top: 2vw;
+    }
+    .separador{
+        height: 17vw;
+        width: 32vw;
+    }
+    .cerrar{
+        margin-left: 80vw;
+        margin-top: -10vw;
+        cursor: pointer;
+        height: 10vw;
+        width: 10vw;
+     }
+     .precio{
+        margin-top: 45vw;
+        height: 7vw;
+        width: 10vw;
+     }
+
+     .comprarAvatar{
+        font-family: "Kavoon", serif;
+        background-color: rgb(149, 247, 110);
+        border-radius: 1rem;
+        border: none;
+        width: 20vw;
+        height: 6vw;
+        text-align: center;
+        font-size: 2vw;
+        cursor: pointer;
+        color: black;
+        margin-top: 0.5vw;
+        margin-bottom: -0rem;
     }
 }

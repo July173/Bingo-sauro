@@ -87,6 +87,7 @@ body {
     margin-top: 0.5vw;
     cursor: pointer;
   }
+
 .logo {
     background-image: url("../../Generales/img/logo.png");
     background-repeat: no-repeat;
@@ -152,7 +153,7 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: 5rem;
+    margin-left: 5.5vw;
 }
 .enviar:hover{
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
@@ -191,7 +192,7 @@ body {
     }
     .cerrar {
         width: 8vw;
-        margin-left: 80vw;
+        margin-left: 85vw;
       } 
   
     .password{
@@ -219,10 +220,15 @@ body {
     .enviar{
        
         padding: 2vw 6vw;
-        font-size: 6vw;
+        font-size: 4vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
+        margin-left: 20vw;
+        width: 28vw;
+    }
 
+    .Name {
+        font-size: 5vw;
     }
   
 

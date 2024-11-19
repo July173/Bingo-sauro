@@ -1,10 +1,21 @@
 
- const botonn = document.getElementById('miBoton');
+ const botonn = document.getElementById('miBotonn');
 
-botonn.addEventListener('click', () => {
-    generarCodigoPartida();
-    window.location.href = '../../../Bingo-sauro/Crearsala/crearsala.html';
+ // Evento del botón
+botonn.addEventListener("click", async () => {
+    const actualizado = await generarCodigoPartida(); // Esperar a que se complete
+
+    if (actualizado) {
+        // Redirigir solo si el código fue actualizado
+        setTimeout(() => {
+            window.location.href = "../../../Bingo-sauro/Crearsala/crearsala.html";
+        }, 2000); // Redirigir después de 3 segundos
+    }else{
+        alert("Pailassssssssss");
+        console.log("paila")
+    }
 });
+
 
 const botonUnirme = document.getElementById('unirme');
 

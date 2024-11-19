@@ -1,7 +1,7 @@
 body {
     margin: 0;
     /*elimina cualquier espacio o margen externo alrededor del elemento*/
-    background-image: url("../../Generales/img/fondo.jpeg");
+    background-image: url("../../../Generales/img/fondo.jpeg");
     position: fixed;
     /*hace que el elemento esté "fijo" respecto al viewport */
     width: 100%;
@@ -26,21 +26,23 @@ body {
     /*establece el ancho del elemento al 100% del ancho de su contenedor*/
     height: 100vh;
   }
+  
   .hojas {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    z-index: 1;
     margin-right: 70vw;
     position: absolute;
-    margin-top: -21vw;
+    margin-top: -16vw;
+    z-index: 1;
+  
   }
-
+  
   .hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    margin-right: 84vw;
+    margin-right: 72vw;
     position: absolute;
     /* 50% de transparencia */
     z-index: 1;
@@ -49,7 +51,6 @@ body {
     /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
   }
-  
   
   .hojas-3 {
     width: 33vw;
@@ -75,58 +76,56 @@ body {
   
   }
   
-  .logo {
-    background-image: url(../../Generales/img/logo.png);
-    background-repeat: no-repeat;
-    background-position: 0px;
-    background-size: 100%;
-    width: 14vw;
-    height: 14vw;
-    opacity: 0.6;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-  
-  }
 
-  .input{
-    border: none;
-    border-radius: 1rem;
-    height: 5vw;
-    margin-bottom: 1rem;
-
+     
+  #contenedorCartonesSala {
+    display: flex;
+    /* Cambia el diseño a un contenedor flexible */
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan a la siguiente línea si no caben */
+    gap: 2px;
+    /* Espacio entre cada carton */
+    margin-left: 2vw;
   }
-  .codigo {
-    font-size: 2.5vw;
-    margin-left: 3vw;
-    margin-bottom: 1rem;
-    margin-top: 1vw;
-    text-align: center;
-  }
-  
  
-  .iniciar {
+
+  
+  .codigo {
+    font-size: 3vw;
+    margin-left: 3vw;
+    margin-bottom: -0.2rem;
+  }
+  
+  .comoLlenar {
+    font-size: 3.5vw;
+    margin-left: 15vw;
+    margin-top: -2vw;
+    display: flex;
+  }
+  
+
+  .bingo {
     font-family: "Kavoon", serif;
-    background-color: #C0E780;
+    background-color: #720a0f;
     border-radius: 1.2rem;
     border: none;
-    margin-top: 30px;
+    margin-top: 2%;
     padding: 0.5vw 2vw;
     font-size: 2vw;
     cursor: pointer;
-    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
-    margin-left: 8.5vw;
-    margin-top: 0.5vw;
-   
+    box-shadow: 5px -2px 2px rgba(0, 0, 0, 0.7);
+    margin-left: 1vw;
+    margin-bottom: -5vw;
+    color: aliceblue;
   }
   
-  .iniciar:hover {
+  .girar:hover {
     box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
   }
   .atras {
     margin-left: -80vw;
     margin-top: 7vw;
     position: absolute;
-   
   }
   
   
@@ -143,15 +142,15 @@ body {
   
   .contenedor-gris {
     font-family: "Kavoon", serif;
-    width: 40vw;
-    height: 2zzzzzzzzzzzzvw;
+    width: 76vw;
+    height: 30vw;
     background-color: rgb(204, 204, 192);
     border-radius: 1rem;
     padding: 1vw 3vw 3vw 1vw;
     overflow-y: auto;
     font-size: 2vw;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-   
+    margin-top: 10vw;
   }
   
   .flecha{
@@ -163,92 +162,44 @@ body {
     height: auto;
     pointer-events: none; /* Evita interferir con otros clics */
   }
-  /*modificaciones para una pantalla vertical*/
 
-  .ingresa{
-    font-size: 2.5vw;
-    margin-left: 6vw;
-    margin-bottom: 1rem;
+  table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 24px;
     text-align: center;
-    width: 25vw;
-  }
-
-  .icon{
-    margin-left: 83vw;
-    margin-top: 20px;
-  }
-
-
-
-
+}
+th, td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+}
+th {
+    background-color: #ff7300;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+  /*modificaciones para una pantalla vertical*/
   @media (orientation: portrait) {
-
-    .contenedor-gris {
-      font-family: "Kavoon", serif;
-      width: 80vw;
-      height: 55vw;
-      background-color: rgb(204, 204, 192);
-      border-radius: 1rem;
-      padding: 1vw 3vw 3vw 1vw;
-      overflow-y: auto;
-      font-size: 2vw;
-      box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-      margin-top: -20vw;
-     
-    }
-
     .logo {
       width: 30%;
       height: 70vw;
-      margin-top: -10vw;
     }
   
     .codigo {
       font-size: 5.5vw;
-      margin-left: 5vw;
-      margin-top: 10vw;
+      margin-left: 13.0vw;
     }
-
-    .ingresa{
-      font-size: 5.5vw;
-      margin-left: 11vw;
-      margin-bottom: 1rem;
-      text-align: center;
-      width: 55vw;
-    }
-
-    .iniciar {
-      font-family: "Kavoon", serif;
-      background-color: #C0E780;
-      border-radius: 1.2rem;
-      border: none;
-      margin-top: 30px;
-      padding: 0.5vw 2vw;
-      font-size: 5vw;
-      cursor: pointer;
-      box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
-      margin-left: 16vw;
-      margin-top: 0.5vw;
-    }
-    .icon{
-      margin-left: 80vw;
-      margin-top: 20px;
-      height: 10vw;
-      width: 10vw;
-    }
-
-    .counter-container{
-      margin-left: 45vw;
-      margin-top: 5vw;
-    }
-    .separador{
-      width: 40vw;
-    }
-  
+    
 
     .cuadro {
       width: 100%;
-      height: 60%;
+      height: 70%;
       margin-top: -38vw;
     }
   
@@ -277,3 +228,31 @@ body {
     }
   }
   
+  @media (orientation: portrait) {
+  
+    .hojas,
+    .hojas-2,
+    .hojas-3 {
+      width: 80vw;
+      height: auto;
+    }
+  }
+  
+  
+  /* Mejoras en pantallas muy pequeñas o móviles */
+  @media (max-width: 480px) {
+    .contenedor-gris {
+      width: 80%;
+      /* Ajusta el ancho para ocupar toda la pantalla */
+      font-size: 100vw;
+      /* Texto más grande para móviles */
+    }
+  
+    .hojas,
+    .hojas-2,
+    .hojas-3 {
+      width: 50vw;
+      /* Reduce el tamaño de los gráficos */
+      height: 50vw;
+    }
+  }

@@ -153,7 +153,7 @@ body {
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-left: -1vw;
+    margin-left: 2vw;
     margin-top: 1vw;
     
     
@@ -185,7 +185,7 @@ body {
     cursor: pointer;
 }
 .centrar{
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
 
@@ -260,9 +260,11 @@ body {
     margin-top: 0.5vw;
     margin-left: 1vw;
 }
+
 .Tienecuenta {
-    margin-left: -0vw;
+    margin-left: 4vw;
     font-size: 17px;
+    margin-top: 1vw;
 }
 
 
@@ -329,13 +331,16 @@ body {
         margin-bottom: 1vw;
         border-radius: 0.8rem;
         margin-top: 8vw;
-        margin-left: -3vw; /* Cambiado a 0 para alinear a la izquierda */
+        margin-left: 2vw; 
 
     }
 
-    .Tienecuenta{
-      font-size: 4vw;
+    .text-light {
+        margin-left: 6vw;
+        font-size: 17px;
+        margin-top: 1vw;
     }
+    
 
     .textoATC{
         font-size: 3.8vw;
@@ -376,20 +381,28 @@ body {
 
     }
     .Tienecuenta{
-         margin-left: 2vw; /* Cambiado a 0 para alinear a la izquierda */
+         margin-left: 6vw; /* Cambiado a 0 para alinear a la izquierda */
     }
     .textoATC {
         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
     }
+    .error {
+        color: red;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    .centrar{
+        margin-left: 2rem;
+    }
+    
+    
 }
 
-.error {
-    color: red;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
+
+
+
 
     

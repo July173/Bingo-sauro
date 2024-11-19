@@ -10,8 +10,11 @@
   
         // Validación del correo
         const email = document.getElementById('email');
+        const emailTooltip = document.querySelector('#email + .invalid-tooltip');
+        
         if (!email.value) {
             email.classList.add('is-invalid');
+            emailTooltip.textContent = 'Por favor digitar correctamente el correo electrónico.';
             valid = false;
         } else {
             email.classList.remove('is-invalid');
@@ -29,6 +32,14 @@
         }
   
         return valid;
+    };
+  
+    // Agregar función para actualizar mensaje de error del correo
+    const actualizarMensajeErrorCorreo = (mensaje) => {
+        const email = document.getElementById('email');
+        const emailTooltip = document.querySelector('#email + .invalid-tooltip');
+        email.classList.add('is-invalid');
+        emailTooltip.textContent = mensaje;
     };
   
     // Loop sobre los formularios y aplicar validación personalizada y la de Bootstrap
@@ -67,5 +78,32 @@
       if (!form.checkValidity()) { // Si el formulario no es válido
           event.preventDefault(); // Evita el envío del formulario
           errorAnimation.style.display = 'block'; // Muestra la animación
+      }
+  });
+  
+  const email = document.getElementById('email');
+  email.addEventListener('blur', async function() {
+      if (this.value && this.checkValidity()) {
+          const formData = new FormData();
+          formData.append('correo', this.value);
+  
+          try {
+              const response = await fetch('../inicioSesion/php/verificar_correo.php', {
+                  method: 'POST',
+                  body: formData
+              });
+              const data = await response.json();
+              
+              const emailTooltip = document.querySelector('#email + .invalid-tooltip');
+              
+              if (data.existe) {
+                  this.classList.add('is-invalid');
+                  emailTooltip.textContent = 'Este correo ya está registrado';
+              } else {
+                  this.classList.remove('is-invalid');
+              }
+          } catch (error) {
+              console.error('Error al verificar correo:', error);
+          }
       }
   });
