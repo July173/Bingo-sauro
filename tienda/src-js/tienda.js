@@ -26,7 +26,7 @@ fetch('../../../Bingo-sauro/tienda/php/carton.php')
         precioBoton.classList.add('price-button');
         precioBoton.addEventListener('click', () => {
           localStorage.setItem('selectedCarton', JSON.stringify(carton));
-          window.location = '/Bingo-sauro/tienda/comprarCarton.html';
+          window.location = '/Bingo-sauro/tienda/comprarCarton.php';
         });
       } else {
         precioBoton.textContent = `Carton comprado `;

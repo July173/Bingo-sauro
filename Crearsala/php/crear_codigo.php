@@ -35,6 +35,7 @@ try {
     $params = [':codigo' => $codigo];
     $insertado = $pdo->prepare($query);
     $insertado->execute($params);
+    
 
     // Obtener el ID del último registro insertado
     $lastId = $pdo->lastInsertId();

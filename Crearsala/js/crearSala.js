@@ -28,7 +28,7 @@ fetch('../../../Bingo-sauro/Crearsala/cartonesSala.json')
       cartonDiv.addEventListener('click', () => {
         localStorage.setItem('selectedCarton', JSON.stringify(carton));
         // Redirigir a la nueva pantalla
-        window.location = `/Bingo-sauro/Crearsala/cartonSala.html`;
+        window.location = `/Bingo-sauro/Crearsala/cartonSala.php`;
       });
 
       // Añadir evento click para mostrar la flecha si el cartón está bloqueado
