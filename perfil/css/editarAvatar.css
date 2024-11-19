@@ -79,7 +79,7 @@ body {
     width: 10vw;
     height: 10vw;
     background-color: rgb(228, 226, 226);
-    margin-top: 5vw;
+    margin-top: 2vw;
     margin-bottom: 1vw;
     border-radius: 1rem;
     background-image: url(../../Generales/img/usuario.png);
@@ -116,7 +116,7 @@ body {
 }
 .cerrar{
    margin-left: 80vw;
-   margin-top: -6vw;
+   margin-top: 1vw;
    cursor: pointer;
 }
 

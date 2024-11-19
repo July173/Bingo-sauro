@@ -102,10 +102,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         Tu navegador no soporta la reproducción de audio.
       </audio>
 
-      <script src="src-js/moviemientos.js"></script>
-      <script src="js/CodigoPartida.js"></script>
-      <script src="js/crearSala.js"></script>
-      <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+  <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>

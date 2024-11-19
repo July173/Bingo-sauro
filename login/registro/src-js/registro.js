@@ -152,8 +152,6 @@
         .then(data => {
             console.log("Respuesta del servidor:", data);
             if (data.success) {
-                alert(data.message);
-                // Redirigir al usuario después de un registro exitoso
                 window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html";
             } else {
                 alert(data.errors ? data.errors.join('\n') : 'Error en el registro');
