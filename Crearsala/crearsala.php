@@ -99,8 +99,8 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
         <h6>Eres el creador de la sala </h6>
 
         <div class="comoLlenar">
-          <!--<p class="codigo ">codigo: <?php echo $id_usuario; ?></p>-->
           <p class="codigo ">codigo: <?php echo $id_usuario; ?></p>
+          <!-- <p class="codigo ">codigo: </p> -->
           <div class="codigo " id="codigoPartida" name="codigoPartida"></div>
           <script>
             // Recuperar el código desde localStorage

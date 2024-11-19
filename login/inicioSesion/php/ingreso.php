@@ -31,7 +31,7 @@ try {
     if ($resultado['validas']) {
         // Almacenar la información del usuario en la sesión
         session_start();  // Asegurarse de que la sesión esté iniciada
-        $_SESSION['usuario_id'] = $resultado['usuario']['id_usuario'];  // Guardar nombre del usuario
+        $_SESSION['usuario_id'] = $resultado['usuario']['usuario_id'];  // Guardar nombre del usuario
         $_SESSION['correo'] = $resultado['usuario']['correo'];  // Guardar correo del usuario
         $_SESSION['nombre'] = $resultado['usuario']['nombre'];  // Guardar nombre del usuario
         
