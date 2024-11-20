@@ -10,6 +10,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
 // Opcional: Obtener información del usuario para mostrar en la página
 $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+$correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <title>Cambiar nombre de usuario </title>
   <script src="../Generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="../perfil/css/cambiarNombre.css" />
+  <link rel="stylesheet" href="./css/cambiarNombre.css" />
   <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -50,7 +51,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
-      <div class="titulo">Editar nombre de usuario</div>
+      <div class="titulo">Editar nombre de usuario </div>
       <img id="redirigirPerfil" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
       <div id="ocultar" class="logo"></div>
 

@@ -10,6 +10,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
 // Opcional: Obtener información del usuario para mostrar en la página
 $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+$correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
@@ -74,9 +75,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           
         </div>
       </div>
-      <div class="nombre-usuario">
+      <div class="nombre-usuario"> 
         <div id="cambiarNombre" class="editar edi-nom"></div>
-        <p class="nombre"></p>
+        <p class="nombre"><?php echo $nombre; ?></p>
       </div>
       <div class="contenedor-3">
 
@@ -86,7 +87,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           <div class=" datos email text-light">
             <div class="editar fas fa-question-circle" id="openModal"> </div>
             <p class="texto-correo">Correo electronico:</p>
-            <div class="usuario correo-usuario"></div>
+            <div class="usuario correo-usuario"><?php echo $correo; ?></div>
           </div>
           <div class=" datos password text-light">
             <div class="editar fas fa-exclamation-circle" id="openModal2"></div>
