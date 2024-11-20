@@ -63,7 +63,7 @@ body {
 }
 
 .hojas {
-    width: 33vw;
+    width: 50vw;
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
@@ -218,9 +218,9 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 32vw;
-        height: 47vw;
-        margin-top: -8vw;
+        width: 35vw;
+        height: 50vw;
+        margin-top: 3vw;
         margin-bottom: -7vw;
 
 
@@ -231,43 +231,43 @@ body {
     }
 
     .cuadro {
-        width: 100%;
-        height: 80%;
+        width: 90vw;
+        height: 150vw;
 
     }
 
     .titulo {
-        font-size: 8vw;
-        margin-top: 6vw;
+        font-size: 10vw;
+        margin-top: 12vw;
        
     }
 
     .hojas {
         position: absolute;
-        width: 70vw;
-        height: 80vw;
-        margin-top: -93vw;
+        width: 110vw;
+        height: 110vw;
+        margin-top: -110vw;
         opacity: 0.6;
     }
 
     .hojas-2 {
         position: absolute;
-        width: 70vw;
-        height: 80vw;
+        width: 120vw;
+        height: 120vw;
         margin-top: 90vw;
         margin-left: 10vw;
     }
 
     .hojas-3 {
         position: absolute;
-        width: 70vw;
-        height: 80vw;
-        margin-right: 20vw;
-        margin-top: -17vw;
+        width: 110vw;
+        height: 110vw;
+        margin-right: 25vw;
+        margin-top: 10vw;
 
     }
     .icon {
-        width: 40px;
+        width: 60vw;
         height: 35px;
         display: flex;
         margin-left: -8vw;
@@ -285,9 +285,23 @@ body {
         
        
     }
+    .fondo{
+        width: 23vw;
+        height: 15vw;
+        border-radius: 10vw;
+    }
+    .counter{
+        width: 21vw;
+        height: 14vw;
+        border-radius: 10vw;
+    }
+    .counter-1{
+        margin-top: -1vw;
+    }
     .separador{
         margin-left: 10px;
-        margin-top: 20px;
+        margin-top: 3vw;
+    
     }
     .counter-container{
         margin-left: 35vw;
@@ -298,14 +312,34 @@ body {
         flex-direction: row;
         align-items: center; /* Centra verticalmente los iconos dentro del contenedor */
         justify-content: center; /* Centra horizontalmente si hay espacio adicional */
-        gap: 50px;
+        gap: 40px;
         height: 30vh;
-        width: 6vw;
-        margin-left: 70vw;
+        width: 10vw;
+        margin-left: 68vw;
         margin-top: -25vw;
         position: absolute;
         z-index: 10;
         
+    }
+    .Columna{
+        margin-top: 1px;
+    }
+    .Crearsala{
+        margin-top: 30vw;
+        width: 35vw;
+        height: 10vw;
+        font-size: 5vw;
+    }
+    .unirme{
+        margin-top: -20vw;
+        width: 35vw;
+        height: 10vw;
+        font-size: 5vw;
+    }
+    .tabla{
+        margin-top: 43vw;
+        height: 15vw;
+        font-size: 4vw;
     }
 
     }
