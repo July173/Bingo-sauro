@@ -7,9 +7,9 @@ botonn.addEventListener("click", async () => {
 
     if (actualizado) {
         // Redirigir solo si el código fue actualizado
-        setTimeout(() => {
+        
             window.location.href = "../../../Bingo-sauro/Crearsala/crearsala.php";
-        }, 2000); // Redirigir después de 3 segundos
+       
     }else{
         alert("Pailassssssssss");
         console.log("paila")
