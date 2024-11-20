@@ -60,43 +60,41 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </dotlottie-player>
       </div>
 
-      <form id="redirigirIniciar" class=" needs-validation" novalidate>
-
-        <label for="password" class="password fw-bold form-label">Confirmar nueva contraseña</label>
+      <form id="formCambiarContraseña" class="needs-validation" novalidate>
+        <label for="password_actual" class="password fw-bold form-label">Contraseña actual</label>
         <div class="input-container position-relative">
-          <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png"
-            alt="lock" />
-          <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
-            placeholder="********">
-          <i class="fa-solid fa-eye-slash" id="togglePassword"
-            style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
-          <div class="invalid-tooltip">
-            La contraseña debe tener al menos 8 caracteres y contener al menos un número.
-          </div>
+            <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+            <input type="password" class="input fs-5 form-control" id="password_actual" required minlength="8" placeholder="********">
+            <i class="fa-solid fa-eye-slash toggle-password" data-target="password_actual"
+                style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+            <div class="invalid-tooltip">
+                Ingresa tu contraseña actual.
+            </div>
         </div>
 
-
-          <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
-          <div class="input-container position-relative">
+        <label for="password_nuevo" class="password fw-bold form-label">Nueva contraseña</label>
+        <div class="input-container position-relative">
             <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-            <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
-              placeholder="********">
-            <i class="fa-solid fa-eye-slash" id="togglePassword"
-              style="position: absolute; right: 35px; top: 55%; transform: translateY(-50%); cursor: pointer;"></i>
+            <input type="password" class="input fs-5 form-control" id="password_nuevo" required minlength="8" placeholder="********">
+            <i class="fa-solid fa-eye-slash toggle-password" data-target="password_nuevo"
+                style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
             <div class="invalid-tooltip">
-              La contraseña debe tener al menos 8 caracteres y contener al menos un número.
+                La contraseña debe tener al menos 8 caracteres y contener al menos un número.
             </div>
-          </div>
+        </div>
 
+        <label for="password_confirmar" class="password fw-bold form-label">Confirmar nueva contraseña</label>
+        <div class="input-container position-relative">
+            <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+            <input type="password" class="input fs-5 form-control" id="password_confirmar" required minlength="8" placeholder="********">
+            <i class="fa-solid fa-eye-slash toggle-password" data-target="password_confirmar"
+                style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+            <div class="invalid-tooltip">
+                Las contraseñas deben coincidir.
+            </div>
+        </div>
 
-            <!-- Audio que queremos controlar -->
-            <audio id="audioPlayer">
-              <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
-              Tu navegador no soporta la reproducción de audio.
-            </audio>
-
-            <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
-
+        <button class="enviar" type="submit">Cambiar</button>
       </form>
 
       <script src="/Generales/jsGenerales/VerContrasña.js"></script>
