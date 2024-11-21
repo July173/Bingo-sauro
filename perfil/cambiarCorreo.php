@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,37 +60,30 @@
         </dotlottie-player>
       </div>
 
-      <form  class=" needs-validation" novalidate>
-
-        <label for=" Correo validationCustom" class=" email fw-bold form-label">Nuevo correo electronico</label>
-        <div class=" has-validation input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
-            alt="letter-with-email-sign" />
-          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
-          <div class="invalid-tooltip">
-            Por favor digitar correctamente el correo electronico.
-          </div>
+      <form id="formCambiarCorreo" class="needs-validation" novalidate>
+        <label for="nuevo_correo" class="email fw-bold form-label">Nuevo correo electrónico</label>
+        <div class="has-validation input-container">
+            <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
+                alt="letter-with-email-sign" />
+            <input type="email" class="input form-control" id="nuevo_correo" 
+                placeholder="pepito@gmail.com" required>
+            <div class="invalid-tooltip">
+                Por favor digita un correo electrónico válido.
+            </div>
         </div>
 
-        <label for=" Correo validationCustom" class=" email fw-bold form-label">Confirmar correo electronico</label>
-        <div class=" has-validation input-container">
-          <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
-            alt="letter-with-email-sign" />
-          <input type="email" class=" input form-control" id="email" placeholder="pepito@gmail.com" required>
-          <div class="invalid-tooltip">
-            Por favor digitar correctamente el correo electronico.
-          </div>
+        <label for="confirmar_correo" class="email fw-bold form-label">Confirmar correo electrónico</label>
+        <div class="has-validation input-container">
+            <img class="i" width="30" height="30" src="https://img.icons8.com/ios/50/letter-with-email-sign.png"
+                alt="letter-with-email-sign" />
+            <input type="email" class="input form-control" id="confirmar_correo" 
+                placeholder="pepito@gmail.com" required>
+            <div class="invalid-tooltip">
+                Los correos electrónicos deben coincidir.
+            </div>
         </div>
 
-
-            <!-- Audio que queremos controlar -->
-            <audio id="audioPlayer">
-              <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
-              Tu navegador no soporta la reproducción de audio.
-            </audio>
-
-            <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
-
+        <button class="enviar" type="submit">Cambiar</button>
       </form>
 
       <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>

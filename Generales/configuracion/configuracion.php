@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -140,18 +154,13 @@
                 </div>
             </div>
             
-
-                
-                <div class="cerrarSesion">
-
-                    <a href="http://localhost/Bingo-sauro/login/Bienvenido/pag2.html">
-                        <button class="botonn bot-logout" onclick="">
-                            <img width="32" height="32" src="https://img.icons8.com/color-pixels/32/close-window.png"
-                                alt="close-window" /> <strong>Cerrar sesión</strong>
-                        </button>
-                    </a>
-                </div>
+            <div class="cerrarSesion">
+                <button class="botonn bot-logout" id="logoutButton">
+                    <img width="32" height="32" src="https://img.icons8.com/color-pixels/32/close-window.png" alt="close-window" />
+                    <strong>Cerrar sesión</strong>
+                </button>
             </div>
+            
 
             <!-- Audio que queremos controlar -->
             <audio id="audioPlayer" loop>

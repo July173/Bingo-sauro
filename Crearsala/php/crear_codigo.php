@@ -1,6 +1,10 @@
 <?php
 header('Content-Type: application/json');
 require '../../conexion_BD/conexion.php';
+session_start();
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 
 // Instanciar conexión
 $conexion = new Conexion();
@@ -31,10 +35,15 @@ try {
     } while ($resultado > 0);
 
     // Insertar nuevo código en la base de datos
-    $query = "INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones) VALUES (:codigo, 0, 0)";
-    $params = [':codigo' => $codigo];
+    $query = "INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones,id_creador) VALUES (:codigo, 0, 0,:id_creador)";
+    $params = [
+        ':codigo' => $codigo,
+        ':id_creador' => $id_usuario
+    ];
+    
     $insertado = $pdo->prepare($query);
     $insertado->execute($params);
+    
 
     // Obtener el ID del último registro insertado
     $lastId = $pdo->lastInsertId();
@@ -42,6 +51,7 @@ try {
     // Retornar JSON válido
     echo json_encode([
         'codigo_sala' => $codigo,
+        'id_creador'=> $id_usuario,
         'last_id' => $lastId,
         'success' => true
     ]);

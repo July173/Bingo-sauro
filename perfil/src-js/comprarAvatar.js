@@ -1,6 +1,6 @@
 
 document.getElementById('redirigirPerfil').addEventListener('click', function () {
-  window.location = "/Bingo-sauro/perfil/editarAvatar.html";
+  window.location = "/Bingo-sauro/perfil/editarAvatar.php";
 });
 
 // Cargar avatar seleccionado desde localStorage
@@ -38,7 +38,7 @@ window.onload = function () {
         alert('Avatar comprado!');
         selectedAvatar.locked = false;
         localStorage.setItem('selectedAvatar', JSON.stringify(selectedAvatar));
-        window.location = '/Bingo-sauro/perfil/perfil.html';
+        window.location = '/Bingo-sauro/perfil/perfil.php';
       }
     });
   } else {

@@ -19,7 +19,7 @@
                     error_log("Datos vacíos recibidos en validarCredenciales");
                     return ['validas' => false, 'mensaje' => 'Datos incompletos'];
                 }
-
+        
                 error_log("Validando credenciales para correo: " . $correo);
                 
                 $query = "SELECT * FROM usuario WHERE correo = :correo LIMIT 1";
@@ -38,7 +38,7 @@
                 
                 // Verificar la contraseña
                 if (password_verify($contrasena, $usuario['contrasena'])) {
-                    $_SESSION['usuario_id'] = $usuario['id'];
+                    $_SESSION['usuario_id'] = $usuario['id_usuario'];
                     $_SESSION['correo'] = $usuario['correo'];
                     $_SESSION['nombre'] = $usuario['primer_nombre'];
                     
@@ -53,12 +53,14 @@
                         'usuario' => [
                             'nombre' => $usuario['primer_nombre'],
                             'correo' => $usuario['correo'],
-                            'contrasena' => $contrasena
+                            'usuario_id' => $usuario['id_usuario']
                         ]
                     ];
+                } else {
+                    error_log("Contraseña incorrecta para el usuario: " . $correo);
+                    return ['validas' => false, 'mensaje' => 'Contraseña incorrecta'];
                 }
-                
-                
+        
             } catch (PDOException $e) {
                 error_log("Error en BD: " . $e->getMessage());
                 return ['validas' => false, 'mensaje' => 'Error en la base de datos'];
@@ -66,4 +68,3 @@
         }
 
     }
-?>

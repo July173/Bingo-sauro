@@ -7,9 +7,9 @@ botonn.addEventListener("click", async () => {
 
     if (actualizado) {
         // Redirigir solo si el código fue actualizado
-        setTimeout(() => {
-            window.location.href = "../../../Bingo-sauro/Crearsala/crearsala.html";
-        }, 2000); // Redirigir después de 3 segundos
+        
+            window.location.href = "../../../Bingo-sauro/Crearsala/crearsala.php";
+       
     }else{
         alert("Pailassssssssss");
         console.log("paila")
@@ -20,5 +20,5 @@ botonn.addEventListener("click", async () => {
 const botonUnirme = document.getElementById('unirme');
 
 botonUnirme.addEventListener('click', () => {
-    window.location = '../../../Bingo-sauro/unirmeSala/unirme.html';
+    window.location = '../../../Bingo-sauro/unirmeSala/unirme.php';
 });
