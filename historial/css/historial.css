@@ -202,25 +202,28 @@ body {
         font-size: 8vw;
     }
 
-    .hojas{
-       position: absolute;
-       width: 70vw;
-       height: 80vw;
-       margin-top: -93vw;
-       opacity: 0.6;
+    .hojas {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-top: -110vw;
+        opacity: 0.6;
     }
-    .hojas-2{  position: absolute;
-        width: 70vw;
-        height: 80vw;
+
+    .hojas-2 {
+        position: absolute;
+        width: 120vw;
+        height: 120vw;
         margin-top: 90vw;
         margin-left: 10vw;
     }
 
-    .hojas-3{  position: absolute;
-        width: 70vw;
-        height: 80vw;
-       margin-right: 20vw;
-       margin-top: -17vw;
+    .hojas-3 {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-right: 25vw;
+        margin-top: 10vw;
 
     }
     .counter-container{
