@@ -29,7 +29,7 @@ async function eliminarCodigoPartida(codigoPartida) {
             console.log(data.message);
             
             // Redirigir a otra página después de la eliminación
-            window.location = '../../../Bingo-sauro/home/inicio.html';
+            window.location = '../../../Bingo-sauro/home/inicio.php';
             alert("Partida eliminada")
         } else {
             console.error(data.message);
