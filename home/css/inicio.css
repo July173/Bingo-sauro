@@ -218,10 +218,10 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 35vw;
+        width: 50vw;
         height: 50vw;
-        margin-top: 3vw;
-        margin-bottom: -7vw;
+        margin-top: 13vw;
+        margin-bottom: -50vw;
 
 
     }
@@ -231,14 +231,15 @@ body {
     }
 
     .cuadro {
-        width: 90vw;
-        height: 150vw;
+        
+        width: 100vw;
+        height: 200Vw;
 
     }
 
     .titulo {
-        font-size: 10vw;
-        margin-top: 12vw;
+        font-size: 12vw;
+        margin-top: 17vw;
        
     }
 
@@ -267,44 +268,16 @@ body {
 
     }
     .icon {
-        width: 60vw;
-        height: 35px;
+        width: 15vw;
+        height: 10vw;
         display: flex;
         margin-left: -8vw;
-        margin-top: 3vw;
+        margin-top: 1vw;
         justify-content: center;
         align-items: center;
         border: 2px solid black;
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Fondo semitransparente */
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        text-decoration: none;
-        align-items: center;
-        
-       
-    }
-    .fondo{
-        width: 23vw;
-        height: 15vw;
-        border-radius: 10vw;
-    }
-    .counter{
-        width: 21vw;
-        height: 14vw;
-        border-radius: 10vw;
-    }
-    .counter-1{
-        margin-top: -1vw;
-    }
-    .separador{
-        margin-left: 10px;
-        margin-top: 3vw;
-    
-    }
-    .counter-container{
-        margin-left: 35vw;
+        border-radius: 20vw;
+
     }
     
     .icon-container {
@@ -312,11 +285,11 @@ body {
         flex-direction: row;
         align-items: center; /* Centra verticalmente los iconos dentro del contenedor */
         justify-content: center; /* Centra horizontalmente si hay espacio adicional */
-        gap: 40px;
-        height: 30vh;
-        width: 10vw;
+        gap: 9vw;
+        height: 63vw;
+        width: 30vw;
         margin-left: 68vw;
-        margin-top: -25vw;
+        margin-top: -20vw;
         position: absolute;
         z-index: 10;
         
@@ -325,21 +298,21 @@ body {
         margin-top: 1px;
     }
     .Crearsala{
-        margin-top: 30vw;
-        width: 35vw;
-        height: 10vw;
-        font-size: 5vw;
+        margin-top: 60vw;
+        width: 40vw;
+        height: 15vw;
+        font-size: 6vw;
     }
     .unirme{
-        margin-top: -20vw;
-        width: 35vw;
-        height: 10vw;
-        font-size: 5vw;
-    }
-    .tabla{
-        margin-top: 43vw;
+        width: 40vw;
         height: 15vw;
-        font-size: 4vw;
+        font-size: 6vw;
+        margin-bottom: -20vw;
     }
+
+     .tabla{
+    margin-top: 40vw;
+
+     }
 
     }

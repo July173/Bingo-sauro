@@ -22,3 +22,15 @@
 .cambiado{
     background-color: rgba(13, 90, 114, 0.8);
 }
+@media (orientation:portrait) {
+
+    .tabla{
+        width: 100vw;
+        height: 20vw;
+        margin-top: 70vw;
+        font-size: 4vw;
+       
+    }
+    
+}
+
