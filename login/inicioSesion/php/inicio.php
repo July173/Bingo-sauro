@@ -41,7 +41,8 @@
                     error_log("Usuario no verificado: " . $correo);
                     return [
                         'validas' => false, 
-                        'mensaje' => 'Por favor, verifica tu cuenta. Revisa tu correo electrónico.'
+                        'mensaje' => 'USUARIO_NO_VERIFICADO',
+                        'descripcion' => 'Tu cuenta no está verificada. Por favor, revisa tu correo electrónico y sigue el enlace de verificación.'
                     ];
                 }
                 

@@ -277,4 +277,56 @@ body {
     }
 }
 
+#noVerificadoModal .modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+#noVerificadoModal .modal-header {
+    background-color: #f8f9fa;
+    border-radius: 15px 15px 0 0;
+}
+
+#noVerificadoModal .modal-footer {
+    background-color: #f8f9fa;
+    border-radius: 0 0 15px 15px;
+}
+
+#noVerificadoModal .btn-primary {
+    background-color: #4CAF50;
+    border: none;
+}
+
+#noVerificadoModal .btn-primary:hover {
+    background-color: #45a049;
+}
+
+#noVerificadoModal .fa-envelope-open-text {
+    color: #ffc107;
+}
+
+.modal-backdrop {
+    opacity: 0.5;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+#noVerificadoModal .modal-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
     
