@@ -66,11 +66,26 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
                 window.location.href = "../../home/inicio.php"; // Cambiar la URL de redirección según lo necesites
             }
         } else {
-            // Mostrar error dependiendo del mensaje de error del servidor
-            document.getElementById('error-animation').style.display = 'block';
-            if (data.mensaje === 'Usuario no encontrado') {
+            if (data.mensaje === 'USUARIO_NO_VERIFICADO') {
+                // Ocultar la animación de error si estaba visible
+                document.getElementById('error-animation').style.display = 'none';
+                
+                // Mostrar el modal usando Bootstrap 5
+                const modalElement = document.getElementById('staticBackdrop');
+                const modal = new bootstrap.Modal(modalElement, {
+                  
+                });
+                modal.show();
+
+                // Agregar manejador para cerrar el modal
+                document.querySelector('[data-bs-dismiss="modal"]').addEventListener('click', () => {
+                    modal.hide();
+                });
+            } else if (data.mensaje === 'Usuario no encontrado') {
+                document.getElementById('error-animation').style.display = 'block';
                 actualizarMensajeErrorCorreo('El correo no está registrado');
             } else {
+                document.getElementById('error-animation').style.display = 'block';
                 actualizarMensajeErrorCorreo(data.mensaje);
             }
         }
@@ -97,4 +112,33 @@ document.getElementById('redirigirRegistro').addEventListener('click', function(
 
 document.getElementById('redirigirOlvidasteContra').addEventListener('click', function(){
     window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
+});
+
+// Opcional: Manejar el reenvío de correo de verificación
+document.getElementById('reenviarVerificacion').addEventListener('click', function() {
+    const email = document.getElementById('email').value;
+    
+    fetch('/Bingo-sauro/login/reenviar-verificacion.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `email=${encodeURIComponent(email)}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Actualizar el contenido del modal para mostrar mensaje de éxito
+            document.querySelector('.modal-body').innerHTML = `
+                <div class="text-center mb-4">
+                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                    <p>¡Correo de verificación reenviado!</p>
+                    <p>Por favor, revisa tu bandeja de entrada.</p>
+                </div>
+            `;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 });

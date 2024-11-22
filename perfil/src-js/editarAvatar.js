@@ -2,7 +2,9 @@ document
   .getElementById("redirigirPerfil")
   .addEventListener("click", function () {
     window.location = "/Bingo-sauro/perfil/perfil.php";
+July
   });
+
 
 // // Cargar avatar desde localStorage al iniciar
 // function loadAvatarFromLocalStorage() {
@@ -16,6 +18,7 @@ document
 //     selectedAvatar = savedAvatar;
 //   }
 // }
+
 
 // window.onload = loadAvatarFromLocalStorage;
 
@@ -258,4 +261,5 @@ function cargarAvatarSeleccionado() {
 // Llamar a las funciones al cargar la página
 cargarAvatares();
 cargarAvatarSeleccionado();
+
 

@@ -6,6 +6,7 @@ header('Content-Type: application/json');
 try {
     $conexion = new Conexion();
 
+
     // Validar si el usuario está autenticado
     if (!isset($_SESSION['usuario_id'])) {
         echo json_encode(['status' => 'error', 'message' => 'Usuario no autenticado.']);
@@ -61,5 +62,6 @@ try {
     }
 } catch (Exception $e) {
     echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+
 }
 ?>
