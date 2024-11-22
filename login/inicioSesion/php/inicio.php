@@ -36,6 +36,15 @@
                     return ['validas' => false, 'mensaje' => 'Usuario no encontrado'];
                 }
                 
+                // Verificar si el usuario está verificado
+                if (!$usuario['verificado']) {
+                    error_log("Usuario no verificado: " . $correo);
+                    return [
+                        'validas' => false, 
+                        'mensaje' => 'Por favor, verifica tu cuenta. Revisa tu correo electrónico.'
+                    ];
+                }
+                
                 // Verificar la contraseña
                 if (password_verify($contrasena, $usuario['contrasena'])) {
                     $_SESSION['usuario_id'] = $usuario['id_usuario'];
