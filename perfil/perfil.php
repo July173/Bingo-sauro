@@ -11,6 +11,7 @@ if (!isset($_SESSION['usuario_id'])) {
 // Opcional: Obtener información del usuario para mostrar en la página
 $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
+
 ?>
 
 <!DOCTYPE html>

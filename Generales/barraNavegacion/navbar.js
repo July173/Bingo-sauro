@@ -25,7 +25,7 @@ function loadNavbar() {
             switch (event.target.id) {
              
                 case 'inicio':
-                    window.location = "../home/inicio.html";
+                    window.location = "../home/inicio.php";
                     break;
                     case 'historial':
                 window.location = "../historial/historial.php";
