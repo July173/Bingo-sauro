@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
-// require_once '../../../conexion_BD/conexion.php';
 require '../../../conexion_BD/conexion.php';
 
 class registrar {
@@ -22,22 +21,37 @@ class registrar {
                 return $this->response;
             }
 
+            // Generar token de verificación
+            $token = bin2hex(random_bytes(32));
+            
+            // Para debug - agregar estos logs
+            error_log("Token generado: " . $token);
+            error_log("Email: " . $datos['email']);
+
             // Hashear la contraseña
             $passwordHash = password_hash($datos['password'], PASSWORD_DEFAULT);
 
-            // Insertar usuario usando la función insert
-            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena) VALUES (?, ?, ?)";
-            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash];
+            // Insertar usuario con el token
+            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado) 
+                     VALUES (?, ?, ?, ?, FALSE)";
+            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token];
+            
+            // Para debug
+            error_log("Query: " . $query);
+            error_log("Params: " . print_r($params, true));
+
             $this->pdo->insert($query, $params);
 
-            $this->response['success'] = true;
-            $this->response['message'] = "Usuario registrado exitosamente";
-        } catch (PDOException $e) {
-            $this->response['errors'][] = "Error al registrar: " . $e->getMessage();
-        } catch (Exception $e) {
-            $this->response['errors'][] = "Error inesperado: " . $e->getMessage();
-        }
+            // Enviar correo
+            require_once(__DIR__ . '/../../mailer/mailer.php');
+            enviarCorreoBienvenida($datos['email'], $datos['primer_nombre'], $token);
 
+            $this->response['success'] = true;
+            $this->response['message'] = "Por favor, verifica tu correo para completar el registro";
+        } catch (Exception $e) {
+            error_log("Error en registro: " . $e->getMessage());
+            $this->response['errors'][] = "Error: " . $e->getMessage();
+        }
         return $this->response;
     }
 }
