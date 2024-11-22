@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicioSesion/InicioSesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -10,6 +24,7 @@
   <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css"> 
   <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
   <link rel="stylesheet" href="../home/css/inicio.css" />
+  <link rel="stylesheet" href="../Generales/loader/loder.css">
   <script src="../Generales/barraNavegacion/navbar.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
@@ -40,6 +55,11 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
 
+    <div id="loader" style="display: none;">
+    <!-- Aquí va el diseño del loader -->
+    <div class="spinner"></div>
+    <p>Cargando...</p>
+</div>
 
     <div class="cuadro">
 
@@ -59,7 +79,7 @@
             alt="ask-question" />
         </div>
         <!-- Botón RG -->
-        <a href="http://localhost/Bingo-sauro/home/rd.html" class="icon">
+        <a href="http://localhost/Bingo-sauro/home/rd.php" class="icon">
           <span style="font-size: 24px;">R<sup>D</sup></span>
         </a>
       </div>
@@ -151,7 +171,8 @@
     <script src="../Generales/bootstrap/js/bootstrap.js"></script>
     <script src="../Crearsala/js/CodigoPartida.js"></script>
     <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../Generales/loader/loader.js"></script>
     <script src="src-js/inicio.js"></script>
-</body>
+
 
 </html>

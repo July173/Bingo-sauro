@@ -39,7 +39,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <div class="separador fondo">
                 <div class="counter counter-1 " data-bs-toggle="modal" data-bs-target="#dinoModal">
                     <span>1</span>
-                    <img src="../Generales/img/dinoTrofeos.png" >
+                    <img src="../Generales/img/dinoTrofeos.png" class="imagen-trofeo" >
                 </div>
             </div>
         </div>

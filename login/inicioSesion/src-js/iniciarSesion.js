@@ -63,7 +63,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
             // Redirigir solo si los datos se guardaron
             if (savedData) {
-                window.location.href = "../../home/inicio.html"; // Cambiar la URL de redirección según lo necesites
+                window.location.href = "../../home/inicio.php"; // Cambiar la URL de redirección según lo necesites
             }
         } else {
             // Mostrar error dependiendo del mensaje de error del servidor
