@@ -59,7 +59,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             </div>
             <div class="cuadro-gris"> 
                  <div id="avatarList" >
-
+                  <div id="avatarContainer"></div>
                  </div>
                 </div>
 
