@@ -64,3 +64,48 @@
   .fondo{
     background-color: rgba(216, 216, 216, 0.911);
   }
+
+
+  @media (orientation:portrait){
+
+    .fondo{
+      width: 25vw;
+      height: 17vw;
+      
+  }
+  .counter-container {
+    width: -8vw;
+    margin-right: 40vw;
+    
+  }
+  .counter{
+      width: 22vw;
+      height: 17vw;
+  }
+  
+  .counter-1{
+      margin-top: -1vw;
+  }
+  .separador{
+      margin-left: 1vw;
+      margin-top: 5vw;  
+  border-radius: 30px;
+  }
+  .counter img {
+    width: 11vw;
+    margin-left: 5vw;
+  }
+  span{
+      margin-left: 1vw;
+      margin-right: -2vw;
+  }
+  .imagen-trofeo{
+    width: 20vw;
+  }
+  img{
+    width: 7vw;
+  }
+ 
+
+  
+}
