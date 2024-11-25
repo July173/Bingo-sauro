@@ -111,7 +111,7 @@ document.getElementById('redirigirRegistro').addEventListener('click', function(
 });
 
 document.getElementById('redirigirOlvidasteContra').addEventListener('click', function(){
-    window.location.href = "../forgotPassword/forgotpassword.html";
+    window.location.href = "../forgot-password/forgotpassword.html";
 });
 
 // Opcional: Manejar el reenvío de correo de verificación

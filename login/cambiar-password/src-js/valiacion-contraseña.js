@@ -78,7 +78,7 @@
           event.preventDefault(); // Evita la acción por defecto (no recargar la página)
           setTimeout(() => {
             window.location =
-              "/Bingo-sauro/login/inicioSesion/InicioSesion.html"; // Redirige después de un retraso
+              "../inicio-sesion/inicio-sesion.html"; // Redirige después de un retraso
           }, 1000); // Espera 1 segundo antes de redirigir
         }
 

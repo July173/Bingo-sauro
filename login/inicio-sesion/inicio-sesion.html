@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicar sesión</title>
-  <script src="../../Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="../../generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="../inicioSesion/css/InicarSesion.css" />
-  <link rel="stylesheet" href="../../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../../Generales/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/inicar-sesion.css" />
+  <link rel="stylesheet" href="../../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../../generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
-  <script src="../../Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body class="container">
@@ -45,7 +45,7 @@
         </dotlottie-player>
       </div>
 
-      <form id="loginForm" class="needs-validation" novalidate action="../inicioSesion/php/ingreso.php" method="POST">
+    <form id="loginForm" class="needs-validation" novalidate action="../inicio-sesion/php/ingreso.php" method="POST">
 
         <label for=" Correo validationCustom" class=" email fw-bold form-label">Correo electronico</label>
         <div class=" has-validation input-container">
@@ -81,18 +81,18 @@
       </form>
 
       <div id="redirigirRegistro" class="registrar text-light ">Registrarse</div>
-      <img src="../../Generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
+      <img src="../../generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
 
       <!-- Audio que queremos controlar -->
       <audio id="audioPlayer" loop>
-        <source src="../../Generales/musica/dinoMusica.mp3" type="audio/mpeg">
+        <source src="../../generales/musica/dinoMusica.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
       </audio>
 
-      <script src="../../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-      <script src="src-js/iniciarSesion.js"></script>
-      <script src="src-js/validationIniciarSesion.js"></script>
-      <script src="../../Generales/jsGenerales/VerContrasña.js"></script>
+      <script src="../../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="src-js/iniciar-sesion.js"></script>
+      <script src="src-js/validation-iIniciar-sesion.js"></script>
+      <script src="../../generales/js_generales/ver-contrasña.js"></script>
 </body>
 
 </html>

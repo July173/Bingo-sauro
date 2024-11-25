@@ -32,7 +32,7 @@
             // Si el formulario es válido y tiene el id "redirigirIniciar", redirige
             if (form.checkValidity() && customValid && form.id === 'redirigirCodigo') {
                 event.preventDefault(); // Evita la acción por defecto (no recargar la página)
-                    window.location= "/Bingo-sauro/login/codigoCorreo/contracodigo.html"; // Redirige después de un retraso
+                    window.location= "../codigo-correo/contracodigo.html"; // Redirige después de un retraso
                 
             }
   

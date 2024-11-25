@@ -1,3 +1,3 @@
 document.getElementById('redirigirIniciar').addEventListener('click', function(){
-    window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html"
+    window.location.href = "../inicio-sesion/inicio-sesion.html"
 });
