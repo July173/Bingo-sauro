@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     formData.append('correo', email);
     formData.append('contrasena', password);
 
-    fetch('/Bingo-sauro/login/inicioSesion/php/ingreso.php', {
+    fetch('../php/ingreso.php/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -107,11 +107,11 @@ function actualizarMensajeErrorCorreo(mensaje) {
 
 // Redirigir al registro o a la recuperación de contraseña
 document.getElementById('redirigirRegistro').addEventListener('click', function(){
-    window.location.href = "/Bingo-sauro/login/registro/registro.html";
+    window.location.href = "../registro/registro.html";
 });
 
 document.getElementById('redirigirOlvidasteContra').addEventListener('click', function(){
-    window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
+    window.location.href = "../forgotPassword/forgotpassword.html";
 });
 
 // Opcional: Manejar el reenvío de correo de verificación
