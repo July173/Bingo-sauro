@@ -1,7 +1,7 @@
 // Función asíncrona para generar el código de la partida
 async function generarCodigoPartida() {
   try {
-      const response = await fetch("../../php/crear_codigo.php");
+      const response = await fetch("../crear_sala/php/crear_codigo.php");
       
       if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

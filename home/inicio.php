@@ -93,7 +93,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       <div class="logo"></div>
 
  
-        <button class=" enviar Crearsala" id="miBotonn">Crear sala</button>
+      <button class=" enviar Crearsala" id="miBotonn">Crear sala</button>
   
 
       <button class="enviar unirme" id="unirme">Unirme</button>
@@ -172,6 +172,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <script src="../crear_sala/js/crear_sala.js"></script>
     <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="../generales/loader/loader.js"></script>
+    <script src="../crear_sala/js/codigo_partida.js"></script>
     <script src="src-js/inicio.js"></script>
 
 
