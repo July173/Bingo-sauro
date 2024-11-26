@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -19,11 +19,11 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editar correo de usuario </title>
-  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="../perfil/css/cambiarCorreo.css" />
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="-./Generales/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../perfil/css/cambiar-correo.css" />
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="-./generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
@@ -86,8 +86,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <button class="enviar" type="submit">Cambiar</button>
       </form>
 
-      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-      <script src="./src-js/cambiarCorreo.js"></script>
+      <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="./src-js/cambiar-correo.js"></script>
 </body>
 
 </html>

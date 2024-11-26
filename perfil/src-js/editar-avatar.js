@@ -1,7 +1,7 @@
 document
   .getElementById("redirigirPerfil")
   .addEventListener("click", function () {
-    window.location = "/Bingo-sauro/perfil/perfil.php";
+    window.location = "./perfil.php";
 July
   });
 
@@ -141,7 +141,7 @@ July
 // }
 
 // URL base para las peticiones al servidor
-const baseUrl = '../../../Bingo-sauro/perfil/php/avatares.php';
+const baseUrl = './php/avatares.php';
 
 /** 
  * Función para cargar todos los avatares disponibles y mostrarlos en el contenedor.

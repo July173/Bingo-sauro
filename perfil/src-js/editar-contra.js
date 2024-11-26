@@ -1,5 +1,5 @@
 document.getElementById('redirigirCodigo').addEventListener('click', function(){
-    window.location = "/Bingo-sauro/perfil/perfil.php"
+    window.location = "./perfil.php"
 });
 
 document.getElementById('formCambiarContraseña').addEventListener('submit', function(event) {
@@ -38,7 +38,7 @@ document.getElementById('formCambiarContraseña').addEventListener('submit', fun
     formData.append('password_nuevo', passwordNuevo);
     formData.append('password_confirmar', passwordConfirmar);
 
-    fetch('/Bingo-sauro/perfil/php/procesar_cambio_contraseña.php', {
+    fetch('./php/procesar_cambio_contraseña.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -60,7 +60,7 @@ document.getElementById('formCambiarContraseña').addEventListener('submit', fun
             alert('Contraseña actualizada correctamente');
             
             setTimeout(() => {
-                window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html";
+                window.location.href = "./../login/inicio-sesion/inicio-sesion.html";
             }, 1000);
         } else {
             document.getElementById('error-animation').style.display = 'block';

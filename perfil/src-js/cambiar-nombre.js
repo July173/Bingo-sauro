@@ -30,7 +30,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     formData.append('nuevo_nombre', nuevoNombre);
     formData.append('confirmar_nombre', confirmarNombre);
 
-    fetch('/Bingo-sauro/perfil/php/procesar_cambio_nombre.php', {
+    fetch('./php/procesar_cambio_nombre.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -59,7 +59,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
             
             // Redirigir al perfil después de un breve delay
             setTimeout(() => {
-                window.location.href = "/Bingo-sauro/perfil/perfil.php";
+                window.location.href = "./perfil.php";
             }, 1000);
         } else {
             document.getElementById('error-animation').style.display = 'block';
@@ -86,7 +86,7 @@ function mostrarError(mensaje) {
 
 // Redirigir al perfil cuando se hace clic en el botón de cerrar
 document.getElementById('redirigirPerfil').addEventListener('click', function() {
-    window.location.href = "/Bingo-sauro/perfil/perfil.php";
+    window.location.href = "./perfil/perfil.php";
 });
 
 // Limpiar errores cuando el usuario comienza a escribir

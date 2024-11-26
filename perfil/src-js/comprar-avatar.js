@@ -1,6 +1,6 @@
 
 document.getElementById('redirigirPerfil').addEventListener('click', function () {
-  window.location = "/Bingo-sauro/perfil/editarAvatar.php";
+  window.location = "./editar-avatar.php";
 });
 
 // Cargar avatar seleccionado desde localStorage
@@ -24,7 +24,7 @@ window.onload = function () {
     precioContainer.textContent = `${selectedAvatar.price}`;
 
     const priceIcon = document.createElement('img');
-    priceIcon.src = '../Generales/img/moneditas.png'; 
+    priceIcon.src = '../generales/img/moneditas.png'; 
     priceIcon.style.width = '4vw'; // Ajusta el tamaño según sea necesario
     priceIcon.style.height = '4vw'; // Ajusta el tamaño según sea necesario
     priceIcon.style.marginLeft = '5px'; // Espaciado opcional entre el precio y la imagen
@@ -38,7 +38,7 @@ window.onload = function () {
         alert('Avatar comprado!');
         selectedAvatar.locked = false;
         localStorage.setItem('selectedAvatar', JSON.stringify(selectedAvatar));
-        window.location = '/Bingo-sauro/perfil/perfil.php';
+        window.location = './perfil.php';
       }
     });
   } else {

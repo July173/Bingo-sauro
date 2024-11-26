@@ -1,5 +1,5 @@
 document.getElementById('redirigirPerfil').addEventListener('click', function(){
-    window.location = "/Bingo-sauro/perfil/perfil.php"
+    window.location = "./perfil.php"
 });
 
 document.getElementById('formCambiarCorreo').addEventListener('submit', function(event) {
@@ -31,7 +31,7 @@ document.getElementById('formCambiarCorreo').addEventListener('submit', function
     formData.append('nuevo_correo', nuevoCorreo);
     formData.append('confirmar_correo', confirmarCorreo);
 
-    fetch('/Bingo-sauro/perfil/php/procesar_cambio_correo.php', {
+    fetch('./php/procesar_cambio_correo.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -53,7 +53,7 @@ document.getElementById('formCambiarCorreo').addEventListener('submit', function
             alert('Correo actualizado correctamente');
             
             setTimeout(() => {
-                window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html";
+                window.location.href =  "./../login/inicio-sesion/inicio-sesion.html";
             }, 1000);
         } else {
             document.getElementById('error-animation').style.display = 'block';

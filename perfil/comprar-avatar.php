@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -19,13 +19,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar Avatar</title>
-    <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
-    <link rel="stylesheet" href="../perfil/css/comprarAvatar.css">
-    <link rel="stylesheet" href="../Generales/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
+    <link rel="stylesheet" href="../perfil/css/comprar-avatar.css">
+    <link rel="stylesheet" href="../generales/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+    <script src="../generales/bootstrap/js/bootstrap.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
@@ -44,11 +44,11 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <div class="cuadro">
 
             <div id='monedas'></div>
-            <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+            <script src="../generales/monedas/js/conexion-monedas.js"></script>
           <script>
             cargarContenido();
         </script>
-            <img id="redirigirPerfil" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
+            <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
             <div class="ContenedorAvatar"></div>
             <div class="precio"></div>
             <div id="comprar" class="comprarAvatar">Comprar avatar</div>
@@ -57,12 +57,12 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     <!-- Audio player -->
     <audio id="audioPlayer">
-        <source src="../Generales/musica/cant_hould_us.mp4" type="audio/mp4">
+        <source src="../generales/musica/cant_hould_us.mp4" type="audio/mp4">
         Tu navegador no soporta la reproducción de audio.
     </audio>
 
-    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="./src-js/comprarAvatar.js"></script>
+    <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="./src-js/comprar-avatar.js"></script>
 
 </body>
 </html> 

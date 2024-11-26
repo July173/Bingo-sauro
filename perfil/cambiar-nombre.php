@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -20,11 +20,11 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cambiar nombre de usuario </title>
-  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="./css/cambiarNombre.css" />
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/cambiar-nombre.css" />
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
@@ -52,7 +52,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
     </div>
     <div class="cuadro">
       <div class="titulo">Editar nombre de usuario </div>
-      <img id="redirigirPerfil" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
+      <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
       <div id="ocultar" class="logo"></div>
 
       <div id="error-animation" style="display: none;">
@@ -87,7 +87,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
             <!-- Audio que queremos controlar -->
             <audio id="audioPlayer">
-              <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
+              <source src="/generales/musica/dinoMusica.mp3" type="audio/mp3">
               Tu navegador no soporta la reproducción de audio.
             </audio>
 
@@ -95,8 +95,8 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
       </form>
 
-      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-      <script src="./src-js/cambiarNombre.js"></script>
+      <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="./src-js/cambiar-nombre.js"></script>
 </body>
 
 </html>

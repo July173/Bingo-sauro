@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -19,11 +19,11 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cambiar contraseña</title>
-  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <link rel="stylesheet" href="../perfil/css/editarContra.css" />
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../perfil/css/editar-contra.css" />
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
@@ -51,7 +51,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
     <div class="cuadro">
       <div class="titulo">Editar constraseña</div>
-      <img id="redirigirCodigo" src="../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
+      <img id="redirigirCodigo" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
       <div id="ocultar" class="logo"></div>
 
       <div id="error-animation" style="display: none;">
@@ -97,10 +97,10 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <button class="enviar" type="submit">Cambiar</button>
       </form>
 
-      <script src="/Generales/jsGenerales/VerContrasña.js"></script>
-      <script src="src-js/editarContra.js"></script>
-      <script src="src-js/valiacionContraseña.js"></script>
-      <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="../generales/js_generales/ver-contrasña.js"></script>
+      <script src="src-js/editar-contra.js"></script>
+      <!-- <script src="src-js/valiacionContraseña.js"></script> -->
+      <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>
