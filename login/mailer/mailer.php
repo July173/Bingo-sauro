@@ -32,22 +32,20 @@ function enviarCorreoBienvenida($emailDestino, $nombreDestino, $token) {
         $mail->Body = "
         <div style='background-color: #f4f4f4; padding: 20px; font-family: Arial, sans-serif;'>
             <div style='max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;'>
-                <!-- Header con imagen de banner -->
-                <div style='background-color: #4e9c81; padding: 20px; text-align: center;'>
-                    <img src='https://i.ibb.co/VvCPKXw/bingo.png' alt='Bingo Sauro Logo' style='max-width: 200px;'>
+                <!-- Header -->
+                <div style='background-color: #4e9c81; padding: 30px; text-align: center;'>
+                    <h1 style='color: #ffffff; margin: 0; font-size: 28px;'>Bingo Sauro</h1>
                 </div>
 
                 <!-- Contenido principal -->
                 <div style='padding: 40px 20px; text-align: center;'>
-                    <h1 style='color: #333333; margin-bottom: 20px; font-size: 24px;'>
-                        ¡Bienvenido a Bingo Sauro, {$nombreDestino}! 🎉
-                    </h1>
-
-                    <!-- Imagen de dinosaurio -->
-                    <img src='https://i.ibb.co/mX3W0vK/dino-Registro.png' alt='Dinosaurio' style='max-width: 150px; margin: 20px 0;'>
+                    <h2 style='color: #333333; margin-bottom: 20px; font-size: 24px;'>
+                        ¡Hola, {$nombreDestino}! 🎉
+                    </h2>
 
                     <p style='color: #666666; font-size: 16px; line-height: 1.5; margin-bottom: 30px;'>
-                        Estamos emocionados de tenerte con nosotros. Solo falta un paso más para comenzar la diversión.
+                        Gracias por registrarte en Bingo Sauro. Para completar tu registro y comenzar a jugar,
+                        por favor verifica tu cuenta haciendo clic en el siguiente botón:
                     </p>
 
                     <!-- Botón de verificación -->
@@ -61,14 +59,14 @@ function enviarCorreoBienvenida($emailDestino, $nombreDestino, $token) {
                               font-size: 16px;
                               font-weight: bold;
                               margin: 20px 0;
-                              transition: background-color 0.3s;'>
+                              box-shadow: 0 3px 6px rgba(0,0,0,0.1);'>
                         Confirmar Registro
                     </a>
 
                     <p style='color: #999999; font-size: 14px; margin-top: 30px;'>
                         Si el botón no funciona, copia y pega este enlace en tu navegador:
                     </p>
-                    <p style='color: #666666; font-size: 12px;'>
+                    <p style='color: #666666; font-size: 12px; word-break: break-all;'>
                         {$urlVerificacion}
                     </p>
                 </div>

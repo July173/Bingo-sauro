@@ -36,8 +36,8 @@
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
     <div class="cuadro">
-      <div class="titulo">Cambiar constraseña</div>
-      <img id="redirigirCodigo" src="../../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
+      <div class="titulo">Cambiar contraseña</div>
+      <img id="redirigirOlvidar" src="../../Generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla">
       <div id="ocultar" class="logo"></div>
 
       <div id="error-animation" style="display: none;">
@@ -46,13 +46,12 @@
         </dotlottie-player>
       </div>
 
-      <form id="redirigirIniciar" class=" needs-validation" novalidate>
-
-        <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
+      <form id="cambiarContrasenaForm" class="needs-validation" novalidate>
+        <label for="nuevaContrasena" class="password fw-bold form-label">Nueva contraseña</label>
         <div class="input-container position-relative">
           <img class="i candadoUno" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png"
             alt="lock" />
-          <input type="password" class="input fs-5 form-control" id="password" required minlength="8"
+          <input type="password" class="input fs-5 form-control" id="nuevaContrasena" required minlength="8"
             placeholder="********">
           <i class="fa-solid fa-eye-slash" id="togglePassword"
             style="position: absolute; right: 35px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
@@ -61,35 +60,34 @@
           </div>
         </div>
 
-
-          <label for="password" class="password fw-bold form-label">Nueva contraseña</label>
-          <div class="input-container position-relative">
-            <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
-            <input type="password" class="input fs-5 form-control" id="passwordDos" required minlength="8"
-              placeholder="********">
-            <i class="fa-solid fa-eye-slash" id="togglePasswordDos"
-              style="position: absolute; right: 35px; top: 55%; transform: translateY(-50%); cursor: pointer;"></i>
-            <div class="invalid-tooltip">
-              La contraseña debe tener al menos 8 caracteres y contener al menos un número.
-            </div>
+        <label for="confirmarContrasena" class="password fw-bold form-label">Confirmar contraseña</label>
+        <div class="input-container position-relative">
+          <img class="i" width="30" height="30" src="https://img.icons8.com/ios-filled/50/lock.png" alt="lock" />
+          <input type="password" class="input fs-5 form-control" id="confirmarContrasena" required minlength="8"
+            placeholder="********">
+          <i class="fa-solid fa-eye-slash" id="togglePasswordDos"
+            style="position: absolute; right: 35px; top: 55%; transform: translateY(-50%); cursor: pointer;"></i>
+          <div class="invalid-tooltip">
+            Las contraseñas deben coincidir.
           </div>
+        </div>
 
+        <!-- Audio -->
+        <audio id="audioPlayer" loop>
+          <source src="../../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
 
-            <!-- Audio que queremos controlar -->
-            <audio id="audioPlayer" loop>
-              <source src="../../Generales/musica/dinoMusica.mp3" type="audio/mp3">
-              Tu navegador no soporta la reproducción de audio.
-            </audio>
-
-            <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
-
+        <button class="enviar" type="submit">Cambiar</button>
       </form>
+    </div>
+  </div>
 
-      <script src="../../Generales/jsGenerales/VerContrasña.js"></script>
-      <script src="src-js/cambiar.js"></script>
-      <script src="src-js/valiacionContraseña.js"></script>
-      <script src="../../Generales/jsGenerales/VerContrasña.js"></script>
-      <script src="../../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+  <!-- Scripts -->
+  <script src="../../Generales/jsGenerales/VerContrasña.js"></script>
+  <script src="src-js/cambiar.js"></script>
+  <script src="src-js/valiacionContraseña.js"></script>
+  <script src="../../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>
