@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -20,12 +20,12 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>crearsala</title>
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../Generales/configuracion/pocision2.css">
-  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
+  <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="css/crearsala.css">
   <link rel="stylesheet" href="../perfil/css/modales.css">
-  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
@@ -58,13 +58,13 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
     <div class="cuadro">
 
       <div id='monedas'></div>
-      <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+      <script src="../generales/monedas/js/conexion-monedas.js"></script>
       <script>
         cargarContenido();
       </script>
 
       <div class="atras">
-          <img src="../Generales/img/atras.png" alt="circulo-atras" id="openModal">
+          <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
         
       </div>
 
@@ -166,18 +166,18 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 
   <!-- Audio que queremos controlar -->
   <audio id="audioPlayer" loop>
-    <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+    <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
     Tu navegador no soporta la reproducción de audio.
   </audio>
 
   <!-- <script src="src-js/moviemientos.js"></script> -->
-  <script src="js/CodigoPartida.js"></script>
-  <script src="js/crearSala.js"></script>
+  <script src="js/codigo_partida.js"></script>
+  <script src="js/crear_sala.js"></script>
   <script src="js/modal.js"></script>
 
   <!-- <script src="js/obtener_codigo.js"></script> -->
 
-  <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+  <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 
 </html>

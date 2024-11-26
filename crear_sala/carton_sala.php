@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -20,9 +20,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comprar carton</title>
 
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="css/comprarCarton.css">
   <script src="../Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -53,13 +53,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
 
       <div id='monedas'></div>
-      <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+      <script src="../generales/monedas/js/conexion-monedas.js"></script>
       <script>
         cargarContenido();
       </script>
 
-      <a href="/Bingo-sauro/Crearsala/crearsala.php">
-        <img src="../Generales/img/cerrar.png" alt="cierre" class="cerrar">
+      <a href="/crear_sala/crearsala.php">
+        <img src="../generales/img/cerrar.png" alt="cierre" class="cerrar">
       </a>
 
       <div class="contenedorCartonSeleccionado"></div>
@@ -72,13 +72,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     <!-- Audio que queremos controlar -->
     <audio id="audioPlayer">
-      <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
+      <source src="/generales/musica/dinoMusica.mp3" type="audio/mp3">
       Tu navegador no soporta la reproducción de audio.
     </audio>
 
     
-    <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="../Crearsala/js/compraCartonSala.js"></script>
+    <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../crear_sala/js/compra_cartonSala.js"></script>
 </body>
 
 </html>

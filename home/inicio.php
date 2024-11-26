@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -19,13 +19,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio</title>
-  <link rel="stylesheet" href="../Generales/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css"> 
-  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
+  <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css"> 
+  <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
   <link rel="stylesheet" href="../home/css/inicio.css" />
-  <link rel="stylesheet" href="../Generales/loader/loder.css">
-  <script src="../Generales/barraNavegacion/navbar.js"></script>
+  <link rel="stylesheet" href="../generales/loader/loder.css">
+  <script src="../generales/barra_navegacion/navbar.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
 </head>
@@ -67,7 +67,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
       <div class="icon-container">
         <!-- Botón de Configuración (Engranaje) -->
-        <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.php" class="icon">
+        <a href="../generales/configuracion/configuracion.php" class="icon">
           <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
 
@@ -79,12 +79,12 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             alt="ask-question" />
         </div>
         <!-- Botón RG -->
-        <a href="http://localhost/Bingo-sauro/home/rd.php" class="icon">
+        <a href="rd.php" class="icon">
           <span style="font-size: 24px;">R<sup>D</sup></span>
         </a>
       </div>
       <div id='monedas'></div>
-      <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+      <script src="../generales/monedas/js/conexion-monedas.js"></script>
       <script>
         cargarContenido();
       </script>
@@ -164,14 +164,14 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     <!-- Audio que queremos controlar -->
     <audio id="audioPlayer" loop>
-      <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+      <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
       Tu navegador no soporta la reproducción de audio.
     </audio>
 
-    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
-    <script src="../Crearsala/js/CodigoPartida.js"></script>
-    <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="../Generales/loader/loader.js"></script>
+    <script src="../generales/bootstrap/js/bootstrap.js"></script>
+    <script src="../crear_sala/js/crear_sala.js"></script>
+    <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../generales/loader/loader.js"></script>
     <script src="src-js/inicio.js"></script>
 
 

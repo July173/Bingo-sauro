@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -21,7 +21,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <title>Configuracion</title>
     <link rel="stylesheet" href="../configuracion/config.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../Generales/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../generales/bootstrap/css/bootstrap.css">
 </head>
 
 <body class="container">
@@ -52,7 +52,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
         <div class="boton">
             <img class="close-btn" onclick="location.href = sessionStorage.getItem('previousPage') || history.back();" width="48" height="48"
-                src="../../Generales/img/cerrar.png" alt="cross-mark-button-emoji" />
+                src="../../generales/img/cerrar.png" alt="cross-mark-button-emoji" />
         </div>
         <div class="mascot"></div>
 
@@ -127,7 +127,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                                 totalidad.
                                 Es responsabilidad del jugador leer y comprender estos Términos y Condiciones antes de jugar.
                             </div>
-                            <img src="../../Generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
+                            <img src="../../generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                             <div class="contexto">
                                 ayuda y soporte...
                             </div>
-                            <img src="../../Generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
+                            <img src="../../generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
                         </div>
                     </div>
                 </div>
@@ -164,12 +164,12 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
             <!-- Audio que queremos controlar -->
             <audio id="audioPlayer" loop>
-                <source src="../../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+                <source src="../../generales/musica/dinoMusica.mp3" type="audio/mp3">
                 Tu navegador no soporta la reproducción de audio.
             </audio>
 
-            <script src="../../Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <script src="../../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-            <script src="../../Generales/configuracion/config.js"></script>
+            <script src="../../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="../../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+            <script src="../../generales/configuracion/config.js"></script>
 </body>
 </html>

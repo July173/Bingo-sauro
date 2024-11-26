@@ -2,7 +2,7 @@
   "cartones": [
     {
       "id": 1,
-      "src": "../Generales/img/CARTON.1..PNG",
+      "src": "../generales/img/CARTON.1..PNG",
       "price": "25",
       "locked": false,
       "alt": "carton 1",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "src": "../Generales/img/CARTON2.PNG",
+      "src": "../generales/img/CARTON2.PNG",
       "price": "30",
       "locked": false,
       "alt": "carton 2",
@@ -19,7 +19,7 @@
     },
     {
       "id": 3,
-      "src": "../Generales/img/CARTON3.PNG",
+      "src": "../generales/img/CARTON3.PNG",
       "price": "40",
       "locked": false,
       "alt": "carton 3",
@@ -28,7 +28,7 @@
     },
     {
       "id": 4,
-      "src": "../Generales/img/CARTON.4.PNG",
+      "src": "../generales/img/CARTON.4.PNG",
       "price": "45",
       "locked": true,
       "alt": "carton 4",
@@ -37,7 +37,7 @@
     },
     {
       "id": 5,
-      "src": "../Generales/img/CARTON_5.PNG",
+      "src": "../generales/img/CARTON_5.PNG",
       "price": "45",
       "locked": true,
       "alt": "carton 5",
@@ -46,7 +46,7 @@
     },
     {
       "id": 6,
-      "src": "../Generales/img/CARTON.6..PNG",
+      "src": "../generales/img/CARTON.6..PNG",
       "price": "45",
       "locked": true,
       "alt": "carton 6",
@@ -55,7 +55,7 @@
     },
     {
       "id": 7,
-      "src": "../Generales/img/CARTON.7..PNG",
+      "src": "../generales/img/CARTON.7..PNG",
       "price": "45",
       "locked": true,
       "alt": "carton 7",
@@ -63,4 +63,4 @@
 
     }
   ]
-}
+}     

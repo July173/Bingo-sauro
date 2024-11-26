@@ -1,5 +1,5 @@
 // Cargar cartones desde el JSON
-fetch('../../../Bingo-sauro/Crearsala/cartonesSala.json')
+fetch('./cartones_sala.json')
   .then(response => response.json())
   .then(data => {
     const contenedorCartonesSala = document.getElementById('contenedorCartonesSala');
