@@ -81,29 +81,29 @@
       }
   });
   
-  const email = document.getElementById('email');
-  email.addEventListener('blur', async function() {
-      if (this.value && this.checkValidity()) {
-          const formData = new FormData();
-          formData.append('correo', this.value);
+//   const email = document.getElementById('email');
+//   email.addEventListener('blur', async function() {
+//       if (this.value && this.checkValidity()) {
+//           const formData = new FormData();
+//           formData.append('correo', this.value);
   
-          try {
-              const response = await fetch('../inicioSesion/php/verificar_correo.php', {
-                  method: 'POST',
-                  body: formData
-              });
-              const data = await response.json();
+//           try {
+//               const response = await fetch('../inicioSesion/php/verificar_correo.php', {
+//                   method: 'POST',
+//                   body: formData
+//               });
+//               const data = await response.json();
               
-              const emailTooltip = document.querySelector('#email + .invalid-tooltip');
+//               const emailTooltip = document.querySelector('#email + .invalid-tooltip');
               
-              if (data.existe) {
-                  this.classList.add('is-invalid');
-                  emailTooltip.textContent = 'Este correo ya está registrado';
-              } else {
-                  this.classList.remove('is-invalid');
-              }
-          } catch (error) {
-              console.error('Error al verificar correo:', error);
-          }
-      }
-  });
+//               if (data.existe) {
+//                   this.classList.add('is-invalid');
+//                   emailTooltip.textContent = 'Este correo ya está registrado';
+//               } else {
+//                   this.classList.remove('is-invalid');
+//               }
+//           } catch (error) {
+//               console.error('Error al verificar correo:', error);
+//           }
+//       }
+//   });

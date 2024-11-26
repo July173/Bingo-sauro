@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require '../../../conexion_bd/conexion.php';
+    require '../../../conexion_BD/conexion.php';
     class inicio{
         private $conexion;
         private $pdo;

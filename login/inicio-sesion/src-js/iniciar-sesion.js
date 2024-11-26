@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     formData.append('correo', email);
     formData.append('contrasena', password);
 
-    fetch('../php/ingreso.php/', {
+    fetch('./php/ingreso.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -114,31 +114,31 @@ document.getElementById('redirigirOlvidasteContra').addEventListener('click', fu
     window.location.href = "../forgot-password/forgotpassword.html";
 });
 
-// Opcional: Manejar el reenvío de correo de verificación
-document.getElementById('reenviarVerificacion').addEventListener('click', function() {
-    const email = document.getElementById('email').value;
+// // Opcional: Manejar el reenvío de correo de verificación
+// document.getElementById('reenviarVerificacion').addEventListener('click', function() {
+//     const email = document.getElementById('email').value;
     
-    fetch('/Bingo-sauro/login/reenviar-verificacion.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `email=${encodeURIComponent(email)}`
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // Actualizar el contenido del modal para mostrar mensaje de éxito
-            document.querySelector('.modal-body').innerHTML = `
-                <div class="text-center mb-4">
-                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
-                    <p>¡Correo de verificación reenviado!</p>
-                    <p>Por favor, revisa tu bandeja de entrada.</p>
-                </div>
-            `;
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});
+//     fetch('/Bingo-sauro/login/reenviar-verificacion.php', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/x-www-form-urlencoded',
+//         },
+//         body: `email=${encodeURIComponent(email)}`
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         if (data.success) {
+//             // Actualizar el contenido del modal para mostrar mensaje de éxito
+//             document.querySelector('.modal-body').innerHTML = `
+//                 <div class="text-center mb-4">
+//                     <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+//                     <p>¡Correo de verificación reenviado!</p>
+//                     <p>Por favor, revisa tu bandeja de entrada.</p>
+//                 </div>
+//             `;
+//         }
+//     })
+//     .catch(error => {
+//         console.error('Error:', error);
+//     });
+// });

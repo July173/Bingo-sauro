@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
-require '../../../conexion_bd/conexion.php';
+require '../../../conexion_BD/conexion.php';
 
 class registrar {
     private $pdo;
