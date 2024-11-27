@@ -13,7 +13,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"></html>
 
 <head>
     <meta charset="UTF-8">
@@ -51,8 +51,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <h2 class="settings-title">AJUSTES</h2>
         </div>
         <div class="boton">
-            <img class="close-btn" onclick="location.href = sessionStorage.getItem('previousPage') || history.back();" width="48" height="48"
-                src="../../Generales/img/cerrar.png" alt="cross-mark-button-emoji" />
+            <button id="botonRegresar" class="close-btn">
+                <img width="48" height="48" src="../../Generales/img/cerrar.png" alt="cross-mark-button-emoji" />
+            </button>
         </div>
         <div class="mascot"></div>
 
