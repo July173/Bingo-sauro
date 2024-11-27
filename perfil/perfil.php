@@ -93,7 +93,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
           <div class=" datos password text-light">
             <div class="editar fas fa-exclamation-circle" id="openModal2"></div>
             <p class="texto-contraseña">Contraseña:</p>
-            <div class=" usuario contraseña-usuario"></div>
+            <div class=" usuario contraseña-usuario">********</div>
           </div>
         </div>
       </div>
