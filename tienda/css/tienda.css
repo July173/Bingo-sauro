@@ -73,6 +73,12 @@ body {
   align-items: center;
   z-index: 10;
 }
+.candado {
+  position: absolute;
+  top: 6vw;
+  right: 6vw;
+  font-size: 4rem;
+}
 .avatar-wrapper {
   position: relative;
   display: inline-block;
