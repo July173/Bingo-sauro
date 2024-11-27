@@ -1,24 +1,31 @@
 
- const botonn = document.getElementById('miBotonn');
+const boton = document.getElementById('miBotonn');
 
- // Evento del botón
-botonn.addEventListener("click", async () => {
-    const actualizado = await generarCodigoPartida(); // Esperar a que se complete
+// Evento del botón
+boton.addEventListener('click', async () => {
+    mostrarLoader(); // Mostrar el loader
 
-    if (actualizado) {
-        // Redirigir solo si el código fue actualizado
-        
-            window.location.href = "../../../Bingo-sauro/Crearsala/crearsala.php";
-       
-    }else{
-        alert("Pailassssssssss");
-        console.log("paila")
+    try {
+        const actualizado = await generarCodigoPartida(); // Ejecutar tu lógica principal
+
+        if (actualizado) {
+            // Redirigir si todo está bien
+            window.location.href = "./../crear_sala/crearsala.php";
+        } else {
+            alert("No se pudo crear la sala. Inténtalo de nuevo.");
+            console.log("Error al crear la sala.");
+        }
+    } catch (error) {
+        console.error("Ocurrió un error:", error);
+    } finally {
+        ocultarLoader(); // Ocultar el loader al finalizar
     }
 });
+
 
 
 const botonUnirme = document.getElementById('unirme');
 
 botonUnirme.addEventListener('click', () => {
-    window.location = '../../../Bingo-sauro/unirmeSala/unirme.php';
+    window.location = './../unirme_sala/unirme.php';
 });

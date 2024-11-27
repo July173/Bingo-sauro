@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Principal</title>
+    <link rel="stylesheet" href="./portada/css/diseño.css" />
+  </head>
+
+  <body class="container">
+    <div class="background"></div>
+    <div class="centrado-total">
+      <div class="logo"></div>
+    </div>
+
+    <div class="gifts">
+      <div class="dino1">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/82dcafe9-9788-467d-86b6-ed1c9388f6b6/l19K6Qr2X3.json"
+          background="transparent"
+          speed="1"
+          style="width: 8rem; height: 8rem"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="loader">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/c68af845-0a4f-4fbf-82d9-a48eb52ed980/v3Ca8nuT7P.json"
+          background="transparent"
+          speed="1"
+          style="width: 12rem; height: 12rem"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+    </div>
+
+    <!-- Audio que queremos controlar -->
+    <audio id="audioPlayer">
+      <source src="/Generales/musica/dinoMusica.mp3" type="audio/mp3">
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+
+    <script src="/Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="./portada/src-js/moviemiento.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -19,7 +19,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monedas y Trofeos</title>
-    <link rel="stylesheet" href="../../Generales/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../generales/bootstrap/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/monedas-trofeos.css">
 </head>
@@ -31,7 +31,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <div class="separador">
                 <div class="counter">
                     <span>25</span>
-                    <img src="../Generales/img/dinomonedas.png" >
+                    <img src="../generales/img/dinomonedas.png" >
                 </div>
             </div>
 
@@ -39,7 +39,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <div class="separador fondo">
                 <div class="counter counter-1 " data-bs-toggle="modal" data-bs-target="#dinoModal">
                     <span>1</span>
-                    <img src="../Generales/img/dinoTrofeos.png" class="imagen-trofeo" >
+                    <img src="../generales/img/dinoTrofeos.png" class="imagen-trofeo" >
                 </div>
             </div>
         </div>
@@ -59,6 +59,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
     </div>
 
-    <script src="../../Generales/bootstrap/js/bootstrap.js"></script>
+    <script src="../../generales/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

@@ -60,7 +60,7 @@
             // Si el formulario es válido y tiene el id "redirigirHome", redirige
             if (form.checkValidity() && customValid && form.id === 'redirigirHome') {
                 event.preventDefault(); // Evita la acción por defecto (no recargar la página)
-                window.location = "/Bingo-sauro/home/inicio.html"; // Redirige después de un retraso
+                window.location = "../../home/inicio.php"; // Redirige después de un retraso
             }
 
             form.classList.add('was-validated'); // Aplica estilos de validación de Bootstrap
@@ -152,7 +152,7 @@
         .then(data => {
             console.log("Respuesta del servidor:", data);
             if (data.success) {
-                window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html";
+                window.location.href = "../inicio-sesion/inicio-sesion.html";
             } else {
                 alert(data.errors ? data.errors.join('\n') : 'Error en el registro');
             }

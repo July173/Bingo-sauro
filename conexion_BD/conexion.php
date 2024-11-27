@@ -8,6 +8,7 @@ class Conexion
     private $baseDatos;
     private $pdo;
 
+    
     public function __construct()
     {
         $this->servidor = "bwbup4izlyky4o7s56rs-mysql.services.clever-cloud.com";
@@ -33,16 +34,16 @@ class Conexion
     }
 
     // Función genérica para INSERT
-    public function insert($query, $params)
+    public function insert($query, $params = [])
     {
         try {
-            $stmt = $this->pdo->prepare($query);
+            $stmt = $this->conectar()->prepare($query);
             $stmt->execute($params);
-            return $this->pdo->lastInsertId(); // Retorna el ID del último registro insertado
+            return true;
         } catch (PDOException $e) {
-            throw new Exception('Error al insertar: ' . $e->getMessage());
+            error_log("Error en insert: " . $e->getMessage());
+            throw new Exception("Error en la inserción: " . $e->getMessage());
         }
-        
     }
 
     // Función genérica para SELECT
@@ -81,5 +82,6 @@ class Conexion
         }
 
     }
+
 }
 ?>

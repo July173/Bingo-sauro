@@ -1,5 +1,5 @@
 const historialDiv = document.getElementById('historialJugar');
-const url = '../../../Bingo-sauro/historial/php/partidas.php'; // Ruta actualizada para acceder al PHP
+const url = './php/partidas.php'; // Ruta actualizada para acceder al PHP
 
 function cargarHistorial() {
     fetch(url)
