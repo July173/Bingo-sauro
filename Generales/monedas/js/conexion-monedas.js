@@ -1,5 +1,5 @@
 function cargarContenido() {
-    fetch('http://localhost/Bingo-sauro/Generales/monedas/monedas.php')
+    fetch('../generales/monedas/monedas.php')
         .then(response => {
             if (!response.ok) {
                 throw new Error('La respuesta de la red no fue ok');

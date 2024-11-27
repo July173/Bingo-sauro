@@ -10,7 +10,7 @@ boton.addEventListener('click', async () => {
 
         if (actualizado) {
             // Redirigir si todo está bien
-            window.location.href = "../../../Bingo-sauro/Crearsala/crearsala.php";
+            window.location.href = "./../crear_sala/crearsala.php";
         } else {
             alert("No se pudo crear la sala. Inténtalo de nuevo.");
             console.log("Error al crear la sala.");
@@ -27,5 +27,5 @@ boton.addEventListener('click', async () => {
 const botonUnirme = document.getElementById('unirme');
 
 botonUnirme.addEventListener('click', () => {
-    window.location = '../../../Bingo-sauro/unirmeSala/unirme.php';
+    window.location = './../unirme_sala/unirme.php';
 });

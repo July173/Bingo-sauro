@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 header('Content-Type: application/json');
 
 // Cargar el archivo JSON
-$carton = file_get_contents('../json/comprarCarton.json');
+$carton = file_get_contents('../json/comprar-carton.json');
 if ($carton === false) {
     echo json_encode(['error' => 'No se pudo cargar el amigos php.']);
     exit;
