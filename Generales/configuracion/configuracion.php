@@ -13,7 +13,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"></html>
 
 <head>
     <meta charset="UTF-8">
