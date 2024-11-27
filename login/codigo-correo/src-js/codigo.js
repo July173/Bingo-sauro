@@ -42,7 +42,7 @@ document.getElementById('redirigirCambiar').addEventListener('click', function(e
     if (!email) {
         console.error('❌ Email no encontrado en sessionStorage');
         alert('Por favor, inicia el proceso de recuperación nuevamente');
-        window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
+        window.location.href = "../forgot-password/forgotpassword.html"
         return;
     }
 
@@ -62,7 +62,7 @@ document.getElementById('redirigirCambiar').addEventListener('click', function(e
     }
 
     // Enviar para verificación
-    fetch('/Bingo-sauro/login/codigoCorreo/php/verificar_codigo.php', {
+    fetch('./php/verificar_codigo.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -76,7 +76,7 @@ document.getElementById('redirigirCambiar').addEventListener('click', function(e
         if (data.success) {
             console.log('✅ Código verificado correctamente');
             sessionStorage.setItem('codigo_verificado', 'true');
-            window.location.href = "/Bingo-sauro/login/CambiarPassword/cambiarContra.html";
+            window.location.href = "../cambiar-password/cambiar-contra.html";
         } else {
             console.error('❌ Verificación fallida:', data.message);
             alert('Código inválido. Por favor, verifique e intente nuevamente.');
@@ -95,5 +95,5 @@ document.getElementById('redirigirCambiar').addEventListener('click', function(e
 
 // Mantener el botón de regresar
 document.getElementById('redirigirOlvidar').addEventListener('click', function(){
-    window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
+    window.location.href = "../forgot-password/forgotpassword.html"
 });

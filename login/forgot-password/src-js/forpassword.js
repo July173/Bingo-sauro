@@ -13,7 +13,7 @@ if (form) {
         
         sessionStorage.setItem('reset_email', email);
         
-        fetch('/Bingo-sauro/login/forgotPassword/php/enviar_codigo.php', {
+        fetch('./php/enviar_codigo.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -27,7 +27,7 @@ if (form) {
                 console.log('Email guardado:', savedEmail);
                 
                 if (savedEmail) {
-                    window.location.href = "/Bingo-sauro/login/codigoCorreo/contracodigo.html";
+                    window.location.href = "../codigo-correo/contracodigo.html";
                 } else {
                     alert('Error al guardar el email. Por favor, intenta nuevamente.');
                 }

@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!email) {
         console.error('❌ No se encontró email en sessionStorage');
         alert('Por favor, inicia el proceso de recuperación nuevamente');
-        window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
+        window.location.href = "../forgot-password/forgotpassword.html";
         return;
     }
 
     // Botón de cerrar
     document.getElementById('redirigirOlvidar').addEventListener('click', function() {
-        window.location.href = "/Bingo-sauro/login/forgotPassword/forgotpassword.html";
+        window.location.href = "../forgot-password/forgotpassword.html";
     });
 
     // Toggle para la nueva contraseña
@@ -71,7 +71,7 @@ document.getElementById('cambiarContrasenaForm').addEventListener('submit', func
         return;
     }
     
-    fetch('/Bingo-sauro/login/CambiarPassword/php/actualizar_contrasena.php', {
+    fetch('./php/actualizar_contrasena.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -85,7 +85,7 @@ document.getElementById('cambiarContrasenaForm').addEventListener('submit', func
         if (data.success) {
             console.log('✅ Contraseña actualizada correctamente');
             sessionStorage.removeItem('reset_email');
-            window.location.href = "/Bingo-sauro/login/inicioSesion/InicioSesion.html";
+            window.location.href = "../inicio-sesion/inicio-sesion.html";
         } else {
             console.error('❌ Error:', data.message);
             document.getElementById('error-animation').style.display = 'block';
