@@ -11,4 +11,3 @@ if ($avatares === false) {
     exit;
 }
 echo $avatares;
-
