@@ -15,7 +15,7 @@ document.querySelector('.close-btn').addEventListener('click', function() {
 });
 
 document.getElementById('logoutButton').addEventListener('click', function () {
-    fetch('../../Generales/configuracion/php/cerrar-sesion.php', {
+    fetch('php/cerrar-sesion.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -30,7 +30,7 @@ document.getElementById('logoutButton').addEventListener('click', function () {
                 alert(data.mensaje);
 
                 // Redirigir al usuario al inicio de sesión
-                window.location.href = "http://localhost/Bingo-sauro/login/Bienvenido/pag2.html";
+                window.location.href = "./../../login/bienvenido/pag2.html";
             }
         })
         .catch((error) => {

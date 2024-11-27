@@ -1,5 +1,5 @@
 // Cargar cartones desde el JSON
-fetch('../../../Bingo-sauro/tienda/php/carton.php')
+fetch('./php/carton.php')
   .then(response => response.json())
   .then(data => {
     const contenedorCartones = document.getElementById('contenedorCartones');
@@ -26,7 +26,7 @@ fetch('../../../Bingo-sauro/tienda/php/carton.php')
         precioBoton.classList.add('price-button');
         precioBoton.addEventListener('click', () => {
           localStorage.setItem('selectedCarton', JSON.stringify(carton));
-          window.location = '/Bingo-sauro/tienda/comprarCarton.php';
+          window.location = './comprar-carton.php';
         });
       } else {
         precioBoton.textContent = `Carton comprado `;

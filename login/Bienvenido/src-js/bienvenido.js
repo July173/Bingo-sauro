@@ -1,5 +1,5 @@
 document.getElementById('redirigirIniciar').addEventListener('click', function(){
-    window.location= "../inicioSesion/InicioSesion.html"
+    window.location= "../inicio-sesion/inicio-sesion.html"
 });
 
 document.getElementById('redirigirRegistrar').addEventListener('click', function(){

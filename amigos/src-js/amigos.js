@@ -5,7 +5,7 @@ let amigoAEliminar = null; // Variable para guardar el amigo a eliminar
 
 // Función para cargar los amigos desde PHP
 function cargarAmigos() {
-  fetch('../../../Bingo-sauro/amigos/json/amigos.php') // Ajusta la ruta según tu estructura de carpetas
+  fetch('./json/amigos.php') // Ajusta la ruta según tu estructura de carpetas
     .then(response => {
       if (!response.ok) {
         throw new Error('Error en la respuesta de la red');
@@ -37,7 +37,7 @@ function mostrarAmigos(amigos) {
       <div class="separador ranking fondo mon">
         <div class="counter counter-1" data-bs-toggle="modal" data-bs-target="#dinoModal">
           <span class="numero">${amigo.cantidad_premios}</span>
-          <img src="../Generales/img/dinoTrofeos.png" alt="Dino">
+          <img src="../generales/img/dinoTrofeos.png" alt="Dino">
         </div>
       </div>
     `;
