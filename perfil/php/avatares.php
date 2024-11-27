@@ -1,10 +1,9 @@
 <?php
 session_start();
-require_once '../../conexion_BD/conexion.php';
+require '../../conexion_BD/conexion.php';
 header('Content-Type: application/json');
 
 try {
-    $conexion = new Conexion();
 
 
     // Validar si el usuario está autenticado
@@ -14,6 +13,7 @@ try {
     }
 
     $user_id = $_SESSION['usuario_id']; // ID del usuario autenticado
+    $conexion = new Conexion();
 
     // Detectar la acción según un parámetro enviado en la solicitud
     $action = isset($_GET['action']) ? $_GET['action'] : null;
@@ -21,7 +21,7 @@ try {
     if ($action === 'getAvatars') {
         // Obtener todos los avatares de una categoría específica (por ejemplo, id_categoria = 1)
         $id_categoria = 1;
-        $query = "SELECT id_articulo, nombre, url, precio, id_categoria, locked FROM articulo WHERE id_categoria = ?";
+        $query = "SELECT id_articulo, nombre, url, precio, id_categoria FROM articulo WHERE id_categoria = ?";
         $result = $conexion->select($query, [$id_categoria]);
 
         if (!empty($result)) {

@@ -2,7 +2,7 @@ document
   .getElementById("redirigirPerfil")
   .addEventListener("click", function () {
     window.location = "./perfil.php";
-July
+
   });
 
 
