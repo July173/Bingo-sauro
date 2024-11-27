@@ -1,0 +1,332 @@
+body {
+    margin: 0;
+    /*elimina cualquier espacio o margen externo alrededor del elemento*/
+    background-image: url("../../../Generales/img/fondo.jpeg");
+    position: fixed;
+    /*hace que el elemento esté "fijo" respecto al viewport */
+    width: 100%;
+    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100%;
+    /*establece la altura del elemento en el 100% de la altura visible del viewport*/
+    background-size: cover;
+    /*ajusta la imagen de fondo,la hace responsive.*/
+    background-repeat: no-repeat;
+    /*No se repite.*/
+    background-attachment: fixed;
+    /*Permanece fija mientras se hace scroll.*/
+}
+
+#contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100vh;
+}
+
+.hojas {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    z-index: 1;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
+  
+
+  .hojas-2 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    margin-right: 84vw;
+    position: absolute;
+    /* 50% de transparencia */
+    z-index: 1;
+    /* Volteo horizontal */
+    transform: rotate(-150deg);
+    /* Opcional: ajusta el contenedor si es necesario */
+    margin-top: 22vw;
+  }
+.hojas-3 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    margin-left:66vw;
+   position: absolute;
+   margin-top: 12vw;
+    z-index: 1;
+    transform: rotate(90deg);
+    margin-bottom: 20vw;
+}
+.cuadro {
+    background-color: rgba(14, 78, 62, 0.5);
+    width: 32vw;
+    height: 45vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    
+}
+.titulo {
+    color: rgb(0, 255, 0);
+    font-family: "Kavoon", serif;
+    font-size: 2.5vw;
+    margin-top: 0.5vw;
+}
+
+.logo {
+    background-image: url("../../../Generales/img/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 20%;
+    height: 25%;
+    opacity: 0.6;
+    margin-top: -2vw;
+    margin-bottom: -2vw;
+}
+
+.email{
+    font-size: 1.8vw ;
+    margin-right: 6vw;
+    color: rgb(0, 0, 0);
+}
+.password{
+    font-size: 1.8vw ;
+    margin-right: 12vw;
+    color: black;
+}    
+
+.input{
+    width: 23vw;
+    height: 4vw;
+    background-color: #FEFFD3;
+    border-radius: 0.3rem;
+    border: none;
+    margin-bottom: 1vw;;
+
+}
+.input-container {
+    position: relative;
+}
+
+.i {
+    position: absolute;
+    left: 4%;
+    top: 45%;
+    transform: translateY(-50%);
+    color: #aaa;
+   
+}
+
+.input-container input {
+    padding: 4% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
+    
+}
+#contraseña{
+    padding: 7% 4% 4% 16%; /* Deja espacio para el ícono dentro del input */
+}
+
+.enviar{
+    font-family: "Kavoon", serif;
+    background-color: rgb(189, 230, 115);
+    border-radius: 1.2rem;
+    border: none;
+    margin-top: 4%;
+    padding: 0.5vw 2vw;
+    font-size: 2vw;
+    cursor: pointer;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 2vw;
+    display: block; /* Asegura que el botón ocupe toda la línea y se centre */
+    text-align: center;
+}
+.enviar:hover{
+    box-shadow: 0.5px 0.5px 4px 2px #0f9b0f;
+}
+.registrar{
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+
+.textoOC{
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-right: 8vw;
+    margin-top: -0.5vw;
+}
+
+
+.bingo{
+   
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: 100%;
+    width: 30vw;
+    margin-left: 1vw;
+    margin-top: -1.5vw;
+}
+
+/*modificaciones para una pantalla vertical*/
+@media (orientation:portrait) {
+
+    .logo {
+        width: 32vw;
+        height: 47vw;
+       margin-top: -8vw;
+       margin-bottom: -7vw;
+     
+
+    }
+    #contenedor{
+        width: 100%;
+    }
+    .cuadro{
+        width: 100%;
+        height: 80%;  
+        z-index: 10; 
+       
+    }
+    .titulo{
+        font-size: 8vw;
+    }
+   
+    .email{
+        font-size: 5vw ;
+        margin-right: 16vw;
+        margin-bottom: 0.5vw;
+
+    }
+    .password{
+        font-size: 5vw ;
+        margin-right: 32 vw;
+        margin-bottom: 0.5vw;
+
+    }    
+    
+    .input{
+        width: 60vw;
+        height: 9vw;
+        margin-bottom: 1vw;;
+    
+    }
+   
+    .i {
+        left: 4%;
+        top: 42%;
+        width: 5vw;
+        height: 5vw;
+    }
+  
+    .enviar{
+        margin: -0.2vw auto 1vw auto; /* Centra el botón horizontalmente */
+        padding: 1vw 8vw;
+        font-size: 5vw;
+        border-radius: 0.8rem;
+        display: block; /* Asegura que el botón ocupe toda la línea y se centre */
+        text-align: center;
+       
+    }
+    
+    .registrar{
+      font-size: 4vw;
+      z-index: 10;
+    }
+    .textoOC{
+        font-size: 3.8vw;
+        z-index: 10;
+        
+    }
+   
+    .bingo{
+        width: 90vw;
+        margin-left: 1vw;
+        
+    }
+    .hojas{
+       position: absolute;
+       width: 70vw;
+       height: 80vw;
+       margin-top: -93vw;
+       opacity: 0.6;
+    }
+    .hojas-2{  position: absolute;
+        width: 70vw;
+        height: 80vw;
+        margin-top: 90vw;
+        margin-left: 10vw;
+    }
+
+    .hojas-3{  position: absolute;
+        width: 70vw;
+        height: 80vw;
+       margin-right: 20vw;
+       margin-top: -17vw;
+
+    }
+}
+
+#noVerificadoModal .modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+#noVerificadoModal .modal-header {
+    background-color: #f8f9fa;
+    border-radius: 15px 15px 0 0;
+}
+
+#noVerificadoModal .modal-footer {
+    background-color: #f8f9fa;
+    border-radius: 0 0 15px 15px;
+}
+
+#noVerificadoModal .btn-primary {
+    background-color: #4CAF50;
+    border: none;
+}
+
+#noVerificadoModal .btn-primary:hover {
+    background-color: #45a049;
+}
+
+#noVerificadoModal .fa-envelope-open-text {
+    color: #ffc107;
+}
+
+.modal-backdrop {
+    opacity: 0.5;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+}
+
+#noVerificadoModal .modal-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+    

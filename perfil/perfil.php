@@ -4,13 +4,14 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.php');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
 // Opcional: Obtener información del usuario para mostrar en la página
 $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
+
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +22,13 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil</title>
 
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
-  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
+  <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../perfil/css/perfil.css" />
   <link rel="stylesheet" href="../perfil/css/modales.css">
-  <link rel="stylesheet" href="../Generales/configuracion/posicion.css">
-  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
 </head>
@@ -55,12 +56,12 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
     <div class="cuadro">
 
       <div class="icon-container">
-        <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.php" class="icon">
-          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+      <a href="../generales/configuracion/configuracion.php" class="icon">
+      <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
       </div>
       <div id='monedas'></div>
-      <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+      <script src="../generales/monedas/js/conexion-monedas.js"></script>
     <script>
       cargarContenido();
   </script>
@@ -92,7 +93,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
           <div class=" datos password text-light">
             <div class="editar fas fa-exclamation-circle" id="openModal2"></div>
             <p class="texto-contraseña">Contraseña:</p>
-            <div class=" usuario contraseña-usuario"></div>
+            <div class=" usuario contraseña-usuario">********</div>
           </div>
         </div>
       </div>
@@ -133,7 +134,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
       </div>
 
       <div id="navbar-container">
-        <script src="../Generales/barraNavegacion/navbar.js"></script>
+        <script src="../generales/barra_navegacion/navbar.js"></script>
         <script>
           loadNavbar();
         </script>
@@ -142,11 +143,11 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
     <!-- Audio que queremos controlar -->
     <audio id="audioPlayer" loop>
-      <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+      <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
       Tu navegador no soporta la reproducción de audio.
   </audio>
 
-  <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+  <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="src-js/perfil.js"></script>
     <script src="src-js/modales.js"></script>
 </body>

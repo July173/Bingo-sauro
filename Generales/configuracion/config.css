@@ -82,8 +82,17 @@ body, html {
     margin: 0;
 }
 .close-btn {
+    background: none;
+    border: none;
     cursor: pointer;
-    margin-left: 1vw;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    position: relative;
+}
+
+.close-btn:hover {
+    opacity: 0.8;
 }
 
 .dinochibi{
@@ -147,8 +156,8 @@ body, html {
     font-weight: bold;
 }
 .boton{
-    margin-left: 32vw;
-    margin-top: -5vw;
+    position: relative;
+    z-index: 9999;
 }
 
 .contenedor-recuadros{
