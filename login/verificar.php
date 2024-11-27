@@ -12,7 +12,7 @@ if (isset($_GET['token'])) {
         
         if ($stmt->rowCount() > 0) {
             // Redirigir al inicio de sesión
-            header('Location: /Bingo-sauro/login/inicioSesion/InicioSesion.html');
+            header('Location: ../login/inicio-sesion/inicio-sesion.html');
             exit();
         } else {
             echo "<h1>Error</h1>";
