@@ -2,9 +2,7 @@ document
   .getElementById("redirigirPerfil")
   .addEventListener("click", function () {
     window.location = "./perfil.php";
-
   });
-
 
 // // Cargar avatar desde localStorage al iniciar
 // function loadAvatarFromLocalStorage() {
@@ -18,7 +16,6 @@ document
 //     selectedAvatar = savedAvatar;
 //   }
 // }
-
 
 // window.onload = loadAvatarFromLocalStorage;
 
@@ -141,13 +138,18 @@ document
 // }
 
 // URL base para las peticiones al servidor
-const baseUrl = './php/avatares.php';
+const baseUrl = "./php/avatares.php";
 
-/** 
+/**
  * Función para cargar todos los avatares disponibles y mostrarlos en el contenedor.
  */
 function cargarAvatares() {
-  fetch(`${baseUrl}?action=getAvatars`)
+  fetch(`${baseUrl}?action=getAvatars`, {
+    method: "GET",
+    // headers: {
+    //   "Content-Type": "application/json",
+    // },
+  })
     .then((response) => response.json())
     .then((data) => {
       if (data.status === "success") {
@@ -161,19 +163,47 @@ function cargarAvatares() {
     });
 }
 
-/** 
+/**
  * Función para mostrar los avatares en el DOM.
  * @param {Array} avatares - Lista de avatares obtenida del servidor.
  */
+// function mostrarAvatares(avatares) {
+//   const container = document.getElementById("avatarContainer"); // Contenedor de los avatares
+//   container.innerHTML = ""; // Limpiar el contenedor
+
+//   avatares.forEach((avatar) => {
+//     const avatarDiv = document.createElement("div");
+//     avatarDiv.classList.add("avatar"); // Clase CSS para estilos
+//     avatarDiv.setAttribute("data-id", avatar.id_articulo); // ID del avatar
+//     avatarDiv.style.backgroundImage = `url(${avatar.url})`; // Imagen del avatar
+//     avatarDiv.style.backgroundSize = "cover";
+
+//     // // Evento al hacer clic en un avatar
+//     // avatarDiv.addEventListener("click", () => {
+//     //   selectAvatar(avatar); // Seleccionar el avatar
+//     // });
+
+//     container.appendChild(avatarDiv); // Agregar al contenedor
+//   });
+// }
+
 function mostrarAvatares(avatares) {
-  const container = document.getElementById("avatarContainer"); // Contenedor de los avatares
-  container.innerHTML = ""; // Limpiar el contenedor
+  const container = document.getElementById("avatarContainer");
+
+  // Verificar si el contenedor existe
+  if (!container) {
+    console.error("El contenedor 'avatarContainer' no existe.");
+    return;
+  }
+
+  // Limpiar el contenedor
+  container.innerHTML = "";
 
   avatares.forEach((avatar) => {
     const avatarDiv = document.createElement("div");
-    avatarDiv.classList.add("avatar"); // Clase CSS para estilos
-    avatarDiv.setAttribute("data-id", avatar.id_articulo); // ID del avatar
-    avatarDiv.style.backgroundImage = `url(${avatar.url})`; // Imagen del avatar
+    avatarDiv.classList.add("avatar");
+    avatarDiv.setAttribute("data-id", avatar.id_articulo);
+    avatarDiv.style.backgroundImage = `url(${avatar.url})`;
     avatarDiv.style.backgroundSize = "cover";
 
     // Evento al hacer clic en un avatar
@@ -181,85 +211,80 @@ function mostrarAvatares(avatares) {
       selectAvatar(avatar); // Seleccionar el avatar
     });
 
-    container.appendChild(avatarDiv); // Agregar al contenedor
+    container.appendChild(avatarDiv);
   });
 }
+// /**
+//  * Función para seleccionar un avatar.
+//  * @param {Object} avatar - Avatar seleccionado.
+//  */
+// function selectAvatar(avatar) {
+//   const idAvatarSeleccionado = avatar.id_articulo;
 
-/** 
- * Función para seleccionar un avatar.
- * @param {Object} avatar - Avatar seleccionado.
- */
-function selectAvatar(avatar) {
-  const idAvatarSeleccionado = avatar.id_articulo;
+//   // Guardar el avatar seleccionado en la base de datos
+//   guardarAvatarEnBD(idAvatarSeleccionado);
 
-  // Guardar el avatar seleccionado en la base de datos
-  guardarAvatarEnBD(idAvatarSeleccionado);
+//   // Mostrar el avatar seleccionado en el cuadro principal
+//   mostrarAvatarSeleccionado(avatar.url);
+// }
 
-  // Mostrar el avatar seleccionado en el cuadro principal
-  mostrarAvatarSeleccionado(avatar.url);
-}
+// /**
+//  * Función para guardar el avatar seleccionado en la base de datos.
+//  * @param {number} idAvatarSeleccionado - ID del avatar seleccionado.
+//  */
+// function guardarAvatarEnBD(idAvatarSeleccionado) {
+//   fetch(`${baseUrl}?action=updateAvatar`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ id_avatar: idAvatarSeleccionado }),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.status === "success") {
+//         console.log("Avatar actualizado correctamente.");
+//       } else {
+//         console.error(data.message);
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error al actualizar el avatar:", error);
+//     });
 
-/** 
- * Función para guardar el avatar seleccionado en la base de datos.
- * @param {number} idAvatarSeleccionado - ID del avatar seleccionado.
- */
-function guardarAvatarEnBD(idAvatarSeleccionado) {
-  fetch(`${baseUrl}?action=updateAvatar`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ id_avatar: idAvatarSeleccionado }),
-    
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === "success") {
-        console.log("Avatar actualizado correctamente.");
-      } else {
-        console.error(data.message);
-      }
-    })
-    .catch((error) => {
-      console.error("Error al actualizar el avatar:", error);
-    });
+//   console.log(JSON.stringify({ id_avatar: idAvatarSeleccionado }));
+// }
 
-    console.log(JSON.stringify({ id_avatar: idAvatarSeleccionado }));
+// /**
+//  * Función para mostrar el avatar seleccionado en el área destacada.
+//  * @param {string} avatarUrl - URL de la imagen del avatar seleccionado.
+//  */
+// function mostrarAvatarSeleccionado(avatarUrl) {
+//   const avatarDisplay = document.querySelector(".avatarvoid"); // Área destacada
 
-}
+//   // Cambiar la imagen del avatar seleccionado
+//   avatarDisplay.style.backgroundImage = `url(${avatarUrl})`;
+//   avatarDisplay.style.backgroundSize = "cover";
+// }
 
-/** 
- * Función para mostrar el avatar seleccionado en el área destacada.
- * @param {string} avatarUrl - URL de la imagen del avatar seleccionado.
- */
-function mostrarAvatarSeleccionado(avatarUrl) {
-  const avatarDisplay = document.querySelector(".avatarvoid"); // Área destacada
-
-  // Cambiar la imagen del avatar seleccionado
-  avatarDisplay.style.backgroundImage = `url(${avatarUrl})`;
-  avatarDisplay.style.backgroundSize = "cover";
-}
-
-/** 
- * Función para cargar el avatar seleccionado al cargar la página.
- */
-function cargarAvatarSeleccionado() {
-  fetch(`${baseUrl}?action=getSelectedAvatar`)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === "success") {
-        mostrarAvatarSeleccionado(data.avatar_url); // Mostrar el avatar seleccionado
-      } else {
-        console.error(data.message);
-      }
-    })
-    .catch((error) => {
-      console.error("Error al obtener el avatar seleccionado:", error);
-    });
-}
+// /**
+//  * Función para cargar el avatar seleccionado al cargar la página.
+//  */
+// function cargarAvatarSeleccionado() {
+//   fetch(`${baseUrl}?action=getSelectedAvatar`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.status === "success") {
+//         mostrarAvatarSeleccionado(data.avatar_url); // Mostrar el avatar seleccionado
+//       } else {
+//         console.error(data.message);
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error al obtener el avatar seleccionado:", error);
+//     });
+// }
 
 // Llamar a las funciones al cargar la página
 cargarAvatares();
-cargarAvatarSeleccionado();
-
-
+// cargarAvatarSeleccionado();

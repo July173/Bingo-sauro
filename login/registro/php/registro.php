@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
 require '../../../conexion_BD/conexion.php';
+require '../inicio-sesion/php/desbloqueados-por-defecto.php'; // Incluir la función desbloquearArticulosPorDefecto
 
 class registrar {
     private $pdo;
@@ -23,25 +24,19 @@ class registrar {
 
             // Generar token de verificación
             $token = bin2hex(random_bytes(32));
-            
-            // Para debug - agregar estos logs
-            error_log("Token generado: " . $token);
-            error_log("Email: " . $datos['email']);
-
-            // Hashear la contraseña
             $passwordHash = password_hash($datos['password'], PASSWORD_DEFAULT);
 
             // Insertar usuario con el token
             $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado) 
-                     VALUES (?, ?, ?, ?, FALSE)";
+                      VALUES (?, ?, ?, ?, FALSE)";
             $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token];
-            
-            // Para debug
-            error_log("Query: " . $query);
-            error_log("Params: " . print_r($params, true));
-
             $this->pdo->insert($query, $params);
 
+            // Obtener el ID del usuario recién registrado
+            $id_usuario = $this->pdo->conectar()->lastInsertId(); // Obtener el último ID insertado
+
+            // Desbloquear artículos por defecto para el usuario
+            agregarArticulosDesbloqueadosPorDefecto($this->pdo->conectar(), $id_usuario);
             // Enviar correo
             require_once(__DIR__ . '/../../mailer/mailer.php');
             enviarCorreoBienvenida($datos['email'], $datos['primer_nombre'], $token);
@@ -65,4 +60,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo json_encode($resultado);
     exit;
 }
-?>

@@ -17,6 +17,10 @@ try {
 
     // Detectar la acción según un parámetro enviado en la solicitud
     $action = isset($_GET['action']) ? $_GET['action'] : null;
+    if (!$action) {
+        echo json_encode(['status' => 'error', 'message' => 'Acción no especificada.']);
+        exit;
+    }
 
     if ($action === 'getAvatars') {
         // Obtener todos los avatares de una categoría específica (por ejemplo, id_categoria = 1)
