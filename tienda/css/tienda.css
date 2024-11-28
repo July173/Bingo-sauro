@@ -299,20 +299,58 @@ body {
 @media (orientation: portrait) {
   
   .logo {
-    width: 32vw;
-    height: 47vw;
-    margin-top: 1vw;
-    margin-bottom: -7vw;
+    width: 30vw;
+    height: 30vw;
+    margin-top: 10vw;
+   
   }
 
   #contenedor {
     width: 100%;
   }
 
-  .cuadro {
-    width: 100%;
-    height: 80%;
-  }
+  .cuadro{
+    width: 100vw;
+    height: 200vw;  
+}
+.tabla{
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+}
+.carton{
+  height: 20vw;
+  width: 20vw;
+  margin-left: -0.2vw;
+
+}
+.price-button {
+  position: relative;
+  font-family: "Kavoon", serif;
+  margin-left: 3.7vw;
+  margin-top: 0.5vw;
+  font-size: 4vw;
+  border-radius: 7VW;
+  background-color: #f9e79f;
+  border-radius: 15px;
+  padding: 0px 10px 0px 10px;
+  border: none;
+  width: 13vw;
+  height: 6vw;
+}
+.comprado-carton {
+  font-family: "Kavoon", serif;
+ margin-left: 2vw;
+  margin-top: 0.10vw;
+  font-size: 2.2vw;
+  border-radius: 10px;
+  background-color: #f9e79f;
+  border-radius: 15px;
+  padding: 0px 10px 0px 10px;
+  border: none;
+  width: 15vw;
+  height: 10vw;
+  height: auto;
+}
 
   .titulo-contenedor {
     font-size: 8vw;
@@ -350,11 +388,12 @@ body {
   .contenedor-gris {
     background-color: #ffffffe3;
     border-radius: 0.5rem;
-    width: 70vw;
+    width: 90vw;
     height: 100vw;
     overflow-y: auto;
     z-index: 10;
     overflow-x: hidden;
+    margin-top: 5vw;
   }
   /*recompensa diaria*/
  .reward-container {
@@ -387,17 +426,19 @@ body {
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
 }
 .img-dino{
-  margin-left: -8vw;
+  margin-left: -7vw;
   margin-top: -5vw;
+  height: 60vw;
+  width: 60vw;
 }
 .counter-container{
-  margin-left: 50vw;
-  margin-top: 2VW;
+  margin-left: 1vw;
+  margin-top: 0.5VW;
 
 }
 .sub {
-  margin-left: 20vw;
-  font-size: 3.0vw;
+  margin-left: 7vw;
+  font-size: 4vw;
   
 }
 .contenedorCartones{
@@ -405,8 +446,8 @@ body {
 }
 
 .dia-7{
-  margin-left: 4vw;
-  font-size: 6vw;
+  margin-left: 12vw;
+  font-size: 8vw;
   font-family: "Kavoon", serif;
   margin-top: -3vw;
   color: gray
@@ -414,11 +455,12 @@ body {
 }
 .subtitulos2 {
   font-size: 2.0vw;
-  margin-left: -7vw;
+  margin-left: 5vw;
   font-family: "Kavoon", serif;
   position: relative;
   color: rgb(164, 161, 161);
-  margin-bottom: -5vw;
+  margin-bottom: -2vw;
+  margin-top: 2vw;
 }
 
 }

@@ -175,8 +175,8 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 20vw;
-        height: 20vw;
+        width: 30vw;
+        height: 30vw;
        margin-top: 10vw;
        margin-bottom: 5vw;
 
@@ -185,8 +185,8 @@ body {
         width: 100%;
     }
     .cuadro{
-        width: 100%;
-        height: 80%;   
+        width: 100vw;
+        height: 200vw;  
        
     }
 
@@ -194,7 +194,7 @@ body {
         width: 10vw;
         height: 10vw;
         position: absolute;
-        left: -6vw;
+        left: -2vw;
         top: 7vw;
     }
 
@@ -227,8 +227,24 @@ body {
 
     }
     .counter-container{
-        margin-left: 150px;
-        margin-top: 10px;
+        margin-left: 3vw;
+        margin-top: -3vw;
+    }
+    .tabla{
+        margin-top: 88vw;
+        margin-bottom: 5vw;
+        
+    
+    }
+    .contenedor-gris{
+        background-color: #d4d4d4e3;
+        border-radius: 0.5rem;
+        width: 99vw;
+        height: 120vw;
+        overflow-y: auto;
+        z-index: 10;
+        margin-bottom: -70vw;
+    
     }
 }
 
