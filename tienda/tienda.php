@@ -25,6 +25,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <link rel="stylesheet" href="../tienda/css/tienda.css" />
     <link rel="stylesheet" href="../generales/configuracion/posicion.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
+    <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 

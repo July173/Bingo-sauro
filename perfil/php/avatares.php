@@ -4,6 +4,7 @@ require '../../conexion_BD/conexion.php';
 header('Content-Type: application/json');
 
 try {
+    $conexion = new Conexion();
 
 
     // Validar si el usuario está autenticado
@@ -13,7 +14,6 @@ try {
     }
 
     $user_id = $_SESSION['usuario_id']; // ID del usuario autenticado
-    $conexion = new Conexion();
 
     // Detectar la acción según un parámetro enviado en la solicitud
     $action = isset($_GET['action']) ? $_GET['action'] : null;
