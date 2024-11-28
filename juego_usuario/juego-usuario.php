@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Redirigir al inicio de sesión si no está autenticado
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
+    exit();
+}
+
+// Opcional: Obtener información del usuario para mostrar en la página
+$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+$id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +21,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>crearsala</title>
-    <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../Generales/configuracion/pocision2.css">
-    <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
-    <link rel="stylesheet" href="css//juegoUsuario.css">
-    <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
+    <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
+    <link rel="stylesheet" href="css//juego-usuario.css">
+    <script src="../generales/bootstrap/js/bootstrap.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
@@ -42,7 +58,7 @@
         <div class="cuadro">
 
             <div id='monedas'></div>
-            <script src="../Generales/monedas/js/conexion-monedas.js"></script>
+            <script src="../generales/monedas/js/conexion-monedas.js"></script>
             <script>
                 cargarContenido();
             </script>
@@ -74,14 +90,14 @@
             </div>
         </div>
 
-        <!-- Audio que queremos controlar -->
+        <!-- Audio que queremos controlar
         <audio id="audioPlayer" loop>
-            <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
+            <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
             Tu navegador no soporta la reproducción de audio.
-        </audio>
+        </audio> -->
 
-        <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-        <script src="js/juegoUsuario.js"></script>
+        <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+        <script src="js/juego-usuario.js"></script>
 </body>
 
 </html>

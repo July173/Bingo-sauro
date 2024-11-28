@@ -25,7 +25,10 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="css/crearsala.css">
   <link rel="stylesheet" href="../perfil/css/modales.css">
-  <script src="../generales/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
+
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>4
+
 
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
@@ -170,12 +173,10 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
     Tu navegador no soporta la reproducción de audio.
   </audio>
 
-  <!-- <script src="src-js/moviemientos.js"></script> -->
   <script src="js/codigo_partida.js"></script>
   <script src="js/crear_sala.js"></script>
   <script src="js/modal.js"></script>
 
-  <!-- <script src="js/obtener_codigo.js"></script> -->
 
   <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>

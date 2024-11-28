@@ -12,6 +12,9 @@ fetch('./php/obtener_cartones.php')
         // Crear un contenedor para cada cartón
         const cartonDiv = document.createElement('div');
         cartonDiv.classList.add('cartonn-sala');
+        if (carton.locked) {
+          cartonDiv.classList.add('locked'); // Añadir clase para estilos de bloqueado
+        }
 
         // Crear el elemento de imagen del cartón
         const cartonImg = document.createElement('img');
@@ -19,32 +22,40 @@ fetch('./php/obtener_cartones.php')
         cartonImg.alt = carton.alt;
         cartonImg.className = carton.locked ? 'carton comprar' : 'carton comprado';
 
+        // Crear el elemento de candado (solo si está bloqueado)
+        if (carton.locked) {
+          const candado = document.createElement('i');
+          candado.className = 'fa-solid fa-lock candado';
+          cartonDiv.appendChild(candado);
+        }
+
         // Crear el elemento de flecha (inicialmente oculto)
         const flecha = document.createElement('img');
         flecha.src = '../Generales/img/chulito.png'; // Cambia esto a la ruta de tu imagen de flecha
         flecha.classList.add('flecha');
         flecha.style.display = 'none'; // Ocultamos la flecha inicialmente
 
-        // Añadir evento click para redirigir a otra pantalla
-        cartonDiv.addEventListener('click', () => {
-          localStorage.setItem('selectedCarton', JSON.stringify(carton));
-          // Redirigir a la nueva pantalla
-          window.location = `./carton_sala.php`;
-        });
+        // Añadir evento click para cartones bloqueados (redirigir a compra)
+        if (carton.locked) {
+          cartonDiv.addEventListener('click', () => {
+            localStorage.setItem('selectedCarton', JSON.stringify(carton));
+            window.location = `./carton_sala.php`;
+          });
+        }
 
-        // Añadir evento click para mostrar la flecha si el cartón está bloqueado
+        // Añadir evento click para cartones desbloqueados (mostrar la flecha)
         if (!carton.locked) {
           cartonImg.addEventListener('click', (event) => {
-            event.stopPropagation(); // Evita que se active el evento de redirección
+            event.stopPropagation(); // Evita activar el evento de redirección
 
             // Ocultar la flecha actualmente visible, si existe
             if (flechaVisible && flechaVisible !== flecha) {
               flechaVisible.style.display = 'none';
             }
 
-            // Mostrar la flecha sobre el cartón actual
+            // Mostrar u ocultar la flecha sobre el cartón actual
             flecha.style.display = flecha.style.display === 'none' ? 'block' : 'none';
-            
+
             // Actualizar la variable de flechaVisible
             flechaVisible = flecha.style.display === 'block' ? flecha : null;
 
@@ -67,9 +78,10 @@ fetch('./php/obtener_cartones.php')
   })
   .catch(error => console.error('Error al cargar los cartones:', error));
 
+
+
 // Variable para almacenar el botón seleccionado
 let botonSeleccionado = null;
-
 const botones = document.querySelectorAll('.botonJugador, .botonAdministrador');
 
 botones.forEach(boton => {

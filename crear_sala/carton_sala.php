@@ -23,7 +23,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
-  <link rel="stylesheet" href="css/comprarCarton.css">
+  <link rel="stylesheet" href="./css/comprar_carton.css">
   <script src="../Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
@@ -58,7 +58,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         cargarContenido();
       </script>
 
-      <a href="/crear_sala/crearsala.php">
+      <a href="./crearsala.php">
         <img src="../generales/img/cerrar.png" alt="cierre" class="cerrar">
       </a>
 
@@ -78,7 +78,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     
     <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="../crear_sala/js/compra_cartonSala.js"></script>
+    <script src="js/compra_cartonSala.js"></script>
 </body>
 
 </html>
