@@ -61,8 +61,8 @@ document.getElementById('formCambiarContraseña').addEventListener('submit', fun
             successModal.show();
             
             setTimeout(() => {
-                window.location.href = "../../login/inicio-sesion/inicio-sesion.html";
-            }, 2000);
+                window.location.href = "../login/inicio-sesion/inicio-sesion.html";
+            }, 1200);
         } else {
             document.getElementById('error-animation').style.display = 'block';
             mostrarError(data.mensaje);
