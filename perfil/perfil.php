@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicio-sesion/inicio-sesion.html');
+    header('Location: ../login/inicioSesion/InicioSesion.html');
     exit();
 }
 
@@ -22,13 +22,13 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil</title>
 
-  <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
-  <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
+  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
+  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../perfil/css/perfil.css" />
   <link rel="stylesheet" href="../perfil/css/modales.css">
-  <link rel="stylesheet" href="../generales/configuracion/posicion.css">
-  <script src="../generales/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="../Generales/configuracion/posicion.css">
+  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
 </head>
@@ -56,12 +56,12 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
     <div class="cuadro">
 
       <div class="icon-container">
-      <a href="../generales/configuracion/configuracion.php" class="icon">
-      <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.php" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
       </div>
       <div id='monedas'></div>
-      <script src="../generales/monedas/js/conexion-monedas.js"></script>
+      <script src="../Generales/monedas/js/conexion-monedas.js"></script>
     <script>
       cargarContenido();
   </script>
@@ -85,37 +85,19 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
         <div class="dino "></div>
 
         <div class="contenedor-gris">
-          <div class=" datos email text-light">
-            <div class="editar fas fa-question-circle" id="openModal"> </div>
-            <p class="texto-correo">Correo electronico:</p>
-            <div class="usuario correo-usuario"><?php echo $correo; ?></div>
-          </div>
-          <div class=" datos password text-light">
+          <div class="datos password text-light">
             <div class="editar fas fa-exclamation-circle" id="openModal2"></div>
             <p class="texto-contraseña">Contraseña:</p>
-            <div class=" usuario contraseña-usuario">********</div>
+            <div class="usuario contraseña-usuario">********</div>
+          </div>
+          <div class="datos email text-light">
+            <p class="texto-correo">Correo electronico:</p>
+            <div class="usuario correo-usuario"><?php echo $correo; ?></div>
           </div>
         </div>
       </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres cambiar tu correo?</h5>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex justify-content-center">
-                <button id="yesBtn" class="botones-modal">Sí</button>
-                <button id="noBtn" class="botones-modal">No</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="modal fade" id="questionModal2" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="exampleModalLabel2" aria-hidden="true">
         <div class="modal-dialog modal-sm">
@@ -134,7 +116,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
       </div>
 
       <div id="navbar-container">
-        <script src="../generales/barra_navegacion/navbar.js"></script>
+        <script src="../Generales/barraNavegacion/navbar.js"></script>
         <script>
           loadNavbar();
         </script>
@@ -143,13 +125,14 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
     <!-- Audio que queremos controlar -->
     <audio id="audioPlayer" loop>
-      <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
+      <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
       Tu navegador no soporta la reproducción de audio.
   </audio>
 
-  <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="src-js/perfil.js"></script>
-    <script src="src-js/modales.js"></script>
+  <script src="../Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+  <script src="src-js/perfil.js"></script>
+  <script src="src-js/modales.js"></script>
 </body>
 
 </html>

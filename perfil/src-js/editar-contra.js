@@ -57,11 +57,12 @@ document.getElementById('formCambiarContraseña').addEventListener('submit', fun
     })
     .then(data => {
         if (data.success) {
-            alert('Contraseña actualizada correctamente');
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            successModal.show();
             
             setTimeout(() => {
-                window.location.href = "./../login/inicio-sesion/inicio-sesion.html";
-            }, 1000);
+                window.location.href = "../../login/inicio-sesion/inicio-sesion.html";
+            }, 2000);
         } else {
             document.getElementById('error-animation').style.display = 'block';
             mostrarError(data.mensaje);

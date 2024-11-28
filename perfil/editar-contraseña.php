@@ -101,6 +101,28 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       <script src="src-js/editar-contra.js"></script>
       <!-- <script src="src-js/valiacionContraseña.js"></script> -->
       <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+
+      <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body text-center">
+                      <div class="animation-container">
+                          <dotlottie-player 
+                              src="https://lottie.host/2d74af69-d3ab-4883-9908-4d6cc7e1f76b/UKWnAuZhgr.json"
+                              background="transparent" 
+                              speed="1" 
+                              style="width: 150px; height: 150px;" 
+                              loop="false" 
+                              autoplay>
+                          </dotlottie-player>
+                      </div>
+                      <h4 class="mt-3">¡Contraseña actualizada correctamente!</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

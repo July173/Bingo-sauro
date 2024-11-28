@@ -250,3 +250,45 @@ body {
     }
 
 }
+
+.modal-content {
+    background-color: rgba(14, 78, 62, 0.9);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-body h4 {
+    color: #bde673;
+    font-family: "Kavoon", serif;
+    margin-top: 15px;
+}
+
+.animation-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+/* Estilos responsivos para el modal */
+@media (orientation: portrait) {
+    .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-body h4 {
+        font-size: 5vw;
+    }
+
+    .animation-container {
+        width: 120px;
+        height: 120px;
+    }
+}
