@@ -69,7 +69,7 @@ body {
 }
 
 .social-icon {
-    width: 50px;
+    width: 70px;
     margin-right: 6px;
 }
 .dino-image {
@@ -120,6 +120,7 @@ body {
     margin-top: -23px;
     height: 3vw;
     width: 3vw;
+    margin-bottom: 3vw;
 }
 
 @media (orientation:portrait) {
