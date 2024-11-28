@@ -4,7 +4,7 @@ function unirseAPartida() {
     const nombre = document.getElementById("nombreJugador").value;
     // const foto = "ruta/a/la/foto.jpg"; // O selecciona la URL de la foto
   
-    fetch(".php/unirse_partida.php", {
+    fetch("../crear_sala/php/unirse_partida.php", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: `codigo=${codigo}&nombre=${nombre}`,
