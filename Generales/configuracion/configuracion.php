@@ -61,7 +61,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 <img width="35" height="30" src="https://img.icons8.com/ios-filled/50/audio-wave--v1.png"
                     alt="audio-wave--v1" />
                 <span class="option-text-2"> <b> Sonido </b></span>
-                <div class="toggle" id="soundToggle" id="toggleButton"></div>
+                <div class="toggle" id="soundToggle"></div>
             </div>
 
             <div class="option">
@@ -164,7 +164,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
             <!-- Audio que queremos controlar -->
             <audio id="audioPlayer" loop>
-                <source src="../../generales/musica/dinoMusica.mp3" type="audio/mp3">
+                <source src="../../musica/dinoMusica.mp3" type="audio/mp3">
                 Tu navegador no soporta la reproducción de audio.
             </audio>
 
