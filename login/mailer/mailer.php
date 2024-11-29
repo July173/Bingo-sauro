@@ -1,8 +1,15 @@
 <?php
+// Carga de dependencias
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
+
+// Verificar que el archivo existe antes de requerirlo
+if (!file_exists(__DIR__ . '/../../vendor/autoload.php')) {
+    error_log("Error: No se encuentra el archivo vendor/autoload.php");
+    throw new Exception("Error en la configuración del correo.");
+}
 
 function enviarCorreoBienvenida($emailDestino, $nombreDestino, $token) {
     $mail = new PHPMailer(true);
@@ -13,7 +20,7 @@ function enviarCorreoBienvenida($emailDestino, $nombreDestino, $token) {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'bingosauro964@gmail.com';
-        $mail->Password = 'ioyb iqob rpac ngls';
+        $mail->Password = 'ioyb iqob rpac ngls'; // Cambia esto a tu contraseña
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;  
         $mail->CharSet = 'UTF-8';
@@ -25,10 +32,10 @@ function enviarCorreoBienvenida($emailDestino, $nombreDestino, $token) {
         $mail->isHTML(true);
         $mail->Subject = '¡Bienvenido a Bingo Sauro! 🦖';
 
-        // URL de verificación
-        $urlVerificacion = "http://localhost/Bingo-sauro/login/verificar.php?token=" . $token;
+        // URL de verificación usando una ruta relativa
+        $urlVerificacion = "http://localhost/Bingo-sauro/login/verificar.php?token=" . urlencode($token); // Cambia 'localhost' si es necesario
 
-        // Plantilla HTML del correo
+        // Cuerpo del correo
         $mail->Body = "
         <div style='background-color: #f4f4f4; padding: 20px; font-family: Arial, sans-serif;'>
             <div style='max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); overflow: hidden;'>
