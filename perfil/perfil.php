@@ -4,7 +4,7 @@ session_start();
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     // Redirigir al inicio de sesión si no está autenticado
-    header('Location: ../login/inicioSesion/InicioSesion.html');
+    header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
 
@@ -22,14 +22,15 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil</title>
 
-  <link rel="stylesheet" href="../Generales/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Generales/barraNavegacion/navbar.css">
-  <link rel="stylesheet" href="../Generales/monedas/css/monedas-trofeos.css">
+ <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
+  <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../perfil/css/perfil.css" />
   <link rel="stylesheet" href="../perfil/css/modales.css">
-  <link rel="stylesheet" href="../Generales/configuracion/posicion.css">
-  <script src="../Generales/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+
 
 </head>
 
@@ -116,7 +117,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
       </div>
 
       <div id="navbar-container">
-        <script src="../Generales/barraNavegacion/navbar.js"></script>
+        <script src="../generales/barra_navegacion/navbar.js"></script>
         <script>
           loadNavbar();
         </script>
@@ -129,10 +130,9 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
       Tu navegador no soporta la reproducción de audio.
   </audio>
 
-  <script src="../Generales/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
-  <script src="src-js/perfil.js"></script>
-  <script src="src-js/modales.js"></script>
-</body>
+  <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="src-js/perfil.js"></script>
+    <script src="src-js/modales.js"></script>
 
+</body>
 </html>
