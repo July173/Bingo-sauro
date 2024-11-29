@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
 require '../../../conexion_BD/conexion.php';
-require '../inicio-sesion/php/desbloqueados-por-defecto.php'; // Incluir la función desbloquearArticulosPorDefecto
 
 class Registrar {
     private $pdo;
@@ -41,7 +40,6 @@ class Registrar {
             // Generar token de verificación
             $token = bin2hex(random_bytes(32));
 
-
             // Validar token generado (debe tener longitud específica y formato hexadecimal)
             if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
                 error_log("Token inválido: " . $token);
@@ -53,9 +51,8 @@ class Registrar {
 
             // Insertar usuario con el token
             $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado) 
-                      VALUES (?, ?, ?, ?, FALSE)";
+                     VALUES (?, ?, ?, ?, FALSE)";
             $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token];
-
             
             // Log para verificar los parámetros
             error_log("Parámetros de inserción: " . json_encode($params));
@@ -69,13 +66,6 @@ class Registrar {
                 error_log("URL inválida: " . $urlVerificacion);
                 throw new Exception("Error al generar la URL de verificación.");
             }
-
-              // Obtener el ID del usuario recién registrado
-            $id_usuario = $this->pdo->conectar()->lastInsertId(); // Obtener el último ID insertado
-
-            // Desbloquear artículos por defecto para el usuario
-            agregarArticulosDesbloqueadosPorDefecto($this->pdo->conectar(), $id_usuario);
-
 
             // Enviar correo
             enviarCorreoBienvenida($datos['email'], $datos['primer_nombre'], $token);
@@ -117,5 +107,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     exit;
 }
-
 ?>
