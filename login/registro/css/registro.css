@@ -273,8 +273,9 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 28vw;
-        height: 43vw;
+        width: 40vw;
+        height: 40vw;
+        margin-bottom: 2vw;
        
      
 
@@ -287,12 +288,13 @@ body {
         height: 200vw;  
     }
     .titulo{
-        font-size: 10vw;
-        margin-top: 15vw;
+        font-size: 13vw;
+        margin-top: 14vw;
+        margin-bottom: 2vw;
     }
    
     .Name{
-        font-size: 5vw ;
+        font-size: 7vw ;
         margin-right: 38vw;
         margin-bottom: 0.5vw;
         
@@ -312,7 +314,7 @@ body {
     
     .input{
         width: 60vw;
-        height: 9vw;
+        height: 13vw;
         margin-bottom: 1vw;;
     
     }
@@ -323,15 +325,18 @@ body {
         width: 5vw;
         height: 5vw;
     }
+    .form-check{
+        margin-left: -4vw;
+    }
 
     .enviar{
        
         padding: 2vw 6vw;
-        font-size: 6vw;
+        font-size: 7vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
         margin-top: 8vw;
-        margin-left: 2vw; 
+        margin-left: -3vw; 
 
     }
 
@@ -383,7 +388,7 @@ body {
 
     }
     .Tienecuenta{
-         margin-left: 4vw; /* Cambiado a 0 para alinear a la izquierda */
+         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
     }
     .textoATC {
         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
