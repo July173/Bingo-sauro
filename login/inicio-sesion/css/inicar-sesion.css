@@ -183,7 +183,7 @@ body {
 
     .logo {
         width: 32vw;
-        height: 47vw;
+        height: 49vw;
        margin-top: -8vw;
        margin-bottom: -7vw;
        margin-top: -3vw;
@@ -199,8 +199,8 @@ body {
     }
        
     .titulo{
-        font-size: 8vw;
-        margin-top: 15vw;
+        font-size: 11vw;
+        margin-top: 18vw;
     }
    
     .email{
@@ -218,8 +218,8 @@ body {
     }    
     
     .input{
-        width: 60vw;
-        height: 9vw;
+        width: 70vw;
+        height: 11vw;
         margin-bottom: 1vw;;
     
     }
@@ -234,7 +234,7 @@ body {
     .enviar{
         margin: -0.2vw auto 1vw auto; /* Centra el botón horizontalmente */
         padding: 1vw 8vw;
-        font-size: 5vw;
+        font-size: 6vw;
         border-radius: 0.8rem;
         display: block; /* Asegura que el botón ocupe toda la línea y se centre */
         text-align: center;
@@ -243,21 +243,21 @@ body {
     }
     
     .registrar{
-      font-size: 4vw;
+      font-size: 6vw;
       z-index: 10;
       margin-top: 2vw;
     }
     .textoOC{
-        font-size: 3.8vw;
+        font-size: 4vw;
         z-index: 10;
         margin-top: 2vw;
         
     }
    
     .bingo{
-        width: 90vw;
+        width: 100vw;
         margin-left: 1vw;
-        margin-top: -3vw;
+        margin-top: -2vw;
         
     }
     .hojas {
