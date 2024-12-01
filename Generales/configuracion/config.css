@@ -173,11 +173,11 @@ body, html {
 .toggle {
     width: 50px;
     height: 30px;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Verde cuando está encendido */
     border-radius: 15px;
     position: relative;
     cursor: pointer;
-    transition: background-color 0.2s ease; /* Transición rápida */
+    transition: background-color 0.2s ease;
 }
 
 .toggle::before {
@@ -188,16 +188,16 @@ body, html {
     border-radius: 50%;
     background-color: white;
     top: 2px;
-    right: 2px;
-    transition: transform 0.2s ease; /* Transición rápida */
+    left: 2px; /* Comienza a la izquierda */
+    transition: transform 0.2s ease;
 }
 
 .toggle.off {
-    background-color: #F44336; /* Rojo */
+    background-color: #F44336; /* Rojo cuando está apagado */
 }
 
 .toggle.off::before {
-    transform: translateX(-20px);
+    transform: translateX(20px); /* Mueve la bolita a la derecha */
 }
 .modal-header {
     background-color:  rgba(35, 80, 69, 0.637) ;  /* Fondo verde translúcido */
@@ -262,6 +262,13 @@ body, html {
     margin-left: 1vw;
 }
 
+.toggle.active {
+    background-color: #F44336; /* Rojo cuando está apagado */
+}
+
+.toggle {
+    background-color: #4CAF50; /* Verde cuando está encendido */
+}
 
 @media (orientation: portrait){
 

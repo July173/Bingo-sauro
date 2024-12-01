@@ -136,30 +136,57 @@
         // Verificar qué datos se están enviando
         console.log("Datos que se están enviando:", data);
 
-        fetch('php/registro.php', {
+        fetch('./php/registro.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error en la respuesta del servidor');
+        .then(async response => {
+            const text = await response.text();
+            try {
+                const jsonResponse = JSON.parse(text);
+                console.log("Respuesta del servidor:", jsonResponse);
+                return jsonResponse;
+            } catch (e) {
+                console.error('Respuesta no válida del servidor:', text);
+                throw new Error('Respuesta del servidor no válida');
             }
-            return response.json();
         })
         .then(data => {
-            console.log("Respuesta del servidor:", data);
             if (data.success) {
                 window.location.href = "../inicio-sesion/inicio-sesion.html";
             } else {
+                console.error("Errores:", data.errors);
                 alert(data.errors ? data.errors.join('\n') : 'Error en el registro');
             }
         })
         .catch((error) => {
             console.error('Error:', error);
-            alert('Error al procesar el registro');
+            alert('Error al procesar el registro. Por favor, intente más tarde.');
+        });
+    });
+
+    document.getElementById('redirigirIniciar').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
+
+        const formData = new FormData(this);
+        fetch('php/test_mail.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+            } else {
+                alert(data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al enviar el correo. Por favor, intenta más tarde.');
         });
     });
 })();

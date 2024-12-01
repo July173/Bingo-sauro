@@ -1,7 +1,7 @@
 <?php
 error_log("🚀 Iniciando proceso de envío de código");
 
-require '../../mailer/vendor/autoload.php';
+require '../../../vendor/autoload.php';
 require '../../../conexion_BD/conexion.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
