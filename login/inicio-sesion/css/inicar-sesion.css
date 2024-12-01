@@ -182,11 +182,11 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 32vw;
-        height: 49vw;
+        width: 45vw;
+        height: 45vw;
        margin-top: -8vw;
-       margin-bottom: -7vw;
-       margin-top: -3vw;
+       margin-bottom: 3vw;
+       margin-top: -1vw;
      
 
     }
@@ -199,12 +199,13 @@ body {
     }
        
     .titulo{
-        font-size: 11vw;
+        font-size: 12vw;
         margin-top: 18vw;
+        margin-bottom: 5vw;
     }
    
     .email{
-        font-size: 5vw ;
+        font-size: 6vw ;
         margin-right: 16vw;
         margin-bottom: 0.5vw;
         margin-top: 3vw;
@@ -238,17 +239,17 @@ body {
         border-radius: 0.8rem;
         display: block; /* Asegura que el botón ocupe toda la línea y se centre */
         text-align: center;
-        margin-top: 3vw;
+        margin-top: 6vw;
        
     }
     
     .registrar{
       font-size: 6vw;
       z-index: 10;
-      margin-top: 2vw;
+      margin-top: 3vw;
     }
     .textoOC{
-        font-size: 4vw;
+        font-size: 6vw;
         z-index: 10;
         margin-top: 2vw;
         
