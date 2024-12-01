@@ -86,7 +86,7 @@ function mostrarError(mensaje) {
 
 // Redirigir al perfil cuando se hace clic en el botón de cerrar
 document.getElementById('redirigirPerfil').addEventListener('click', function() {
-    window.location.href = "./perfil/perfil.php";
+    window.location.href = "./perfil.php";
 });
 
 // Limpiar errores cuando el usuario comienza a escribir
