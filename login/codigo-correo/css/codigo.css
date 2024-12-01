@@ -156,10 +156,10 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (orientation:portrait) {
 
     .logo {
-        width: 32vw;
-        height: 47vw;
-       margin-top: 17vw;
-       margin-bottom: -7vw;
+        width: 45vw;
+        height: 45vw;
+       margin-top: 22vw;
+       margin-bottom: 8vw;
      
 
     }
@@ -187,15 +187,15 @@ input[type="number"]::-webkit-inner-spin-button {
         padding: 5vw 5vw;
         width: 70vw;
         height: 38vw;
-        margin-top: 2vw;
-        margin-bottom: 1vw;
+        margin-top: 5vw;
+        margin-bottom: 2vw;
         text-align: center;
     
     }
     .enviar{
-       margin-top: -0.1vw;
+       margin-top: 2vw;
         padding: 1vw 8vw;
-        font-size: 6vw;
+        font-size: 8vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
 
