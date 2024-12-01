@@ -3,7 +3,6 @@ session_start();
 
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
-    // Redirigir al inicio de sesión si no está autenticado
     header('Location: ../login/inicio-sesion/inicio-sesion.html');
     exit();
 }
@@ -154,6 +153,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
               El juego Bingo-Saurio está creado con fines de entretenimiento...
               El juego Bingo-Saurio está creado con fines de entretenimiento...
               El juego Bingo-Saurio está creado con fines de entretenimiento...
+              El juego Bingo-Saurio está creado con fines de entretenimiento...
+              El juego Bingo-Saurio está creado con fines de entretenimiento...
 
             </div>
             <img src="/Generales/img/bingo.png" alt="Bolas que dicen bingo" class="BingoImg">
@@ -162,18 +163,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       </div> -->
 
 
-    <!-- Audio que queremos controlar -->
-    <audio id="audioPlayer" loop>
-      <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
-      Tu navegador no soporta la reproducción de audio.
-    </audio>
+    
 
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
+    <script src="../generales/musica/musica.js"></script>
     <script src="../crear_sala/js/crear_sala.js"></script>
-    <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="../generales/loader/loader.js"></script>
     <script src="../crear_sala/js/codigo_partida.js"></script>
     <script src="src-js/inicio.js"></script>
-
 
 </html>
