@@ -294,7 +294,7 @@ body {
     }
    
     .Name{
-        font-size: 7vw ;
+        font-size: 8vw ;
         margin-right: 38vw;
         margin-bottom: 0.5vw;
         
@@ -315,7 +315,7 @@ body {
     .input{
         width: 60vw;
         height: 13vw;
-        margin-bottom: 1vw;;
+        margin-bottom: 1vw;
     
     }
    
@@ -327,6 +327,7 @@ body {
     }
     .form-check{
         margin-left: -4vw;
+        margin-top: 2vw;
     }
 
     .enviar{
@@ -336,7 +337,7 @@ body {
         margin-bottom: 1vw;
         border-radius: 0.8rem;
         margin-top: 8vw;
-        margin-left: -3vw; 
+        margin-left: -1vw; 
 
     }
 
@@ -388,7 +389,7 @@ body {
 
     }
     .Tienecuenta{
-         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
+         margin-left: 6vw; /* Cambiado a 0 para alinear a la izquierda */
     }
     .textoATC {
         margin-left: 1vw; /* Cambiado a 0 para alinear a la izquierda */
