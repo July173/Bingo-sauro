@@ -205,8 +205,88 @@ body {
         width: 100%;
     }
     .cuadro{
-        width: 100%;
-        height: 80%;   
+        width: 100vw;
+        height: 200vw;  
+    }
+    .avatarvoid{
+        width: 20vw;
+        margin-top: 15vw;
+        margin-left: -7vw;
+        height: 20vw;
+        
+        
+    }
+    .editarimagen{
+        width: 20vw;
+        height: 20vw;
+
+    }
+    
+    #avatarDisplay{
+        width: 20VW;
+        height: 20VW;
+    }
+    .tabla{
+        margin-top: 35vw;
+        
+    }
+    .contenedor-gris{
+        height: 60vw;
+        width: 99vw;
+        margin-top: 8vw;
+        margin-left: -9vw;
+    }
+    .text-light{
+        width: 95vw;
+        height: 20vw;
+        margin-top: 7vw;
+        margin-left: 1.5vw;
+    }
+    .texto-contraseña{
+        margin-right: 7vw;
+        margin-left: 2vw;
+        font-size: 5.5vw;
+        
+    }
+    .nombre-usuario{
+        margin-top: 20vw;
+        font-size: 5.5vw;
+        width: 93vw;
+        
+
+    }
+    .texto-correo{
+        font-size: 5.5vw;
+        margin-left: 2vw;
+        
+    }
+    .contraseña-usuario{
+        width: 75vw;
+        height: 10vw;
+        margin-top: 8vw;
+        margin-left: -38vw;
+
+    }
+    .correo-usuario{
+        width: 75vw;
+        height: 9.5vw;
+        margin-top: 8vw;
+        margin-left: -50vw;
+        font-size: 5vw;
+    }
+    .editar{
+        width: 8vw;
+        height: 8vw;
+        border-radius: 2vw;
+        margin-top: 3vw;
+        margin-left: 3vw;
+    }
+    .icon{
+        width: 2vw;
+        height: 2vw;
+        position: absolute;
+        left: -4vw;
+        top: 7vw;
        
     }
     .titulo-contenedor{
@@ -237,4 +317,8 @@ body {
         margin-top: 10vw;
 
     }
+
+    
 }
+
+    

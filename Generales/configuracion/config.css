@@ -86,7 +86,8 @@ body, html {
     border: none;
     cursor: pointer;
     padding: 0;
-    margin: 0;
+    margin-left: 40vw;
+    margin-top: -7vw;
     z-index: 9999;
     position: relative;
 }
@@ -100,7 +101,7 @@ body, html {
     background-size: 100%;
     width: 16vw;
     height: 16vw;
-    margin-right: 23vw;
+    margin-right: 25vw;
     margin-top: 22vw;
     position: absolute;
     margin-left: -5vw;
@@ -129,13 +130,13 @@ body, html {
     margin-left: -3vw;
 }
 .option-text {
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     margin-left: -6vw;
 }
 
 .option-text-2 {
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     margin-left: -7.4vw;
 }
@@ -148,7 +149,7 @@ body, html {
     margin-bottom: 10px;
     width: 25vw;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     margin-left: -3vw;
 }
@@ -271,23 +272,18 @@ body, html {
 
 @media (orientation: portrait){
 
-    .cuadro {
-        background-color: rgba(14, 78, 62, 0.5);
-        height: 120vw;   
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        width: 80vw;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .cuadro{
+        width: 100vw;
+        height: 200vw;  
     }
 
     .close-btn {
-        margin-left: 35vw;
-        margin-top: -20vw;
+        margin-left: 78vw;
+        margin-top: -50vw;
         height: 10vw;
         width: 10vw;
+        margin-bottom: 15vw;
+     
     }
     .option {
         display: flex;
@@ -308,7 +304,7 @@ body, html {
         padding: 12px;
         margin-bottom: 12px;
         width: 52vw;
-        height: 12vw;
+        height: 13vw;
         border-radius: 10px;
         font-size: 3.2vw;
         cursor: pointer;
@@ -329,7 +325,7 @@ body, html {
         width: 40vw;
         height: 40vw;
         margin-right: 23vw;
-        margin-top: 70vw;
+        margin-top: 90vw;
         position: absolute;
         margin-left: -150px;
     }
@@ -347,7 +343,7 @@ body, html {
     }
     .contenedor-recuadros{
         width: 22vw;
-        margin-left: 12vw;
+        margin-left: 8vw;
     }
     .option-text-2 {
         font-size: 17px;
@@ -360,7 +356,7 @@ body, html {
         margin-left: 0.5vw;
     }
     .toggle {
-        width: 50px;
+        width: 57px;
         height: 30px;
         background-color: #4CAF50;
         border-radius: 15px;
@@ -368,6 +364,9 @@ body, html {
         cursor: pointer;
         transition: background-color 0.2s ease; /* Transición rápida */
         
+    }
+    .header{
+        margin-top: 20vw;
     }
     .hojas {
         width: 33vw;
@@ -379,6 +378,30 @@ body, html {
         margin-top: -90vw;
         margin-left: 10vw;
       }
+      .hojas {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-top: -110vw;
+        opacity: 0.6;
+    }
+
+    .hojas-2 {
+        position: absolute;
+        width: 120vw;
+        height: 120vw;
+        margin-top: 90vw;
+        margin-left: 10vw;
+    }
+
+    .hojas-3 {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-right: 25vw;
+        margin-top: 10vw;
+
+    }
       
 
 }
