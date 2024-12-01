@@ -235,7 +235,7 @@ body {
     .enviar{
         margin: -0.2vw auto 1vw auto; /* Centra el botón horizontalmente */
         padding: 1vw 8vw;
-        font-size: 6vw;
+        font-size: 7vw;
         border-radius: 0.8rem;
         display: block; /* Asegura que el botón ocupe toda la línea y se centre */
         text-align: center;
