@@ -256,6 +256,28 @@ body {
       .fa-solid{
         font-size:5vw;
       }
+      .subtitulos{
+        display: flex;
+        color: rgb(151, 151, 151);
+        font-size: 5.5vw;
+        margin-left: 4vw;
+        font-family: "Kavoon", serif;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+    }
+    span{
+        font-size: 5vw;
+        margin-left: -5vw;
+    }
+    .carton-imagen {
+        width: 60px; /* Tamaño de los cartones */
+        height: auto; /* Mantiene la proporción */
+        cursor: pointer;
+        margin-right: 10vw;
+        
+      }
+    
 }
 
     
