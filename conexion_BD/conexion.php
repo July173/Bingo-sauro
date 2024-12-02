@@ -80,4 +80,19 @@
                throw new Exception('Error al eliminar: ' . $e->getMessage());
            }
        }
+       public function insert($query, $params = [])
+{
+    try {
+        if ($this->pdo === null) {
+            $this->conectar(); // Garantiza la conexión antes de usarla
+        }
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($params);
+        return $this->pdo->lastInsertId(); // Retorna el ID del último registro insertado
+    } catch (PDOException $e) {
+        throw new Exception('Error al insertar: ' . $e->getMessage());
+    }
+}
+
    }
+   
