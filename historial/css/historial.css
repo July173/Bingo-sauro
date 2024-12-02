@@ -244,8 +244,18 @@ body {
         overflow-y: auto;
         z-index: 10;
         margin-bottom: -70vw;
-    
     }
+    .ganado {
+        color: green;
+        font-size: 10vw;
+      }
+      .perdido {
+        color: red;
+        font-size: 10vw;
+      }
+      .fa-solid{
+        font-size:5vw;
+      }
 }
 
     

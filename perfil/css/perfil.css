@@ -126,7 +126,11 @@ body {
     margin-right: 22vw;
 }
 .texto-correo{
-    margin-left: 1vw;
+    margin-left: 5vw;
+}
+.correo-usuario{
+    margin-left: 15vw;
+   
 }
 .texto-contraseña{
     margin-right: 7vw;
@@ -183,6 +187,8 @@ body {
 
 .nombre{
     margin-top: 1vw;
+    margin-left: 5vw;
+    font-size: 2vw;
     
 }
 .dino{
@@ -256,7 +262,8 @@ body {
         height: 13vw;
     }
     .nombre{
-        margin-left: 5vw;
+        margin-left: 2vw;
+        font-size: 7vw;
     }
     .texto-correo{
         font-size: 5.5vw;
