@@ -133,6 +133,8 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
   <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="src-js/perfil.js"></script>
     <script src="src-js/modales.js"></script>
+    <script src="../generales/monedas/js/obtener-monedas.js"></script>
+
 
 </body>
 </html>

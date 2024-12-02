@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
-require '../../../conexion_BD/conexion.php';
+require_once '../../../conexion_BD/conexion.php'; // Cambiado a require_once
+require_once './desbloqueados-por-defecto.php'; // Ajusta la ruta según tu estructura
 
 class Registrar {
     private $pdo;
@@ -10,18 +11,18 @@ class Registrar {
     public function __construct() {
         $this->pdo = new Conexion();
         $this->response = ['success' => false, 'errors' => []];
-        
+
         // Definir la URL base para la verificación
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
         $host = $_SERVER['HTTP_HOST'];
         $this->urlBase = $protocol . $host . '/Bingo-sauro/login/verificar.php';
+        error_log("Esto es un mensaje de prueba para verificar los logs.");
     }
 
     public function registrarUsuario($datos) {
         try {
-            // Añadir log para debugging
             error_log("Iniciando proceso de registro para: " . $datos['email']);
-            
+
             // Validar que el mailer existe antes de continuar
             $mailerPath = __DIR__ . '/../../mailer/mailer.php';
             if (!file_exists($mailerPath)) {
@@ -33,6 +34,7 @@ class Registrar {
             $stmt = $this->pdo->conectar()->prepare("SELECT COUNT(*) FROM usuario WHERE correo = ?");
             $stmt->execute([$datos['email']]);
             if ($stmt->fetchColumn() > 0) {
+                error_log("Correo ya registrado: " . $datos['email']);
                 $this->response['errors'][] = "El correo ya está registrado";
                 return $this->response;
             }
@@ -40,7 +42,7 @@ class Registrar {
             // Generar token de verificación
             $token = bin2hex(random_bytes(32));
 
-            // Validar token generado (debe tener longitud específica y formato hexadecimal)
+            // Validar token generado
             if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
                 error_log("Token inválido: " . $token);
                 throw new Exception("Error al generar el token de verificación.");
@@ -48,20 +50,32 @@ class Registrar {
 
             // Hashear la contraseña
             $passwordHash = password_hash($datos['password'], PASSWORD_DEFAULT);
-
+            $monedas= 25;
             // Insertar usuario con el token
-            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado) 
-                     VALUES (?, ?, ?, ?, FALSE)";
-            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token];
-            
-            // Log para verificar los parámetros
+            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado, contador_monedas) 
+                     VALUES (?, ?, ?, ?, FALSE, ?)";
+            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token, $monedas];
+
             error_log("Parámetros de inserción: " . json_encode($params));
 
-            $this->pdo->insert($query, $params);
+            // Usar el método insert que retorna el último ID
+            $id_usuario = $this->pdo->insert($query, $params);
 
+            if (!$id_usuario) {
+                throw new Exception("No se pudo obtener el ID del usuario recién creado.");
+            }
+
+            error_log("ID del usuario recién creado: $id_usuario");
+
+            // Desbloquear artículos por defecto para el usuario
+            error_log("Llamando a agregarArticulosDesbloqueadosPorDefecto...");
+            $resultado = agregarArticulosDesbloqueadosPorDefecto($this->pdo->conectar(), $id_usuario);
+            error_log("Resultado de la función: " . $resultado);
+
+            // Generar URL de verificación
             $urlVerificacion = $this->urlBase . "?token=" . urlencode($token);
 
-            // Validar que la URL generada es válida
+            // Validar URL
             if (!filter_var($urlVerificacion, FILTER_VALIDATE_URL)) {
                 error_log("URL inválida: " . $urlVerificacion);
                 throw new Exception("Error al generar la URL de verificación.");
@@ -69,6 +83,8 @@ class Registrar {
 
             // Enviar correo
             enviarCorreoBienvenida($datos['email'], $datos['primer_nombre'], $token);
+
+            error_log("Correo de bienvenida enviado a: " . $datos['email']);
 
             $this->response['success'] = true;
             $this->response['message'] = "Por favor, verifica tu correo para completar el registro";
@@ -84,7 +100,7 @@ class Registrar {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $datos = json_decode(file_get_contents('php://input'), true);
-        
+
         if (!isset($datos['email'], $datos['primer_nombre'], $datos['password']) ||
             !filter_var($datos['email'], FILTER_VALIDATE_EMAIL) ||
             strlen($datos['primer_nombre']) < 2 ||
@@ -92,13 +108,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception('Datos inválidos o incompletos');
         }
 
+        error_log("Datos de registro recibidos: " . json_encode($datos));
+
         $registro = new Registrar();
         $resultado = $registro->registrarUsuario($datos);
-        
+
         header('Content-Type: application/json');
         echo json_encode($resultado);
-        
+
     } catch (Exception $e) {
+        error_log("Error procesando la solicitud POST: " . $e->getMessage());
         header('Content-Type: application/json');
         echo json_encode([
             'success' => false,
