@@ -8,7 +8,6 @@ class Conexion
     private $baseDatos;
     private $pdo;
 
-    
     public function __construct()
     {
         $this->servidor = "bwbup4izlyky4o7s56rs-mysql.services.clever-cloud.com";
@@ -22,24 +21,26 @@ class Conexion
     public function conectar()
     {
         try {
-            $dsn = "mysql:host=$this->servidor;port=$this->puerto;dbname=$this->baseDatos";
-            $this->pdo = new PDO($dsn, $this->usuario, $this->password, [
+            $dsn = "mysql:host=$this->servidor;port=$this->puerto;dbname=$this->baseDatos;charset=utf8mb4";
+            $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-            ]);
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES => false // Desactivar la emulación de preparaciones
+            ];
+            $this->pdo = new PDO($dsn, $this->usuario, $this->password, $options);
             return $this->pdo;
         } catch (PDOException $e) {
             throw new Exception('Error en la conexión: ' . $e->getMessage());
         }
     }
 
-    // Función genérica para INSERT
+    // Función genérica para INSERT con retorno del último ID
     public function insert($query, $params = [])
     {
         try {
-            $stmt = $this->conectar()->prepare($query);
+            $stmt = $this->pdo->prepare($query);
             $stmt->execute($params);
-            return true;
+            return $this->pdo->lastInsertId(); // Retorna el último ID generado
         } catch (PDOException $e) {
             error_log("Error en insert: " . $e->getMessage());
             throw new Exception("Error en la inserción: " . $e->getMessage());
@@ -56,7 +57,6 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al consultar: ' . $e->getMessage());
         }
-
     }
 
     // Función genérica para UPDATE
@@ -68,7 +68,6 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al actualizar: ' . $e->getMessage());
         }
-
     }
 
     // Función genérica para DELETE
@@ -80,8 +79,6 @@ class Conexion
         } catch (PDOException $e) {
             throw new Exception('Error al eliminar: ' . $e->getMessage());
         }
-
     }
-
 }
 ?>

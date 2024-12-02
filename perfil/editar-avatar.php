@@ -54,14 +54,14 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
            
             <div id="avatarSelectedInfo">
-              <div class="avatarvoid"></div>
+              <div class="avatarvoid" id="avatarvoid"></div>
               <div id="selectBtn" class="elegir texto">Elegir Avatar</div>
             </div>
             <div class="cuadro-gris"> 
-                 <div id="avatarList" >
+                
                   <div id="avatarContainer"></div>
                  </div>
-                </div>
+                
 
         </div>
 
@@ -73,8 +73,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
        
     </div>
-    <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="src-js/editar-avatar.js"></script>
+       <script src="src-js/editar-avatar.js"></script>
 </body>
 </html>
 

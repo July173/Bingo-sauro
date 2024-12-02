@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json'); // Asegurarnos de que la respuesta sea JSON
-require '../../../conexion_BD/conexion.php';
-require 'desbloqueados-por-defecto.php';
+require_once '../../../conexion_BD/conexion.php'; // Cambiado a require_once
+require_once './desbloqueados-por-defecto.php'; // Ajusta la ruta según tu estructura
 
 class Registrar {
     private $pdo;
@@ -17,7 +17,6 @@ class Registrar {
         $host = $_SERVER['HTTP_HOST'];
         $this->urlBase = $protocol . $host . '/Bingo-sauro/login/verificar.php';
         error_log("Esto es un mensaje de prueba para verificar los logs.");
-
     }
 
     public function registrarUsuario($datos) {
@@ -51,18 +50,21 @@ class Registrar {
 
             // Hashear la contraseña
             $passwordHash = password_hash($datos['password'], PASSWORD_DEFAULT);
-
+            $monedas= 25;
             // Insertar usuario con el token
-            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado) 
-                     VALUES (?, ?, ?, ?, FALSE)";
-            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token];
+            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado, contador_monedas) 
+                     VALUES (?, ?, ?, ?, FALSE, ?)";
+            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token, $monedas];
 
             error_log("Parámetros de inserción: " . json_encode($params));
 
-            $this->pdo->insert($query, $params);
+            // Usar el método insert que retorna el último ID
+            $id_usuario = $this->pdo->insert($query, $params);
 
-            // Obtener el ID del usuario recién registrado
-            $id_usuario = $this->pdo->conectar()->lastInsertId();
+            if (!$id_usuario) {
+                throw new Exception("No se pudo obtener el ID del usuario recién creado.");
+            }
+
             error_log("ID del usuario recién creado: $id_usuario");
 
             // Desbloquear artículos por defecto para el usuario
@@ -124,6 +126,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     exit;
 }
-
-
 ?>
