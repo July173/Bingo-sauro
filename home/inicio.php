@@ -170,6 +170,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <script src="../crear_sala/js/crear_sala.js"></script>
     <script src="../generales/loader/loader.js"></script>
     <script src="../crear_sala/js/codigo_partida.js"></script>
+    <script src="../generales/monedas/js/obtener-monedas.js"></script>
     <script src="src-js/inicio.js"></script>
 
 </html>

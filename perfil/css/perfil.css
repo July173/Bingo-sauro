@@ -186,7 +186,7 @@ body {
     
 }
 .dino{
-    background-image: url("/Generales/img/dinosaurio-cute.png");
+    background-image: url(../../Generales/img/dinosaurio-cute.png);
     background-repeat: no-repeat;
     background-position: 70px;
     background-size: 100%;

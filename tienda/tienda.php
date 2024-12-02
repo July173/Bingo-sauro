@@ -220,5 +220,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
         <script src="src-js/tienda.js"></script>
         <script src="src-js/recompensa-diaria.js"></script>
+        <script src="../generales/monedas/js/obtener-monedas.js"></script>
+
 </body>
 </html>

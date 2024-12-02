@@ -179,6 +179,8 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 
 
   <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+  <script src="../generales/monedas/js/obtener-monedas.js"></script>
+
 </body>
 
 </html>
