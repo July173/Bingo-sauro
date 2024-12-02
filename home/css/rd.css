@@ -57,7 +57,7 @@ body {
 }
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
-    height: 35vw;   
+    height: 45vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -69,13 +69,14 @@ body {
 }
 
 .social-icon {
-    width: 70px;
-    margin-right: 6px;
+    width: 5vw;
+    margin-right: 1vw;
 }
 .dino-image {
-    width: 230px;
-    margin-left: -24vw;
-    margin-top: -60px;
+    width: 17vw;
+    height: 17vw;
+    margin-left: -23vw;
+    margin-top: -7vw;
 }
 .boton{
     margin-left: 30vw;
@@ -105,15 +106,24 @@ body {
     font-weight: 300;
     margin: 0;
 }
+.letra-contac{
+    font-family: "Kavoon", serif;
+    color:  rgb(0, 255, 0);
+    font-size: 3vw;
+    margin-left: 8vw;
+    margin-top: 2vw;
+}
 .mascot {
     background-repeat: no-repeat;
     opacity: 0.4;
+    margin-bottom: 5vw;
 }
 
 .ms-3 {
-    height: 5vw;
-    width: 17vw;
-    margin-left: -10vw;
+    height: 6vw;
+    width: 20vw;
+    margin-right: -7vw;
+    margin-top: -12vw;
 }
 .close-btn {
     margin-left: 17px;
@@ -127,39 +137,58 @@ body {
 
     .cuadro{
         width: 100vw;
-        height: 200vw;  
+        height: 200vw;
+        z-index: 10;
+    }
+    .mascot {
+        background-repeat: no-repeat;
+        opacity: 0.6;
+      
+        
     }
     .dino-image {
-        width: 35vw;
-        margin-left: -50vw;
-        margin-top: -6px;
+        width: 60vw;
+        height: 60vw;
+        margin-left: -68vw;
+        margin-top: -15vw;
+        
     }
     .close-btn {
-        margin-left: 58vw;
-        margin-top: -5vw;
+        margin-left: 55vw;
+        margin-top: -3vw;
         height: 10vw;
         width: 10vw;
-        margin-bottom: 30vw;
+        
+    }
+    .letra-contac{
+        font-family: "Kavoon", serif;
+        color:  rgb(0, 255, 0);
+        font-size: 12vw;
+        margin-left: 5vw;
+        margin-top: 1vw;
+        margin-bottom: 6vw;
     }
     .letra {
         font-family: "Kavoon", serif;
         color:  rgb(0, 255, 0);
-        font-size: 7.5vw;
-        font-weight: 300;
-        margin: 0;
+        font-size: 8vw;
+        margin-top: 15vw;
+        margin-bottom: 13vw;
+        
     }
     .ms-3 {
-        height: 12vw;
-        width: 45vw;
-        margin-left: 35vw;
-        margin-top: -15vw;
+        height: 20vw;
+        width: 65vw;
+        margin-left: 60vw;
+        margin-top: -40vw;
+        margin-right: -17vw;
         
 
     }
     .social-icon{
-        height: 10vw;
-        width: 10vw;
-        margin-left: -2vw;
+        height: 15vw;
+        width: 15vw;
+        margin-left: 2vw;
         margin-top: 1vw;
     }
     .d-flex {
@@ -172,6 +201,7 @@ body {
         height: 110vw;
         margin-top: -110vw;
         opacity: 0.6;
+        z-index: 1;
     }
 
     .hojas-2 {
@@ -180,6 +210,7 @@ body {
         height: 120vw;
         margin-top: 90vw;
         margin-left: 10vw;
+        z-index: 1;
     }
 
     .hojas-3 {
@@ -188,6 +219,7 @@ body {
         height: 110vw;
         margin-right: 25vw;
         margin-top: 10vw;
+        z-index: 1;
 
     }
     
