@@ -16,9 +16,12 @@ window.onload = function () {
     }
 
     // Verificar que el DOM contiene los elementos necesarios
-    const avatarContainer = document.querySelector('ContenedorAvatar');
+    const avatarContainer = document.querySelector('.ContenedorAvatar');
     const precioContainer = document.querySelector('.precio');
-
+    console.log('Avatar seleccionado:', selectedAvatar);
+    console.log('Contenedor de avatar encontrado:', avatarContainer);
+    console.log('Contenedor de precio encontrado:', precioContainer);
+    
     if (!avatarContainer) {
       console.error('No se encontró el contenedor de avatar (.ContenedorAvatar) en el DOM.');
       return;
