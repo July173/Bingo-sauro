@@ -49,8 +49,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             cargarContenido();
         </script>
             <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
-            <div class="ContenedorAvatar"></div>
-            <div class="precio"></div>
+            <div class="ContenedorAvatar" id="ContenedorAvatar"></div>
+            <div class="precio">kkk
+            </div>
             <div id="comprarBtn" class="comprarAvatar">Comprar avatar</div>
         </div>
     </div>

@@ -15,7 +15,7 @@ try {
     $id_usuario = $_SESSION['usuario_id'];
 
     // Instanciar la clase Conexion
-    $conexion = new Conexion();
+    $conexion = new Conexion(); // Ahora la conexión se inicializa aquí
 
     // Consulta SQL para obtener los cartones
     $query = "

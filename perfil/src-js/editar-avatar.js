@@ -36,6 +36,7 @@ fetch("./php/avatares.php")
         selectBtn.onclick = () => {
           if (carton.locked) {
             localStorage.setItem("selectedAvatar", JSON.stringify(carton));
+            console.log('Avatar guardado en localStorage:', carton);
             window.location = "./comprar-avatar.php";
           } else {
             localStorage.setItem("selectedAvatar", JSON.stringify(carton));
