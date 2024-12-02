@@ -29,7 +29,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <!-- Contador 25 -->
             <div class="separador">
                 <div class="counter">
-                    <span>25</span>
+                    <div id="cuadro_monedas"></div>
                     <img src="../generales/img/dinomonedas.png" >
                 </div>
             </div>
@@ -59,5 +59,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
 
     <script src="../../generales/bootstrap/js/bootstrap.js"></script>
+    <script src="js/obtener-monedas.js"></script>
 </body>
 </html>

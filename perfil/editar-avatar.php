@@ -74,6 +74,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
        
     </div>
        <script src="src-js/editar-avatar.js"></script>
+       <script src="../generales/monedas/js/obtener-monedas.js"></script>
+
 </body>
 </html>
 

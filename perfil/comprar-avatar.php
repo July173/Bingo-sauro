@@ -51,7 +51,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
             <div class="ContenedorAvatar"></div>
             <div class="precio"></div>
-            <div id="comprar" class="comprarAvatar">Comprar avatar</div>
+            <div id="comprarBtn" class="comprarAvatar">Comprar avatar</div>
         </div>
     </div>
 
@@ -63,6 +63,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
     <script src="./src-js/comprar-avatar.js"></script>
+    <script src="../generales/monedas/js/obtener-monedas.js"></script>
+
 
 </body>
 </html> 
