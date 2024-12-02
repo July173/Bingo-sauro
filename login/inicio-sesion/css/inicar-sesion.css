@@ -186,6 +186,7 @@ body {
         height: 47vw;
        margin-top: -8vw;
        margin-bottom: -7vw;
+       margin-top: -3vw;
      
 
     }
@@ -193,19 +194,20 @@ body {
         width: 100%;
     }
     .cuadro{
-        width: 100%;
-        height: 80%;  
-        z-index: 10; 
-       
+        width: 100vw;
+        height: 200vw;  
     }
+       
     .titulo{
         font-size: 8vw;
+        margin-top: 15vw;
     }
    
     .email{
         font-size: 5vw ;
         margin-right: 16vw;
         margin-bottom: 0.5vw;
+        margin-top: 3vw;
 
     }
     .password{
@@ -236,46 +238,52 @@ body {
         border-radius: 0.8rem;
         display: block; /* Asegura que el botón ocupe toda la línea y se centre */
         text-align: center;
+        margin-top: 3vw;
        
     }
     
     .registrar{
       font-size: 4vw;
       z-index: 10;
+      margin-top: 2vw;
     }
     .textoOC{
         font-size: 3.8vw;
         z-index: 10;
+        margin-top: 2vw;
         
     }
    
     .bingo{
         width: 90vw;
         margin-left: 1vw;
+        margin-top: -3vw;
         
     }
-    .hojas{
-       position: absolute;
-       width: 70vw;
-       height: 80vw;
-       margin-top: -93vw;
-       opacity: 0.6;
+    .hojas {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-top: -110vw;
+        opacity: 0.6;
     }
-    .hojas-2{  position: absolute;
-        width: 70vw;
-        height: 80vw;
+
+    .hojas-2 {
+        position: absolute;
+        width: 120vw;
+        height: 120vw;
         margin-top: 90vw;
         margin-left: 10vw;
     }
 
-    .hojas-3{  position: absolute;
-        width: 70vw;
-        height: 80vw;
-       margin-right: 20vw;
-       margin-top: -17vw;
+    .hojas-3 {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-right: 25vw;
+        margin-top: 10vw;
 
     }
-}
 
 #noVerificadoModal .modal-content {
     border-radius: 15px;
