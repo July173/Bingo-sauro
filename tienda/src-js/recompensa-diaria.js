@@ -63,4 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
             rewardMessage7.style.display = 'none';
         }, 3000);
     });
+
+    // Función para reclamar la recompensa diaria
+    function reclamarRecompensa() {
+        fetch('./php/recompensa_diaria.php') // Llamar al script PHP
+            .then(response => response.json())
+            .then(data => {
+                alert(data.mensaje); // Mostrar el mensaje de la respuesta
+                if (data.cantidad) {
+                    // Actualizar el saldo de monedas del usuario
+                    document.getElementById('saldo').innerText = `Saldo: ${data.cantidad}`;
+                }
+            })
+            .catch(error => console.error('Error al reclamar la recompensa:', error));
+    }
+
+    // Llama a la función cuando el usuario haga clic en un botón
+    const botonReclamar = document.getElementById('botonReclamar');
+    if (botonReclamar) {
+        botonReclamar.addEventListener('click', reclamarRecompensa); // Agregar el evento de clic
+    }
 });

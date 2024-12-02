@@ -8,7 +8,6 @@ class Conexion
     private $baseDatos;
     private $pdo;
 
-    
     public function __construct()
     {
         $this->servidor = "bwbup4izlyky4o7s56rs-mysql.services.clever-cloud.com";
