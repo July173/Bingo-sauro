@@ -8,13 +8,23 @@ if (!isset($_SESSION['usuario_id'])) {
     exit();
 }
 
-// Opcional: Obtener información del usuario para mostrar en la página
-$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+// Asignar el ID del usuario a la variable
+$usuario_id = $_SESSION['usuario_id'];
+
+// Conectar a la base de datos
+require_once '../conexion_BD/conexion.php';
+$conexion = new Conexion();
+
+// Obtener la lista de amigos
+$query = "SELECT u.id_usuario, u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido 
+          FROM amigo a 
+          JOIN usuario u ON a.amigo_id = u.id_usuario 
+          WHERE a.usuario_id = :usuario_id";
+$amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,7 +76,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       </script>
       <div class="logo"></div>
 
-      <button class="invitarAmigo">Invitar un amigo</button>
+      <a href="agregar_amigos.php" class="btn btn-success invitarAmigo">Invitar un amigo</a>
       <div class="contenedor-3">
         <div class="dino"></div>
         <div class="contenedor-gris">
@@ -74,7 +84,39 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <div class="titulo-contenedor">Amigos</div>
             <p class="text-trofeo text-secondary">Dino-trofeos</p>
           </div>
-          <div id="AmigosRegistro"></div>
+          <br>
+          <div class="list-group">
+    <?php if (count($amigos) > 0): ?>
+        <?php foreach ($amigos as $amigo): ?>
+            <div class="list-group-item d-flex justify-content-between align-items-center" 
+                 data-id="<?php echo $amigo['id_usuario']; ?>" 
+                 onclick="confirmarEliminacion(this)">
+                <?php echo htmlspecialchars($amigo['primer_nombre'] . ' ' . $amigo['primer_apellido']); ?>
+                <button class="btn btn-success btn-sm" onclick="event.stopPropagation(); confirmarEliminacion(this.parentElement)">Eliminar</button>
+            </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <div class="list-group-item">No tienes amigos agregados.</div>
+    <?php endif; ?>
+</div>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirmModal" data-bs-backdrop="false" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas eliminar a este amigo?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="confirmarEliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
       </div>
 
@@ -86,37 +128,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       </div>
     </div>
 
-    <audio id="audioPlayer" loop>
-      <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
-      Tu navegador no soporta la reproducción de audio.
-    </audio>
 
-<!-- Modal que se abre al hacer clic en un amigo -->
-<div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="d-flex justify-content-center">
-          <button id="elimi" class="botones-modal" data-bs-target="#confirmModal" data-bs-toggle="modal">Eliminar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal de Confirmación de Eliminación -->
-<div class="modal fade" id="confirmModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-body">
-        <p>¿Estás seguro de que deseas eliminar a este amigo?</p>
-        <button class="botones-modal" id="confirmarEliminacion">Sí</button>
-        <button class="botones-modal" data-bs-dismiss="modal">No</button>
-      </div>
-    </div>
-  </div>
-</div>
+<script src="../generales/bootstrap/js/bootstrap.bundle.min.js"></script> 
     <script src="src-js/amigos.js"></script>
-    <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
 </body>
 </html>

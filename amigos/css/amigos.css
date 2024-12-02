@@ -97,7 +97,7 @@ body {
     font-size: 2.3vw;
     margin-top: 0.5vw;
     text-align: center;
-    margin-left: 20vw;
+    margin-left: 15vw;
 }
 .text-trofeo{
     font-family: "Kavoon", serif;
@@ -135,6 +135,7 @@ body {
     
 .invitarAmigo{
     font-family: "Kavoon", serif;
+    color: #000000;
     background-color: rgb(149, 247, 110);
     border-radius: 1.2rem;
     border: none;
