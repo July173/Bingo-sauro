@@ -38,8 +38,6 @@ try {
         $_SESSION['usuario_id'] = $resultado['usuario']['usuario_id'];  // Guardar nombre del usuario
         $_SESSION['correo'] = $resultado['usuario']['correo'];  // Guardar correo del usuario
         $_SESSION['nombre'] = $resultado['usuario']['nombre'];  // Guardar nombre del usuario
-        
-        // Opcional: También podrías agregar más datos si es necesario, por ejemplo, el id del usuario
     }
     
     // Asegurarse de que no haya salida antes del JSON
