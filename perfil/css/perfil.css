@@ -209,16 +209,17 @@ body {
         height: 200vw;  
     }
     .avatarvoid{
-        width: 20vw;
-        margin-top: 15vw;
+        width: 10vw;
+        margin-top: 20vw;
         margin-left: -7vw;
-        height: 20vw;
+        height: 10vw;
         
         
     }
     .editarimagen{
-        width: 20vw;
-        height: 20vw;
+        width: 15vw;
+        height: 15vw;
+        margin-left: -10vw;
 
     }
     
@@ -233,7 +234,7 @@ body {
     .contenedor-gris{
         height: 60vw;
         width: 99vw;
-        margin-top: 8vw;
+        margin-top: 4vw;
         margin-left: -9vw;
     }
     .text-light{
@@ -249,11 +250,13 @@ body {
         
     }
     .nombre-usuario{
-        margin-top: 20vw;
-        font-size: 5.5vw;
-        width: 93vw;
-        
-
+        margin-top: 30vw;
+        font-size: 5vw;
+        width: 90vw;
+        height: 13vw;
+    }
+    .nombre{
+        margin-left: 5vw;
     }
     .texto-correo{
         font-size: 5.5vw;
@@ -271,7 +274,7 @@ body {
         width: 75vw;
         height: 9.5vw;
         margin-top: 8vw;
-        margin-left: -50vw;
+        margin-left: -40vw;
         font-size: 5vw;
     }
     .editar{
