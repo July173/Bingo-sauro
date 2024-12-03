@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    /*elimina cualquier espacio o margen externo alrededor del elemento*/
+    background-image: url("../../Generales/img/fondo.jpeg");
+    position: fixed;
+    /*hace que el elemento esté "fijo" respecto al viewport */
+    width: 100%;
+    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
+    height: 100%;
+    /*establece la altura del elemento en el 100% de la altura visible del viewport*/
+    background-size: cover;
+    /*ajusta la imagen de fondo,la hace responsive.*/
+    background-repeat: no-repeat;
+    /*No se repite.*/
+    background-attachment: fixed;
+    /*Permanece fija mientras se hace scroll.*/
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hojas {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    z-index: 1;
+    margin-right: 70vw;
+    position: absolute;
+    margin-top: -21vw;
+  }
+
+  .hojas-2 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    margin-right: 84vw;
+    position: absolute;
+    /* 50% de transparencia */
+    z-index: 1;
+    /* Volteo horizontal */
+    transform: rotate(-150deg);
+    /* Opcional: ajusta el contenedor si es necesario */
+    margin-top: 22vw;
+  }
+  
+.hojas-3 {
+    width: 33vw;
+    height: 33vw;
+    opacity: 0.8;
+    margin-left:66vw;
+   position: absolute;
+   margin-top: 12vw;
+    z-index: 1;
+    transform: rotate(90deg);
+    margin-bottom: 20vw;
+}
+.cuadro {
+    background-color: rgba(14, 78, 62, 0.5);
+    height: 35vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding: 20px;
+    width: 35vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+
+.boton{
+    margin-left: 30vw;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+.cuadro-blanco{
+    height: 20vw;
+    width: 30vw;
+    background-color: white;
+    color: black;
+    font-family: "Kavoon", serif;
+    font-size: 2vw;
+    border-radius: 2rem;
+    padding: 1vw;
+}
+
+
+.letra {
+    font-family: "Kavoon", serif;
+    color:  rgb(0, 255, 0);
+    font-size: 2.7vw;
+    font-weight: 300;
+    margin: 0;
+}
+.mascot {
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+
+.close-btn {
+    margin-left: 17px;
+    margin-top: -23px;
+    height: 3vw;
+    width: 3vw;
+    margin-bottom: 3vw;
+}
+
+@media (orientation:portrait) {
+
+    .cuadro{
+        width: 100vw;
+        height: 200vw;  
+    }
+    .dino-image {
+        width: 35vw;
+        margin-left: -50vw;
+        margin-top: -6px;
+    }
+    .close-btn {
+        margin-left: 58vw;
+        margin-top: -5vw;
+        height: 10vw;
+        width: 10vw;
+        margin-bottom: 30vw;
+    }
+    .letra {
+        font-family: "Kavoon", serif;
+        color:  rgb(0, 255, 0);
+        font-size: 7.5vw;
+        font-weight: 300;
+        margin: 0;
+    }
+    .ms-3 {
+        height: 12vw;
+        width: 45vw;
+        margin-left: 35vw;
+        margin-top: -15vw;
+        
+
+    }
+    .social-icon{
+        height: 10vw;
+        width: 10vw;
+        margin-left: -2vw;
+        margin-top: 1vw;
+    }
+    .d-flex {
+        margin-top: -6vw;
+        margin-left: 10vw;
+    }
+    .hojas {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-top: -110vw;
+        opacity: 0.6;
+    }
+
+    .hojas-2 {
+        position: absolute;
+        width: 120vw;
+        height: 120vw;
+        margin-top: 90vw;
+        margin-left: 10vw;
+    }
+
+    .hojas-3 {
+        position: absolute;
+        width: 110vw;
+        height: 110vw;
+        margin-right: 25vw;
+        margin-top: 10vw;
+
+    }
+    
+}

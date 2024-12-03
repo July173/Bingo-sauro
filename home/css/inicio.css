@@ -149,71 +149,9 @@ body {
 .unirme {
     padding: 0.5vw 3.2vw;
 }
-/* 
-.modal-header {
-    background-color: rgba(23, 53, 45, 0.5) !important;
-    border: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-bottom: none !important;
-}
 
-.inicioLogo {
-    width: 20% !important;
-    height: 20% !important;
-    opacity: 0.6 !important;
-    margin-top: 0.5vw !important;
 
-}
 
-.modal-body{
-    background-color: rgba(23, 53, 45, 0.5);
-    padding: 1vw !important;
-   
-
-}
-
-.title-modal {
-    color: rgb(9, 255, 9);
-    font-family: "Kavoon", serif;
-    font-size: 2.5vw;
-    margin-left: 3vw;
-}
-
-.context {
-    background-color: rgb(255, 255, 255);
-    border-radius: 1.3rem;
-    padding: 1.5vw;
-    width: 80%;
-    margin-left: 4vw;
-    font-family: "Kavoon", serif;
-    margin-top: -1vw;
-}
-
-.close-custom {
-
-    background-image: url("/Generales/img/cerrar.png") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    width: 3vw !important;
-    height: 3vw !important;
-    cursor: pointer !important;
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
-
-}
-
-.BingoImg {
-    background-repeat: no-repeat;
-    background-position: 0px;
-    background-size: 100%;
-    width: 30vw;
-    margin-top: 0.5vw;
-    margin-left: 1vw;
-} */
 
 @media (orientation:portrait) {
 

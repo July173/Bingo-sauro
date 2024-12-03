@@ -30,7 +30,7 @@ fetch('./php/carton.php')
           window.location = './comprar-carton.php';
         });
       } else {
-        precioBoton.textContent = 'Cartón comprado';
+        precioBoton.textContent = 'seleccionar';
         precioBoton.classList.add('comprado-carton');
       }
 

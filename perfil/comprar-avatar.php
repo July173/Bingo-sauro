@@ -45,9 +45,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
             <div id='monedas'></div>
             <script src="../generales/monedas/js/conexion-monedas.js"></script>
-          <script>
-            cargarContenido();
-        </script>
+            <script>
+                cargarContenido();
+            </script>
             <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta ventana">
             <div class="ContenedorAvatar" id="ContenedorAvatar"></div>
             <div class="precio">kkk
@@ -63,8 +63,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </audio>
 
     <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
-    <script src="./src-js/comprar-avatar.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
+    <script src="./src-js/comprar-avatar.js"></script>
+
 
 
 </body>

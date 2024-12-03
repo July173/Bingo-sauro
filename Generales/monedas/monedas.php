@@ -37,7 +37,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <!-- Contador 1 con modal -->
             <div class="separador fondo">
                 <div class="counter counter-1 " data-bs-toggle="modal" data-bs-target="#dinoModal">
-                    <span>1</span>
+                    <span>0</span>
                     <img src="../generales/img/dinoTrofeos.png" class="imagen-trofeo" >
                 </div>
             </div>
