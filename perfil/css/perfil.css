@@ -217,16 +217,14 @@ body {
         height: 200vw;  
     }
     .avatarvoid{
-        width: 30vw;
-        height: 30vw;
-        background-color: rgb(228, 226, 226);
-        margin-top: 10vw;
-        border-radius: 1rem;
-        background-size: contain; /* Ajusta la imagen sin deformarla */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        background-position: center; /* Centra la imagen en el div */
-        background-image: url(../../Generales/img/usuario.png);
+        width: 20vw;
+        margin-top: 12vw;
+        margin-left: -7vw;
+        height: 20vw;
+        
+        
     }
+ 
     .editarimagen{
         width: 50vw;
         height: 50vw;
@@ -236,9 +234,12 @@ body {
     }
     
     #avatarDisplay{
-        width: 20VW;
-        height: 20VW;
+        width: 20vw;
+        margin-top: 12vw;
+        margin-left: -7vw;
+        height: 20vw;
     }
+    
     .tabla{
         margin-top: 23.5vw;
         

@@ -154,15 +154,15 @@ body {
 
 .comprado-carton {
   font-family: "Kavoon", serif;
- margin-left: 3vw;
+ margin-left: 2vw;
   margin-top: 0.10vw;
-  font-size: 1.4vw;
+  font-size: 2vw;
   border-radius: 10px;
   background-color: #f9e79f;
   border-radius: 15px;
   padding: 0px 10px 0px 10px;
   border: none;
-  width: 10vw;
+  width: auto;
   height: auto;
 }
 .price-button {

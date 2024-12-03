@@ -3,7 +3,6 @@ const boton = document.getElementById('miBotonn');
 
 // Evento del botón
 boton.addEventListener('click', async () => {
-    mostrarLoader(); // Mostrar el loader
 
     try {
         const actualizado = await generarCodigoPartida(); // Ejecutar tu lógica principal
@@ -17,8 +16,6 @@ boton.addEventListener('click', async () => {
         }
     } catch (error) {
         console.error("Ocurrió un error:", error);
-    } finally {
-        ocultarLoader(); // Ocultar el loader al finalizar
     }
 });
 
