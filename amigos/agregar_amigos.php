@@ -17,9 +17,10 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Amigos</title>
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/agregar-amigos.css">
 </head>
 <body>
-    <div class="container mt-5">
+    <div id="contenedor">
         <h1 class="text-center">Agregar Amigos</h1>
         <div class="card">
             <div class="card-header">

@@ -210,12 +210,13 @@ body {
     }
     .avatarvoid{
         width: 20vw;
-        margin-top: 15vw;
+        margin-top: 12vw;
         margin-left: -7vw;
         height: 20vw;
         
         
     }
+ 
     .editarimagen{
         width: 20vw;
         height: 20vw;
@@ -223,9 +224,12 @@ body {
     }
     
     #avatarDisplay{
-        width: 20VW;
-        height: 20VW;
+        width: 20vw;
+        margin-top: 12vw;
+        margin-left: -7vw;
+        height: 20vw;
     }
+    
     .tabla{
         margin-top: 35vw;
         

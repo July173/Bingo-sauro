@@ -73,7 +73,9 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
         <div class="editar edi-avatar" id="CambiarAvatar">
         </div>
-        <div id="avatarDisplay" class="avatarvoid">
+        <div id="avatarvoid">
+        <div id="avatarDisplay" class="avatarDisplay"></div>
+          
           
         </div>
       </div>

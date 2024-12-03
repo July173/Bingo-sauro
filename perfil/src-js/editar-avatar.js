@@ -1,6 +1,7 @@
-document.getElementById('redirigirPerfil').addEventListener('click', function(){
-  window.location = "./perfil.php"
+document.getElementById('redirigirPerfil').addEventListener('click', function() {
+  window.location = "./perfil.php";
 });
+
 fetch("./php/avatares.php")
   .then((response) => response.json())
   .then((data) => {
@@ -28,9 +29,7 @@ fetch("./php/avatares.php")
         avatarVoid.innerHTML = `<img src="${carton.src}" alt="${carton.alt}" class="avatar-seleccionado">`;
 
         // Cambiar el texto del botón según si el avatar está bloqueado
-        selectBtn.textContent = carton.locked
-          ? "Comprar avatar"
-          : "Seleccionar avatar";
+        selectBtn.textContent = carton.locked ? "Comprar avatar" : "Seleccionar avatar";
 
         // Evento para el botón de seleccionar/comprar avatar
         selectBtn.onclick = () => {
@@ -39,8 +38,31 @@ fetch("./php/avatares.php")
             console.log('Avatar guardado en localStorage:', carton);
             window.location = "./comprar-avatar.php";
           } else {
+            // Si el avatar no está bloqueado, enviamos la solicitud para actualizar el avatar del usuario
             localStorage.setItem("selectedAvatar", JSON.stringify(carton));
             alert("Avatar seleccionado correctamente.");
+
+            // Enviar el ID del avatar al servidor
+            fetch("./php/actualizacion-avatar.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: `id_avatar=${carton.id}`,
+            })
+            .then(response => response.json())
+            .then(data => {
+              if (data.status === 'success') {
+                // Cambiar el texto del botón a "Avatar seleccionado"
+                selectBtn.textContent = "Avatar seleccionado";
+              } else {
+                alert("Error al actualizar el avatar.");
+              }
+            })
+            .catch(error => {
+              console.error("Error al enviar la solicitud:", error);
+              alert("Error al seleccionar el avatar.");
+            });
           }
         };
       });
