@@ -213,7 +213,8 @@ body {
     .logo {
         width: 40vw;
         height: 40vw;
-       margin-top: 12vw;
+       margin-top: 15vw;
+       margin-bottom: 5vw;
        
      
     }
@@ -336,7 +337,7 @@ body {
         background-size: 100%;
         width: 30vw;
         height: 30vw;
-        margin-top: 18vw;
+        margin-top: 20vw;
         margin-left: 15vw;
     }
 
