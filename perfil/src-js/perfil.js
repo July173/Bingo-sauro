@@ -11,7 +11,6 @@ document.getElementById('CambiarAvatar').addEventListener('click', function(){
     window.location = "./editar-avatar.php"
 });
 
-// Llamar al archivo PHP para obtener el avatar seleccionado
 fetch("./php/mostrar-avatar.php")
   .then((response) => response.json())
   .then((data) => {
@@ -22,14 +21,39 @@ fetch("./php/mostrar-avatar.php")
       // Mostrar el avatar seleccionado en el div
       avatarVoid.innerHTML = `
         <img src="${data.avatar.src}" alt="${data.avatar.alt}" class="avatarvoid">
-        
       `;
     } else {
-      // Si no hay avatar seleccionado, mostrar un mensaje
-      avatarVoid.innerHTML = "<p>No has seleccionado un avatar aún.</p>";
+      // Si no hay avatar seleccionado, mostrar el div con estilos personalizados
+      avatarVoid.innerHTML = `
+        <div style="
+          width: 10vw;
+          height: 10vw;
+          background-color: rgb(228, 226, 226);
+          margin-top: 1.5vw;
+          margin-bottom: 1vw;
+          border-radius: 1rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url('./../Generales/img/usuario.png');
+        "></div>
+      `;
     }
   })
   .catch((error) => {
     console.error("Error al obtener el avatar:", error);
-    avatarVoid.innerHTML = "<p>Error al cargar el avatar.</p>";
+    avatarVoid.innerHTML = `
+      <div style="
+        width: 10vw;
+        height: 10vw;
+        background-color: rgb(228, 226, 226);
+        margin-top: 1.5vw;
+        margin-bottom: 1vw;
+        border-radius: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./../Generales/img/usuario.png');
+      "></div>
+    `;
   });

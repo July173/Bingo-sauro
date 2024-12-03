@@ -4,62 +4,48 @@ document.getElementById('redirigirPerfil').addEventListener('click', function ()
 });
 
 // Cargar avatar seleccionado desde localStorage
-window.onload = function () {
+// Ejecutar cuando el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM cargado correctamente.");
+
   try {
-    // Obtener el avatar seleccionado del localStorage
-    const selectedAvatar = JSON.parse(localStorage.getItem('selectedAvatar'));
+      const selectedAvatar = JSON.parse(localStorage.getItem('selectedAvatar'));
 
-    // Verificar si existe un avatar seleccionado
-    if (!selectedAvatar) {
-      console.error('No hay avatar seleccionado en localStorage.');
-      return;
-    }
+      if (!selectedAvatar) {
+          console.error('No hay avatar seleccionado en localStorage.');
+          return;
+      }
 
-    // Verificar que el DOM contiene los elementos necesarios
-    const avatarContainer = document.querySelector('.ContenedorAvatar');
-    const precioContainer = document.querySelector('.precio');
-    console.log('Avatar seleccionado:', selectedAvatar);
-    console.log('Contenedor de avatar encontrado:', avatarContainer);
-    console.log('Contenedor de precio encontrado:', precioContainer);
-    
-    if (!avatarContainer) {
-      console.error('No se encontró el contenedor de avatar (.ContenedorAvatar) en el DOM.');
-      return;
-    }
-    if (!precioContainer) {
-      console.error('No se encontró el contenedor de precio (.precio) en el DOM.');
-      return;
-    }
+      const avatarContainer = document.querySelector('.ContenedorAvatar');
+      const precioContainer = document.querySelector('.precio');
 
-    // Crear y configurar la imagen del avatar
-    const avatarImg = document.createElement('img');
-    avatarImg.src = selectedAvatar.src;
-    avatarImg.alt = "Avatar a comprar";
-    avatarImg.style.width = '55vw'; // Ajusta según sea necesario
-    avatarImg.style.height = '55vw'; // Ajusta según sea necesario
-    avatarImg.style.borderRadius = '3rem';
+      if (!avatarContainer || !precioContainer) {
+          console.error('Elementos necesarios no encontrados en el DOM.');
+          return;
+      }
 
-    // Agregar la imagen al contenedor de avatar
-    avatarContainer.appendChild(avatarImg);
+      const avatarImg = document.createElement('img');
+      avatarImg.src = selectedAvatar.src;
+      avatarImg.alt = "Avatar a comprar";
+      avatarImg.style.width = '28vw';
+      avatarImg.style.height = '28vw';
+      avatarImg.style.borderRadius = '3rem';
 
-    // Mostrar el precio del avatar
-    precioContainer.textContent = `${selectedAvatar.price}`;
+      avatarContainer.appendChild(avatarImg);
+      precioContainer.textContent = `${selectedAvatar.price}`;
 
-    // Crear y configurar el ícono de precio
-    const priceIcon = document.createElement('img');
-    priceIcon.src = '../generales/img/moneditas.png';
-    priceIcon.style.width = '4vw'; // Ajusta según sea necesario
-    priceIcon.style.height = '4vw'; // Ajusta según sea necesario
-    priceIcon.style.marginLeft = '5px'; // Espaciado opcional entre el precio y la imagen
+      const priceIcon = document.createElement('img');
+      priceIcon.src = '../generales/img/moneditas.png';
+      priceIcon.style.width = '4vw';
+      priceIcon.style.height = '4vw';
+      priceIcon.style.marginLeft = '5px';
 
-    // Agregar el ícono de precio al contenedor
-    precioContainer.appendChild(priceIcon);
-
+      precioContainer.appendChild(priceIcon);
   } catch (error) {
-    // Manejo de errores generales
-    console.error('Error al cargar el avatar:', error);
+      console.error('Error al cargar el avatar:', error);
   }
-};
+});
+
 
 
 
