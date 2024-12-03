@@ -63,7 +63,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
       <div class="contenedorCartonSeleccionado"></div>
       <div class="precio"></div>
-      <div id="comprar" class="comprarAvatar">Comprar carton</div>
+      <div id="comprarBtn" class="comprarAvatar">Comprar carton</div>
 
 
     </div>

@@ -47,67 +47,77 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Evento cuando el usuario hace clic en el botón de compra
+document.addEventListener("DOMContentLoaded", function () {
+    const comprarBtn = document.getElementById('comprarBtn');
+    const selectedAvatar = JSON.parse(localStorage.getItem('selectedAvatar'));
 
+    if (!selectedAvatar) {
+        console.error('No se encontró el avatar seleccionado en localStorage.');
+        alert('No se encontró el avatar seleccionado.');
+        comprarBtn.disabled = true; // Deshabilitar botón si no hay avatar seleccionado
+        return;
+    }
+
+    const idArticulo = selectedAvatar.id;
+
+    // Verificar si el artículo ya fue comprado
+    const articulosComprados = JSON.parse(localStorage.getItem('articulosComprados')) || {};
+    if (articulosComprados[idArticulo]) {
+        comprarBtn.textContent = 'Comprado';
+        comprarBtn.disabled = true;
+        comprarBtn.style.backgroundColor = '#ccc'; // Opcional: cambiar estilo del botón
+        return;
+    }
+
+    // Agregar evento al botón de compra
+    comprarBtn.addEventListener('click', function () {
+        const precioArticulo = selectedAvatar.price;
+
+        console.log('ID del artículo seleccionado:', idArticulo);
+        console.log('Precio del artículo seleccionado:', precioArticulo);
+
+        // Llamar a la función de compra
+        comprarArticulo(idArticulo, precioArticulo, comprarBtn);
+    });
+});
 
 // Función para realizar la compra
-function comprarArticulo( idArticulo, precioArticulo) {
+function comprarArticulo(idArticulo, precioArticulo, button) {
     console.log('Iniciando compra...');
-    console.log('ID del artículo:', idArticulo);
-    console.log('Precio del artículo:', precioArticulo);
-    console.log('Datos enviados al servidor:', {
-      idArticulo: idArticulo,
-      precioArticulo: precioArticulo
-  });
-  
-  // Hacer la solicitud AJAX a PHP
-  fetch('./php/compra.php', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-          idArticulo: idArticulo,
-          precioArticulo: precioArticulo
-      })
-  })
-  .then(response => {
-    console.log('Respuesta del servidor:', response);
-    return response.json();
-})  .then(data => {
-  console.log('Datos recibidos del servidor:', data);
-      // Verificar si la compra fue exitosa
-      if (data.exito) {
-          // Actualizar el cuadro de monedas con las monedas restantes
-          console.log('Compra exitosa. Monedas restantes:', data.monedas_restantes);
-          alert('Compra realizada con éxito. ¡Disfruta de tu artículo!');
-      } else {
-          // Si no fue exitosa, mostrar el mensaje de error
-          console.error('Error en la compra:', data.mensaje);
-          alert(data.mensaje);
-      }
-  })
-  .catch(error => {
-      console.error('Error en la compra:', error);
-      alert('Hubo un error al procesar la compra.');
-  });
+
+    fetch('./php/compra.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            idArticulo: idArticulo,
+            precioArticulo: precioArticulo
+        })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.exito) {
+                console.log('Compra exitosa. Monedas restantes:', data.monedas_restantes);
+                alert('Compra realizada con éxito. ¡Disfruta de tu artículo!');
+
+                // Marcar el artículo como comprado
+                const articulosComprados = JSON.parse(localStorage.getItem('articulosComprados')) || {};
+                articulosComprados[idArticulo] = true;
+                localStorage.setItem('articulosComprados', JSON.stringify(articulosComprados));
+
+                // Actualizar el botón
+                button.textContent = 'Comprado';
+                button.disabled = true;
+                button.style.backgroundColor = '#ccc'; // Opcional: cambiar estilo
+            } else {
+                console.error('Error en la compra:', data.mensaje);
+                alert(data.mensaje);
+            }
+        })
+        .catch(error => {
+            console.error('Error en la compra:', error);
+            alert('Hubo un error al procesar la compra.');
+        });
 }
-
-// Evento cuando el usuario hace clic en el botón de compra
-document.getElementById('comprarBtn').addEventListener('click', function() {
-  const selectedAvatar = JSON.parse(localStorage.getItem('selectedAvatar'));
-
-  if (!selectedAvatar) {
-      console.error('No se encontró el avatar seleccionado en localStorage.');
-      alert('No se encontró el avatar seleccionado.');
-      return;
-  }
-
-  const idArticulo = selectedAvatar.id; // ID del artículo que se va a comprar
-  const precioArticulo = selectedAvatar.price; // Precio del artículo
-
-  console.log('ID del artículo seleccionado:', idArticulo);
-  console.log('Precio del artículo seleccionado:', precioArticulo);
-
-  // Llamar a la función de compra
-  comprarArticulo(idArticulo, precioArticulo);
-});
