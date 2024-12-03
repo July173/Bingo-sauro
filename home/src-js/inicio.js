@@ -1,4 +1,3 @@
-
 const boton = document.getElementById('miBotonn');
 
 // Evento del botón
@@ -28,4 +27,20 @@ const botonUnirme = document.getElementById('unirme');
 
 botonUnirme.addEventListener('click', () => {
     window.location = './../unirme_sala/unirme.php';
+});
+
+const botonReclamar = document.getElementById('botonReclamarRecompensa');
+
+botonReclamar.addEventListener('click', async () => {
+    try {
+        const response = await fetch('./php/recompensa_diaria.php'); // Asegúrate de que la ruta sea correcta
+        const data = await response.json();
+        alert(data.mensaje); // Mostrar el mensaje de la respuesta
+        if (data.cantidad) {
+            // Actualizar el saldo de monedas del usuario
+            document.getElementById('monedas').innerText = `Saldo: ${data.cantidad}`;
+        }
+    } catch (error) {
+        console.error('Error al reclamar la recompensa:', error);
+    }
 });

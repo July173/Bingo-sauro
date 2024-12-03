@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../conexion_BD/conexion.php'; // Asegúrate de que esta ruta sea correcta
 
 // Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
@@ -8,16 +9,14 @@ if (!isset($_SESSION['usuario_id'])) {
     exit();
 }
 
-// Opcional: Obtener información del usuario para mostrar en la página
-$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
+$usuario_id = $_SESSION['usuario_id'];
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
 
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
@@ -84,22 +83,20 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                             <tr>
                                 <td>
                                     <div class="reward-container">
-                                        <div class="reward-header">Día 1</div>
+                                        <div class="reward-header">AYER</div>
                                         <div class="circle-container">
                                             <dotlottie-player id="rewardAnimation1"
                                                 src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
                                                 background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                class=""
                                                 loop autoplay>
                                             </dotlottie-player>
                                         </div>
                                     </div>
-                                    <div id="rewardMessage1" style="display: none;">
-                                    </div>
+                                    <div id="rewardMessage1" style="display: none;"></div>
                                 </td>
                                 <td>
                                     <div class="reward-container">
-                                        <div class="reward-header">Día 2</div>
+                                        <div class="reward-header">HOY</div>
                                         <div class="circle-container">
                                             <dotlottie-player id="rewardAnimation2"
                                                 src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
@@ -108,14 +105,11 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                                             </dotlottie-player>
                                         </div>
                                     </div>
-                                    <div id="rewardMessage2" style="display: none;">
-                                    </div>
+                                    <div id="rewardMessage2" style="display: none;"></div>
                                 </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <div class="reward-container">
-                                        <div class="reward-header">Día 3</div>
+                                        <div class="reward-header">MAÑANA</div>
                                         <div class="circle-container">
                                             <dotlottie-player id="rewardAnimation3"
                                                 src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
@@ -124,72 +118,14 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                                             </dotlottie-player>
                                         </div>
                                     </div>
-                                    <div id="rewardMessage3" style="display: none;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="reward-container">
-                                        <div class="reward-header">Día 4</div>
-                                        <div class="circle-container">
-                                            <dotlottie-player id="rewardAnimation4"
-                                                src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
-                                                background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                loop autoplay>
-                                            </dotlottie-player>
-                                        </div>
-                                    </div>
-                                    <div id="rewardMessage4" style="display: none;">
-                                    </div>
-                                </td>
+                                    <div id="rewardMessage3" style="display: none;"></div>
+                                </td> 
                             </tr>
-                            <tr>
-                                <td>
-                                    <div class="reward-container">
-                                        <div class="reward-header">Día 5</div>
-                                        <div class="circle-container">
-                                            <dotlottie-player id="rewardAnimation5"
-                                                src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
-                                                background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                loop autoplay>
-                                            </dotlottie-player>
-                                        </div>
-                                    </div>
-                                    <div id="rewardMessage5" style="display: none;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="reward-container">
-                                        <div class="reward-header">Día 6</div>
-                                        <div class="circle-container">
-                                            <dotlottie-player id="rewardAnimation6"
-                                                src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
-                                                background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                loop autoplay>
-                                            </dotlottie-player>
-                                        </div>
-                                    </div>
-                                    <div id="rewardMessage6" style="display: none;">
-                                    </div>
-                                </td>
-                            </tr>
+                            
                         </table>
-                    </div>
-
-                    <div class="dino">
-                        <tr>
-                            <td colspan="2">
-                                <div class="dia-7">Dia 7</div>
-                                <img id="rewardImage7" class="img-dino" src="../generales/img/dinovolteado.png"
-                                    alt="Recompensa Día 7">
-
-                                <div id="rewardMessage7" style="display: none;">
-                                </div>
-                            </td>
-                        </tr>
                     </div>
                     
                     <div id="congratulationsMessage" class="congratulations-message" style="display: none;"></div>
-
                 </div>
 
 
@@ -212,8 +148,10 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
 
         <script src="src-js/tienda.js"></script>
-        <script src="src-js/recompensa-diaria.js"></script>
+        <script src="../tienda/src-js/recompensa-diaria.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
 
+        <div id="cofres"></div>
+
 </body>
-</html>
+</html>  
