@@ -189,6 +189,15 @@ body {
         height: 200vw;  
        
     }
+    .separador{
+        margin-left: 1vw;
+    }
+    .counter-container{
+        margin-left: -100vw;
+        margin-top: 3vw;
+        height: 20vw;
+        width: 10vw;
+    }
 
     .icon{
         width: 10vw;

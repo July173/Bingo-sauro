@@ -74,11 +74,14 @@
       margin-left: -10vw;
       
   }
-  .counter-container {
-    width: -10vw;
+  
+  .counter-container{
+    margin-left: -50vw;
     margin-right: 10vw;
-    
-  }
+    margin-top: 3vw;
+    height: 10vw;
+    width: 10vw;
+}
   .counter{
       width: 22vw;
       height: 17vw;
