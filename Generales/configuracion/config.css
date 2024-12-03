@@ -282,10 +282,58 @@ body, html {
         height: 200vw;
         z-index: 10;  
     }
+    .modal-title{
+        color: rgb(9, 255, 9);
+        font-family: "Kavoon", serif;
+        font-size: 4vw;
+        margin-left: 3vw;
+        margin-top: 5vw;
+    }
+
+    .contexto{
+        background-color: rgb(255, 255, 255);
+        border-radius: 1.3rem;
+        padding: 1.5vw;
+        width: 80%;
+        margin-left: 9vw;
+        font-family: "Kavoon", serif;
+        margin-top: -1vw;
+    
+    }
+    .logoModal {
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 100%;
+        width: 25vw;
+        height: 25vw;
+        opacity: 0.6;
+        margin-top: 0.5vw;
+    }
+    .custom-close {
+        background-image: url("../../Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 10vw;
+        height: 10vw;
+        cursor: pointer;
+        position: absolute;
+        top: 1vw;
+        right: 1vw;
+    }
+    .Bingo{
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 100%;
+        width: 70vw;
+        height: 20vw;
+        margin-top: 0.5vw;
+        margin-left: 10vw;
+    }
+
 
     .close-btn {
-        margin-left: 85vw;
-        margin-top: -60vw;
+        margin-left: 90vw;
+        margin-top: -70vw;
         height: 10vw;
         width: 10vw;
         margin-bottom: 15vw;
