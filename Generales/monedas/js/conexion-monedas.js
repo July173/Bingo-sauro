@@ -14,7 +14,6 @@ function cargarContenido() {
             if (modalElement) {
                 modalElement.style.width = '17vw';
                 modalElement.style.backgroundColor = '#FFF5D3';
-                console.log('Estilos aplicados correctamente');
             } else {
                 console.error('El modal no fue encontrado');
             }

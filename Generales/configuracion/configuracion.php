@@ -13,8 +13,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
-<html lang="es"></html>
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../generales/bootstrap/css/bootstrap.css">
 </head>
-
 <body class="container">
     <div class="hojas">
         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
@@ -51,7 +49,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <h2 class="settings-title">AJUSTES</h2>
         </div>
         <div class="boton">
-            <img class="close-btn" onclick="location.href = sessionStorage.getItem('previousPage') || history.back();" width="48" height="48"
+            <img class="close-btn" onclick="redirectToPreviousPage();" width="48" height="48"
                 src="../../generales/img/cerrar.png" alt="cross-mark-button-emoji" />
         </div>
         <div class="mascot"></div>
@@ -160,16 +158,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                     <strong>Cerrar sesión</strong>
                 </button>
             </div>
-            
-
-            <!-- Audio que queremos controlar -->
-            <audio id="audioPlayer" loop>
-                <source src="../../musica/dinoMusica.mp3" type="audio/mp3">
-                Tu navegador no soporta la reproducción de audio.
-            </audio>
 
             <script src="../../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <script src="../../generales/musica/activar_y_desactivar_musica/musica.js"></script>
-            <script src="../../generales/configuracion/config.js"></script>
+            <script src="config.js"></script>
 </body>
 </html>

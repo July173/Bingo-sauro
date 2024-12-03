@@ -19,7 +19,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monedas y Trofeos</title>
-    <link rel="stylesheet" href="../../generales/bootstrap/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/monedas-trofeos.css">
 </head>
@@ -30,7 +29,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <!-- Contador 25 -->
             <div class="separador">
                 <div class="counter">
-                    <span>25</span>
+                    <div id="cuadro_monedas"></div>
                     <img src="../generales/img/dinomonedas.png" >
                 </div>
             </div>
@@ -60,5 +59,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
 
     <script src="../../generales/bootstrap/js/bootstrap.js"></script>
+    <script src="js/obtener-monedas.js"></script>
 </body>
 </html>
