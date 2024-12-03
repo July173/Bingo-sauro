@@ -217,17 +217,21 @@ body {
         height: 200vw;  
     }
     .avatarvoid{
-        width: 10vw;
-        margin-top: 20vw;
-        margin-left: -7vw;
-        height: 10vw;
-        
-        
+        width: 30vw;
+        height: 30vw;
+        background-color: rgb(228, 226, 226);
+        margin-top: 10vw;
+        border-radius: 1rem;
+        background-size: contain; /* Ajusta la imagen sin deformarla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen en el div */
+        background-image: url(../../Generales/img/usuario.png);
     }
     .editarimagen{
-        width: 15vw;
-        height: 15vw;
-        margin-left: -10vw;
+        width: 50vw;
+        height: 50vw;
+        margin-left: 6vw;
+        margin-top: 10vw;
 
     }
     
@@ -258,7 +262,7 @@ body {
         
     }
     .nombre-usuario{
-        margin-top: 30vw;
+        margin-top: 1vw;
         font-size: 5vw;
         width: 90vw;
         height: 13vw;
@@ -267,6 +271,7 @@ body {
         margin-left: 2vw;
         font-size: 7vw;
     }
+    
     .texto-correo{
         font-size: 5.5vw;
         margin-left: 2vw;
@@ -277,6 +282,7 @@ body {
         height: 10vw;
         margin-top: 8vw;
         margin-left: -38vw;
+        font-size: 7vw;
 
     }
     .correo-usuario{
@@ -297,7 +303,7 @@ body {
         width: 2vw;
         height: 2vw;
         position: absolute;
-        left: -4vw;
+        left: -7vw;
         top: 7vw;
        
     }
