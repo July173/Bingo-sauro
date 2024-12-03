@@ -110,6 +110,30 @@
   img{
     width: 7vw;
   }
+  .modal-body {
+    height: 30vw;
+    width: 50vw;
+    overflow-y: auto;
+  }
+  .custom-close {
+    background-image: url("../../img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 2vw;
+  }
+  .modal-dialog {
+    margin-left: 20vw !important;
+    margin-top: 5vw !important;
+
+}
+.estilo-modal{
+  width: 50vw  !important;
+}
  
 
   
