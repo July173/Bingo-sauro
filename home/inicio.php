@@ -54,12 +54,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         background="transparent" speed="2" loop autoplay></dotlottie-player>
     </div>
 
-    <div id="loader" style="display: none;">
-    <!-- Aquí va el diseño del loader -->
-    <div class="spinner"></div>
-    <p>Cargando...</p>
-</div>
-
     <div class="cuadro">
 
       <!-- <div id="contenido-cargado"></div> -->
@@ -105,13 +99,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
  
 
-
-    
-
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
-    <script src="../generales/musica/musica.js"></script>
     <script src="../crear_sala/js/crear_sala.js"></script>
-    <script src="../generales/loader/loader.js"></script>
     <script src="../crear_sala/js/codigo_partida.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
     <script src="src-js/inicio.js"></script>
