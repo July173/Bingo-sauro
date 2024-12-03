@@ -236,12 +236,11 @@ body {
     }
 
     .icon{
-        width: 2vw;
-        height: 2vw;
+        width: 10vw;
+        height: 10vw;
         position: absolute;
-        left: -4vw;
+        left: -5vw;
         top: 7vw;
-       
     }
          
     .hojas {
