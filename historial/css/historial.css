@@ -177,7 +177,8 @@ body {
     .logo {
         width: 30vw;
         height: 30vw;
-       margin-top: 10vw;
+        margin-top: 13vw;
+       
        margin-bottom: 5vw;
 
     }
@@ -193,7 +194,8 @@ body {
         margin-left: 1vw;
     }
     .counter-container{
-        margin-left: -100vw;
+        margin-left: 100vw;
+        margin-right: 92vw;
         margin-top: 3vw;
         height: 20vw;
         width: 10vw;
