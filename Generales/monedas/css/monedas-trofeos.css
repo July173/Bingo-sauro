@@ -71,11 +71,12 @@
     .fondo{
       width: 25vw;
       height: 17vw;
+      margin-left: -10vw;
       
   }
   .counter-container {
-    width: -8vw;
-    margin-right: 40vw;
+    width: -10vw;
+    margin-right: 10vw;
     
   }
   .counter{
@@ -89,7 +90,8 @@
   .separador{
       margin-left: 1vw;
       margin-top: 5vw;  
-  border-radius: 30px;
+  border-radius: 30vw;
+  gap: 5vw;
   }
   .counter img {
     width: 11vw;

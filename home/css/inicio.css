@@ -222,12 +222,21 @@ body {
         height: 50vw;
         margin-top: 13vw;
         margin-bottom: -50vw;
-
-
     }
+    
 
     #contenedor {
         width: 100%;
+    }
+
+    .separador{
+        margin-left: 1vw;
+    }
+    .counter-container{
+        margin-left: -50vw;
+        margin-top: 3vw;
+        height: 20vw;
+        width: 10vw;
     }
 
     .cuadro {
@@ -238,8 +247,8 @@ body {
     }
 
     .titulo {
-        font-size: 12vw;
-        margin-top: 17vw;
+        font-size: 13vw;
+        margin-top: 10vw;
        
     }
 
