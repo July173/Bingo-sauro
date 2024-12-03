@@ -196,8 +196,10 @@ body {
     background-repeat: no-repeat;
     background-position: 70px;
     background-size: 100%;
-    width: 22vw;
-    height: 22vw;
+    width: 21vw;
+    height: 21vw;
+    margin-right: 10vw;
+    margin-left: -8vw;
 
    
 }
