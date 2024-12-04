@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const avatarImg = document.createElement('img');
       avatarImg.src = selectedAvatar.src;
       avatarImg.alt = "Avatar a comprar";
-      avatarImg.style.width = '28vw';
-      avatarImg.style.height = '28vw';
+      avatarImg.style.width = '25vw';
+      avatarImg.style.height = '25vw';
       avatarImg.style.borderRadius = '3rem';
 
       avatarContainer.appendChild(avatarImg);
