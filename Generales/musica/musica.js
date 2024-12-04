@@ -62,3 +62,10 @@ function clearMusicStorage() {
     localStorage.removeItem('musicPlaying');
     localStorage.removeItem('musicPosition');
 }
+
+// Guardar la posición de la música en localStorage al salir de la página
+window.addEventListener('beforeunload', function() {
+    console.log('Guardando posición antes de salir:', audio.currentTime); // Verifica la posición guardada
+    localStorage.setItem('musicPosition', audio.currentTime); // Guardar la posición actual
+    localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true'); // Guardar estado
+});
