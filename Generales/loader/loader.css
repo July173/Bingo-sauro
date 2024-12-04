@@ -38,9 +38,9 @@ body {
 }
 
 .dino {
-  width: 100px;
+  width: 150px;
   position: absolute;
-  top: 30px;
+  top: -1vw;
   left: -120px; /* Inicia fuera del contenedor */
   animation: walk 5s linear infinite, bounce 0.6s ease-in-out infinite; /* Más lento */
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); /* Sombra para resaltar */
