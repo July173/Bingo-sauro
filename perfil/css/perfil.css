@@ -224,11 +224,17 @@ body {
         
         
     }
+    .dedide{
+        margin-left: 1vw;
+        width: 6vw;
+        height: 6vw;
+
+    }
  
     .editarimagen{
         width: 50vw;
         height: 50vw;
-        margin-left: 6vw;
+        margin-left: 38vw;
         margin-top: 20vw;
 
     }
@@ -274,31 +280,31 @@ body {
     }
     
     .texto-correo{
-        font-size: 5.5vw;
+        font-size: 5.3vw;
         margin-left: 2vw;
         
     }
     .contraseña-usuario{
-        width: 75vw;
+        width: 82vw;
         height: 10vw;
         margin-top: 8vw;
-        margin-left: -38vw;
+        margin-left: -40vw;
         font-size: 7vw;
 
     }
     .correo-usuario{
-        width: 75vw;
+        width: 82vw;
         height: 9.5vw;
         margin-top: 8vw;
-        margin-left: -40vw;
+        margin-left: -43vw;
         font-size: 5vw;
     }
     .editar{
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
         border-radius: 2vw;
         margin-top: 3vw;
-        margin-left: 3vw;
+        margin-left: 1vw;
     }
     .icon{
         width: 10vw;
