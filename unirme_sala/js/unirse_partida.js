@@ -7,8 +7,6 @@ function unirseAPartida() {
         return;
     }
 
-    console.log(codigo);
-
     fetch('./php/unirse_partida.php', {
         method: 'POST',
         headers: {
@@ -22,6 +20,7 @@ function unirseAPartida() {
             // Redirigir a otra pantalla
             window.location.href = '../juego_usuario/juego-usuario.php'; // Cambia a la URL deseada
         } else {
+            // Mostrar el error al usuario
             alert(data.error);
         }
     })

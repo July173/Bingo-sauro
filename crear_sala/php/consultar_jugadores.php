@@ -23,7 +23,7 @@ try {
 
     $id_partida = $resultPartida[0]['id_partida'];
 
-   // Consultar jugadores con rol 1
+    // Consultar jugadores con rol 1
     $queryJugadores = "
     SELECT 
         u.primer_nombre AS nombre,
@@ -35,14 +35,18 @@ try {
     ";
     $jugadores = $conexion->select($queryJugadores, [$id_partida]);
 
+    // Depuración
+    error_log('Jugadores: ' . json_encode($jugadores));
+
     echo json_encode([
         'success' => true,
         'jugadores' => $jugadores
     ]);
 } catch (Exception $e) {
+    // Log the error and send a failure response
+    error_log('Error: ' . $e->getMessage());
     echo json_encode([
         'success' => false,
         'error' => $e->getMessage()
     ]);
 }
-?>
