@@ -53,8 +53,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
 
         <h2 class="letra"><b>Nuestras redes sociales</b></h2>
-        <img src="../generales/img/logo.png" alt="Bingo Dinosaur" class="img-fluid my-3 mascot" width="100">
-        <h3 class="letra"><b>Contáctenos</b></h3>
+        <img src="../generales/img/logo.png" alt="Bingo Dinosaur" class="img-fluid my-3 mascot" width="200">
+        <h3 class="letra-contac"><b>Contáctenos</b></h3>
         <img src="../Generales/img/dinosaurio-cute.png" alt="Dino" class="dino-image">
         <div class="d-flex justify-content-center align-items-center">
             <div class="ms-3 iconos">
