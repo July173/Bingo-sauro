@@ -187,7 +187,7 @@ body {
 
 .nombre{
     margin-top: 1vw;
-    margin-left: 5vw;
+    margin-left: -1vw;
     font-size: 2vw;
     
 }
@@ -217,12 +217,17 @@ body {
         height: 200vw;  
     }
     .avatarvoid{
-        width: 20vw;
-        margin-top: 12vw;
-        margin-left: -7vw;
-        height: 20vw;
-        
-        
+        width: 30vw;
+        height: 30vw;
+        background-color: rgb(228, 226, 226);
+        margin-top: 1.5vw;
+        margin-left: -14vw;
+        margin-bottom: 1vw;
+        border-radius: 1rem;
+        background-size: contain; /* Ajusta la imagen sin deformarla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen en el div */
+        background-image: url(../../Generales/img/usuario.png);
     }
     .dedide{
         margin-left: 1vw;
@@ -257,7 +262,7 @@ body {
         margin-left: -9vw;
     }
     .text-light{
-        width: 95vw;
+        width: 96.2vw;
         height: 20vw;
         margin-top: 7vw;
         margin-left: 1.5vw;
@@ -275,17 +280,17 @@ body {
         height: 13vw;
     }
     .nombre{
-        margin-left: 2vw;
+        margin-left: -12vw;
         font-size: 7vw;
     }
     
     .texto-correo{
         font-size: 5.3vw;
-        margin-left: 2vw;
+        margin-left: 5vw;
         
     }
     .contraseña-usuario{
-        width: 82vw;
+        width: 80.1vw;
         height: 10vw;
         margin-top: 8vw;
         margin-left: -40vw;
@@ -300,11 +305,11 @@ body {
         font-size: 5vw;
     }
     .editar{
-        width: 6vw;
-        height: 6vw;
+        width: 7vw;
+        height: 7vw;
         border-radius: 2vw;
         margin-top: 3vw;
-        margin-left: 1vw;
+        margin-left: 5vw;
     }
     .icon{
         width: 10vw;
