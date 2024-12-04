@@ -131,7 +131,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 
           <div class="contenedorCantidadMaximaDeCartones">
             <p class="cantidadMaximaCartones">Ingresar la catidad maxima de cartones por jugador</p>
-            <input class="numCartonesPorJugador " placeholder="#">
+            <input type="number"  class="numCartonesPorJugador " placeholder="#">
             </input>
           </div>
 
@@ -142,7 +142,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 
           <div class="contenedorCantidadMaximaDeMonedas">
             <p class="cantidadMaximaMonedas">Dino-monedas minimas que se deben apostar</p>
-            <input class="numMonedasPorJugador" placeholder="#">
+            <input type="number" class="numMonedasPorJugador" placeholder="#">
             </input>
           </div>
         </div>
@@ -157,7 +157,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 
         <div class="contenedorapostarjugador hidden">
           <p class="Ndinomontexto">¿Cuantas Dino-monedas apostaras?</p>
-          <input class="numMonedas" placeholder="#">
+          <input type="number" class="numMonedas" placeholder="#" >
           </input>
         </div>
 

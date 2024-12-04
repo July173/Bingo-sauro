@@ -18,7 +18,7 @@ function unirseAPartida() {
     .then(data => {
         if (data.success) {
             // Redirigir a otra pantalla
-            window.location.href = '../juego_usuario/juego-usuario.php'; // Cambia a la URL deseada
+            window.location.href = './espera.php'; // Cambia a la URL deseada
         } else {
             // Mostrar el error al usuario
             alert(data.error);
