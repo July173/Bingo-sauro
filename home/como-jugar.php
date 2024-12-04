@@ -52,11 +52,29 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 src="../generales/img/cerrar.png" alt="cross-mark-button-emoji" />
         </div>
 
-        <h2 class="letra"><b>Como juagar</b></h2>
+        <h2 class="letra"><b>Como jugar</b></h2>
         <img src="../generales/img/logo.png" alt="Bingo Dinosaur" class="img-fluid my-3 mascot" width="100">
         <div class="cuadro-blanco">
           
-            jsjsjs
+        Administrar el Juego:
+        <br><br>
+        Llenado del Cartón: El administrador decidirá cómo se llenará el cartón del bingo.
+        <br><br>
+        
+        Cantidad de Cartones: Determinará el número máximo de cartones que cada jugador podrá tener.
+        <br><br>
+        Iniciar la Partida:
+
+        Inicio del Juego: El administrador iniciará la partida y girará el bombo para seleccionar el número que saldrá.
+        <br><br>
+        Verificación de Números: Tendrá la opción de corroborar los números que ya se han dicho.
+        <br><br>
+
+        Gestión de Ganadores:
+        Indicación de Bingo: Si un jugador indica "bingo," el administrador verificará el cartón del participante.
+        <br><br>
+        Verificación: Si el cartón está completo y corresponde a los números anunciados, se otorgará la victoria al jugador y se dará por terminada la partida.
+
           
         </div>
         <img src="../generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
