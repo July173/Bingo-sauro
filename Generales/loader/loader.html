@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,30 +6,14 @@
   <title>Espera</title>
   <link rel="stylesheet" href="loader.css">
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
-
 </head>
 <body>
   <div class="loader-dino">
-
-
-  <div class="dino">
-  <script
-        
-          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-          type="module"
-        ></script>
-        <dotlottie-player
-          src="https://lottie.host/82dcafe9-9788-467d-86b6-ed1c9388f6b6/l19K6Qr2X3.json"
-          background="transparent"
-          speed="1"
-          style="width: 8rem; height: 8rem"
-          loop
-          autoplay
-        ></dotlottie-player>
-        </div>
-          <div class="ground"></div>
-         
-
+    <div class="dino">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+      <dotlottie-player src="https://lottie.host/82dcafe9-9788-467d-86b6-ed1c9388f6b6/l19K6Qr2X3.json" background="transparent" speed="1" style="width: 8rem; height: 8rem" loop autoplay></dotlottie-player>
+    </div>
+    <div class="ground"></div>
   </div>
   
   <div class="clouds">
@@ -38,8 +21,15 @@
     <div class="cloud"></div>
     <div class="cloud"></div>
     <div class="cloud"></div>
-
   </div>
+  
   <script src="../generales/musica/musica.js"></script>
+  
+  <script>
+    // Redirigir automáticamente a la página de inicio de sesión después de 3 segundos
+    setTimeout(() => {
+      window.location.href = "../../login/inicio-sesion/inicio-sesion.html"; // Cambia la ruta según tu estructura
+    }, 3000); // 3000 milisegundos = 3 segundos
+  </script>
 </body>
 </html>
