@@ -182,11 +182,11 @@ body {
 @media (orientation:portrait) {
 
     .logo {
-        width: 32vw;
-        height: 47vw;
+        width: 45vw;
+        height: 45vw;
        margin-top: -8vw;
-       margin-bottom: -7vw;
-       margin-top: -3vw;
+       margin-bottom: 3vw;
+       margin-top: -1vw;
      
 
     }
@@ -199,12 +199,13 @@ body {
     }
        
     .titulo{
-        font-size: 8vw;
-        margin-top: 15vw;
+        font-size: 12vw;
+        margin-top: 18vw;
+        margin-bottom: 5vw;
     }
    
     .email{
-        font-size: 5vw ;
+        font-size: 6vw ;
         margin-right: 16vw;
         margin-bottom: 0.5vw;
         margin-top: 3vw;
@@ -218,8 +219,8 @@ body {
     }    
     
     .input{
-        width: 60vw;
-        height: 9vw;
+        width: 70vw;
+        height: 11vw;
         margin-bottom: 1vw;;
     
     }
@@ -234,30 +235,30 @@ body {
     .enviar{
         margin: -0.2vw auto 1vw auto; /* Centra el botón horizontalmente */
         padding: 1vw 8vw;
-        font-size: 5vw;
+        font-size: 7vw;
         border-radius: 0.8rem;
         display: block; /* Asegura que el botón ocupe toda la línea y se centre */
         text-align: center;
-        margin-top: 3vw;
+        margin-top: 6vw;
        
     }
     
     .registrar{
-      font-size: 4vw;
+      font-size: 6vw;
       z-index: 10;
-      margin-top: 2vw;
+      margin-top: 3vw;
     }
     .textoOC{
-        font-size: 3.8vw;
+        font-size: 6vw;
         z-index: 10;
         margin-top: 2vw;
         
     }
    
     .bingo{
-        width: 90vw;
+        width: 100vw;
         margin-left: 1vw;
-        margin-top: -3vw;
+        margin-top: -2vw;
         
     }
     .hojas {
@@ -336,4 +337,5 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+
 }

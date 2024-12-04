@@ -144,7 +144,8 @@ body {
        
         width: 50%;
         height: 70vw;
-        margin-top: 11vw;
+        margin-top: 4vw;
+        margin-bottom: 3vw;
 
     }
     .cuadro{
@@ -152,12 +153,12 @@ body {
         height: 200vw;  
     } 
     .titulo{
-        font-size: 10vw;
-        margin-top: 17vw;
+        font-size: 11vw;
+        margin-top: 30vw;
     }
     .inicio {
         padding: 2.0vw 3vw;
-        font-size: 7vw;
+        font-size: 8vw;
         border-radius: 0.8rem;
 
         
@@ -167,7 +168,7 @@ body {
     .registro {
         margin-top: 6%;
         padding: 2.0vw 6vw;
-        font-size: 7vw;
+        font-size: 8vw;
         margin-bottom: 1vw;
         border-radius: 0.8rem;
 

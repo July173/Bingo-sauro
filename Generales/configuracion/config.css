@@ -117,7 +117,8 @@ body, html {
     opacity: 0.4;
     overflow: hidden;
     margin-left: 1vw;
-    margin-top: -1vw;
+    margin-top: -3vw;
+    margin-bottom: 1vw;
 }
 .option {
     display: flex;
@@ -128,6 +129,8 @@ body, html {
     border-radius: 10px;
     padding: 10px;
     width: 25vw;
+    height: 4vw;
+    font-size: 1vw;
     margin-left: -3vw;
 }
 .option-text {
@@ -149,8 +152,9 @@ body, html {
     padding: 12px;
     margin-bottom: 10px;
     width: 25vw;
+    height: 4vw;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 1.5vw;
     cursor: pointer;
     margin-left: -3vw;
 }
@@ -267,13 +271,62 @@ body, html {
 @media (orientation: portrait){
 
     .cuadro{
-        width: 100vw;
-        height: 200vw;  
+        width: 110vw;
+        height: 200vw;
+        z-index: 10;  
+    }
+    .modal-title{
+        color: rgb(9, 255, 9);
+        font-family: "Kavoon", serif;
+        font-size: 4vw;
+        margin-left: 3vw;
+        margin-top: 5vw;
     }
 
+    .contexto{
+        background-color: rgb(255, 255, 255);
+        border-radius: 1.3rem;
+        padding: 1.5vw;
+        width: 80%;
+        margin-left: 9vw;
+        font-family: "Kavoon", serif;
+        margin-top: -1vw;
+    
+    }
+    .logoModal {
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 100%;
+        width: 25vw;
+        height: 25vw;
+        opacity: 0.6;
+        margin-top: 0.5vw;
+    }
+    .custom-close {
+        background-image: url("../../Generales/img/cerrar.png"); /* Reemplaza por la ruta de tu icono */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 10vw;
+        height: 10vw;
+        cursor: pointer;
+        position: absolute;
+        top: 1vw;
+        right: 1vw;
+    }
+    .Bingo{
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 100%;
+        width: 70vw;
+        height: 20vw;
+        margin-top: 0.5vw;
+        margin-left: 10vw;
+    }
+
+
     .close-btn {
-        margin-left: 78vw;
-        margin-top: -50vw;
+        margin-left: 90vw;
+        margin-top: -70vw;
         height: 10vw;
         width: 10vw;
         margin-bottom: 15vw;
@@ -287,9 +340,9 @@ body, html {
         background-color: #FFF9C4;
         border-radius: 10px;
         padding: 15px;
-        width: 52vw;
-        height: 10vw;
-        margin-left: -11vw;
+        width: 55vw;
+        height: 15vw;
+        margin-left: -3vw;
     }
     .botonn {
         background-color: #FFF9C4;
@@ -297,28 +350,29 @@ body, html {
         text-align: left;
         padding: 12px;
         margin-bottom: 12px;
-        width: 52vw;
-        height: 13vw;
+        width: 55vw;
+        height: 15vw;
         border-radius: 10px;
-        font-size: 3.2vw;
+        font-size: 3.5vw;
         cursor: pointer;
-        margin-left: -11vw;
+        margin-left: -3vw;
         
     }
 
     .settings-title {
         font-family: "Kavoon", serif;
         color:  rgb(0, 255, 0);
-        font-size: 7vw;
-        margin: 0;
+        font-size: 11vw;
+        margin-bottom: 5vw;
+        margin-top: -5vw;
     }
 
     .dinochibi{
         background-image: url("../../Generales/img/dinosaurio-cute.png");
         background-size: 100%;
-        width: 40vw;
-        height: 40vw;
-        margin-right: 23vw;
+        width: 60vw;
+        height: 60vw;
+        margin-right: 20vw;
         margin-top: 90vw;
         position: absolute;
         margin-left: -150px;
@@ -328,12 +382,12 @@ body, html {
         background-repeat: no-repeat;
         background-position: 0px;
         background-size: 80%;
-        width: 30vw;
-        height: 30vw;
+        width: 50vw;
+        height: 50vw;
         opacity: 0.4;
         overflow: hidden;
-        margin-left: 5vw;
-        margin-top: -5vw;
+        margin-left: 10vw;
+        margin-top: -15vw;
     }
     .contenedor-recuadros{
         width: 22vw;
@@ -371,6 +425,7 @@ body, html {
         position: absolute;
         margin-top: -90vw;
         margin-left: 10vw;
+        z-index: 1;
       }
       .hojas {
         position: absolute;
@@ -378,6 +433,7 @@ body, html {
         height: 110vw;
         margin-top: -110vw;
         opacity: 0.6;
+        z-index: 1;
     }
 
     .hojas-2 {
@@ -386,6 +442,7 @@ body, html {
         height: 120vw;
         margin-top: 90vw;
         margin-left: 10vw;
+        z-index: 1;
     }
 
     .hojas-3 {
@@ -394,6 +451,7 @@ body, html {
         height: 110vw;
         margin-right: 25vw;
         margin-top: 10vw;
+        z-index: 1;
 
     }
       
