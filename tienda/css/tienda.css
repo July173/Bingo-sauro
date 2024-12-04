@@ -485,3 +485,19 @@ body {
 }
 
 }
+
+.reward-container[data-state="reclamado"] {
+  background-color: green;
+  color: white;
+}
+
+.reward-container[data-state="disponible"] {
+  background-color: yellow;
+  color: black;
+}
+
+.reward-container[data-state="mañana"],
+.reward-container[data-state="pasado"] {
+  background-color: gray;
+  color: white;
+}

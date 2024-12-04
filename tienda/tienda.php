@@ -77,56 +77,33 @@ $usuario_id = $_SESSION['usuario_id'];
 
 
 
-                <div class="contenedor-dias">
-                    <div>
-                        <table class="reward-table">
-                            <tr>
-                                <td>
-                                    <div class="reward-container">
-                                        <div class="reward-header">AYER</div>
-                                        <div class="circle-container">
-                                            <dotlottie-player id="rewardAnimation1"
-                                                src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
-                                                background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                loop autoplay>
-                                            </dotlottie-player>
-                                        </div>
-                                    </div>
-                                    <div id="rewardMessage1" style="display: none;"></div>
-                                </td>
-                                <td>
-                                    <div class="reward-container">
-                                        <div class="reward-header">HOY</div>
-                                        <div class="circle-container">
-                                            <dotlottie-player id="rewardAnimation2"
-                                                src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
-                                                background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                loop autoplay>
-                                            </dotlottie-player>
-                                        </div>
-                                    </div>
-                                    <div id="rewardMessage2" style="display: none;"></div>
-                                </td>
-                                <td>
-                                    <div class="reward-container">
-                                        <div class="reward-header">MAÑANA</div>
-                                        <div class="circle-container">
-                                            <dotlottie-player id="rewardAnimation3"
-                                                src="https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json"
-                                                background="transparent" speed="1" style="width: 150px; height: 150px;"
-                                                loop autoplay>
-                                            </dotlottie-player>
-                                        </div>
-                                    </div>
-                                    <div id="rewardMessage3" style="display: none;"></div>
-                                </td> 
-                            </tr>
-                            
-                        </table>
-                    </div>
-                    
-                    <div id="congratulationsMessage" class="congratulations-message" style="display: none;"></div>
-                </div>
+                <tr>
+    <td>
+        <div class="reward-container" id="cofre-ayer" data-state="">
+            <div class="reward-header">AYER</div>
+            <div class="circle-container">
+                <dotlottie-player id="rewardAnimation1" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div class="reward-container" id="cofre-hoy" data-state="">
+            <div class="reward-header">HOY</div>
+            <div class="circle-container">
+                <dotlottie-player id="rewardAnimation2" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div class="reward-container" id="cofre-manana" data-state="">
+            <div class="reward-header">MAÑANA</div>
+            <div class="circle-container">
+                <dotlottie-player id="rewardAnimation3" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+    </td>
+</tr>
+
 
 
                 <div class="subtitulos2">

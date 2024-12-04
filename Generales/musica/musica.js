@@ -4,6 +4,7 @@ audio.loop = true; // Repetir la música
 // Verificar el estado de la música en localStorage
 if (localStorage.getItem('musicPlaying') === 'true') {
     console.log('Reproduciendo música desde localStorage');
+    audio.currentTime = localStorage.getItem('musicPosition') || 0; // Establecer la posición
     audio.play(); // Reproducir música si estaba activa
 } else {
     console.log('Música no estaba activa');
@@ -18,7 +19,9 @@ function toggleMusic() {
         console.log('Reproduciendo música...');
         audio.play().then(() => {
             localStorage.setItem('musicPlaying', 'true'); // Guardar estado
-            toggleButton.classList.add('active'); // Cambiar a estado activo
+            if (toggleButton) {
+                toggleButton.classList.add('active'); // Cambiar a estado activo
+            }
         }).catch(error => {
             console.error('Error al reproducir la música:', error);
         });
@@ -26,25 +29,36 @@ function toggleMusic() {
         console.log('Pausando música...');
         audio.pause(); // Pausar la música
         localStorage.setItem('musicPlaying', 'false'); // Guardar estado
-        toggleButton.classList.remove('active'); // Cambiar a estado inactivo
+        if (toggleButton) {
+            toggleButton.classList.remove('active'); // Cambiar a estado inactivo
+        }
     }
 }
 
-// Asegúrate de que el botón de alternar música esté configurado correctamente
-const toggleButton = document.getElementById('soundToggle');
-if (toggleButton) {
-    toggleButton.addEventListener('click', toggleMusic);
-}
-
-// Agregar un evento para manejar el final de la música
-audio.addEventListener('ended', function() {
-    localStorage.setItem('musicPlaying', 'false'); // Asegurarse de que el estado se actualice
-    console.log('La música ha terminado.');
+// Guardar la posición de la música en localStorage al pausar
+audio.addEventListener('pause', function() {
+    console.log('Guardando posición:', audio.currentTime); // Verifica la posición guardada
+    localStorage.setItem('musicPosition', audio.currentTime); // Guardar la posición actual
 });
 
 // Reproducir música al cargar la página
 window.addEventListener('load', function() {
     if (localStorage.getItem('musicPlaying') === 'true') {
+        const position = localStorage.getItem('musicPosition') || 0;
+        console.log('Restaurando posición:', position); // Verifica la posición restaurada
+        audio.currentTime = position; // Establecer la posición
         audio.play();
     }
+
+    // Asegúrate de que el botón de alternar música esté configurado correctamente
+    const toggleButton = document.getElementById('soundToggle');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', toggleMusic);
+    }
 });
+
+// Limpiar el almacenamiento local al cerrar sesión o cuando sea necesario
+function clearMusicStorage() {
+    localStorage.removeItem('musicPlaying');
+    localStorage.removeItem('musicPosition');
+}

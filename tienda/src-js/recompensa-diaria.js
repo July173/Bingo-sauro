@@ -1,11 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Obtener los datos desde PHP
+        fetch("../src-php/recompensa_diaria.php")
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    const dias = data.dias;
+    
+                    dias.forEach((dia, index) => {
+                        const cofreId = ["cofre-ayer", "cofre-hoy", "cofre-manana"][index];
+                        const cofre = document.getElementById(cofreId);
+    
+                        // Configurar estado y estilos
+                        cofre.setAttribute("data-state", dia.estado);
+                        if (dia.estado === "reclamado") {
+                            cofre.style.backgroundColor = "green";
+                        } else if (dia.estado === "disponible") {
+                            cofre.style.backgroundColor = "yellow";
+                        } else {
+                            cofre.style.backgroundColor = "gray";
+                        }
+    
+                        // Manejar clics
+                        cofre.addEventListener("click", () => {
+                            if (dia.estado === "disponible") {
+                                alert("¡Cofre reclamado con éxito!");
+                                cofre.style.backgroundColor = "green";
+                                cofre.setAttribute("data-state", "reclamado");
+                            } else if (dia.estado === "mañana") {
+                                alert("Este cofre estará disponible mañana.");
+                            } else if (dia.estado === "pasado") {
+                                alert("No puedes reclamar cofres de días anteriores.");
+                            } else {
+                                alert("Este cofre ya ha sido reclamado.");
+                            }
+                        });
+                    });
+                } else {
+                    console.error(data.error);
+                }
+            })
+            .catch((err) => console.error("Error:", err));
+    });
+    
+
     const animations = [
         "https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json", // Primera animación
         "https://lottie.host/54e02410-09ee-45ff-8f6b-91f18d223fe4/WD2nnf03HC.json"  // Segunda animación
-    ];
-
-    const rewardAlert = document.getElementById('rewardAlert'); // Contenedor para mensajes de recompensa
-    console.log(rewardAlert); // Verificar si se encuentra el contenedor
+    ];    
 
     // Función para manejar la animación y el mensaje de recompensa
     function handleAnimationClick(playerId, dayNumber) {

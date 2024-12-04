@@ -62,11 +62,14 @@ try {
             
         }
 
-        $estados[] = [
-            'fecha' => $dia,
-            'monedas' => $monedas,
-            'encontrado' => $encontrado  // Campo que indica si se encontró en historial_recompensa_diaria
-        ];
+        // Modificar el array de estados para incluir el estado del cofre
+$estados[] = [
+    'fecha' => $dia,
+    'monedas' => $monedas,
+    'encontrado' => $encontrado,
+    'estado' => !$encontrado ? ($dia === $dias[1] ? 'disponible' : ($dia === $dias[2] ? 'mañana' : 'pasado')) : 'reclamado'
+];
+
     }
 
     echo json_encode(['success' => true, 'dias' => $estados]);
