@@ -27,13 +27,13 @@ async function eliminarCodigoPartida(codigoPartida) {
 
         if (data.success) {
             console.log(data.message);
-            
-            // Redirigir a otra página después de la eliminación
+            alert("Partida eliminada");
             window.location = '../home/inicio.php';
-            alert("Partida eliminada")
         } else {
             console.error(data.message);
+            alert("Error: " + data.message);
         }
+        
     } catch (error) {
         console.error('Error al eliminar el código de la partida:', error);
     }

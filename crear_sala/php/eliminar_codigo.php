@@ -7,21 +7,45 @@ try {
     $codigoPartida = $input['codigoPartida'] ?? null;
 
     if ($codigoPartida) {
+        // Crear instancia de conexión
         $conexion = new Conexion();
+
+        // Iniciar una transacción
         $pdo = $conexion->conectar();
+        $pdo->beginTransaction();
 
-        $stmt = $pdo->prepare('DELETE FROM partida WHERE codigo_sala = :codigo');
-        $stmt->bindParam(':codigo', $codigoPartida);
+        // Obtener el ID de la partida a partir del código
+        $queryPartida = "SELECT id_partida FROM partida WHERE codigo_sala = :codigo";
+        $params = [':codigo' => $codigoPartida];
+        $resultado = $conexion->select($queryPartida, $params);
 
-        if ($stmt->execute()) {
-            echo json_encode(['success' => true, 'message' => 'Código eliminado correctamente.']);
-            
-        } else {
-            echo json_encode(['success' => false, 'message' => 'Error al eliminar el código.']);
+        if (empty($resultado)) {
+            echo json_encode(['success' => false, 'message' => 'Código de partida no encontrado.']);
+            $pdo->rollBack(); // Revertir cambios si no existe la partida
+            exit();
         }
+
+        $idPartida = $resultado[0]['id_partida'];
+
+        // Eliminar los usuarios asociados en la tabla usuario_partida_rol
+        $queryEliminarRoles = "DELETE FROM usuario_partida_rol WHERE id_partida = :id_partida";
+        $conexion->delete($queryEliminarRoles, [':id_partida' => $idPartida]);
+
+        // Eliminar la partida en la tabla partida
+        $queryEliminarPartida = "DELETE FROM partida WHERE id_partida = :id_partida";
+        $conexion->delete($queryEliminarPartida, [':id_partida' => $idPartida]);
+
+        // Confirmar la transacción
+        $pdo->commit();
+
+        // Respuesta de éxito
+        echo json_encode(['success' => true, 'message' => 'Partida eliminada correctamente, junto con los usuarios.']);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Código no proporcionado.']);
+        echo json_encode(['success' => false, 'message' => 'Código de partida no proporcionado.']);
     }
 } catch (PDOException $e) {
+    if (isset($pdo)) {
+        $pdo->rollBack(); // Revertir cambios en caso de error
+    }
     echo json_encode(['success' => false, 'message' => 'Error en la base de datos: ' . $e->getMessage()]);
 }

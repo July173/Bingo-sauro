@@ -1,67 +1,57 @@
 <?php
 header('Content-Type: application/json');
-require '../../conexion_BD/conexion.php';
 session_start();
+require '../../conexion_BD/conexion.php';
 
-// Opcional: Obtener información del usuario para mostrar en la página
-$id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
-
-// Instanciar conexión
-$conexion = new Conexion();
-$pdo = $conexion->conectar();
-
-// Validar conexión
-if (!$pdo) {
-    echo json_encode(['error' => 'Error al conectar con la base de datos', 'success' => false]);
-    exit();
-}
-
-// Función para generar un código aleatorio de 6 caracteres
+// Función para generar un código aleatorio de 6 dígitos
 function generarCodigo($longitud = 6): string
 {
     return substr(str_shuffle("0123456789"), 0, $longitud);
 }
 
 try {
-    $resultado = 0;
+    $conexion = new Conexion();
+    $pdo = $conexion->conectar();
 
-    // Generar un código único
+    if (!$pdo) {
+        throw new Exception('Error al conectar con la base de datos');
+    }
+
+    // Obtener ID del usuario desde la sesión
+    $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : 0;
+
+    // Generar un código único para la partida
     do {
         $codigo = generarCodigo();
-        $codigoConsultado = $pdo->prepare("SELECT COUNT(*) as total FROM partida WHERE codigo_sala = :codigo");
-        $codigoConsultado->bindParam(':codigo', $codigo);
-        $codigoConsultado->execute();
-        $resultado = $codigoConsultado->fetchColumn();
-    } while ($resultado > 0);
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM partida WHERE codigo_sala = :codigo");
+        $stmt->bindParam(':codigo', $codigo);
+        $stmt->execute();
+        $existe = $stmt->fetchColumn();
+    } while ($existe > 0);
 
-    // Insertar nuevo código en la base de datos
-    $query = "INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones,id_creador) VALUES (:codigo, 0, 0,:id_creador)";
-    $params = [
+    $estado = "registrada";
+
+    // Insertar la partida en la base de datos
+    $query = "INSERT INTO partida (codigo_sala, monedas_minimas, maximo_cartones, id_creador, estado) 
+              VALUES (:codigo, 0, 0, :id_creador, :estado)";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([
         ':codigo' => $codigo,
-        ':id_creador' => $id_usuario
-    ];
-    
-    $insertado = $pdo->prepare($query);
-    $insertado->execute($params);
-    
-
-    // Obtener el ID del último registro insertado
-    $lastId = $pdo->lastInsertId();
-
-    // Retornar JSON válido
-    echo json_encode([
-        'codigo_sala' => $codigo,
-        'id_creador'=> $id_usuario,
-        'last_id' => $lastId,
-        'success' => true
+        ':id_creador' => $id_usuario,
+        ':estado' => $estado
     ]);
 
-    
-    
-} catch (PDOException $e) {
-    // Manejar errores de base de datos
+    // Guardar el código de la partida en la sesión
+    $_SESSION['codigo_partida'] = $codigo;
+
     echo json_encode([
-        'error' => 'Error en la base de datos: ' . $e->getMessage(),
-        'success' => false
+        'success' => true,
+        'codigo_sala' => $codigo
+    ]);
+} catch (Exception $e) {
+    echo json_encode([
+        'success' => false,
+        'error' => $e->getMessage()
     ]);
 }
+?>
