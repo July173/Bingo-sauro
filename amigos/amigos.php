@@ -34,7 +34,7 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
   <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css" />
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../amigos/css/amigos.css" />
-  <link rel="stylesheet" href="../amigos/css/modales-delete.css">
+  <link rel="stylesheet" href="../amigos/css/modales.css">
   <link rel="stylesheet" href="../generales/configuracion/posicion.css">
   <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <script src="../generales/bootstrap/js/bootstrap.bundle.js"></script>
