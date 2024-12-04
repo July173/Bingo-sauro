@@ -152,13 +152,14 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 </div>
             </div>
             
-            <div class="cerrarSesion">
+            <div class="cerrarSesion"></div>
                 <button class="botonn bot-logout" id="logoutButton">
                     <img width="32" height="32" src="https://img.icons8.com/color-pixels/32/close-window.png" alt="close-window" />
                     <strong>Cerrar sesión</strong>
                 </button>
             </div>
 
+            <script src="../../Generales/musica/musica.js"></script>
             <script src="../../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
             <script src="config.js"></script>
 </body>

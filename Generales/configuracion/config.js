@@ -19,6 +19,7 @@ document.querySelector('.close-btn').addEventListener('click', function() {
 });
 
 document.getElementById('logoutButton').addEventListener('click', function () {
+    clearMusicStorage(); // Limpiar el estado de la música
     fetch('php/cerrar-sesion.php', {
         method: 'POST',
         headers: {

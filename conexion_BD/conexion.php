@@ -80,7 +80,7 @@
                throw new Exception('Error al eliminar: ' . $e->getMessage());
            }
        }
-       public function insert($query, $params = [])
+        public function insert($query, $params = [])
 {
     try {
         if ($this->pdo === null) {
@@ -94,5 +94,8 @@
     }
 }
 
+       public function execute($query, $params = []) {
+           $stmt = $this->pdo->prepare($query);
+           return $stmt->execute($params);
+       }
    }
-   

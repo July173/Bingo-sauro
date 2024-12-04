@@ -1,15 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Obtener los datos desde PHP
+        fetch("../src-php/recompensa_diaria.php")
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    const dias = data.dias;
+    
+                    dias.forEach((dia, index) => {
+                        const cofreId = ["cofre-ayer", "cofre-hoy", "cofre-manana"][index];
+                        const cofre = document.getElementById(cofreId);
+    
+                        // Configurar estado y estilos
+                        cofre.setAttribute("data-state", dia.estado);
+                        if (dia.estado === "reclamado") {
+                            cofre.style.backgroundColor = "green";
+                        } else if (dia.estado === "disponible") {
+                            cofre.style.backgroundColor = "yellow";
+                        } else {
+                            cofre.style.backgroundColor = "gray";
+                        }
+    
+                        // Manejar clics
+                        cofre.addEventListener("click", () => {
+                            if (dia.estado === "disponible") {
+                                alert("¡Cofre reclamado con éxito!");
+                                cofre.style.backgroundColor = "green";
+                                cofre.setAttribute("data-state", "reclamado");
+                            } else if (dia.estado === "mañana") {
+                                alert("Este cofre estará disponible mañana.");
+                            } else if (dia.estado === "pasado") {
+                                alert("No puedes reclamar cofres de días anteriores.");
+                            } else {
+                                alert("Este cofre ya ha sido reclamado.");
+                            }
+                        });
+                    });
+                } else {
+                    console.error(data.error);
+                }
+            })
+            .catch((err) => console.error("Error:", err));
+    });
+    
+
     const animations = [
         "https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json", // Primera animación
         "https://lottie.host/54e02410-09ee-45ff-8f6b-91f18d223fe4/WD2nnf03HC.json"  // Segunda animación
-    ];
-
-    const congratulationsMessage = document.getElementById('congratulationsMessage');
+    ];    
 
     // Función para manejar la animación y el mensaje de recompensa
-    function handleAnimationClick(playerId, messageId, dayNumber) {
+    function handleAnimationClick(playerId, dayNumber) {
         const rewardAnimation = document.getElementById(playerId);
-        const rewardMessage = document.getElementById(messageId);
         let currentAnimation = 0;
 
         rewardAnimation.addEventListener('click', () => {
@@ -17,50 +60,106 @@ document.addEventListener('DOMContentLoaded', () => {
             currentAnimation = (currentAnimation + 1) % animations.length;
             rewardAnimation.load(animations[currentAnimation]);
 
-            // Mostrar el mensaje de felicitaciones con el número del día
-            congratulationsMessage.innerText = `¡Felicidades! Has desbloqueado el Día ${dayNumber}.`;
-            congratulationsMessage.style.display = "block";
-
-            // Ocultar el mensaje después de 3 segundos
-            setTimeout(() => {
-                congratulationsMessage.style.display = "none";
-            }, 3000);
-
-            // Mostrar el letrero de recompensa
-            rewardMessage.style.display = "block";
-
-            // Ocultar el letrero después de 3 segundos
-            setTimeout(() => {
-                rewardMessage.style.display = "none";
-            }, 3000);
+            // Reclamar la recompensa diaria
+            reclamarRecompensa(dayNumber);
         });
+    }
+
+    // Función para reclamar la recompensa diaria
+    function reclamarRecompensa(dia) {
+        fetch(`./php/recompensa_diaria.php?dia=${dia}`) // Llamar al script PHP con el día
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Verificar la respuesta del servidor
+                rewardAlert.innerText = data.mensaje; // Mostrar el mensaje de la respuesta
+                rewardAlert.style.display = "block"; // Hacer visible el contenedor
+
+                // Ocultar el mensaje después de 3 segundos
+                setTimeout(() => {
+                    rewardAlert.style.display = "none";
+                }, 3000);
+
+                if (data.cantidad) {
+                    // Actualizar el saldo de monedas del usuario
+                    document.getElementById('saldo').innerText = `Saldo: ${data.cantidad}`;
+                }
+            })
+            .catch(error => console.error('Error al reclamar la recompensa:', error));
     }
 
     // Aplicar la función a cada uno de los 6 cofres, pasando el número del día
     for (let i = 1; i <= 6; i++) {
-        handleAnimationClick(`rewardAnimation${i}`, `rewardMessage${i}`, i);
+        handleAnimationClick(`rewardAnimation${i}`, i);
     }
 
     // Manejo especial para la imagen del Día 7
     const day7Image = document.getElementById('rewardImage7');
-    const rewardMessage7 = document.getElementById('rewardMessage7');
 
     day7Image.addEventListener('click', () => {
-        // Mostrar mensaje de felicitaciones para el Día 7
-        congratulationsMessage.innerText = '¡Felicidades! Has alcanzado la recompensa del Día 7.';
-        congratulationsMessage.style.display = 'block';
-
-        // Ocultar el mensaje después de 3 segundos
-        setTimeout(() => {
-            congratulationsMessage.style.display = 'none';
-        }, 3000);
-
-        // Mostrar el letrero de recompensa
-        rewardMessage7.style.display = 'block';
-
-        // Ocultar el letrero de recompensa después de 3 segundos
-        setTimeout(() => {
-            rewardMessage7.style.display = 'none';
-        }, 3000);
+        // Reclamar la recompensa del Día 7
+        reclamarRecompensa(7);
     });
+
+    function cargarCofres() {
+        fetch('ruta/obtener_estado_cofres.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+
+                const cofresContainer = document.getElementById('cofres');
+                cofresContainer.innerHTML = '';
+
+                data.dias.forEach(dia => {
+                    const cofreDiv = document.createElement('div');
+                    cofreDiv.className = `cofre ${dia.reclamado ? 'reclamado' : 'no-reclamado'}`;
+                    cofreDiv.innerHTML = `
+                        <p>${dia.fecha}</p>
+                        <p>${dia.monedas} monedas</p>
+                    `;
+                    if (!dia.reclamado) {
+                        const boton = document.createElement('button');
+                        boton.textContent = 'Reclamar';
+                        boton.onclick = () => reclamarCofre(dia.fecha);
+                        cofreDiv.appendChild(boton);
+                    }
+                    cofresContainer.appendChild(cofreDiv);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function reclamarCofre(fecha) {
+        fetch('ruta/reclamar_recompensa.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `fecha=${fecha}`
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    alert(`Has reclamado ${data.monedas} monedas.`);
+                    cargarCofres(); // Recargar los cofres
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function irUltimaPagina() {
+        const cofres = document.querySelectorAll('.cofre');
+        const hoy = new Date().toISOString().slice(0, 10); // Fecha actual en formato YYYY-MM-DD
+
+        let ultimaPagina = 0;
+        cofres.forEach((cofre, index) => {
+            if (cofre.querySelector('p').textContent === hoy) {
+                ultimaPagina = Math.floor(index / 6); // 6 cofres por página
+            }
+        });
+
+        mostrarPagina(ultimaPagina);
+    }
 });

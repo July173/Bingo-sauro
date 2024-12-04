@@ -15,7 +15,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">12
 
 <head>
   <meta charset="UTF-8" />
@@ -81,7 +81,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
       </div>
       <div class="nombre-usuario"> 
         <div id="cambiarNombre" class="editar edi-nom"></div>
-        <p class="nombre"><?php echo $nombre; ?></p>
+        <p class="nombre"><?php echo $nombre; ?> (ID: <?php echo $_SESSION['usuario_id']; ?>)</p>
       </div>
       <div class="contenedor-3">
 
