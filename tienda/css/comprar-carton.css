@@ -132,10 +132,7 @@ body {
         margin-top: 90vw;
         margin-left: 10vw;
     }
-    .ContenedorAvatar{
-        width: 25vw  !important;
-        margin-top: 30vw;
-    }
+
 
     .hojas-3 {
         position: absolute;
@@ -163,7 +160,7 @@ body {
         width: 10vw;
      }
      .precio{
-        margin-top: 25vw;
+        margin-top: 10vw;
         height: 16vw;
         width: 25vw;
         font-size: 10vw;
@@ -183,8 +180,7 @@ body {
         margin-top: 10vw;
         margin-bottom: -0rem;
     }
+}
     
-    
-    }
 
 

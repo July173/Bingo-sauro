@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const isPortrait = window.matchMedia('(orientation: portrait)').matches;
       
         if (isPortrait) {
-          avatarImg.style.width = '60vw'; // Ajustes para modo portrait
-          avatarImg.style.height = '60vw';
+          avatarImg.style.width = '80vw'; // Ajustes para modo portrait
+          avatarImg.style.height = '80vw';
           avatarImg.style.marginTop = '30vw';
           
         } else {
