@@ -30,6 +30,8 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
   <script src="../generales/bootstrap/js/bootstrap.js"></script>4
 
 
+  
+
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
 
