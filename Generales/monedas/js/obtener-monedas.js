@@ -19,7 +19,7 @@ function actualizarMonedas() {
         });
 }
 // Actualizar cada 30 segundos
-setInterval(actualizarMonedas, 30000);
+setInterval(actualizarMonedas, 8000);
 
 // Llamar a la función al cargar la página
 window.onload = actualizarMonedas;

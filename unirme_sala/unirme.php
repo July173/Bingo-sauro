@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -18,7 +17,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crearsala</title>
+    <title>Unirme Sala</title>
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
@@ -80,8 +79,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
                 <!-- Ingresar el código para unirse -->
                 <div>
-                    <input type="text" id="codigoEntrada" placeholder="Ingresa el código" class="codigo">
-                    <input type="text" id="nombreJugador" placeholder="Ingresa tu nombre">
+                    <input type="number" id="codigo" placeholder="Ingresa el código" class="codigo">
                     <button onclick="unirseAPartida()" class="iniciar" id="redirigirJuego">Unirse a Partida</button>
                 </div>
 
@@ -89,21 +87,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             </div>
 
 
-
-
         </div>
 
     </div>
     </div>
 
-    <!-- Audio que queremos controlar
-    <audio id="audioPlayer" loop>
-        <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
-        Tu navegador no soporta la reproducción de audio.
-    </audio> -->
-    <script src="../crear_sala/js/unirse_partida.js"></script>
+    <script src="js/unirse_partida.js"></script>
     <script src="js/unirme.js"></script>
-    <!-- <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script> -->
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
 
 </body>
