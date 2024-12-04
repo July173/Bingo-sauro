@@ -99,8 +99,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
       <script src="../generales/js_generales/ver-contrasña.js"></script>
       <script src="src-js/editar-contra.js"></script>
-      <!-- <script src="src-js/valiacionContraseña.js"></script> -->
-      <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="../generales/musica/musica.js"></script>
 
       <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">

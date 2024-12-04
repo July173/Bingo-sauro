@@ -65,16 +65,10 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
         </div>
 
-        <!-- Audio que queremos controlar
-        <audio id="audioPlayer">
-            <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
-            Tu navegador no soporta la reproducción de audio.
-        </audio> -->
-
        
     </div>
        <script src="src-js/editar-avatar.js"></script>
-       <script src="../generales/monedas/js/obtener-monedas.js"></script>
+       <script src="../generales/musica/musica.js"></script>
 
 </body>
 </html>

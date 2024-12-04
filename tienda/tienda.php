@@ -126,7 +126,7 @@ $usuario_id = $_SESSION['usuario_id'];
 
         <script src="src-js/tienda.js"></script>
         <script src="../tienda/src-js/recompensa-diaria.js"></script>
-        <script src="../generales/monedas/js/obtener-monedas.js"></script>
+        <script src="../generales/musica/musica.js"></script>
 
         <div id="cofres"></div>
 
