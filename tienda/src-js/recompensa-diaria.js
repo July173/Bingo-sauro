@@ -1,165 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    document.addEventListener("DOMContentLoaded", () => {
-        // Obtener los datos desde PHP
-        fetch("../src-php/recompensa_diaria.php")
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.success) {
-                    const dias = data.dias;
-    
-                    dias.forEach((dia, index) => {
-                        const cofreId = ["cofre-ayer", "cofre-hoy", "cofre-manana"][index];
-                        const cofre = document.getElementById(cofreId);
-    
-                        // Configurar estado y estilos
-                        cofre.setAttribute("data-state", dia.estado);
-                        if (dia.estado === "reclamado") {
-                            cofre.style.backgroundColor = "green";
-                        } else if (dia.estado === "disponible") {
-                            cofre.style.backgroundColor = "yellow";
-                        } else {
-                            cofre.style.backgroundColor = "gray";
-                        }
-    
-                        // Manejar clics
-                        cofre.addEventListener("click", () => {
-                            if (dia.estado === "disponible") {
-                                alert("¡Cofre reclamado con éxito!");
-                                cofre.style.backgroundColor = "green";
-                                cofre.setAttribute("data-state", "reclamado");
-                            } else if (dia.estado === "mañana") {
-                                alert("Este cofre estará disponible mañana.");
-                            } else if (dia.estado === "pasado") {
-                                alert("No puedes reclamar cofres de días anteriores.");
-                            } else {
-                                alert("Este cofre ya ha sido reclamado.");
-                            }
-                        });
-                    });
-                } else {
-                    console.error(data.error);
-                }
-            })
-            .catch((err) => console.error("Error:", err));
-    });
-    
-
     const animations = [
         "https://lottie.host/27eeb06a-d46f-407e-a990-4e17e0cc2496/BFgVvTWKJv.json", // Primera animación
         "https://lottie.host/54e02410-09ee-45ff-8f6b-91f18d223fe4/WD2nnf03HC.json"  // Segunda animación
-    ];    
+    ];
 
-    // Función para manejar la animación y el mensaje de recompensa
-    function handleAnimationClick(playerId, dayNumber) {
-        const rewardAnimation = document.getElementById(playerId);
-        let currentAnimation = 0;
+    const rewardsContainer = document.getElementById('rewardsContainer'); // Contenedor de recompensas
+    const messageBox = document.getElementById('messageBox'); // Elemento para mostrar mensajes al usuario
 
-        rewardAnimation.addEventListener('click', () => {
-            // Alternar entre las animaciones
-            currentAnimation = (currentAnimation + 1) % animations.length;
-            rewardAnimation.load(animations[currentAnimation]);
-
-            // Reclamar la recompensa diaria
-            reclamarRecompensa(dayNumber);
-        });
+    // Función para mostrar mensajes al usuario
+    function mostrarMensaje(texto, tipo = 'info') {
+        messageBox.textContent = texto;
+        messageBox.className = `message-box ${tipo}`; // Clase CSS según el tipo de mensaje
+        setTimeout(() => {
+            messageBox.textContent = '';
+            messageBox.className = 'message-box'; // Restaurar estilo base
+        }, 5000); // El mensaje desaparece después de 5 segundos
     }
 
-    // Función para reclamar la recompensa diaria
-    function reclamarRecompensa(dia) {
-        fetch(`./php/recompensa_diaria.php?dia=${dia}`) // Llamar al script PHP con el día
-            .then(response => response.json())
-            .then(data => {
-                console.log(data); // Verificar la respuesta del servidor
-                rewardAlert.innerText = data.mensaje; // Mostrar el mensaje de la respuesta
-                rewardAlert.style.display = "block"; // Hacer visible el contenedor
+    // Función para cargar el estado de los cofres
+    async function cargarCofres() {
+        try {
+            const response = await fetch('./src-php/obtener_estado_cofres.php', {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' }
+            });
 
-                // Ocultar el mensaje después de 3 segundos
-                setTimeout(() => {
-                    rewardAlert.style.display = "none";
-                }, 3000);
-
-                if (data.cantidad) {
-                    // Actualizar el saldo de monedas del usuario
-                    document.getElementById('saldo').innerText = `Saldo: ${data.cantidad}`;
-                }
-            })
-            .catch(error => console.error('Error al reclamar la recompensa:', error));
+            const data = await response.json();
+            if (data.success) {
+                console.log('Estado de cofres:', data.dias);
+                actualizarUI(data.dias);
+            } else {
+                mostrarMensaje('Error al cargar cofres: ' + data.error, 'error');
+            }
+        } catch (error) {
+            console.error('Error al cargar cofres:', error);
+            mostrarMensaje('Error al conectar con el servidor para cargar cofres.', 'error');
+        }
     }
 
-    // Aplicar la función a cada uno de los 6 cofres, pasando el número del día
-    for (let i = 1; i <= 6; i++) {
-        handleAnimationClick(`rewardAnimation${i}`, i);
+    // Función para reclamar una recompensa
+    async function reclamarRecompensa(fecha) {
+        try {
+            const response = await fetch('./src-php/reclamar_recompensa.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ fecha })
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                mostrarMensaje(`¡Felicidades! Has ganado ${data.monedas} monedas.`, 'success');
+                cargarCofres(); // Actualizar el estado después de reclamar
+            } else {
+                mostrarMensaje(`Error al reclamar recompensa: ${data.error}`, 'error');
+            }
+        } catch (error) {
+            console.error('Error al reclamar recompensa:', error);
+            mostrarMensaje('Error al conectar con el servidor.', 'error');
+        }
     }
 
-    // Manejo especial para la imagen del Día 7
-    const day7Image = document.getElementById('rewardImage7');
+    // Función para actualizar la interfaz con los estados de los cofres
+    function actualizarUI(estados) {
+        estados.forEach((estado, index) => {
+            const rewardElement = document.getElementById(`rewardAnimation${index + 1}`);
+            if (rewardElement) {
+                const estadoClase = estado.estado === 'disponible' ? 'available' : (estado.estado === 'reclamado' ? 'claimed' : 'locked');
+                rewardElement.className = `reward-animation ${estadoClase}`;
 
-    day7Image.addEventListener('click', () => {
-        // Reclamar la recompensa del Día 7
-        reclamarRecompensa(7);
-    });
-
-    function cargarCofres() {
-        fetch('ruta/obtener_estado_cofres.php')
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    alert(data.error);
-                    return;
-                }
-
-                const cofresContainer = document.getElementById('cofres');
-                cofresContainer.innerHTML = '';
-
-                data.dias.forEach(dia => {
-                    const cofreDiv = document.createElement('div');
-                    cofreDiv.className = `cofre ${dia.reclamado ? 'reclamado' : 'no-reclamado'}`;
-                    cofreDiv.innerHTML = `
-                        <p>${dia.fecha}</p>
-                        <p>${dia.monedas} monedas</p>
-                    `;
-                    if (!dia.reclamado) {
-                        const boton = document.createElement('button');
-                        boton.textContent = 'Reclamar';
-                        boton.onclick = () => reclamarCofre(dia.fecha);
-                        cofreDiv.appendChild(boton);
+                rewardElement.addEventListener('click', () => {
+                    if (estado.estado === 'disponible') {
+                        reclamarRecompensa(estado.fecha);
+                    } else if (estado.estado === 'reclamado') {
+                        mostrarMensaje('Recompensa ya reclamada.', 'warning');
+                    } else {
+                        mostrarMensaje('Este cofre no está disponible aún.', 'error');
                     }
-                    cofresContainer.appendChild(cofreDiv);
                 });
-            })
-            .catch(error => console.error('Error:', error));
-    }
-
-    function reclamarCofre(fecha) {
-        fetch('ruta/reclamar_recompensa.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `fecha=${fecha}`
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    alert(data.error);
-                } else {
-                    alert(`Has reclamado ${data.monedas} monedas.`);
-                    cargarCofres(); // Recargar los cofres
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    }
-
-    function irUltimaPagina() {
-        const cofres = document.querySelectorAll('.cofre');
-        const hoy = new Date().toISOString().slice(0, 10); // Fecha actual en formato YYYY-MM-DD
-
-        let ultimaPagina = 0;
-        cofres.forEach((cofre, index) => {
-            if (cofre.querySelector('p').textContent === hoy) {
-                ultimaPagina = Math.floor(index / 6); // 6 cofres por página
             }
         });
-
-        mostrarPagina(ultimaPagina);
     }
+
+    // Inicializar la lógica para los cofres
+    for (let i = 1; i <= 7; i++) {
+        const rewardElement = document.getElementById(`rewardAnimation${i}`);
+
+        if (rewardElement) {
+            let currentAnimation = 0;
+
+            rewardElement.addEventListener('click', () => {
+                currentAnimation = (currentAnimation + 1) % animations.length;
+                rewardElement.load(animations[currentAnimation]);
+            });
+        }
+    }
+
+    // Cargar el estado inicial de los cofres
+    cargarCofres();
 });

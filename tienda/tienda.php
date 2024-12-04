@@ -77,32 +77,20 @@ $usuario_id = $_SESSION['usuario_id'];
 
 
 
-                <tr>
-    <td>
-        <div class="reward-container" id="cofre-ayer" data-state="">
+                <div id="rewardsContainer">
+                    <div id="rewardAnimation1" class="reward-animation">
+                    <div class="reward-container" id="cofre-ayer" data-state="">
             <div class="reward-header">AYER</div>
             <div class="circle-container">
                 <dotlottie-player id="rewardAnimation1" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
             </div>
         </div>
-    </td>
-    <td>
-        <div class="reward-container" id="cofre-hoy" data-state="">
-            <div class="reward-header">HOY</div>
-            <div class="circle-container">
-                <dotlottie-player id="rewardAnimation2" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
-            </div>
-        </div>
-    </td>
-    <td>
-        <div class="reward-container" id="cofre-manana" data-state="">
-            <div class="reward-header">MAÑANA</div>
-            <div class="circle-container">
-                <dotlottie-player id="rewardAnimation3" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
-            </div>
-        </div>
-    </td>
-</tr>
+                    </div>
+                    <div id="rewardAnimation2" class="reward-animation"></div>
+                    <div id="rewardAnimation2" class="reward-animation"></div>                    
+                </div>
+                <div id="messageBox" class="message-box"></div>
+
 
 
 
@@ -124,6 +112,7 @@ $usuario_id = $_SESSION['usuario_id'];
             </script>
         </div>
 
+        <script src="../generales/monedas/js/obtener-monedas.js"></script>
         <script src="src-js/tienda.js"></script>
         <script src="../tienda/src-js/recompensa-diaria.js"></script>
         <script src="../generales/musica/musica.js"></script>
