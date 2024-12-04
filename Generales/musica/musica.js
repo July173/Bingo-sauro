@@ -1,4 +1,4 @@
-let audio = new Audio('../../Generales/audio/apt.mp3');
+let audio = new Audio('/Bingo-sauro/generales/musica/apt.mp3');
 audio.loop = true; // Repetir la música
 
 // Verificar el estado de la música en localStorage
@@ -31,10 +31,20 @@ function toggleMusic() {
 }
 
 // Asegúrate de que el botón de alternar música esté configurado correctamente
-document.getElementById('soundToggle').addEventListener('click', toggleMusic);
+const toggleButton = document.getElementById('soundToggle');
+if (toggleButton) {
+    toggleButton.addEventListener('click', toggleMusic);
+}
 
 // Agregar un evento para manejar el final de la música
 audio.addEventListener('ended', function() {
     localStorage.setItem('musicPlaying', 'false'); // Asegurarse de que el estado se actualice
     console.log('La música ha terminado.');
+});
+
+// Reproducir música al cargar la página
+window.addEventListener('load', function() {
+    if (localStorage.getItem('musicPlaying') === 'true') {
+        audio.play();
+    }
 });

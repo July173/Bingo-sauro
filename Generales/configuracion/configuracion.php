@@ -159,7 +159,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 </button>
             </div>
 
-            <script src="../musica/musica.js"></script>
+            <script src="../../Generales/musica/musica.js"></script>
             <script src="../../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
             <script src="config.js"></script>
 </body>

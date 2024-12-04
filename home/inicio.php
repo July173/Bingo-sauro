@@ -30,7 +30,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 </head>
 
 <body class="container">
-
   <div id="contenedor">
 
     <div class="hojas">
