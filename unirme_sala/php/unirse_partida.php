@@ -22,15 +22,16 @@ try {
 
     $codigo = $_POST['codigo'];
 
-    // Obtener la foto del usuario desde la tabla usuario
-    $queryFoto = "SELECT id_avatar FROM usuario WHERE id_usuario = ?";
-    $resultFoto = $conexion->select($queryFoto, [$id_usuario]);
+    // Obtener el avatar del usuario desde la tabla usuario
+    $queryAvatar = "SELECT id_avatar FROM usuario WHERE id_usuario = ?";
+    $resultAvatar = $conexion->select($queryAvatar, [$id_usuario]);
 
-    if (count($resultFoto) === 0) {
-        throw new Exception('No se encontró el avatar del usuario');
+    if (count($resultAvatar) === 0 || empty($resultAvatar[0]['id_avatar'])) {
+        echo json_encode(['error' => 'Debes seleccionar un avatar antes de unirte a la partida.', 'success' => false]);
+        exit;
     }
 
-    $foto = $resultFoto[0]['id_avatar']; // Suponiendo que id_avatar es una URL o identificador
+    $id_avatar = $resultAvatar[0]['id_avatar'];
 
     // Verificar que el código de la partida existe y obtener su estado
     $queryPartida = "SELECT id_partida, estado FROM partida WHERE codigo_sala = ?";
@@ -46,12 +47,12 @@ try {
 
     // Validar el estado de la partida
     if ($estado === 'registrada') {
-        // Insertar al jugador en la tabla jugadores
+        // Insertar al jugador en la tabla usuario_partida_rol
         $id_rol = 1; // Suponiendo que este es el rol por defecto
         $queryJugador = "INSERT INTO usuario_partida_rol (id_usuario, id_partida, id_rol) VALUES (?, ?, ?)";
         $conexion->insert($queryJugador, [$id_usuario, $partida_id, $id_rol]);
 
-        echo json_encode(['success' => true, 'nombre' => $nombre, 'foto' => $foto]);
+        echo json_encode(['success' => true, 'nombre' => $nombre, 'foto' => $id_avatar]);
     } elseif ($estado === 'iniciada') {
         echo json_encode(['error' => 'La partida ya ha sido iniciada', 'success' => false]);
     } elseif ($estado === 'terminada') {
@@ -62,4 +63,3 @@ try {
 } catch (Exception $e) {
     echo json_encode(['error' => 'Error: ' . $e->getMessage(), 'success' => false]);
 }
-?>
