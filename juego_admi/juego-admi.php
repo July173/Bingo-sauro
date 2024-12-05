@@ -110,7 +110,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
         <div class="">
           <button class="verNumeeros">Ver numeros mostrados </button>
-          <p>Minimo de dino-monedas para apostar:</p>
+          <p id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
 
         </div>
         <div class="flex">
@@ -144,6 +144,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <!-- <script src="js/movimiento-balotera.js"></script> -->
         <script src="js/modal.js"></script>
         <script src="js/obtener_bola.js"></script>
+        <script src="js/juego_admi.js"></script>
 
 </body>
 
