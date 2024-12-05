@@ -157,7 +157,7 @@
         .then(data => {
             if (data.success) {
                 // Redirigir a la página de carga
-                window.location.href = "../../generales/loader/loader.html"; // Cambia la ruta según tu estructura
+                window.location.href = "../../generales/loader/loader.html"; // Cambia la ruta según tu estructura 
             } else {
                 console.error("Errores:", data.errors);
                 alert(data.errors ? data.errors.join('\n') : 'Error en el registro');

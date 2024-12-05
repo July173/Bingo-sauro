@@ -72,7 +72,14 @@
       </div>
     </div>
 
-    <script src="../generales/musica/musica.js"></script>
+    <script src="../../generales/musica/musica.js"></script>
     <script src="src-js/bienvenido.js"></script>
+    <script>
+        document.body.addEventListener('click', function() {
+            audio.play().catch(error => {
+                console.error('Error al intentar reproducir la música:', error);
+            });
+        });
+    </script>
   </body>
 </html>
