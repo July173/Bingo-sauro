@@ -350,13 +350,18 @@
     font-size: 2.1vw; /* Aumenta el tamaño de la letra */
     line-height: 1.0; /* Ajusta el espacio entre líneas si es necesario */
     margin-bottom: -1rem; /* Añade un margen inferior para mayor separación */
+    writing-mode: vertical-lr; /* Orientación vertical */
+    transform: rotate(270deg); /* Lo rota 90 grados para ser horizontal */
 }
    .cantidadMaximaCartones {
    width: 18vw;
-   margin-left: 15vw;
-   font-size: 2vw; /* Aumenta el tamaño de la letra */
+   margin-left: 6vw;
+   font-size: 2.3vw; /* Aumenta el tamaño de la letra */
    line-height: 0.9; /* Ajusta el espacio entre líneas si es necesario */
-   margin-bottom: -1rem; /* Añade un margen inferior para mayor separación */
+   top: -70vw;
+   writing-mode: vertical-lr; /* Orientación vertical */
+  transform: rotate(270deg); /* Lo rota 90 grados para ser horizontal */
+  margin-left: 19vw;
 }
     .numMonedasPorJugador {
   margin-left: 1.5vw;
@@ -364,7 +369,7 @@
   background-color: white;
   font-size: 1.5vw;
   border-radius: 1vw;
-  margin-top: 1rem; /* Añade margen superior para separar de elementos anteriores */
+  margin-top: -10vw; /* Añade margen superior para separar de elementos anteriores */
   margin-bottom: 0.0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
 }
 
@@ -379,19 +384,21 @@
 }
 .botonJugador {
   background-color: #efe7c4;
-  width: 14vw;
+  width: 30vw;
+  font-size: 4vw;
   border-radius: 1vw;
-  margin-left: 0.0vw;
-  margin-bottom: 1vw;
-  -webkit-border-radius: 1vw;
-  -moz-border-radius: 1vw;
-  -ms-border-radius: 1vw;
-  -o-border-radius: 1vw;
+  margin-left: -25vw;
+  position: relative;
+  top: -20vw; /* Mueve hacia arriba */  
 }
 .botonAdministrador {
   background-color: #efe7c4;
-  width: 14vw;
+  width: 30vw;
+  margin-left: -25vw;
+  font-size: 4vw;
   border-radius: 1vw;
+  position: relative;
+  top: -70px; /* Mueve hacia arriba */
   -webkit-border-radius: 1vw;
   -moz-border-radius: 1vw;
   -ms-border-radius: 1vw;
@@ -432,7 +439,7 @@
 .contenedor-gris {
   font-family: "Kavoon", serif;
   width: 100vw;
-  height: 110vw;
+  height: 100vw;
   background-color: rgb(204, 204, 192);
   border-radius: 1rem;
   padding: 1vw 3vw 3vw 1vw;
@@ -442,15 +449,15 @@
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
 }
 .cuadroGrisOscuro {
-  margin-left: 4vw;
+  margin-left: 15vw;
   align-items: center;
   font-family: "Kavoon", serif;
   background-color: #AFADA5;
   border-radius: 1rem;
   border: none;
   padding: 3vw;
-  width: 90vw;
-  height: 20vw;
+  width: 60vw;
+  height: 60vw;
   box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
   display: flex;
   margin-top: 40px;
