@@ -115,6 +115,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <script src="js/form.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/verficar-estadia.js"></script>
 
 </body>
 

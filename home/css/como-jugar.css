@@ -57,7 +57,7 @@ body {
 }
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
-    height: 35vw;   
+    height: 48vw;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,12 +76,12 @@ body {
     cursor: pointer;
 }
 .cuadro-blanco{
-    height: 20vw;
+    height: 30vw;
     width: 30vw;
     background-color: white;
     color: black;
     font-family: "Kavoon", serif;
-    font-size: 2vw;
+    font-size: 0.8vw;
     border-radius: 2rem;
     padding: 1vw;
 }
@@ -90,13 +90,21 @@ body {
 .letra {
     font-family: "Kavoon", serif;
     color:  rgb(0, 255, 0);
-    font-size: 2.7vw;
+    font-size: 3vw;
     font-weight: 300;
     margin: 0;
+    margin-top: -5vw;
 }
 .mascot {
     background-repeat: no-repeat;
     opacity: 0.4;
+    width: 8vw;
+    height: 8vw;
+}
+.bingo{
+    width: 25vw;
+    margin-top: -0.2vw;
+    
 }
 
 
@@ -119,6 +127,17 @@ body {
         margin-left: -50vw;
         margin-top: -6px;
     }
+    .mascot {
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        width: 42vw;
+        height: 42vw;
+    }
+    .bingo{
+        width: 100vw;
+        margin-top: -0.2vw;
+        
+    }
     .close-btn {
         margin-left: 58vw;
         margin-top: -5vw;
@@ -126,12 +145,23 @@ body {
         width: 10vw;
         margin-bottom: 30vw;
     }
+    .cuadro-blanco{
+        height: 106vw;
+        width: 90vw;
+        background-color: white;
+        color: black;
+        font-family: "Kavoon", serif;
+        font-size: 3.1vw;
+        border-radius: 1rem;
+        padding: 1vw;
+    }
     .letra {
         font-family: "Kavoon", serif;
         color:  rgb(0, 255, 0);
-        font-size: 7.5vw;
+        font-size: 12vw;
         font-weight: 300;
         margin: 0;
+        margin-top: -37VW;
     }
     .ms-3 {
         height: 12vw;
