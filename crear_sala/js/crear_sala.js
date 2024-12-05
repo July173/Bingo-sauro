@@ -154,7 +154,7 @@ document.querySelector('.iniciar').addEventListener('click', function (event) {
       }
     })
     .catch(error => {
-      console.error('Error al iniciar partida:', error);
+      console.error('Error al iniciar partida:', error.message);
       alert('Error al procesar la respuesta del servidor.');
     });
 });

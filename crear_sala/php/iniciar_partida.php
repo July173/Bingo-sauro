@@ -1,18 +1,7 @@
 <?php
 session_start();
+ob_clean();
 header('Content-Type: application/json');
-
-
-// Ejemplo de datos que quieres devolver
-$response = [
-    'success' => true,
-    'message' => 'Partida iniciada correctamente.'
-];
-
-// Devuelve la respuesta como JSON
-echo json_encode($response);
-error_log(print_r($response, true)); // Para debugging en error_log
-
 
 // Incluir archivo de conexión
 require '../../conexion_BD/conexion.php';
@@ -21,16 +10,15 @@ try {
     $requestBody = file_get_contents('php://input');
     $data = json_decode($requestBody, true);
 
-    // **Validación inicial de datos**
     if (
         !isset($data['monedasPorJugador'], $data['cartonesPorJugador'], $data['cartonSeleccionado'], $data['botonSeleccionado'], $data['codigoPartida']) ||
         !is_numeric($data['monedasPorJugador']) ||
         !is_numeric($data['cartonesPorJugador']) ||
-        !is_string($data['cartonSeleccionado']) || // Validar como string
+        !is_numeric($data['cartonSeleccionado']) || // Validar como string
         !is_string($data['botonSeleccionado']) || // Validar como string
         !is_string($data['codigoPartida']) // Validar como string
     ) {
-        error_log('Error de validación: Datos incompletos o inválidosss.');
+        error_log('Error de validación: Datos incompletos o inválidos.');
         echo json_encode(['success' => false, 'message' => 'Datos incompletos o inválidos.']);
         exit;
     }
@@ -54,51 +42,8 @@ try {
         $botonSeleccionado = isset($data['botonSeleccionado']) ? $data['botonSeleccionado'] : null;
         $codigoPartida = isset($data['codigoPartida']) ? $data['codigoPartida'] : null;
 
-   if (is_string($cartonSeleccionado)) {
-    // Si es un string, intenta decodificarlo
-    $cartonSeleccionado = json_decode($cartonSeleccionado, true);
-}
-
-if (!is_array($cartonSeleccionado) || !isset($cartonSeleccionado['id'])) {
-    error_log("cartonSeleccionado no tiene un formato válido o no contiene 'id'.");
-    echo json_encode(['success' => false, 'message' => 'cartonSeleccionado inválido.']);
-    exit;
-}
-
-
         // Instanciar la conexión a la base de datos
         $conexion = new Conexion();
-
-        // (El resto del código permanece igual)
-
-        // Si no se proporcionó el código de partida, obtenerlo de la base de datos
-        if (empty($codigoPartida)) {
-            $queryObtenerCodigo = "
-                SELECT codigo_sala 
-                FROM partida 
-                WHERE id_creador = :id_usuario
-                ORDER BY id_partida DESC LIMIT 1
-            ";
-
-            $paramsObtenerCodigo = [':id_usuario' => $id_usuario];
-            $resultadoCodigo = $conexion->select($queryObtenerCodigo, $paramsObtenerCodigo);
-
-            if (!empty($resultadoCodigo)) {
-                $codigoPartida = $resultadoCodigo[0]['codigo_sala'];
-                error_log("Código de partida obtenido de la base de datos: $codigoPartida");
-            } else {
-                echo json_encode(['success' => false, 'message' => 'No se encontró ninguna partida asociada al usuario.']);
-                error_log("No se encontró ninguna partida asociada al usuario.");
-                exit;
-            }
-        }
-
-        // Validar que los datos no estén vacíos
-        if ($monedasPorJugador === null || $cartonesPorJugador === null || $cartonSeleccionado === null || !$cartonSeleccionado['id'] || $botonSeleccionado === null) {
-            echo json_encode(['success' => false, 'message' => 'Datos incompletos o inválidos']);
-            error_log("Error de validación: Datos incompletos o inválidos.");
-            exit;
-        }
 
         // Verificar si el código de partida existe en la base de datos
         $queryCheckPartida = "
@@ -129,7 +74,7 @@ if (!is_array($cartonSeleccionado) || !isset($cartonSeleccionado['id'])) {
         $paramsUpdatePartida = [
             ':monedas_minimas' => $monedasPorJugador,
             ':maximo_cartones' => $cartonesPorJugador,
-            ':forma_carton' => $cartonSeleccionado['id'],
+            ':forma_carton' => $cartonSeleccionado,
             ':codigo_partida' => $codigoPartida
         ];
 
@@ -147,8 +92,6 @@ if (!is_array($cartonSeleccionado) || !isset($cartonSeleccionado['id'])) {
         // Determinar el rol basado en el botón seleccionado
         $id_rol = ($botonSeleccionado === 'jugador') ? 1 : 2;
 
-        error_log("mira el rol");
-
         // Insertar en la tabla usuario_partida_rol
         $queryRol = "
             INSERT INTO usuario_partida_rol (id_usuario, id_partida, id_rol) 
@@ -158,24 +101,21 @@ if (!is_array($cartonSeleccionado) || !isset($cartonSeleccionado['id'])) {
                 :id_rol
             )";
 
-            error_log($queryRol);
-
         $paramsRol = [
             ':id_usuario' => $id_usuario,
             ':codigo_sala' => $codigoPartida,
             ':id_rol' => $id_rol
         ];
-        error_log("los atributos son " .$id_usuario );
-        error_log("los atributos son " .$codigo_sala );
-        error_log("los atributos son " .$id_rol);
 
         $conexion->insert($queryRol, $paramsRol);
-
-        echo json_encode(['success' => true, 'message' => 'Partida iniciada correctamente y rol registrado']);
+        echo json_encode(['success' => true, 'message' => 'Partida iniciada correctamente y rol registrado']);      
+        exit;
     } else {
         echo json_encode(['success' => false, 'message' => 'Método no permitido']);
+        exit;
     }
 } catch (Exception $e) {
-    error_log("Excepción: " . $e->getMessage());
+    error_log("pinche cosa");
+    error_log("Excepcion: " . $e->getMessage());
     echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);   
 }
