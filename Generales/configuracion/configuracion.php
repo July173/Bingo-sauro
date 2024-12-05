@@ -59,15 +59,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 <img width="35" height="30" src="https://img.icons8.com/ios-filled/50/audio-wave--v1.png"
                     alt="audio-wave--v1" />
                 <span class="option-text-2"> <b> Sonido </b></span>
-                <div class="toggle" id="soundToggle"></div>
-            </div>
-
-            <div class="option">
-                <img width="30" height="30"
-                    src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/external-smartphone-vibrate-forming-the-wave-pattern-layout-mobile-bold-tal-revivo.png"
-                    alt="external-smartphone-vibrate-forming-the-wave-pattern-layout-mobile-bold-tal-revivo" />
-                <span class="option-text"> <b> Vibración </b></strong></span>
-                <div class="toggle" id="vibrationToggle"></div>
+                <div class="toggle active" id="soundToggle"></div>
             </div>
 
             <button class="botonn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

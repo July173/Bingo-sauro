@@ -27,7 +27,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
   <link rel="stylesheet" href="../perfil/css/modales.css">
   <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
 
-  <script src="../generales/bootstrap/js/bootstrap.js"></script>4
+  <script src="../generales/bootstrap/js/bootstrap.js"></script>
 
 
 

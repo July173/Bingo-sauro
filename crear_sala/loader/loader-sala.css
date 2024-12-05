@@ -1,0 +1,236 @@
+/* Fondo general */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #c1f0c1; /* Fondo inicial verde claro */
+  animation: gradientBackground 6s linear infinite; /* Animación del fondo */
+  overflow: hidden; /* Ocultar contenido que sobresale */
+}
+
+/* Animación del fondo */
+@keyframes gradientBackground {
+  0% {
+    background-color: #c1f0c1; /* Verde claro */
+  }
+  25% {
+    background-color: #a8e6a1; /* Verde más intenso */
+  }
+  50% {
+    background-color: #90d988; /* Verde intermedio */
+  }
+  75% {
+    background-color: #a3ebaa; /* Verde fresco */
+  }
+  100% {
+    background-color: #c1f0c1; /* Volver al verde claro */
+  }
+}
+
+/* Loader del dinosaurio */
+.loader-dino {
+  position: relative;
+  width: 40vw; /* Ancho más corto */
+  height: 20vw;
+  overflow: hidden; /* Oculta lo que se sale del contenedor */
+}
+.dino{
+  width: 100px;
+  top: 30px;
+  left: -120px; /* Inicia fuera del contenedor */
+  animation: walk 5s linear infinite, bounce 0.6s ease-in-out infinite; /* Más lento */
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); /* Sombra para resaltar */
+}
+
+.ground {
+  
+  width: 200%; /* Barra más corta */
+  height: 15px;
+  background: repeating-linear-gradient(
+    to right,
+    #736565 0%,
+    #594a4a 10%,
+    #736565 20%
+  ); /* Patrón para simular tierra */
+  animation: moveGround 3s linear infinite; /* Movimiento más lento */
+  margin-bottom: 1vw;
+ 
+}
+.texto{
+  font-family: "Kavoon", serif;
+  font-size: 2vw; 
+}
+
+
+@keyframes walk {
+  0% {
+    transform: translateX(0); /* Inicia en el borde izquierdo */
+  }
+  50% {
+    transform: translateX(200px); /* Cruza hasta el centro */
+  }
+  100% {
+    transform: translateX(300px); /* Sale del borde derecho */
+  }
+}
+
+@keyframes moveGround {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Nubes */
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden; /* Ocultar contenido sobrante */
+}
+
+.cloud {
+  position: absolute;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0); /* Gradiente suave */
+  border-radius: 50%; /* Forma circular */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  animation: moveClouds 6s linear infinite;
+}
+
+/* Crear nubes más elaboradas con múltiples círculos */
+.cloud:nth-child(1) {
+  top: 20%;
+  left: -150px;
+  width: 200px;
+  height: 100px;
+  animation-duration: 5s;
+}
+
+.cloud:nth-child(1)::before,
+.cloud:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 50%;
+}
+
+.cloud:nth-child(1)::before {
+  width: 100px;
+  height: 50px;
+  top: -30px;
+  left: 30px;
+}
+
+.cloud:nth-child(1)::after {
+  width: 120px;
+  height: 60px;
+  top: 20px;
+  left: 100px;
+}
+
+.cloud:nth-child(2) {
+  top: 35%;
+  left: -200px;
+  width: 250px;
+  height: 120px;
+  animation-duration: 6.5s;
+}
+
+.cloud:nth-child(2)::before,
+.cloud:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 50%;
+}
+
+.cloud:nth-child(2)::before {
+  width: 120px;
+  height: 60px;
+  top: -40px;
+  left: 40px;
+}
+
+.cloud:nth-child(2)::after {
+  width: 140px;
+  height: 70px;
+  top: 30px;
+  left: 130px;
+}
+
+.cloud:nth-child(3) {
+  top: 50%;
+  left: -250px;
+  width: 180px;
+  height: 90px;
+  animation-duration: 5s;
+}
+
+.cloud:nth-child(3)::before,
+.cloud:nth-child(3)::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 50%;
+}
+
+.cloud:nth-child(3)::before {
+  width: 80px;
+  height: 40px;
+  top: -20px;
+  left: 20px;
+}
+
+.cloud:nth-child(3)::after {
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  left: 80px;
+}
+
+.cloud:nth-child(4) {
+  top: 65%;
+  left: -300px;
+  width: 220px;
+  height: 110px;
+  animation-duration: 7s;
+}
+
+.cloud:nth-child(4)::before,
+.cloud:nth-child(4)::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 50%;
+}
+
+.cloud:nth-child(4)::before {
+  width: 110px;
+  height: 55px;
+  top: -25px;
+  left: 35px;
+}
+
+.cloud:nth-child(4)::after {
+  width: 130px;
+  height: 65px;
+  top: 25px;
+  left: 100px;
+}
+
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
