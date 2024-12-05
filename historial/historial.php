@@ -8,7 +8,6 @@ if (!isset($_SESSION['usuario_id'])) {
 }
 
 // Opcional: Obtener información del usuario para mostrar en la página
-$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +56,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
     <div class="cuadro">
 
-        <!-- Botón de Configuración (Engranaje) -->
          <div class="icon-container">
          <a href="../generales/configuracion/configuracion.php" class="icon">
          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
@@ -88,12 +86,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
       </script>
     </div>
-
-    
     <script src="../generales/musica/musica.js"></script>
     <script src="src-js/historial.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
 
 </body>
-
 </html>
