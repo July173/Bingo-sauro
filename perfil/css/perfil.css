@@ -184,13 +184,14 @@ body {
     
     
 }
-
+  
 .nombre{
     margin-top: 1vw;
     margin-left: -1vw;
     font-size: 2vw;
     
 }
+ 
 .dino{
     background-image: url(../../Generales/img/dinosaurio-cute.png);
     background-repeat: no-repeat;
