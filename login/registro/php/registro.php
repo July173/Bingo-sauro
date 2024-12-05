@@ -51,10 +51,11 @@ class Registrar {
             // Hashear la contraseña
             $passwordHash = password_hash($datos['password'], PASSWORD_DEFAULT);
             $monedas= 25;
-            // Insertar usuario con el token
-            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado, contador_monedas) 
-                     VALUES (?, ?, ?, ?, FALSE, ?)";
-            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token, $monedas];
+            $id_color_carton=5;
+            // Insertar usuario con el token    
+            $query = "INSERT INTO usuario (primer_nombre, correo, contrasena, token_verificacion, verificado, contador_monedas, id_color_carton) 
+                     VALUES (?, ?, ?, ?, FALSE, ?, ?)";
+            $params = [$datos['primer_nombre'], $datos['email'], $passwordHash, $token, $monedas, $id_color_carton];
 
             error_log("Parámetros de inserción: " . json_encode($params));
 
