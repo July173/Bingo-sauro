@@ -74,12 +74,12 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
                 <div>
                     <p>Ingresa la cantidad de monedas que vas a apostar </p>
-                    <input type="number" id="codigo" placeholder="Ingresa" class="codigo">
+                    <input type="number" id="monedas" placeholder="Ingresa" class="codigo">
                 </div>
                    <div>
                    <p>Ingresa la cantidad de cartones que quieres jugar </p>
-                    <input type="number" id="codigo" placeholder="Ingresa el código" class="codigo">
-                    <button onclick="unirseAPartida()" class="iniciar" id="redirigirJuego">Entrar</button>
+                    <input type="number" id="cartones" placeholder="Ingresa " class="codigo">
+                    <button class="iniciar" id="redirigirJuego">Entrar</button>
                 </div>
 
 
