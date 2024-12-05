@@ -56,13 +56,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
     </div>
 
-    <!-- Audio player -->
-    <audio id="audioPlayer">
-        <source src="../generales/musica/cant_hould_us.mp4" type="audio/mp4">
-        Tu navegador no soporta la reproducción de audio.
-    </audio>
-
-    <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../generales/musica/musica.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
     <script src="./src-js/comprar-avatar.js"></script>
 

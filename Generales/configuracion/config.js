@@ -32,9 +32,8 @@ document.getElementById('logoutButton').addEventListener('click', function () {
                 // Eliminar cualquier dato almacenado localmente
                 sessionStorage.clear();
                 localStorage.clear();
-                alert(data.mensaje);
-
-                // Redirigir al usuario al inicio de sesión
+                
+                // Redirigir al usuario al inicio de sesión sin mensaje
                 window.location.href = "./../../login/bienvenido/pag2.html";
             }
         })

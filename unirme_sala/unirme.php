@@ -94,7 +94,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     <script src="js/unirse_partida.js"></script>
     <script src="js/unirme.js"></script>
-    <script src="../generales/monedas/js/obtener-monedas.js"></script>
+    <script src="../generales/musica/musica.js"></script>
 
 </body>
 

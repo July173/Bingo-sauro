@@ -86,7 +86,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <button class="enviar" type="submit">Cambiar</button>
       </form>
 
-      <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="../generales/musica/musica.js"></script>
       <script src="./src-js/cambiar-correo.js"></script>
 </body>
 

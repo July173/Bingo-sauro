@@ -1,4 +1,4 @@
-let audio = new Audio('/Bingo-sauro/generales/musica/apt.mp3');
+let audio = new Audio('/Bingo-sauro/generales/musica/bingo-musica.mp3');
 audio.loop = true; // Repetir la música
 
 // Verificar el estado de la música en localStorage
@@ -44,10 +44,11 @@ audio.addEventListener('pause', function() {
 // Reproducir música al cargar la página
 window.addEventListener('load', function() {
     if (localStorage.getItem('musicPlaying') === 'true') {
-        const position = localStorage.getItem('musicPosition') || 0;
-        console.log('Restaurando posición:', position); // Verifica la posición restaurada
-        audio.currentTime = position; // Establecer la posición
-        audio.play();
+        audio.play().then(() => {
+            console.log('Música iniciada desde localStorage');
+        }).catch(error => {
+            console.error('Error al reproducir la música:', error);
+        });
     }
 
     // Asegúrate de que el botón de alternar música esté configurado correctamente

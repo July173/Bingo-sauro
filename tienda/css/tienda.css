@@ -517,3 +517,32 @@ body {
   background-color: gray;
   color: white;
 }
+
+
+.message-box {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.message-box.info {
+  background-color: #d9edf7;
+  color: #31708f;
+}
+
+.message-box.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.message-box.warning {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+
+.message-box.error {
+  background-color: #f2dede;
+  color: #a94442;
+}

@@ -32,22 +32,20 @@ body {
 /* Loader del dinosaurio */
 .loader-dino {
   position: relative;
-  width: 300px; /* Ancho más corto */
-  height: 150px;
+  width: 40vw; /* Ancho más corto */
+  height: 20vw;
   overflow: hidden; /* Oculta lo que se sale del contenedor */
 }
-
-.dino {
-  width: 150px;
-  position: absolute;
-  top: -1vw;
+.dino{
+  width: 100px;
+  top: 30px;
   left: -120px; /* Inicia fuera del contenedor */
   animation: walk 5s linear infinite, bounce 0.6s ease-in-out infinite; /* Más lento */
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); /* Sombra para resaltar */
 }
 
 .ground {
-  position: absolute;
+  
   width: 200%; /* Barra más corta */
   height: 15px;
   background: repeating-linear-gradient(
@@ -56,9 +54,15 @@ body {
     #594a4a 10%,
     #736565 20%
   ); /* Patrón para simular tierra */
-  bottom: 0;
   animation: moveGround 3s linear infinite; /* Movimiento más lento */
+  margin-bottom: 1vw;
+ 
 }
+.texto{
+  font-family: "Kavoon", serif;
+  font-size: 2vw; 
+}
+
 
 @keyframes walk {
   0% {
@@ -88,6 +92,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
   overflow: hidden; /* Ocultar contenido sobrante */
 }
 
@@ -219,6 +224,7 @@ body {
   top: 25px;
   left: 100px;
 }
+
 
 @keyframes moveClouds {
   0% {

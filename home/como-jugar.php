@@ -82,7 +82,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
 
    
-
+    <script src="../generales/musica/musica.js"></script>
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
 </body>
 

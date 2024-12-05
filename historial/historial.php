@@ -8,7 +8,6 @@ if (!isset($_SESSION['usuario_id'])) {
 }
 
 // Opcional: Obtener información del usuario para mostrar en la página
-$nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +56,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     </div>
     <div class="cuadro">
 
-        <!-- Botón de Configuración (Engranaje) -->
          <div class="icon-container">
          <a href="../generales/configuracion/configuracion.php" class="icon">
          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
@@ -88,17 +86,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
       </script>
     </div>
-
-    <!-- Audio que queremos controlar -->
-    <audio id="audioPlayer">
-      <source src="../generales/musica/dinoMusica.mp3" type="audio/mp3">
-      Tu navegador no soporta la reproducción de audio.
-    </audio>
-
-    <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../generales/musica/musica.js"></script>
     <script src="src-js/historial.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
 
 </body>
-
 </html>
