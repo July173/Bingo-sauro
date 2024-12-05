@@ -129,8 +129,8 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
     </div>
 
 
-
-<script src="../generales/bootstrap/js/bootstrap.bundle.min.js"></script> 
+    <script src="../generales/musica/musica.js"></script>
+    <script src="../generales/bootstrap/js/bootstrap.bundle.min.js"></script> 
     <script src="src-js/amigos.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
 

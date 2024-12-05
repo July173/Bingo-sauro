@@ -84,18 +84,12 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
             El nombre de usuario debe tener al menos 5 caracteres y no ser ofensivo.
            </div>
         </div>
-
-            <!-- Audio que queremos controlar -->
-            <audio id="audioPlayer">
-              <source src="/generales/musica/dinoMusica.mp3" type="audio/mp3">
-              Tu navegador no soporta la reproducción de audio.
-            </audio>
-
-            <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
+        
+        <button id="redirigirIniciar" class="enviar" type="submit">Cambiar</button>
 
       </form>
 
-      <script src="/generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="../generales/musica/musica.js"></script>
       <script src="./src-js/cambiar-nombre.js"></script>
 </body>
 

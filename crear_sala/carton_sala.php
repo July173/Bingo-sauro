@@ -72,7 +72,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
   
 
-    
+    <script src="../generales/musica/musica.js"></script>
     <script src="js/compra_carton-sala.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
 

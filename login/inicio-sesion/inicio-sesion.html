@@ -83,13 +83,14 @@
       <div id="redirigirRegistro" class="registrar text-light ">Registrarse</div>
       <img src="../../generales/img/bingo.png" class="bingo" alt="Bolas que dicen bingo">
 
-      <!-- Audio que queremos controlar -->
-      <audio id="audioPlayer" loop>
-        <source src="../../generales/musica/dinoMusica.mp3" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
-      </audio>
-
-      <script src="../../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="../../generales/musica/musica.js"></script>
+      <script>
+          document.body.addEventListener('click', function() {
+              audio.play().catch(error => {
+                  console.error('Error al intentar reproducir la música:', error);
+              });
+          });
+      </script>
       <script src="src-js/iniciar-sesion.js"></script>
       <script src="src-js/validation-iniciar-sesion.js"></script>
       <script src="../../generales/js_generales/ver-contrasña.js"></script>

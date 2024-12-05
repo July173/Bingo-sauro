@@ -93,5 +93,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             .catch(error => console.error('Error:', error));
         }
     </script>
+
+    <script src="../generales/musica/musica.js"></script>
 </body>
 </html>

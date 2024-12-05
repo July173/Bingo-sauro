@@ -14,6 +14,8 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">12
 
@@ -126,13 +128,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
       </div>
     </div>
 
-    <!-- Audio que queremos controlar -->
-    <audio id="audioPlayer" loop>
-      <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
-      Tu navegador no soporta la reproducción de audio.
-  </audio>
-
-  <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
+    <script src="../generales/musica/musica.js"></script>
     <script src="src-js/perfil.js"></script>
     <script src="src-js/modales.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
