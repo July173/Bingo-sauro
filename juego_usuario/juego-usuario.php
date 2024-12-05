@@ -68,10 +68,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 <div class="atras">
           <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
       </div>
-            <div class="icon" data-bs-toggle="modal" data-bs-target="#modalPregunta">
-                <img width="
-        40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
-            </div>
+          
 
 
 

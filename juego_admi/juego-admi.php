@@ -66,10 +66,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
       </div>
 
-      <div class="icon" data-bs-toggle="modal" data-bs-target="#modalPregunta">
-        <img width="
-        40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
-      </div>
+      
 <!-- Modal de salida  -->
     <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
        aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -113,7 +110,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
         <div class="">
           <button class="verNumeeros">Ver numeros mostrados </button>
-          <p>Minimo de dino-monedas para apostar:</p>
+          <p id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
 
         </div>
         <div class="flex">
@@ -147,6 +144,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <!-- <script src="js/movimiento-balotera.js"></script> -->
         <script src="js/modal.js"></script>
         <script src="js/obtener_bola.js"></script>
+        <script src="js/juego_admi.js"></script>
 
 </body>
 

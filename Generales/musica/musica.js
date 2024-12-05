@@ -1,4 +1,4 @@
-let audio = new Audio('/Bingo-sauro/generales/musica/bingo-musica.mp3');
+let audio = new Audio('../generales/musica/bingo-musica.mp3');
 audio.loop = true; // Repetir la música
 
 // Verificar el estado de la música en localStorage
