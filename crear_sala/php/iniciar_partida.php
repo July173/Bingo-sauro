@@ -108,11 +108,9 @@ try {
         ];
 
         $conexion->insert($queryRol, $paramsRol);
-        error_log("paso todo bien");
         echo json_encode(['success' => true, 'message' => 'Partida iniciada correctamente y rol registrado']);      
         exit;
     } else {
-        error_log("No es post");
         echo json_encode(['success' => false, 'message' => 'Método no permitido']);
         exit;
     }

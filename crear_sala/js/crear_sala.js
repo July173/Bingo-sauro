@@ -134,13 +134,11 @@ document.querySelector('.iniciar').addEventListener('click', function (event) {
   })
     .then(response => {
       if (!response.ok) {
-        alert("No es ok");
         throw new Error('Error en la respuesta del servidor');
       }
       return response.json(); // Esto convierte la respuesta a JSON
     })
     .then(data => {
-      alert("porque si");
       console.log('Respuesta del servidor (JSON):', data);
 
       if (data.success) {
