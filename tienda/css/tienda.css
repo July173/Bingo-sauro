@@ -165,6 +165,13 @@ body {
   width: auto;
   height: auto;
 }
+ .seleccionado {
+  background-color: #4a4a4a; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  cursor: default; /* No clickeable */
+  pointer-events: none; /* Desactiva el clic */
+}
+
 .price-button {
   position: relative;
   font-family: "Kavoon", serif;
