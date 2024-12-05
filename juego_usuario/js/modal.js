@@ -11,7 +11,7 @@ openModal.addEventListener('click', () => {
 // Función para eliminar el código de la partida
 async function eliminarCodigoPartida(codigoPartida) {
     try {
-        const response = await fetch('../php/salir-partida.php', {
+        const response = await fetch('./php/salir-partida.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

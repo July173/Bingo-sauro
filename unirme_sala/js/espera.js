@@ -27,13 +27,13 @@ function verificarEstadoPartida() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert(data.message);
+                console.log(data.message);
                 if (data.redirect) {
                     // Si la partida está iniciada, redirigir a la nueva página
                     window.location.href = '../juego_usuario/form-jugador.php';  // Aquí coloca la URL de la página a la que quieres redirigir
                 }
             } else {
-                alert(data.message); // Mostrar mensaje si no está iniciada
+                console.log(data.message); // Mostrar mensaje si no está iniciada
             }
         })
         .catch(error => {
