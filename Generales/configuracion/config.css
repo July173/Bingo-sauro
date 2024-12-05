@@ -60,13 +60,13 @@ body, html {
 
 .cuadro {
     background-color: rgba(14, 78, 62, 0.5);
-    height: 43vw;   
+    height: 43vw;
+    width: 43vw;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 45vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
@@ -79,7 +79,7 @@ body, html {
 .settings-title {
     font-family: "Kavoon", serif;
     color:  rgb(0, 255, 0);
-    font-size: 2.4vw;
+    font-size: 3.5vw;
     margin: 0;
 }
 .close-btn {
@@ -87,8 +87,8 @@ body, html {
     border: none;
     cursor: pointer;
     padding: 0;
-    margin-left: 40vw;
-    margin-top: -7vw;
+    margin-left: 39vw;
+    margin-top: -12vw;
     z-index: 9999;
     position: relative;
 }
@@ -100,10 +100,10 @@ body, html {
 .dinochibi{
     background-image: url("../../Generales/img/dinosaurio-cute.png");
     background-size: 100%;
-    width: 16vw;
-    height: 16vw;
+    width: 20vw;
+    height: 20vw;
     margin-right: 25vw;
-    margin-top: 22vw;
+    margin-top: 20vw;
     position: absolute;
     margin-left: -5vw;
 }
@@ -128,21 +128,20 @@ body, html {
     background-color: #FFF9C4;
     border-radius: 10px;
     padding: 10px;
-    width: 25vw;
-    height: 4vw;
-    font-size: 1vw;
+    width: 27vw;
+    height: 4.5vw;
     margin-left: -3vw;
 }
 .option-text {
-    font-size: 30px;
+    font-size: 2vw;
     color: black;
-    margin-left: -6vw;
+    margin-left: -8vw;
 }
 
 .option-text-2 {
-    font-size: 30px;
+    font-size: 2vw;
     color: black;
-    margin-left: -7.4vw;
+    margin-left: -10vw;
 }
 
 .botonn {
@@ -151,10 +150,10 @@ body, html {
     text-align: left;
     padding: 12px;
     margin-bottom: 10px;
-    width: 25vw;
-    height: 4vw;
+    width: 27vw;
+    height: 4.5vw;
     border-radius: 10px;
-    font-size: 1.5vw;
+    font-size: 1.9vw;
     cursor: pointer;
     margin-left: -3vw;
 }

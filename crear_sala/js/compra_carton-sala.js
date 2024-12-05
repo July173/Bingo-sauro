@@ -26,6 +26,27 @@ document.addEventListener("DOMContentLoaded", function () {
         cartonImg.style.height = '18vw'; // Ajusta según sea necesario
         cartonImg.style.borderRadius = '2rem'; // Redondear bordes
         cartonContainer.appendChild(cartonImg);
+        
+        function adjustAvatarSize() {
+            const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+          
+            if (isPortrait) {
+              cartonImg.style.width = '60vw'; // Ajustes para modo portrait
+              cartonImg.style.height = '60vw';
+              cartonImg.style.marginTop = '30vw';
+              
+            } else {
+                cartonImg.style.width = '28vw'; // Ajustes para modo landscape
+                cartonImg.style.height = '28vw';
+              
+            }
+          }
+          // Escucha cambios en la orientación
+          const mediaQueryList = window.matchMedia('(orientation: portrait)');
+          mediaQueryList.addEventListener('change', adjustAvatarSize);
+          
+          // Llama a la función inicialmente para configurar los estilos
+          adjustAvatarSize();
 
         // Mostrar el precio del cartón
         precioContainer.textContent = ` ${selectedCarton.price}`; 

@@ -27,9 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
       const avatarImg = document.createElement('img');
       avatarImg.src = selectedAvatar.src;
       avatarImg.alt = "Avatar a comprar";
-      avatarImg.style.width = '28vw';
-      avatarImg.style.height = '28vw';
+      avatarImg.style.width = '25vw';
+      avatarImg.style.height = '25vw';
       avatarImg.style.borderRadius = '3rem';
+
+      function adjustAvatarSize() {
+        const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+      
+        if (isPortrait) {
+          avatarImg.style.width = '80vw'; // Ajustes para modo portrait
+          avatarImg.style.height = '80vw';
+          avatarImg.style.marginTop = '30vw';
+          
+        } else {
+          avatarImg.style.width = '28vw'; // Ajustes para modo landscape
+          avatarImg.style.height = '28vw';
+          
+        }
+      }
+      
+      // Escucha cambios en la orientación
+      const mediaQueryList = window.matchMedia('(orientation: portrait)');
+      mediaQueryList.addEventListener('change', adjustAvatarSize);
+      
+      // Llama a la función inicialmente para configurar los estilos
+      adjustAvatarSize();
 
       avatarContainer.appendChild(avatarImg);
       precioContainer.textContent = `${selectedAvatar.price}`;
