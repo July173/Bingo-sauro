@@ -1,109 +1,161 @@
-// Cargar cartones desde el archivo PHP
-fetch('./php/obtener_cartones.php')
-  .then(response => response.json())
-  .then(data => {
-    const contenedorCartonesSala = document.getElementById('contenedorCartonesSala');
-    let flechaVisible = null; // Variable para almacenar la flecha actualmente visible
-    let cartónSeleccionado = null; // Variable para almacenar el cartón seleccionado
+  let cartonSeleccionado = null; // Variable global para el cartón seleccionado
+  let botonSeleccionado = null; // Variable global para el botón seleccionado
 
-    // Verificar si la respuesta contiene los cartones
-    if (data.cartones && data.cartones.length > 0) {
-      data.cartones.forEach(carton => {
-        // Crear un contenedor para cada cartón
-        const cartonDiv = document.createElement('div');
-        cartonDiv.classList.add('cartonn-sala');
-        if (carton.locked) {
-          cartonDiv.classList.add('locked'); // Añadir clase para estilos de bloqueado
-        }
+  // Asegúrate de que el DOM esté completamente cargado antes de ejecutar el script
+  document.addEventListener('DOMContentLoaded', function () {
+    // Cargar cartones desde el archivo PHP
+    fetch('./php/obtener_cartones.php')
+      .then(response => response.json())
+      .then(data => {
+        const contenedorCartonesSala = document.getElementById('contenedorCartonesSala');
+        let flechaVisible = null; // Variable para la flecha actualmente visible
 
-        // Crear el elemento de imagen del cartón
-        const cartonImg = document.createElement('img');
-        cartonImg.src = carton.src;
-        cartonImg.alt = carton.alt;
-        cartonImg.className = carton.locked ? 'carton comprar' : 'carton comprado';
-
-        // Crear el elemento de candado (solo si está bloqueado)
-        if (carton.locked) {
-          const candado = document.createElement('i');
-          candado.className = 'fa-solid fa-lock candado';
-          cartonDiv.appendChild(candado);
-        }
-
-        // Crear el elemento de flecha (inicialmente oculto)
-        const flecha = document.createElement('img');
-        flecha.src = '../Generales/img/chulito.png'; // Cambia esto a la ruta de tu imagen de flecha
-        flecha.classList.add('flecha');
-        flecha.style.display = 'none'; // Ocultamos la flecha inicialmente
-
-        // Añadir evento click para cartones bloqueados (redirigir a compra)
-        if (carton.locked) {
-          cartonDiv.addEventListener('click', () => {
-            localStorage.setItem('selectedCarton', JSON.stringify(carton));
-            window.location = `./carton_sala.php`;
-          });
-        }
-
-        // Añadir evento click para cartones desbloqueados (mostrar la flecha)
-        if (!carton.locked) {
-          cartonImg.addEventListener('click', (event) => {
-            event.stopPropagation(); // Evita activar el evento de redirección
-
-            // Ocultar la flecha actualmente visible, si existe
-            if (flechaVisible && flechaVisible !== flecha) {
-              flechaVisible.style.display = 'none';
+        if (data.cartones && data.cartones.length > 0) {
+          data.cartones.forEach(carton => {
+            const cartonDiv = document.createElement('div');
+            cartonDiv.classList.add('cartonn-sala');
+            if (carton.locked) {
+              cartonDiv.classList.add('locked'); // Añadir clase para estilos de bloqueado
             }
 
-            // Mostrar u ocultar la flecha sobre el cartón actual
-            flecha.style.display = flecha.style.display === 'none' ? 'block' : 'none';
+            const cartonImg = document.createElement('img');
+            cartonImg.src = carton.src;
+            cartonImg.alt = carton.alt;
+            cartonImg.className = carton.locked ? 'carton comprar' : 'carton comprado';
 
-            // Actualizar la variable de flechaVisible
-            flechaVisible = flecha.style.display === 'block' ? flecha : null;
+            if (carton.locked) {
+              const candado = document.createElement('i');
+              candado.className = 'fa-solid fa-lock candado';
+              cartonDiv.appendChild(candado);
+            }
 
-            // Guardar la información del cartón seleccionado
-            cartónSeleccionado = flechaVisible ? carton : null;
+            const flecha = document.createElement('img');
+            flecha.src = '../Generales/img/chulito.png';
+            flecha.classList.add('flecha');
+            flecha.style.display = 'none';
+
+            if (carton.locked) {
+              cartonDiv.addEventListener('click', () => {
+                localStorage.setItem('selectedCarton', JSON.stringify(carton));
+                window.location = `./carton_sala.php`;
+              });
+            } else {
+              cartonImg.addEventListener('click', (event) => {
+                event.stopPropagation();
+
+                if (flechaVisible && flechaVisible !== flecha) {
+                  flechaVisible.style.display = 'none';
+                }
+
+                flecha.style.display = flecha.style.display === 'none' ? 'block' : 'none';
+                flechaVisible = flecha.style.display === 'block' ? flecha : null;
+                cartonSeleccionado = flechaVisible ? carton : null;
+              });
+            }
+
+            cartonDiv.appendChild(cartonImg);
+            cartonDiv.appendChild(flecha);
+            contenedorCartonesSala.appendChild(cartonDiv);
           });
+        } else {
+          contenedorCartonesSala.innerHTML = '<p>No hay cartones disponibles.</p>';
         }
+      })
+      .catch(error => console.error('Error al cargar los cartones:', error));
 
-        // Añadir los elementos al contenedor del cartón
-        cartonDiv.appendChild(cartonImg);
-        cartonDiv.appendChild(flecha);
-
-        // Agregar el contenedor del cartón al contenedor principal
-        contenedorCartonesSala.appendChild(cartonDiv);
+    // Validación para botones
+    const botones = document.querySelectorAll('.botonJugador, .botonAdministrador');
+    botones.forEach(boton => {
+      boton.addEventListener('click', () => {
+        botones.forEach(b => b.classList.remove('activo'));
+        boton.classList.add('activo');
+        botonSeleccionado = boton.classList.contains('botonJugador') ? 'jugador' : 'administrador';
       });
-    } else {
-      // Si no hay cartones, mostrar un mensaje o manejar el caso
-      contenedorCartonesSala.innerHTML = '<p>No hay cartones disponibles.</p>';
-    }
-  })
-  .catch(error => console.error('Error al cargar los cartones:', error));
+    });
 
+    // Validaciones con el botón de iniciar
+    const iniciarBtn = document.querySelector('.iniciar');
+    iniciarBtn.addEventListener('click', function (event) {
+      const monedasInput = document.querySelector('.numMonedasPorJugador');
+      const cartonesInput = document.querySelector('.numCartonesPorJugador');
 
+      if (!monedasInput.value.trim() || !cartonesInput.value.trim()) {
+        event.preventDefault();
+        alert('Debe llenar todos los espacios antes de iniciar la partida.');
+        return;
+      }
 
-// Variable para almacenar el botón seleccionado
-let botonSeleccionado = null;
-const botones = document.querySelectorAll('.botonJugador, .botonAdministrador');
+      if (!cartonSeleccionado || !botonSeleccionado) {
+        event.preventDefault();
+        alert('Debe seleccionar un cartón y un botón antes de iniciar la partida.');
+        return;
+      }
 
-botones.forEach(boton => {
-  boton.addEventListener('click', () => {
-    // Elimina la clase 'activo' de todos los botones
-    botones.forEach(b => b.classList.remove('activo'));
-    // Agrega la clase 'activo' solo al botón clicado
-    boton.classList.add('activo');
-
-    // Actualiza la variable con el botón seleccionado
-    botonSeleccionado = boton.classList.contains('botonJugador') ? 'jugador' : 'administrador';
-
-    verjugadorapostar();
+      console.log('Campos completos, partida iniciada.');
+      console.log('Cartón seleccionado:', cartonSeleccionado, 'Botón seleccionado:', botonSeleccionado);
+    });
   });
+
+ // Evento para iniciar partida con datos enviados al servidor
+document.querySelector('.iniciar').addEventListener('click', function (event) {
+  const monedasInput = document.querySelector('.numMonedasPorJugador');
+  const cartonesInput = document.querySelector('.numCartonesPorJugador');
+
+  // Validaciones previas
+  if (!monedasInput.value.trim() || !cartonesInput.value.trim()) {
+    event.preventDefault();
+    alert('Debe llenar todos los espacios antes de iniciar la partida.');
+    return;
+  }
+
+  if (!cartonSeleccionado || !botonSeleccionado) {
+    event.preventDefault();
+    alert('Debe seleccionar un cartón y un botón antes de iniciar la partida.');
+    return;
+  }
+
+  // Logs para verificar los datos
+  console.log('Campos completos, partida iniciada.');
+  console.log('Cartón seleccionado:', cartonSeleccionado.id);
+  console.log('Botón seleccionado:', botonSeleccionado);
+  console.log('Código de partida:', localStorage.getItem('codigoPartida'));
+
+  // Enviar datos al servidor
+  fetch('./php/iniciar_partida.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      monedasPorJugador: monedasInput.value,
+      cartonesPorJugador: cartonesInput.value,
+      cartonSeleccionado: cartonSeleccionado.id, // Asegúrate de que `cartonSeleccionado` tiene un id
+      botonSeleccionado: botonSeleccionado,
+      codigoPartida: localStorage.getItem('codigoPartida'),
+    }),
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error en la respuesta del servidor');
+      }
+      return response.json(); // Esto convierte la respuesta a JSON
+    })
+    .then(data => {
+      console.log('Respuesta del servidor (JSON):', data);
+
+      if (data.success) {
+        alert(data.message);
+
+        if (botonSeleccionado === 'jugador') {
+          window.location.href = '../juego_admi_jugador/juego-admi.php';
+        } else if (botonSeleccionado === 'administrador') {
+          window.location.href = './pantalla_administrador.php';
+        }
+      } else {
+        alert(data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error al iniciar partida:', error);
+      alert('Error al procesar la respuesta del servidor.');
+    });
 });
 
-const verjugadorapostar = () => {
-  const contenedorJugador = document.querySelector('.contenedorapostarjugador');
-  
-  if (botonSeleccionado === 'jugador') {
-      contenedorJugador.classList.remove('hidden'); // Muestra los divs
-  } else {
-      contenedorJugador.classList.add('hidden'); // Oculta los divs
-  }
-};

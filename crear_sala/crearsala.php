@@ -30,7 +30,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
   <script src="../generales/bootstrap/js/bootstrap.js"></script>4
 
 
-  
+
 
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 </head>
@@ -148,7 +148,6 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
             </input>
           </div>
         </div>
-
         <div class="cuadrodeabajo">
           <h3>Jugadores</h3>
           <!-- Contenedor de jugadores -->
@@ -156,12 +155,12 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
     <!-- Aquí se agregarán los jugadores -->
           </div>
         </div>
-
+<!-- 
         <div class="contenedorapostarjugador hidden">
           <p class="Ndinomontexto">¿Cuantas Dino-monedas apostaras?</p>
           <input type="number" class="numMonedas" placeholder="#" >
           </input>
-        </div>
+        </div> -->
 
         <button class="iniciar">Iniciar partida</button>
       </div>
@@ -175,6 +174,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
   <script src="js/crear_sala.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/actualizar_jugadores.js"></script>
+  <script src="js/validar-datos.js"></script>
 
 
   <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>

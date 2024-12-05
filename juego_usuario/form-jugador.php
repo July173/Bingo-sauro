@@ -10,22 +10,19 @@ if (!isset($_SESSION['usuario_id'])) {
 
 // Opcional: Obtener información del usuario para mostrar en la página
 $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
-$id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crearsala</title>
+    <title>Form</title>
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
-    <link rel="stylesheet" href="css/juego-usuario.css">
     <link rel="stylesheet" href="../perfil/css/modales.css">
+    <link rel="stylesheet" href="./css/fomr.css">
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -64,34 +61,42 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
                 cargarContenido();
             </script>
 
-          
-<div class="atras">
+            <div class="atras">
           <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
       </div>
+
+            
             <div class="icon" data-bs-toggle="modal" data-bs-target="#modalPregunta">
                 <img width="
         40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
             </div>
 
+            <div class="logo"></div>
 
 
             <div class="contenedor-gris">
-                <h6>Tu eres un jugador </h6>
-                <button class="bingo">Bingo</button>
-                <div class="flex">
-                <h1 style="text-align: center; background-color: white">Administrador:</h1>
-                <p>Apostaste: dino-monedas</p>
-                </div>
-                <button onclick=>ver numeros salidos</button>
-                <div id="bingo-carton"></div>
 
-                <div class="cuadroAmigos"></div>
-                >
-                <img src="" alt="">
-                
+
+                <div>
+                    <p>Ingresa la cantidad de monedas que vas a apostar </p>
+                    <input type="number" id="codigo" placeholder="Ingresa" class="codigo">
+                </div>
+                   <div>
+                   <p>Ingresa la cantidad de cartones que quieres jugar </p>
+                    <input type="number" id="codigo" placeholder="Ingresa el código" class="codigo">
+                    <button onclick="unirseAPartida()" class="iniciar" id="redirigirJuego">Entrar</button>
+                </div>
+
+
             </div>
+
+
         </div>
-        <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+
+    </div>
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
        aria-labelledby="exampleModalLabel" aria-hidden="true">
        <div class="modal-dialog modal-sm">
          <div class="modal-content">
@@ -107,11 +112,9 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
          </div>
        </div>
      </div>
-
-        <script src="../generales/musica/activar_y_desactivar_musica/musica.js"></script>
-        <script src="js/juego-usuario.js"></script>
-        <script src="../generales/monedas/js/obtener-monedas.js"></script>
-        <script src="js/modal.js"></script>
+    <script src="js/form.js"></script>
+    <script src="../generales/monedas/js/obtener-monedas.js"></script>
+    <script src="js/modal.js"></script>
 
 </body>
 
