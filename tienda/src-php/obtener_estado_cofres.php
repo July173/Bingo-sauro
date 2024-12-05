@@ -63,12 +63,19 @@ try {
         }
 
         // Modificar el array de estados para incluir el estado del cofre
-$estados[] = [
-    'fecha' => $dia,
-    'monedas' => $monedas,
-    'encontrado' => $encontrado,
-    'estado' => !$encontrado ? ($dia === $dias[1] ? 'disponible' : ($dia === $dias[2] ? 'mañana' : 'pasado')) : 'reclamado'
-];
+        $estados[] = [
+            'fecha' => $dia,
+            'monedas' => $monedas,
+            'encontrado' => $encontrado,
+            'dia' => $dia === $dias[1] ? 'HOY' : ($dia === $dias[2] ? 'MAÑANA' : 'AYER'),  // Corregir $fecha por $dias
+            'mensaje' => $encontrado 
+                ? "El día de $dia, ya reclamaste tu recompensa."
+                : ($dia === $dias[1] 
+                    ? "No has reclamado tu recompensa, aún estás a tiempo." 
+                    : ($dia === $dias[2] 
+                        ? "Mañana podrás reclamar $monedas monedas, te esperamos." 
+                        : "El día de $dia, no reclamaste tu recompensa."))
+        ];
 
     }
 

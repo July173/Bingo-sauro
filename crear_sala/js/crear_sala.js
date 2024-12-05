@@ -147,7 +147,7 @@ document.querySelector('.iniciar').addEventListener('click', function (event) {
         if (botonSeleccionado === 'jugador') {
           window.location.href = '../juego_admi_jugador/juego-admi.php';
         } else if (botonSeleccionado === 'administrador') {
-          window.location.href = './pantalla_administrador.php';
+          window.location.href = '../juego_admi/juego-admi.php';
         }
       } else {
         alert(data.message);

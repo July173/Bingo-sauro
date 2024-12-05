@@ -12,99 +12,58 @@ try {
     $usuario_id = $_SESSION['usuario_id'];
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Reclamar recompensa diaria
-        $fecha = $_POST['fecha'] ?? null;
+        // Leer el cuerpo de la solicitud
+        $data = json_decode(file_get_contents('php://input'), true);
 
-        if (!$fecha) {
-            throw new Exception('Fecha no proporcionada');
+        // Obtener la fecha y cantidadMonedas desde el JSON recibido
+        $fecha = $data['fecha'] ?? null;
+        $cantidadMonedas = $data['cantidadMonedas'] ?? null;
+
+        if (!$fecha || !$cantidadMonedas) { // Asegúrate de que cantidadMonedas también esté presente
+            throw new Exception('Fecha o monedas no proporcionada');
         }
 
-        // Insertar o actualizar la recompensa diaria en el historial
+        // Insertar recompensa diaria en el historial
         $query = "
-            INSERT INTO historial_recompensa_diaria (id_usuario, fecha_recompensa, cantidad_monedas, estado)
-            VALUES (?, ?, ?, 1)
-            ON DUPLICATE KEY UPDATE cantidad_monedas = cantidad_monedas + VALUES(cantidad_monedas), estado = 1
+            INSERT INTO historial_recompensa_diaria (id_usuario, fecha_recompensa, cantidad_monedas)
+            VALUES (?, ?, ?)
         ";
-        $params = [$usuario_id, $fecha, 10];
-        $result = $conexion->execute($query, $params);
+        $params = [$usuario_id, $fecha, $cantidadMonedas];
+        $ultimo_id_insertado = $conexion->insert($query, $params);
 
-        if (!$result) {
+        if (!$ultimo_id_insertado) {
             throw new Exception('Error al ejecutar la consulta para reclamar recompensa');
         }
 
-        // Obtener monedas de la tabla recompensa_diaria
-        $dia_semana = date('N', strtotime($fecha));
-        $recompensa_query = "
-            SELECT monedas_diarias 
-            FROM recompensa_diaria 
-            WHERE dia_semana = ?
+        // Consultar el contador de monedas del usuario
+        $query_usuario = "
+            SELECT contador_monedas 
+            FROM usuario 
+            WHERE id_usuario = ?
         ";
-        $recompensa_result = $conexion->select($recompensa_query, [$dia_semana]);
+        $usuario_result = $conexion->select($query_usuario, [$usuario_id]);
 
-        $monedas_recompensa = $recompensa_result[0]['monedas_diarias'] ?? 0;
-
-        echo json_encode(['success' => true, 'monedas' => 10, 'monedas_recompensa' => $monedas_recompensa]);
-    } elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        // Obtener el estado de los cofres para ayer, hoy y mañana
-        $hoy = new DateTime();
-        $dias = [
-            $hoy->modify('-1 day')->format('Y-m-d'), // Ayer
-            (new DateTime())->format('Y-m-d'), // Hoy
-            $hoy->modify('+2 day')->format('Y-m-d') // Mañana
-        ];
-
-        // Consulta para verificar el estado de cada día
-        $placeholders = implode(',', array_fill(0, count($dias), '?'));
-        $query = "
-            SELECT 
-                DATE(h.fecha_recompensa) as fecha,
-                h.cantidad_monedas as monedas
-            FROM historial_recompensa_diaria h
-            WHERE h.id_usuario = ? AND DATE(h.fecha_recompensa) IN ($placeholders)
-        ";
-
-        $params = array_merge([$usuario_id], $dias);
-        $result = $conexion->select($query, $params);
-
-        // Procesar resultados
-        $estados = [];
-        foreach ($dias as $dia) {
-            $encontrado = false;
-            $monedas = 0;
-            foreach ($result as $fila) {
-                if ($fila['fecha'] === $dia) {
-                    $monedas = $fila['monedas'];
-                    $encontrado = true;
-                    break;
-                }
-            }
-
-            if (!$encontrado) {
-                // Si no se encontró en historial_recompensa_diaria, consultar recompensa_diaria
-                $dia_semana = date('N', strtotime($dia));
-                $recompensa_query = "
-                    SELECT monedas_diarias 
-                    FROM recompensa_diaria 
-                    WHERE id_recompensa = ?
-                ";
-                $recompensa_result = $conexion->select($recompensa_query, [$dia_semana]);
-                $monedas = $recompensa_result[0]['monedas_diarias'] ?? 0;
-            }
-
-            // Modificar el array de estados para incluir el estado del cofre
-            $estados[] = [
-                'fecha' => $dia,
-                'monedas' => $monedas,
-                'encontrado' => $encontrado,
-                'estado' => !$encontrado ? ($dia === $dias[1] ? 'disponible' : ($dia === $dias[2] ? 'mañana' : 'pasado')) : 'reclamado'
-            ];
+        if (empty($usuario_result)) {
+            throw new Exception('Usuario no encontrado');
         }
 
-        echo json_encode(['success' => true, 'dias' => $estados]);
+        // Sumar la cantidad de monedas
+        $contador_monedas_actual = $usuario_result[0]['contador_monedas'] ?? 0;
+        $nuevo_contador_monedas = $contador_monedas_actual + $cantidadMonedas;
+
+        // Actualizar el contador de monedas del usuario
+        $query_update = "
+            UPDATE usuario 
+            SET contador_monedas = ?
+            WHERE id_usuario = ?
+        ";
+        $params_update = [$nuevo_contador_monedas, $usuario_id];
+        $conexion->update($query_update, $params_update);
+
+        echo json_encode(['success' => true, 'monedas' => $cantidadMonedas]);
     } else {
         throw new Exception('Método HTTP no soportado');
     }
 } catch (Exception $e) {
     echo json_encode(['error' => $e->getMessage()]);
 }
-?>
