@@ -206,6 +206,11 @@ body {
     text-align: center;
     font-weight: bold;
   }
+  .list-group-item{
+    font-family: "Kavoon", serif;
+    color: #000000;
+    font-size: 2vw;
+    }
 
 
 @media (orientation:portrait) {
