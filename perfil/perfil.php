@@ -14,6 +14,8 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">12
 
