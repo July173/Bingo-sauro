@@ -1,57 +1,57 @@
-const openModal = document.getElementById('openModal');
-const yesBtn = document.getElementById('yesBtn');
-const noBtn = document.getElementById('noBtn');
-const modal = new bootstrap.Modal(document.getElementById('questionModal'));
+    const openModal = document.getElementById('openModal');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const modal = new bootstrap.Modal(document.getElementById('questionModal'));
 
-// Abrir el modal al hacer clic en el ícono
-openModal.addEventListener('click', () => {
-    modal.show();
-});
+    // Abrir el modal al hacer clic en el ícono
+    openModal.addEventListener('click', () => {
+        modal.show();
+    });
 
-// Función para eliminar el código de la partida
-async function eliminarCodigoPartida(codigoPartida) {
-    try {
-        const response = await fetch('./php/eliminar_codigo.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ codigoPartida }),
-        });
+    // Función para eliminar el código de la partida
+    async function eliminarCodigoPartida(codigoPartida) {
+        try {
+            const response = await fetch('./php/eliminar_codigo.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ codigoPartida }),
+            });
 
-        if (!response.ok) {
-            throw new Error(`HTTP status ${response.status}`);
+            if (!response.ok) {
+                throw new Error(`HTTP status ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (data.success) {
+                console.log(data.message);
+                alert("Partida eliminada");
+                window.location = '../home/inicio.php';
+            } else {
+                console.error(data.message);
+                alert("Error: " + data.message);
+            }
+            
+        } catch (error) {
+            console.error('Error al eliminar el código de la partida:', error);
         }
+    }
 
-        const data = await response.json();
 
-        if (data.success) {
-            console.log(data.message);
-            alert("Partida eliminada");
-            window.location = '../home/inicio.php';
+    // Redirigir a otra página si hace clic en "Sí"
+    yesBtn.addEventListener('click', () => {
+        const codigoPartida = localStorage.getItem('codigoPartida');
+        console.log('Código de partida para eliminar:', codigoPartida); // Para verificar
+        if (codigoPartida) {
+            eliminarCodigoPartida(codigoPartida);
         } else {
-            console.error(data.message);
-            alert("Error: " + data.message);
+            console.error('Código de partida no disponible.');
         }
-        
-    } catch (error) {
-        console.error('Error al eliminar el código de la partida:', error);
-    }
-}
+    });
 
-
-// Redirigir a otra página si hace clic en "Sí"
-yesBtn.addEventListener('click', () => {
-    const codigoPartida = localStorage.getItem('codigoPartida');
-    console.log('Código de partida para eliminar:', codigoPartida); // Para verificar
-    if (codigoPartida) {
-        eliminarCodigoPartida(codigoPartida);
-    } else {
-        console.error('Código de partida no disponible.');
-    }
-});
-
-// Cerrar el modal si hace clic en "No"
-noBtn.addEventListener('click', () => {
-    modal.hide();
-});
+    // Cerrar el modal si hace clic en "No"
+    noBtn.addEventListener('click', () => {
+        modal.hide();
+    });

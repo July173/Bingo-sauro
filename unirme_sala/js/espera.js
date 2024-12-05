@@ -1,23 +1,4 @@
-document.getElementById('atras').addEventListener('click', function () {
-    fetch('./php/salir_partida.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message); // Mostrar mensaje de éxito
-            window.location.href = "../home/inicio.php"; // Redirigir al inicio
-        } else {
-            alert(data.error); // Mostrar mensaje de error
-        }
-    })
-    .catch(error => console.error('Error:', error));
-});
-
-
+// Función para verificar si el usuario está en la partida
 function verificarUsuario() {
     fetch('./php/verificar-estadia.php', {
         method: 'POST',
@@ -39,3 +20,27 @@ function verificarUsuario() {
 
 // Ejecutar la verificación cada 5 segundos
 setInterval(verificarUsuario, 5000);
+
+// Función para verificar el estado de la partida
+function verificarEstadoPartida() {
+    fetch('./php/verificar-estadia.php')  // Aquí debes colocar la ruta correcta del PHP
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                if (data.redirect) {
+                    // Si la partida está iniciada, redirigir a la nueva página
+                    window.location.href = '../juego_usuario/form-jugador.php';  // Aquí coloca la URL de la página a la que quieres redirigir
+                }
+            } else {
+                alert(data.message); // Mostrar mensaje si no está iniciada
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Hubo un problema al verificar el estado de la partida.');
+        });
+}
+
+// Ejecutar la función cada 5000ms (5 segundos)
+setInterval(verificarEstadoPartida, 5000);

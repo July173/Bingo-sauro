@@ -70,42 +70,40 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         <img width="
         40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
       </div>
-<!-- Modal de salida (sin cambios) -->
-<div class="modal fade" id="modalSalida" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" 
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
-            </div>
-            <div class="modal-body">
-                <div class="d-flex justify-content-center">
-                    <button id="yesBtn" class="botones-modal">Sí</button>
-                    <button id="noBtn" class="botones-modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de números salidos
-<div class="modal fade" id="modalNumerosSalidos" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" 
-    aria-labelledby="numerosSalidosLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="numerosSalidosLabel">Números salidos</h5>
-                <img id="redirigirPerfil" src="../generales/img/cerrar.png" class="cerrar" alt="boton para cerrar esta pantalla" data-bs-dismiss="modal">
-            </div>
-            <div class="modal-body">
-                <div id="contenedorNumSalidos" style="background-color: #ccc; height: 200px; overflow-y: scroll;">
-                     Aquí se mostrarán los números salidos -->
-                <!-- </div>
-            </div>
-        </div>
-    </div>
-</div>
- --> 
+<!-- Modal de salida  -->
+    <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+           </div>
+           <div class="modal-body">
+             <div class="d-flex justify-content-center">
+               <button id="yesBtn" class="botones-modal">Sí</button>
+               <button id="noBtn" class="botones-modal">No</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+<!-- Modal bolas  -->
+<div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+           </div>
+           <div class="modal-body">
+             <div class="d-flex justify-content-center">
+               <button id="yesBtn" class="botones-modal">Sí</button>
+               <button id="noBtn" class="botones-modal">No</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
 
 
       <div class="contenedor-gris">
@@ -114,8 +112,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           <h4 class="nMaxCartones" id="cartonesMaximos">Cantidad maxima de cartones:</h4>
         </div>
         <div class="">
-<!-- Botón para abrir el modal de números salidos -->
-<button class="verNumeros" data-bs-toggle="modal" data-bs-target="#modalNumerosSalidos">Ver números mostrados</button>
+          <button class="verNumeeros">Ver numeros mostrados </button>
           <p>Minimo de dino-monedas para apostar:</p>
 
         </div>
@@ -145,8 +142,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           Tu navegador no soporta la reproducción de audio.
         </audio>
 
-      <script src="../generales/musica/musica.js"></script>
+        <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
+        <!-- <script src="js/movimiento-balotera.js"></script> -->
         <script src="js/modal.js"></script>
         <script src="js/obtener_bola.js"></script>
 
