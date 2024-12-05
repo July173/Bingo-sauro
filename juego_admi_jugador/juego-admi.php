@@ -67,11 +67,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </a>
       </div>
 
-      <div class="icon" data-bs-toggle="modal" data-bs-target="#modalPregunta">
-        <img width="
-        40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
-      </div>
-
 
 
       <div class="contenedor-gris">
@@ -81,7 +76,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       </div>
       <div class="">
         <button>Ver numeros mostrados </button>
-      <p>Minimo de dino-monedas para apostar:</p>
+      <p id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
 
       </div>
         <div class="">
