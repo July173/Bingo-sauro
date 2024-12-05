@@ -81,7 +81,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       </div>
       <div class="">
         <button>Ver numeros mostrados </button>
-      <p>Minimo de dino-monedas para apostar:</p>
+      <p id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
 
       </div>
         <div class="">
