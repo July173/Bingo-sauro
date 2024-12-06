@@ -7,6 +7,8 @@ function unirseAPartida() {
         return;
     }
 
+    localStorage.setItem("codigoPartida", codigo);
+
     fetch('./php/unirse_partida.php', {
         method: 'POST',
         headers: {

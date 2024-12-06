@@ -3,9 +3,17 @@ document.getElementById('redirigirJuego').addEventListener('click', async () => 
     const monedas = document.getElementById('monedasApostar').value;
     const cartones = document.getElementById('cartones').value;
 
-    // Validar que ambos campos estén llenos
+    // Obtener el código de la partida desde localStorage
+    const codigo = localStorage.getItem('codigoPartida');
+
+    // Validar que ambos campos estén llenos y que el código esté presente
     if (!monedas || !cartones) {
         alert('Por favor, completa ambos campos antes de continuar.');
+        return;
+    }
+
+    if (!codigo) {
+        alert('Código de partida no encontrado. Intenta recargar la página.');
         return;
     }
 
@@ -16,11 +24,10 @@ document.getElementById('redirigirJuego').addEventListener('click', async () => 
 
         const monedasMinimas = restricciones.monedas_minimas;
         const maximoCartones = restricciones.maximo_cartones;
+        console.log(monedasMinimas);
+        console.log(maximoCartones);
 
-        // Insertar los valores de monedas_minimas y maximo_cartones sobre los inputs
-        document.getElementById('monedasMinimas').textContent = `Mínimo: ${monedasMinimas} monedas`;
-        document.getElementById('maximoCartones').textContent = `Máximo: ${maximoCartones} cartones`;
-
+    
         // Validar que las monedas sean suficientes y los cartones no excedan el límite
         if (monedas < monedasMinimas) {
             alert(`La cantidad mínima de monedas para apostar es ${monedasMinimas}.`);
@@ -32,11 +39,11 @@ document.getElementById('redirigirJuego').addEventListener('click', async () => 
             return;
         }
 
-        // Enviar los datos al servidor
+        // Enviar los datos al servidor, incluyendo el código de partida
         const serverResponse = await fetch('./php/enviar_datos.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ monedas, cartones }),
+            body: JSON.stringify({ monedas, cartones, codigo }), // Aquí se incluye el código
         });
 
         const data = await serverResponse.json();
