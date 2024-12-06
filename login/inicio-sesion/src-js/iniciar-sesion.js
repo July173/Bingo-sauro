@@ -5,9 +5,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
 
+    // Obtener el logo
+    const logo = document.querySelector('.logo'); // Obtener el logo
+
     // Validar que los campos no estén vacíos
     if (!email || !password) {
         document.getElementById('error-animation').style.display = 'block';
+        logo.style.display = 'none'; // Ocultar el logo si hay error
         return; // Evitar la petición si los campos están vacíos
     }
 
@@ -66,19 +70,22 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
                 window.location.href = "../../home/inicio.php";
             }
         } else {
+            // Ocultar la animación de error si estaba visible
+            document.getElementById('error-animation').style.display = 'none';
+            logo.style.display = 'block'; // Mostrar el logo si no hay errores
+
             if (data.mensaje === 'USUARIO_NO_VERIFICADO') {
-                // Ocultar la animación de error si estaba visible
-                document.getElementById('error-animation').style.display = 'none';
-                
                 // Mostrar el modal usando Bootstrap 5
                 const modalElement = document.getElementById('staticBackdrop');
                 const modal = new bootstrap.Modal(modalElement, {});
                 modal.show();
             } else if (data.mensaje === 'Usuario no encontrado') {
                 document.getElementById('error-animation').style.display = 'block';
+                logo.style.display = 'none'; // Ocultar el logo si el usuario no fue encontrado
                 actualizarMensajeErrorCorreo('El correo no está registrado');
             } else {
                 document.getElementById('error-animation').style.display = 'block';
+                logo.style.display = 'none'; // Ocultar el logo si hay otro error
                 actualizarMensajeErrorCorreo(data.mensaje);
             }
         }
@@ -86,6 +93,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .catch(error => {
         console.error('Error detallado:', error);
         document.getElementById('error-animation').style.display = 'block';
+        logo.style.display = 'none'; // Ocultar el logo en caso de error
         actualizarMensajeErrorCorreo('Hubo un problema al procesar tu solicitud. Intenta de nuevo.');
     });
 });

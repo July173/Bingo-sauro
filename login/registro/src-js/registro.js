@@ -118,12 +118,20 @@
 
         // Si hay campos vacíos o inválidos, no continuar
         if (hasEmptyField) {
-            // Mostrar la animación de error si existe
+            // Obtener el logo y la animación de error
             const errorAnimation = document.getElementById('error-animation');
+            const logo = document.querySelector('.logo'); // Cambiar a querySelector para obtener el logo
+
+            // Mostrar la animación de error y ocultar el logo
             if (errorAnimation) {
-                errorAnimation.style.display = 'block';
+                errorAnimation.style.display = 'block'; // Mostrar animación de error
+                logo.style.display = 'none'; // Ocultar el logo
             }
             return;
+        } else {
+            // Si no hay errores, asegurarse de que el logo esté visible
+            const logo = document.querySelector('.logo'); // Obtener el logo
+            logo.style.display = 'block'; // Mostrar el logo si no hay errores
         }
 
         // Crear el objeto de datos a enviar si todos los campos están completos y válidos
