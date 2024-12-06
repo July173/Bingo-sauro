@@ -1,4 +1,5 @@
-// Función para generar un cartón de Bingo
+document.addEventListener('DOMContentLoaded', () => {
+    // Función para generar un cartón de Bingo
 function generarCartonHtml() {
     const letras = ["B", "I", "N", "G", "O"];
     const rangos = [
@@ -54,6 +55,8 @@ async function generarCartones() {
         return;
     }
 
+    console.log("ingresa al generar cartones");
+
     const contenedor = document.getElementById('contenedorCartones');
     contenedor.innerHTML = '<p>Cargando cartones...</p>'; // Mensaje mientras carga
 
@@ -91,5 +94,5 @@ async function generarCartones() {
     }
 }
 
-// Llamar a la función al cargar la página
-window.onload = generarCartones;
+generarCartones();
+});
