@@ -14,7 +14,7 @@ function cargarHistorial() {
         })
         .catch(error => {
             console.error('Error al cargar el historial js:', error);
-            historialDiv.innerHTML = '<p class="mensaje-vacio">No se pudo cargar el historial.</p>';
+            historialDiv.innerHTML = '<p class="mensaje-vacio">No hay partidas jugadas.</p>';
         });
 }
 
