@@ -105,6 +105,15 @@ body {
     margin-top: -2vw;
     display: flex;
   }
+  .nMaxCartones{
+    margin-left: 27vw;
+  }
+  .verNumeeros{
+    margin-left: 22vw;
+    border-radius: 1rem;
+    font-size: 2vw;
+    background-color: #C0E780;
+  }
   
 
   .girar {
@@ -112,12 +121,12 @@ body {
     background-color: #C0E780;
     border-radius: 1.2rem;
     border: none;
-    margin-top: 2%;
+    top: -10vw;
     padding: 0.5vw 2vw;
     font-size: 2vw;
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
-    margin-left: 27vw;
+    margin-left: 43vw;
   }
   
   .girar:hover {
@@ -150,9 +159,17 @@ body {
     border-radius: 1rem;
     padding: 1vw 3vw 3vw 1vw;
     overflow-y: auto;
-    font-size: 2vw;
+    font-size: 0.5vw;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
     margin-top: 8vw;
+  }
+  .texto-pequeno{
+    font-size: 2vw;
+    margin-top: 2vw;
+  }
+  .minimoMonedas{
+    font-size: 2vw;
+    margin-top: 2vw;
   }
  
   .flecha{
@@ -173,7 +190,7 @@ body {
     padding: 2vw;
     font-size: 2vw;
     margin-top: 40px;
-    margin-left: 16vw;
+    margin-left: 1vw;
     width: 40vw;
     text-align: center;
   
@@ -210,69 +227,119 @@ body {
       width: 30%;
       height: 70vw;
     }
+    .girar {
+      font-family: "Kavoon", serif;
+      background-color: #C0E780;
+      border-radius: 1.2rem;
+      border: none;
+      top: -10vw;
+      padding: 0.5vw 2vw;
+      font-size: 4vw;
+      cursor: pointer;
+      box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
+      margin-left: 62vw;
+    }
+    .atras {
+      margin-left: -80vw;
+      margin-top: 25vw;
+      position: absolute;
+      cursor: pointer;
+    }
+    .minimoMonedas{
+      font-size: 3.5vw;
+      margin-top: 2vw;
+    }
+    .texto-pequeno{
+      font-size: 3vw;
+      margin-top: 10vw;
+    }
   
     .codigo {
       font-size: 5.5vw;
       margin-left: 13.0vw;
     }
+    .nMaxCartones{
+      margin-left: 20vw;
+      font-size: 3vw;
+    }
+    .verNumeeros{
+      margin-left: 24vw;
+      font-size: 4vw;
+      border-radius: 1rem;
+      background-color: #C0E780;
+    }
+    .cuadrodeabajo {
+      font-family: "Kavoon", serif;
+      background-color: rgb(138, 138, 116);
+      border-radius: 1.5rem;
+      border: none;
+      padding: 2vw;
+      font-size: 2vw;
+      margin-top: -2vw;
+      margin-left: 1vw;
+      width: 51vw;
+      height: 55vw;
+      text-align: center;
+    
+    }
     
 
     .cuadro {
-      width: 100%;
-      height: 70%;
-      margin-top: -38vw;
+      width: 100vw;
+      height: 200vw;
+      margin-left: -6vw;
+      
+    }
+    
+    .modal-content{
+     width: 35vw;
+     height: 35vw;
+    }
+    .modal-body{
+      width: 30vw;
+    }
+    .modal-title{
+      font-size: 4vw;
+    }
+    .contenedor-gris {
+      font-family: "Kavoon", serif;
+      width: 100vw;
+      height: 110vw;
+      background-color: rgb(204, 204, 192);
+      border-radius: 1rem;
+      font-size: 1vw;
+      box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
+      margin-top: 45vw;
+    }
+    #baloteraImg{
+     margin-left: 2vw;
+     width: 50vw;
+     
     }
   
     .hojas {
       position: absolute;
-      width: 70vw;
-      height: 80vw;
-      margin-top: -140vw;
+      width: 110vw;
+      height: 110vw;
+      margin-top: -110vw;
       opacity: 0.6;
-    }
-  
-    .hojas-2 {
+  }
+
+  .hojas-2 {
       position: absolute;
-      width: 70vw;
-      height: 80vw;
+      width: 120vw;
+      height: 120vw;
       margin-top: 90vw;
       margin-left: 10vw;
-    }
-  
-    .hojas-3 {
+  }
+
+  .hojas-3 {
       position: absolute;
-      width: 70vw;
-      height: 80vw;
-      margin-right: 20vw;
-      margin-top: -17vw;
-    }
+      width: 110vw;
+      height: 110vw;
+      margin-right: 25vw;
+      margin-top: 10vw;
+
+  }
   }
   
-  @media (orientation: portrait) {
-  
-    .hojas,
-    .hojas-2,
-    .hojas-3 {
-      width: 80vw;
-      height: auto;
-    }
-  }
-  
-  
-  /* Mejoras en pantallas muy pequeñas o móviles */
-  @media (max-width: 480px) {
-    .contenedor-gris {
-      width: 80%;
-      /* Ajusta el ancho para ocupar toda la pantalla */
-      font-size: 100vw;
-      /* Texto más grande para móviles */
-    }
-  
-    .hojas,
-    .hojas-2,
-    .hojas-3 {
-      width: 50vw;
-      /* Reduce el tamaño de los gráficos */
-      height: 50vw;
-    }
-  }
