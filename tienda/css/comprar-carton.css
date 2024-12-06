@@ -83,8 +83,8 @@ body {
     font-size: 2vw;
     cursor: pointer;
     color: black;
-    margin-top: 0.5vw;
-    margin-bottom: -0rem;
+    margin-top: -1vw;
+    margin-bottom: -10rem;
 }
 .precio-texto, .precio{
     font-family: "Kavoon", serif;
@@ -96,7 +96,7 @@ body {
     text-align: center;
     font-size: 3vw;
     color: black;
-    margin-top: 1vw;
+    margin-top: 3vw;
     margin-bottom: 1rem;
 }
 
