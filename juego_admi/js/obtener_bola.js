@@ -31,7 +31,7 @@ async function girarBombo() {
     // Mostrar la imagen en el overlay
     bolaImg.src = data.url;
     bolaOverlay.style.display = 'flex'; // Mostrar el overlay
-
+    console.log("se muestra la bola");
     // Animar la bola de pequeña a grande
     setTimeout(() => {
       bolaImg.style.width = '40vw'; // Tamaño final deseado

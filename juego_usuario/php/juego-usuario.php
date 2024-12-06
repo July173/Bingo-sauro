@@ -18,7 +18,7 @@ try {
     }
 
     // Obtener el número de cartones desde la base de datos
-    $query = "SELECT numero_cartones FROM usuario_partida_rol WHERE id_usuario = ? AND codigo_sala = ?";
+    $query = "SELECT numero_cartones FROM usuario_partida_rol WHERE id_usuario = ? AND id_partida = (SELECT id_partida FROM partida WHERE codigo_sala=?)";
     $resultado = $conexion->select($query, [$id_usuario, $codigo_partida]);
 
     if (!$resultado || count($resultado) === 0) {
