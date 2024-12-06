@@ -13,7 +13,11 @@ try {
     $image = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // Retorna la imagen como JSON
-    echo json_encode($image);
+    if ($image && isset($image['url'])) {
+        echo json_encode($image); // Retorna la URL como JSON
+    } else {
+        echo json_encode(['error' => 'No se encontró una bola']);
+    }
 } catch (Exception $e) {
     // Manejo de errores
     echo json_encode(['error' => $e->getMessage()]);
