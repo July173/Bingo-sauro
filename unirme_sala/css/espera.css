@@ -241,4 +241,36 @@ body {
       transform: translateX(150%);
     }
   }
+  @media (orientation: portrait){
+     /* Nubes */
+  .clouds {
+    position: absolute;
+    width: 100;
+    height: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden; /* Ocultar contenido sobrante */
+  }
+  .dino{
+    width: 100vw;
+    top: 5vw;
+    left: -5vw; /* Inicia fuera del contenedor */
+    animation: walk 5s linear infinite, bounce 0.6s ease-in-out infinite; /* Más lento */
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); /* Sombra para resaltar */
+    margin-top: -3vw;
+  }
+  .texto{
+    font-family: "Kavoon", serif;
+    font-size: 6vw; 
+  }
+    /* Loader del dinosaurio */
+    .loader-dino {
+      position: relative;
+      width: 95vw; /* Ancho más corto */
+      height: 60vw;
+      margin-top: 60vw;
+      overflow: hidden; /* Oculta lo que se sale del contenedor */
+    }
+  }
   
