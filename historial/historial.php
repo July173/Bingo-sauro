@@ -20,7 +20,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
   <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
-  <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+  <link rel="stylesheet" href="../configuracion/posicion.css">
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../historial/css/historial.css">
   <script src="../generales/bootstrap/js/bootstrap.js"></script>

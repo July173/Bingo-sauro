@@ -23,7 +23,7 @@ $usuario_id = $_SESSION['usuario_id'];
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
     <link rel="stylesheet" href="../tienda/css/tienda.css" />
-    <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+    <link rel="stylesheet" href="../configuracion/posicion.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
     <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
