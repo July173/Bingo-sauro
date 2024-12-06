@@ -36,20 +36,16 @@ body {
     margin-right: 70vw;
     position: absolute;
     margin-top: -21vw;
-  }
-  
-  .hojas-2 {
+}
+
+.hojas-2 {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
     z-index: 1;
     margin-right: 72vw;
     position: absolute;
-    /* 50% de transparencia */
-    z-index: 1;
-    /* Volteo horizontal */
     transform: rotate(-150deg);
-    /* Opcional: ajusta el contenedor si es necesario */
     margin-top: 22vw;
 }
 
@@ -57,9 +53,9 @@ body {
     width: 33vw;
     height: 33vw;
     opacity: 0.8;
-    margin-left:66vw;
-   position: absolute;
-   margin-top: 12vw;
+    margin-left: 66vw;
+    position: absolute;
+    margin-top: 12vw;
     z-index: 1;
     transform: rotate(90deg);
     margin-bottom: 20vw;
@@ -91,14 +87,7 @@ body {
     display: flex;
     margin-right: 10vw
 }
-.titulo-contenedor {
-    color: rgb(0, 0, 0);
-    font-family: "Kavoon", serif;
-    font-size: 2.3vw;
-    margin-top: 0.5vw;
-    text-align: center;
-    margin-left: 15vw;
-}
+
 .text-trofeo{
     font-family: "Kavoon", serif;
     font-size: 1.8vw;
@@ -106,12 +95,15 @@ body {
     margin-left: 13vw;
     
 }
-.texto-contenedor{
-    display: flex;
-    text-align: center;
-    margin-bottom: -2vw;
+
+.titulo-contenedor-agregar{
+    color: rgb(225, 219, 219);
+    font-family: "Kavoon", serif;
+    font-size: 3vw;
+    margin-top: 1vw;
 
 }
+
 .logo {
     background-image: url("../../Generales/img/logo.png");
     background-repeat: no-repeat;
@@ -206,3 +198,62 @@ body {
     text-align: center;
     font-weight: bold;
   }
+
+  .cuadro {
+    font-family: "Kavoon", serif;
+    font-size: 1.5vw;
+    background-color: rgba(14, 78, 62, 0.5);
+    width: 50vw;
+    height: 23vw;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-agregar{
+    background-color: rgb(94, 244, 34);
+    border-radius: 1.2rem;
+    border: none;
+    font-family: "Kavoon", serif;
+    font-size: 1.7vw;
+    padding: 0.5vw 10vw;
+    cursor: pointer;    
+    margin-top: 1vw;
+}
+
+  @media (orientation:portrait) {
+    .hojas {
+      position: absolute;
+      width: 110vw;
+      height: 110vw;
+      margin-top: -110vw;
+      opacity: 0.6;
+  }
+
+  .hojas-2 {
+      position: absolute;
+      width: 120vw;
+      height: 120vw;
+      margin-top: 90vw;
+      margin-left: 10vw;
+  }
+
+  .hojas-3 {
+      position: absolute;
+      width: 110vw;
+      height: 110vw;
+      margin-right: 25vw;
+      margin-top: 10vw;
+
+  }
+  .cuadro{
+    width: 100vw;
+    height: 200vw;  
+}
+  }
+
+

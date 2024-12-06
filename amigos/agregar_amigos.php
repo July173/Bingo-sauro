@@ -16,12 +16,32 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Amigos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/agregar-amigos.css">
 </head>
 <body>
     <div id="contenedor">
-        <h1 class="text-center">Agregar Amigos</h1>
+    <div class="hojas">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="hojas-2">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="hojas-3">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player src="https://lottie.host/ad88f89d-a741-4835-959e-74fdca1d1c28/BT8qkiI0D1.json"
+        background="transparent" speed="2" loop autoplay></dotlottie-player>
+    </div>
+    <div class="cuadro">
+        <h1 class="text-center titulo-contenedor-agregar">Agregar Amigos</h1>
         <div class="card">
             <div class="card-header">
                 Ingrese el ID del amigo
@@ -32,11 +52,12 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                         <label for="amigoId">ID del amigo:</label>
                         <input type="text" class="form-control" id="amigoId" placeholder="Ingresa el ID del amigo" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Agregar Amigo</button>
+                    <button type="submit" class="btn btn-agregar">Agregar Amigo</button>
                 </form>
                 <div id="resultado" class="mt-3"></div>
             </div>
         </div>
+    </div>
     </div>
 
     <script>
