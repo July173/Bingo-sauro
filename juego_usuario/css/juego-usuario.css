@@ -177,6 +177,26 @@ button {
 .flex{
   display: flex;
 }
+
+.numero {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  background-color: lightgray;
+  border: 1px solid #ddd;
+}
+
+.numero.seleccionado {
+  background-color: green;
+  color: white;
+}
+
+.libre {
+  background-color: lightgray;
+  color: gray;
+  text-align: center;
+  padding: 10px;
+}
   /*modificaciones para una pantalla vertical*/
   @media (orientation: portrait) {
     .logo {
