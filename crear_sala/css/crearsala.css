@@ -439,14 +439,15 @@
   background-color: white;
   font-size: 1.5vw;
   border-radius: 1vw;
-  margin-top: 1rem; /* Añade margen superior para separar de elementos anteriores */
-  margin-bottom: 0.0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
+  margin-top: 0rem; /* Añade margen superior para separar de elementos anteriores */
+  margin-bottom: 0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
+ 
 }
 .botonJugador {
   background-color: #efe7c4;
   width: 30vw;
   font-size: 4vw;
-  border-radius: 1vw;
+  border-radius: 1vw; 
   margin-left: -25vw;
   position: relative;
   top: -20vw; /* Mueve hacia arriba */  
