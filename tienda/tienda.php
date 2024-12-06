@@ -14,6 +14,7 @@ $usuario_id = $_SESSION['usuario_id'];
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,10 +59,9 @@ $usuario_id = $_SESSION['usuario_id'];
 
             <div class="icon-container">
                 <!-- Botón de Configuración (Engranaje) -->
-                <a href="../generales/configuracion/configuracion.php" class="icon">
-                <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png"
-                        alt="settings" />
-                </a>
+                <a href="../configuracion/configuracion.php" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        </a>
             </div>
             <div id='monedas'></div>
             <script src="../generales/monedas/js/conexion-monedas.js"></script>
@@ -74,30 +74,30 @@ $usuario_id = $_SESSION['usuario_id'];
                 <div class="subtitulos">
                     <p class="sub "> Recompensas diarias </p>
                 </div>
+                <div class="flex">
+                    <div id="rewardsContainer">
 
-
-
-                <div id="rewardsContainer">
-                    <div id="rewardAnimation1" class="reward-animation">
-                    <div class="reward-container" id="cofre-ayer" data-state="">
-            <div class="reward-header">AYER</div>
-            <div class="circle-container">
-                <dotlottie-player id="rewardAnimation1" src="..." style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
-            </div>
-        </div>
                     </div>
-                    <div id="rewardAnimation2" class="reward-animation"></div>
-                    <div id="rewardAnimation2" class="reward-animation"></div>                    
+
+                    <div class="dino">
+                        <tr>
+                            <td colspan="1">
+                                <img id="rewardImage7" class="img-dino" src="../generales/img/dinovolteado.png"
+                                    alt="Recompensa Día 7">
+
+                                <div id="rewardMessage7" style="display: none;">
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+
+                    <div id="congratulationsMessage" class="congratulations-message" style="display: none;"></div>
                 </div>
-                <div id="messageBox" class="message-box"></div>
-
-
-
 
                 <div class="subtitulos2">
                     <p class="sub ">Cambiar de colores de cartones</p>
                 </div>
-                
+
 
                 <div class="contenedorDelContenedorDeCartones">
                     <div id="contenedorCartones"></div>
@@ -116,8 +116,10 @@ $usuario_id = $_SESSION['usuario_id'];
         <script src="src-js/tienda.js"></script>
         <script src="../tienda/src-js/recompensa-diaria.js"></script>
         <script src="../generales/musica/musica.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest"></script>
 
         <div id="cofres"></div>
 
 </body>
-</html>  
+
+</html>

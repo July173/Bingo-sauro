@@ -65,11 +65,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
       </div>
 
-            
-            <div class="icon" data-bs-toggle="modal" data-bs-target="#modalPregunta">
-                <img width="
-        40" height="40" src="https://img.icons8.com/material-sharp/24/ask-question.png" alt="ask-question" />
-            </div>
 
             <div class="logo"></div>
 
@@ -79,12 +74,12 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
                 <div>
                     <p>Ingresa la cantidad de monedas que vas a apostar </p>
-                    <input type="number" id="codigo" placeholder="Ingresa" class="codigo">
+                    <input type="number" id="monedas" placeholder="Ingresa" class="codigo">
                 </div>
                    <div>
                    <p>Ingresa la cantidad de cartones que quieres jugar </p>
-                    <input type="number" id="codigo" placeholder="Ingresa el código" class="codigo">
-                    <button onclick="unirseAPartida()" class="iniciar" id="redirigirJuego">Entrar</button>
+                    <input type="number" id="cartones" placeholder="Ingresa " class="codigo">
+                    <button class="iniciar" id="redirigirJuego">Entrar</button>
                 </div>
 
 
@@ -115,6 +110,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <script src="js/form.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/verficar-estadia.js"></script>
 
 </body>
 

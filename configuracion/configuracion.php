@@ -18,9 +18,9 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuracion</title>
-    <link rel="stylesheet" href="../configuracion/config.css">
+    <link rel="stylesheet" href="./config.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../generales/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
 </head>
 <body class="container">
     <div class="hojas">
@@ -50,7 +50,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
         <div class="boton">
             <img class="close-btn" onclick="redirectToPreviousPage();" width="48" height="48"
-                src="../../generales/img/cerrar.png" alt="cross-mark-button-emoji" />
+                src="../generales/img/cerrar.png" alt="cross-mark-button-emoji" />
         </div>
         <div class="mascot"></div>
 
@@ -83,7 +83,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                             style="display:none;"></button>
                           <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div>
-                            <img src="../../Generales/img/logo.png" alt="Logo" class="logoModal">
+                            <img src="../Generales/img/logo.png" alt="Logo" class="logoModal">
                         </div>
                     
                         <div class="modal-body">
@@ -117,7 +117,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                                 totalidad.
                                 Es responsabilidad del jugador leer y comprender estos Términos y Condiciones antes de jugar.
                             </div>
-                            <img src="../../generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
+                            <img src="../generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
                         </div>
                     </div>
                 </div>
@@ -132,13 +132,13 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                             <h1 class="modal-title fs-1 id="modalDosLabel">Ayuda y soporte</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                             style="display:none;"></button>
-                          <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div><img src="../../Generales/img/logo.png" alt="Logo" class="logoModal">
+                          <div class="custom-close" data-bs-dismiss="modal" aria-label="Close"></div><img src="../Generales/img/logo.png" alt="Logo" class="logoModal">
                         </div>
                         <div class="modal-body">
                             <div class="contexto">
                                 ayuda y soporte...
                             </div>
-                            <img src="../../generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
+                            <img src="../generales/img/bingo.png" alt="Bolas que dicen bingo" class="Bingo">
                         </div>
                     </div>
                 </div>
@@ -151,8 +151,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 </button>
             </div>
 
-            <script src="../../Generales/musica/musica.js"></script>
-            <script src="../../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="../Generales/musica/musica.js"></script>
+            <script src="../generales/bootstrap/js/bootstrap.bundle.min.js"></script>
             <script src="config.js"></script>
 </body>
 </html>

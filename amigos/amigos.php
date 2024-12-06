@@ -65,8 +65,8 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
 
       <div class="icon-container">
         <!-- Botón de Configuración (Engranaje) -->
-        <a href="../generales/configuracion/configuracion.php" class="icon">
-        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        <a href="../configuracion/configuracion.php" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
       </div>
       <div id='monedas'></div>

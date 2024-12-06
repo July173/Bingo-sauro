@@ -303,6 +303,82 @@ body {
 
 }
 
+.reward-animation.available {
+  background-color: green;
+}
+
+.reward-animation.claimed {
+  background-color: gray;
+}
+
+.reward-animation.locked {
+  background-color: red;
+}
+
+#rewardsContainer{
+  display: flex;
+}
+.flex{
+  display: flex;
+}
+
+/* Base oscura */
+.darkened {
+  filter: brightness(0.5);
+  opacity: 0.8;
+  background-color: rgba(165, 164, 164, 0.582);
+  border-radius: 2rem;
+  margin-left: 1vw;
+  width: 170px; 
+  height: 210px
+}
+
+/* Oscuro tirando a rojo (AYER y encontrado = true) */
+.darkened-red {
+  filter: brightness(0.5);
+  background-color: rgba(255, 0, 0, 0.582);
+  opacity: 0.8;
+  border-radius: 2rem;
+  margin-left: 1vw;
+  width: 170px; 
+  height: 210px
+
+}
+
+/* Oscuro tirando a verde (AYER y encontrado = false) */
+.darkened-green {
+  filter: brightness(0.5);
+  background-color: rgba(0, 255, 0, 0.795);
+  opacity: 0.8;
+  border-radius: 2rem;
+  margin-left: 1vw;
+  width: 170px; 
+  height: 210px
+
+}
+
+/* Oscuro tirando a amarillo (MAÑANA) */
+.darkened-yellow {
+  filter: brightness(0.5);
+  background-color: rgba(238, 241, 56, 0.884);
+  opacity: 0.8;
+  border-radius: 2rem;
+  margin-left: 1vw;
+  width: 170px; 
+  height: 210px
+
+}
+
+/* Normal (HOY y encontrado = false) */
+.normal {
+  filter: none;
+  opacity: 1;
+  border-radius: 2rem;
+  margin-left: 1vw;
+  width: 170px; 
+  height: 210px
+}
+
 @media (orientation: portrait) {
   
   .logo {
