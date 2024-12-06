@@ -23,10 +23,10 @@
             error_log("Usuario está en la partida."); // Registrar que el usuario está en la partida
 
             // Si el usuario está en la partida, verificar el estado de la partida
-            $query_estado = "SELECT estado FROM partida WHERE id_partida = (SELECT id_partida FROM usuario_partida_rol WHERE id_usuario = ? LIMIT 1)";
-            $estado_result = $conexion->select($query_estado, [$id_usuario]);
+            $query_estado = "SELECT estado FROM partida WHERE id_partida = (SELECT id_partida FROM partida WHERE codigo_sala = ? LIMIT 1)";
+            $estado_result = $conexion->select($query_estado, [$codigoSala]);
 
-            if ($estado_result && $estado_result[0]['estado'] == 'iniciada') {
+            if ($estado_result && $estado_result[0]['estado'] === 'iniciada') {
                 // Si el estado de la partida es "iniciada", redirigir al usuario con JavaScript
                 error_log("La partida está iniciada.");
                 echo json_encode(['success' => true, 'message' => 'Usuario sigue en la partida.', 'redirect' => true]);
