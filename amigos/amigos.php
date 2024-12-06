@@ -16,7 +16,7 @@ require_once '../conexion_BD/conexion.php';
 $conexion = new Conexion();
 
 // Obtener la lista de amigos
-$query = "SELECT u.id_usuario, u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido 
+$query = "SELECT u.id_usuario, u.primer_nombre, u.segundo_nombre, u.primer_apellido, u.segundo_apellido, u.contador_trofeos 
           FROM amigo a 
           JOIN usuario u ON a.amigo_id = u.id_usuario 
           WHERE a.usuario_id = :usuario_id";
@@ -85,18 +85,19 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
             <p class="text-trofeo text-secondary">Dino-trofeos</p>
           </div>
           <br>
-          <div class="list-group">
+          <div class="list-group"></div>
     <?php if (count($amigos) > 0): ?>
         <?php foreach ($amigos as $amigo): ?>
-            <div class="list-group-item d-flex justify-content-between align-items-center" 
+            <div class="list-group-item d-flex justify-content-between align-items-center dinoTrofeosLinea" 
                  data-id="<?php echo $amigo['id_usuario']; ?>" 
                  onclick="confirmarEliminacion(this)">
                 <?php echo htmlspecialchars($amigo['primer_nombre'] . ' ' . $amigo['primer_apellido']); ?>
-                <button class="btn btn-success btn-sm" onclick="event.stopPropagation(); confirmarEliminacion(this.parentElement)">Eliminar</button>
+                <span class="badge dinotrofeos"><?php echo htmlspecialchars($amigo['contador_trofeos']); ?><img src="../generales/img/dinoTrofeos.png" alt="trofeos amigos" class="trofeos-amigos"></span>
+                <button class="btn btn-success btn-x" onclick="event.stopPropagation(); confirmarEliminacion(this.parentElement)">Eliminar</button>
             </div>
         <?php endforeach; ?>
     <?php else: ?>
-        <div class="list-group-item">No tienes amigos agregados.</div>
+        <div class="list-group-item sin">No tienes amigos agregados.</div>
     <?php endif; ?>
 </div>
 
@@ -118,16 +119,14 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
     </div>
 </div>
         </div>
+        <div id="navbar-container">
+          <script src="../generales/barra_navegacion/navbar.js"></script>
+          <script>
+            loadNavbar();
+          </script>
+        </div>
       </div>
-
-      <div id="navbar-container">
-        <script src="../generales/barra_navegacion/navbar.js"></script>
-        <script>
-          loadNavbar();
-        </script>
       </div>
-    </div>
-
 
     <script src="../generales/musica/musica.js"></script>
     <script src="../generales/bootstrap/js/bootstrap.bundle.min.js"></script> 
