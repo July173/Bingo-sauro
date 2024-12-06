@@ -129,7 +129,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           </div>
         </div>
         <button class="girar" onclick="girarBombo()">Girar bombo</button>        <p class="texto-pequeno">Por ser administrador obtendrás 7 dino-monedas</p>
-        <div id="bola-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 1%; height: 1%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+        <div id="bola-overlay">
       <img id="bola-img" src="" alt="Bola de Bingo" style="max-width: 90%; max-height: 90%; cursor: pointer;">
       </div>
 
