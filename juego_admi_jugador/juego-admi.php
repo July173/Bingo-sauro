@@ -80,7 +80,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
       </div>
         <div class="">
-          <div class="amigos"></div>
+          <div class="amigos" id="amigos"></div>
           <p></p>
         </div>
         <div class="ruleta">

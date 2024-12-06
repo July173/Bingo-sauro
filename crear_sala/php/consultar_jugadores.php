@@ -5,6 +5,7 @@ require '../../conexion_BD/conexion.php';
 
 try {
     $conexion = new Conexion();
+    $filtros = isset($_GET['filtros']) ? filter_var($_GET['filtros'], FILTER_VALIDATE_BOOLEAN) : false;
 
     // Verificar si el código de la partida está en la sesión
     if (!isset($_SESSION['codigo_partida'])) {
@@ -27,12 +28,19 @@ try {
     $queryJugadores = "
     SELECT 
         u.primer_nombre AS nombre,
-        a.url AS avatar
+        a.url AS avatar,
+        upr.numero_cartones as cartones
     FROM usuario_partida_rol upr
     INNER JOIN usuario u ON upr.id_usuario = u.id_usuario
     INNER JOIN articulo a ON u.id_avatar = a.id_articulo
     WHERE upr.id_partida = ? AND upr.id_rol = 1
     ";
+    
+    // Aplicar filtros adicionales si "filtros" es verdadero
+    if ($filtros) {
+        $queryJugadores .= " AND upr.monedas_apostar != null AND upr.numero_cartones != null"; // Ajusta este filtro según tus necesidades
+    }
+
     $jugadores = $conexion->select($queryJugadores, [$id_partida]);
 
     // Depuración
