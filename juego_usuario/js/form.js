@@ -10,12 +10,16 @@ document.getElementById('redirigirJuego').addEventListener('click', async () => 
     }
 
     try {
-        // Obtener las monedas mínimas y los cartones máximos (puedes hacer esto con una consulta adicional o como parte de la respuesta del servidor)
-        const response = await fetch('./php/obtener_restricciones.php', { method: 'GET' });
+        // Obtener las monedas mínimas y los cartones máximos desde el servidor
+        const response = await fetch('./php/enviar_datos.php', { method: 'GET' });
         const restricciones = await response.json();
 
         const monedasMinimas = restricciones.monedas_minimas;
         const maximoCartones = restricciones.maximo_cartones;
+
+        // Insertar los valores de monedas_minimas y maximo_cartones sobre los inputs
+        document.getElementById('monedasMinimas').textContent = `Mínimo: ${monedasMinimas} monedas`;
+        document.getElementById('maximoCartones').textContent = `Máximo: ${maximoCartones} cartones`;
 
         // Validar que las monedas sean suficientes y los cartones no excedan el límite
         if (monedas < monedasMinimas) {

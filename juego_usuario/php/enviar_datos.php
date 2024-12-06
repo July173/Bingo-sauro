@@ -22,6 +22,7 @@ try {
     // Verificar que se recibieron los datos necesarios
     $monedas = isset($data['monedas']) ? (int)$data['monedas'] : null;
     $cartones = isset($data['cartones']) ? (int)$data['cartones'] : null;
+    $codigo_partida = 
 
     if ($monedas === null || $cartones === null) {
         throw new Exception('Faltan datos para procesar.');
