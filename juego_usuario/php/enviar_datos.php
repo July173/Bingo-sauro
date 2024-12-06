@@ -8,7 +8,7 @@ try {
     // Verificar si el usuario está autenticado
     if (!isset($_SESSION['usuario_id'])) {
         error_log("Error: Usuario no autenticado.");
-        throw new Exception('Usuario no autenticado');
+        throw new Exception('Usuario no autenticado.');
     }
 
     // Obtener el ID del usuario desde la sesión
@@ -22,9 +22,10 @@ try {
     // Verificar que se recibieron los datos necesarios
     $monedas = isset($data['monedas']) ? (int)$data['monedas'] : null;
     $cartones = isset($data['cartones']) ? (int)$data['cartones'] : null;
-    $codigo_partida = 
+    $codigo_partida = isset($data['codigo']) ? $data['codigo'] : null;
+    error_log($codigo_partida);
 
-    if ($monedas === null || $cartones === null) {
+    if ($monedas === null || $cartones === null || $codigo_partida === null) {
         throw new Exception('Faltan datos para procesar.');
     }
 
@@ -38,9 +39,9 @@ try {
 
     $monedas_actuales = (int)$resultado[0]['contador_monedas'];
 
-    // Obtener las monedas mínimas y los cartones máximos desde la tabla partida
-    $consultaPartida = "SELECT monedas_minimas, maximo_cartones FROM partida WHERE id_partida = ?";
-    $resultadoPartida = $conexion->select($consultaPartida, [$id_usuario]);
+    // Obtener las monedas mínimas y los cartones máximos desde la tabla partida usando el código de partida
+    $consultaPartida = "SELECT monedas_minimas, maximo_cartones FROM partida WHERE codigo_sala = ?";
+    $resultadoPartida = $conexion->select($consultaPartida, [$codigo_partida]);
 
     if (empty($resultadoPartida)) {
         throw new Exception('No se encontró la partida.');
@@ -71,8 +72,10 @@ try {
     $conexion->getPdo()->beginTransaction();
 
     // Actualizar las monedas y los cartones en la tabla usuario_partida_rol
-    $queryPartidaRol = "UPDATE usuario_partida_rol SET monedas_apostar = ?, numero_cartones = ? WHERE id_usuario = ?";
-    $conexion->update($queryPartidaRol, [$monedas, $cartones, $id_usuario]);
+    $queryPartidaRol = "UPDATE usuario_partida_rol 
+                        SET monedas_apostar = ?, numero_cartones = ? 
+                        WHERE id_usuario = ? AND id_partida = (SELECT id_partida FROM partida WHERE codigo_sala=?)";
+    $conexion->update($queryPartidaRol, [$monedas, $cartones, $id_usuario, $codigo_partida]);
 
     // Actualizar el contador de monedas en la tabla usuario
     $queryUsuario = "UPDATE usuario SET contador_monedas = ? WHERE id_usuario = ?";
@@ -86,7 +89,9 @@ try {
     // Enviar respuesta exitosa
     echo json_encode([
         'success' => true,
-        'message' => 'Datos actualizados correctamente.'
+        'message' => 'Datos actualizados correctamente.',
+        'monedas' => $monedas_minimas,
+        'cartones' => $maximo_cartones
     ]);
 } catch (Exception $e) {
     // Revertir los cambios si hubo un error
