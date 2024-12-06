@@ -43,16 +43,16 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <div class="cuadro">
         <h1 class="text-center titulo-contenedor-agregar">Agregar Amigos</h1>
         <div class="card">
-            <div class="card-header">
+            <div class="card-header titulo">
                 Ingrese el ID del amigo
             </div>
             <div class="card-body">
                 <form id="agregarAmigoForm">
                     <div class="form-group">
-                        <label for="amigoId">ID del amigo:</label>
+                        <label for="amigoId titulo">ID del amigo:</label>
                         <input type="text" class="form-control" id="amigoId" placeholder="Ingresa el ID del amigo" required>
                     </div>
-                    <button type="submit" class="btn btn-agregar">Agregar Amigo</button>
+                    <button type="submit" class="btn btn-agregar titulo">Agregar Amigo</button>
                 </form>
                 <div id="resultado" class="mt-3"></div>
             </div>
