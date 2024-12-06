@@ -135,7 +135,6 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
           </div>
 
           <div class="botonesEleccion">
-            <button class="botonJugador">jugador</button>
             <button class="botonAdministrador">administrador</button>
           </div>
 
