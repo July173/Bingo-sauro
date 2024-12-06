@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const actualizarJugadores = () => {
-        fetch('../crear_sala/php/consultar_jugadores.php')
+        fetch('../crear_sala/php/consultar_jugadores.php?filtros=true')
             .then(response => response.json())
             .then(data => {
                 if (data.success) {

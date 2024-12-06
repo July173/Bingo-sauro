@@ -24,21 +24,23 @@ try {
 
     $id_partida = $resultPartida[0]['id_partida'];
 
+    error_log("filtros ".$filtros);
+
     // Consultar jugadores con rol 1
     $queryJugadores = "
     SELECT 
         u.primer_nombre AS nombre,
         a.url AS avatar,
-        upr.numero_cartones as cartones
+        upr.numero_cartones AS cartones
     FROM usuario_partida_rol upr
     INNER JOIN usuario u ON upr.id_usuario = u.id_usuario
     INNER JOIN articulo a ON u.id_avatar = a.id_articulo
     WHERE upr.id_partida = ? AND upr.id_rol = 1
     ";
-    
+
     // Aplicar filtros adicionales si "filtros" es verdadero
-    if ($filtros) {
-        $queryJugadores .= " AND upr.monedas_apostar != null AND upr.numero_cartones != null"; // Ajusta este filtro según tus necesidades
+    if (isset($filtros) && $filtros) {
+        $queryJugadores .= " AND upr.monedas_apostar IS NOT NULL AND upr.numero_cartones IS NOT NULL";
     }
 
     $jugadores = $conexion->select($queryJugadores, [$id_partida]);
