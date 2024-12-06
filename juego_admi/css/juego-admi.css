@@ -290,15 +290,16 @@ body {
       margin-left: -6vw;
       
     }
+    
     .modal-content{
-     width: 30vw;
-     height: 25vw;
+     width: 35vw;
+     height: 35vw;
     }
     .modal-body{
       width: 30vw;
     }
     .modal-title{
-      font-size: 2.2vw;
+      font-size: 4vw;
     }
     .contenedor-gris {
       font-family: "Kavoon", serif;
