@@ -76,14 +76,15 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
                 <h6>Tu eres un jugador </h6>
                 <button class="bingo">Bingo</button>
                 <div class="flex">
-                <h1 style="text-align: center; background-color: white">Administrador:</h1>
+                <h1 style="text-align: center; background-color: white" class="tueres">Administrador:</h1>
                 <p>Apostaste: dino-monedas</p>
                 </div>
                 <button onclick=>ver numeros salidos</button>
-                <div id="bingo-carton"></div>
+                <div id="contenedorCartones" class="contenedor-cartones"></div>
+
 
                 <div class="cuadroAmigos"></div>
-                >
+                
                 <img src="" alt="">
                 
             </div>
@@ -109,7 +110,10 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
         <script src="js/juego-usuario.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
         <script src="js/modal.js"></script>
-
+        <script src="js/verficar-estadia.js"></script>
+      <script>
+         verificarUsuario()
+      </script>
 </body>
 
 </html>
