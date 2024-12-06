@@ -33,9 +33,19 @@ function eliminarAmigo(amigoId) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.reload(); // Recargar la página para actualizar la lista
+            // Eliminar el amigo de la UI
+            const amigoElemento = document.querySelector(`[data-id="${amigoId}"]`);
+            if (amigoElemento) {
+                amigoElemento.remove(); // Eliminar el elemento de la lista
+            }
+
+            // Cerrar el modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('confirmModal'));
+            if (modal) {
+                modal.hide(); // Cerrar el modal
+            }
         } else {
-            alert('Error: ' + data.error);
+            alert('Error: ' + data.error); // Mostrar el error
         }
     })
     .catch(error => console.error('Error:', error));

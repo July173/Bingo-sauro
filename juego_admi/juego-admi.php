@@ -133,15 +133,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
       <img id="bola-img" src="" alt="Bola de Bingo" style="max-width: 90%; max-height: 90%; cursor: pointer;">
       </div>
 
-        <!-- Audio que queremos controlar -->
-        <audio id="audioPlayer" loop>
-          <source src="../Generales/musica/dinoMusica.mp3" type="audio/mp3">
-          Tu navegador no soporta la reproducción de audio.
-        </audio>
-
-        <script src="../Generales/musica/activar_y_desactivar_musica/musica.js"></script>
+      <script src="../generales/musica/musica.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
-        <!-- <script src="js/movimiento-balotera.js"></script> -->
         <script src="js/modal.js"></script>
         <script src="js/obtener_bola.js"></script>
         <script src="js/juego_admi.js"></script>

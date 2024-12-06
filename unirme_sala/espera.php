@@ -57,7 +57,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
   </div>
   
-
+  <script src="../generales/musica/musica.js"></script>
   <script src="js/espera.js"></script>
   <script>
     setInterval(verificarUsuario, 5000);

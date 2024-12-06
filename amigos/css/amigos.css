@@ -97,7 +97,7 @@ body {
     font-size: 2.3vw;
     margin-top: 0.5vw;
     text-align: center;
-    margin-left: 15vw;
+    margin-left: 6vw;
 }
 .text-trofeo{
     font-family: "Kavoon", serif;
@@ -364,4 +364,34 @@ body {
    
   
 
+}
+
+.trofeos-amigos{
+    width: 4vw;
+    height: 4vw;
+}
+
+.dinotrofeos{
+    border-radius: 1rem;
+    background-color: #ece98f;
+    color: #000000;
+    font-size: 2vw;
+}
+
+.dinoTrofeosLinea{
+    background-color: gray;
+    border-radius: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;  
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    padding: 0.5vw;
+    font-size: 2vw;
+    font-family: "Kavoon", serif;
+}
+
+.sin-amigos{
+    font-family: "Kavoon", serif;
+    font-size: 1.5vw;
+    color: #000000;
 }
