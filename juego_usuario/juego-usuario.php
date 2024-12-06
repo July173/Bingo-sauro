@@ -109,6 +109,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
         <script src="js/juego-usuario.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
         <script src="js/modal.js"></script>
+        <script src="js/verficar-estadia.js"></script>
 
 </body>
 
