@@ -261,3 +261,18 @@ body {
 }
 
 }
+
+/* Estilos para el mensaje de verificación */
+.mensaje-verificacion {
+  font-family: "Kavoon", serif;
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 20vw; /* Espacio desde la parte inferior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar el centrado */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  text-align: center; /* Centrar texto */
+  z-index: 2; /* Asegurarse de que esté por encima de otros elementos */
+}
