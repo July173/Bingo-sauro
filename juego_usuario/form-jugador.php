@@ -19,7 +19,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
     <link rel="stylesheet" href="../perfil/css/modales.css">
     <link rel="stylesheet" href="./css/fomr.css">
@@ -62,8 +61,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             </script>
 
             <div class="atras">
-          <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
-      </div>
+                <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
+            </div>
 
 
             <div class="logo"></div>
@@ -71,18 +70,20 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
             <div class="contenedor-gris">
 
-
+            <form>
                 <div>
-                    <p>Ingresa la cantidad de monedas que vas a apostar </p>
-                    <input type="number" id="monedas" placeholder="Ingresa" class="codigo">
+                    <p>Ingresa la cantidad de monedas que vas a apostar:</p>
+                    <input type="number" id="monedasApostar" placeholder="Ingresa" >
                 </div>
-                   <div>
-                   <p>Ingresa la cantidad de cartones que quieres jugar </p>
-                    <input type="number" id="cartones" placeholder="Ingresa " class="codigo">
+                <div>
+                    <p>Ingresa la cantidad de cartones que quieres jugar:</p>
+                    <input type="number" id="cartones" placeholder="Ingresa">
+                </div>
+                <div>
                     <button class="iniciar" id="redirigirJuego">Entrar</button>
                 </div>
 
-
+                </form>
             </div>
 
 
@@ -90,23 +91,23 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 
     </div>
     </div>
-<!-- Modal -->
-<div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-       aria-labelledby="exampleModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-sm">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
-           </div>
-           <div class="modal-body">
-             <div class="d-flex justify-content-center">
-               <button id="yesBtn" class="botones-modal">Sí</button>
-               <button id="noBtn" class="botones-modal">No</button>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <button id="yesBtn" class="botones-modal">Sí</button>
+                        <button id="noBtn" class="botones-modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/form.js"></script>
     <script src="../generales/monedas/js/obtener-monedas.js"></script>
     <script src="js/modal.js"></script>
