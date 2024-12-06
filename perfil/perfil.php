@@ -29,7 +29,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../perfil/css/perfil.css" />
   <link rel="stylesheet" href="../perfil/css/modales.css">
-  <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+  <link rel="stylesheet" href="../configuracion/posicion.css">
   <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
 
@@ -59,7 +59,7 @@ $correo = isset($_SESSION['correo']) ? $_SESSION['correo'] : 'Usuario';
     <div class="cuadro">
 
       <div class="icon-container">
-        <a href="http://localhost/Bingo-sauro/Generales/configuracion/configuracion.php" class="icon">
+      <a href="../configuracion/configuracion.php" class="icon">
           <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
       </div>

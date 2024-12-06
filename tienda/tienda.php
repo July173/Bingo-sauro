@@ -23,7 +23,7 @@ $usuario_id = $_SESSION['usuario_id'];
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="../generales/barra_navegacion/navbar.css">
     <link rel="stylesheet" href="../tienda/css/tienda.css" />
-    <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+    <link rel="stylesheet" href="../configuracion/posicion.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
     <link rel="stylesheet" href="../generales/fontawesome/css/all.min.css">
     <script src="../generales/bootstrap/js/bootstrap.js"></script>
@@ -59,10 +59,9 @@ $usuario_id = $_SESSION['usuario_id'];
 
             <div class="icon-container">
                 <!-- Botón de Configuración (Engranaje) -->
-                <a href="../generales/configuracion/configuracion.php" class="icon">
-                    <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png"
-                        alt="settings" />
-                </a>
+                <a href="../configuracion/configuracion.php" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        </a>
             </div>
             <div id='monedas'></div>
             <script src="../generales/monedas/js/conexion-monedas.js"></script>

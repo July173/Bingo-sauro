@@ -35,7 +35,7 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../amigos/css/amigos.css" />
   <link rel="stylesheet" href="../amigos/css/modales.css">
-  <link rel="stylesheet" href="../generales/configuracion/posicion.css">
+  <link rel="stylesheet" href="../configuracion/posicion.css">
   <script src="../generales/bootstrap/js/bootstrap.js"></script>
   <script src="../generales/bootstrap/js/bootstrap.bundle.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
@@ -65,8 +65,8 @@ $amigos = $conexion->select($query, ['usuario_id' => $usuario_id]);
 
       <div class="icon-container">
         <!-- Botón de Configuración (Engranaje) -->
-        <a href="../generales/configuracion/configuracion.php" class="icon">
-        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
+        <a href="../configuracion/configuracion.php" class="icon">
+          <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/settings.png" alt="settings" />
         </a>
       </div>
       <div id='monedas'></div>

@@ -34,7 +34,7 @@ document.getElementById('logoutButton').addEventListener('click', function () {
                 localStorage.clear();
                 
                 // Redirigir al usuario al inicio de sesión sin mensaje
-                window.location.href = "./../../login/bienvenido/pag2.html";
+                window.location.href = "../login/bienvenido/pag2.html";
             }
         })
         .catch((error) => {
