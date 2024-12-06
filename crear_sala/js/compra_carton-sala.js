@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
               cartonImg.style.marginTop = '30vw';
               
             } else {
-                cartonImg.style.width = '28vw'; // Ajustes para modo landscape
-                cartonImg.style.height = '28vw';
+                cartonImg.style.width = '20vw'; // Ajustes para modo landscape
+                cartonImg.style.height = '20vw';
               
             }
           }

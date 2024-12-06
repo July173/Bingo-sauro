@@ -28,8 +28,10 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 </head>
 
 <body class="container">
+    
 
     <div id="contenedor">
+        
 
         <div class="hojas">
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
@@ -53,6 +55,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 background="transparent" speed="1" loop autoplay></dotlottie-player>
         </div>
         <div class="cuadro">
+            
 
             <div id='monedas'></div>
             <script src="../generales/monedas/js/conexion-monedas.js"></script>
@@ -64,6 +67,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
                 <a href="../home/inicio.php">
                     <img src="../generales/img/atras.png" alt="circulo-atras">
                 </a>
+                <div class="dino"></div>
             </div>
 
 

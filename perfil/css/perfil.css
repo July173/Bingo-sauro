@@ -161,7 +161,7 @@ body {
 
 
 .avatarvoid{
-    width: 10vw;
+    width:  10vw;
     height: 10vw;
     background-color: rgb(228, 226, 226);
     margin-top: 1.5vw;
@@ -184,13 +184,14 @@ body {
     
     
 }
-
+  
 .nombre{
     margin-top: 1vw;
     margin-left: -1vw;
     font-size: 2vw;
     
 }
+ 
 .dino{
     background-image: url(../../Generales/img/dinosaurio-cute.png);
     background-repeat: no-repeat;

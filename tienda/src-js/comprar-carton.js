@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const isPortrait = window.matchMedia('(orientation: portrait)').matches;
       
         if (isPortrait) {
-          cartonImg.style.width = '60vw'; // Ajustes para modo portrait
-          cartonImg.style.height = '60vw';
+          cartonImg.style.width = '50vw'; // Ajustes para modo portrait
+          cartonImg.style.height = '50vw';
           cartonImg.style.marginTop = '30vw';
           
         } else {
-            cartonImg.style.width = '28vw'; // Ajustes para modo landscape
-            cartonImg.style.height = '28vw';
+            cartonImg.style.width = '20vw'; // Ajustes para modo landscape
+            cartonImg.style.height = '20vw';
           
         }
       }
