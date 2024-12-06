@@ -108,6 +108,12 @@ document.querySelector('.iniciar').addEventListener('click', function (event) {
     return;
   }
 
+  if (cartonesInput.value.trim() < 1 || cartonesInput.value.trim() > 4) {
+    event.preventDefault();
+    alert('El número de cartones debe estar entre 1 y 4.');
+    return;
+  }
+
   if (!cartonSeleccionado || !botonSeleccionado) {
     event.preventDefault();
     alert('Debe seleccionar un cartón y un botón antes de iniciar la partida.');
