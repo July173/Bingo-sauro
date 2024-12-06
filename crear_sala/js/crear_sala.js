@@ -108,10 +108,13 @@ document.querySelector('.iniciar').addEventListener('click', function (event) {
     return;
   }
 
-  if (cartonesInput.value.trim() < 1 || cartonesInput.value.trim() > 4) {
-    event.preventDefault();
-    alert('El número de cartones debe estar entre 1 y 4.');
-    return;
+  const cartones = parseInt(cartonesInput.value.trim(), 10);
+  console.log("cartones ", cartones);
+
+  if (isNaN(cartones) || cartones < 1 || cartones > 4) {
+      event.preventDefault();
+      alert('El número de cartones debe estar entre 1 y 4.');
+      return;
   }
 
   if (!cartonSeleccionado || !botonSeleccionado) {
