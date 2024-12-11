@@ -77,31 +77,7 @@ body {
   }
   
 
-     
-  #contenedorCartonesSala {
-    display: flex;
-    /* Cambia el diseño a un contenedor flexible */
-    flex-wrap: wrap;
-    /* Permite que los elementos se muevan a la siguiente línea si no caben */
-    gap: 2px;
-    /* Espacio entre cada carton */
-    margin-left: 2vw;
-  }
- 
 
-  
-  .codigo {
-    font-size: 3vw;
-    margin-left: 3vw;
-    margin-bottom: -0.2rem;
-  }
-  
-  .comoLlenar {
-    font-size: 3.5vw;
-    margin-left: 15vw;
-    margin-top: -2vw;
-    display: flex;
-  }
   
 
   .bingo {
@@ -153,16 +129,7 @@ body {
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
     margin-top: 10vw;
   }
-  
-  .flecha{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%; /* Ajusta el tamaño de la flecha según tu preferencia */
-    height: auto;
-    pointer-events: none; /* Evita interferir con otros clics */
-  }
+ 
 
   table {
     border-collapse: collapse;
@@ -186,8 +153,49 @@ button {
     cursor: pointer;
 }
 
+
+.contenedor-cartones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carton {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.tueres{
+  padding: 1vw;
+  border-radius: 2rem;
+  margin-left: 20vw;
+}
+
 .flex{
   display: flex;
+}
+
+.numero {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  background-color: lightgray;
+  border: 1px solid #ddd;
+}
+
+.numero.seleccionado {
+  background-color: green;
+  color: white;
+}
+
+.libre {
+  background-color: lightgray;
+  color: gray;
+  text-align: center;
+  padding: 10px;
 }
   /*modificaciones para una pantalla vertical*/
   @media (orientation: portrait) {

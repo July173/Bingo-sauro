@@ -110,7 +110,7 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         </div>
         <div class="">
           <button class="verNumeeros">Ver numeros mostrados </button>
-          <p id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
+          <p class="minimoMonedas", id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
 
         </div>
         <div class="flex">
@@ -128,8 +128,8 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           </div>
           </div>
         </div>
-        <button class="girar" onclick="girarBombo()">Girar bombo</button>        <p>Por se administrador obtendras 7 dino-monedas</p>
-        <div id="bola-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+        <button class="girar" onclick="girarBombo()">Girar bombo</button>        <p class="texto-pequeno">Por ser administrador obtendrás 7 dino-monedas</p>
+        <div id="bola-overlay">
       <img id="bola-img" src="" alt="Bola de Bingo" style="max-width: 90%; max-height: 90%; cursor: pointer;">
       </div>
 

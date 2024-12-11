@@ -339,15 +339,75 @@
     width: 30%;
     height: 70vw;
   }
+  .cuadrodeabajo {
+    font-family: "Kavoon", serif;
+    background-color: rgb(138, 138, 116);
+    border-radius: 1.5rem;
+    border: none;
+    padding: 2vw;
+    font-size: 2vw;
+    margin-top: 1vw;
+    margin-left: 16vw;
+    width: 60vw;
+    text-align: center;
+  
+  }
+  .atras {
+    margin-left: -80vw;
+    margin-top: 25vw;
+    position: absolute;
+    cursor: pointer;
+  }
+  .modal-content{
+    width: 30vw;
+    height: 25vw;
+   }
+   .modal-body{
+     width: 70vw;
+     height: 10vw;
+   }
+   .modal-title{
+     font-size: 2.2vw;
+   }
+  .iniciar {
+    font-family: "Kavoon", serif;
+    background-color: #C0E780;
+    border-radius: 1.2rem;
+    border: none;
+    margin-top: 2%;
+    padding: 0.5vw 2vw;
+    font-size: 7vw;
+    cursor: pointer;
+    box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
+    margin-left: 19vw;
+  }
+  .comoLlenar {
+    font-size: 5vw;
+    margin-left: 18vw;
+    margin-top: -1vw;
+    display: flex;
+  }
 
   .codigo {
     font-size: 5.5vw;
-    margin-left: 13.0vw;
+    margin-left: 20vw;
+    margin-top: -1vw;
+    margin-bottom: 5vw;
+  }
+  .cartonn-sala{
+    width: 40vw;
+    height: 40vw;
+  }
+  .carton{
+    width: 30vw;
+    height: 30vw;
   }
   
   .cantidadMaximaMonedas {
     width: 20vw;
-    font-size: 2.1vw; /* Aumenta el tamaño de la letra */
+    margin-left: -26.2vw;
+    margin-top: 10vw;
+    font-size: 2.6vw; /* Aumenta el tamaño de la letra */
     line-height: 1.0; /* Ajusta el espacio entre líneas si es necesario */
     margin-bottom: -1rem; /* Añade un margen inferior para mayor separación */
     writing-mode: vertical-lr; /* Orientación vertical */
@@ -364,12 +424,12 @@
   margin-left: 19vw;
 }
     .numMonedasPorJugador {
-  margin-left: 1.5vw;
+  margin-left: -20vw;
   width: 10vw;
   background-color: white;
   font-size: 1.5vw;
   border-radius: 1vw;
-  margin-top: -10vw; /* Añade margen superior para separar de elementos anteriores */
+  margin-top: -50vw; 
   margin-bottom: 0.0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
 }
 
@@ -379,14 +439,15 @@
   background-color: white;
   font-size: 1.5vw;
   border-radius: 1vw;
-  margin-top: 1rem; /* Añade margen superior para separar de elementos anteriores */
-  margin-bottom: 0.0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
+  margin-top: 0rem; /* Añade margen superior para separar de elementos anteriores */
+  margin-bottom: 0rem; /* Opcional: añade margen inferior si necesitas más espacio abajo */
+ 
 }
 .botonJugador {
   background-color: #efe7c4;
   width: 30vw;
   font-size: 4vw;
-  border-radius: 1vw;
+  border-radius: 1vw; 
   margin-left: -25vw;
   position: relative;
   top: -20vw; /* Mueve hacia arriba */  
@@ -439,7 +500,7 @@
 .contenedor-gris {
   font-family: "Kavoon", serif;
   width: 100vw;
-  height: 100vw;
+  height: 120vw;
   background-color: rgb(204, 204, 192);
   border-radius: 1rem;
   padding: 1vw 3vw 3vw 1vw;

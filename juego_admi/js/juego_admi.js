@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para cargar datos del servidor
     async function cargarDatos() {
+        console.log("cargando datos");
         try {
             const response = await fetch(`./php/consultar_datos.php?codigo_sala=${codigoPartida}`, {
                 method: 'GET', // Especifica el método GET explícitamente
             });
 
+            console.log("se hizo la connsulta");
             if (!response.ok) {
                 throw new Error('Error en la consulta: ' + response.status);
             }
@@ -25,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert("erro");
             } else {
                 // Inserta los datos en el DOM
+                console.log(datos.monedas_minimas);
+                console.log(datos.maximo_cartones);
                 document.getElementById('minimoMonedas').textContent = `Minimo de dino-monedas para apostar: ${datos.monedas_minimas}`;
                 document.getElementById('cartonesMaximos').textContent = `Cantidad maxima de cartones: ${datos.maximo_cartones}`;
             }
@@ -72,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error al consultar jugadores:', error));
     };
 
-    // Cargar el estado inicial de los cofres
-    cargarDatos();
-
     // Actualizar cada 5 segundos
     setInterval(actualizarJugadores, 5000);
 
     // Llamada inicial
     actualizarJugadores();
+
+    // Cargar el estado inicial de los cofres
+    cargarDatos();
 });
