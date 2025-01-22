@@ -76,18 +76,13 @@ body {
   
   }
   
-
-
-  
-
   .bingo {
     font-family: "Kavoon", serif;
     background-color: #720a0f;
     border-radius: 1.2rem;
     border: none;
-    margin-top: 2%;
     padding: 0.5vw 2vw;
-    font-size: 2vw;
+    font-size: 3vw;
     cursor: pointer;
     box-shadow: 5px -2px 2px rgba(0, 0, 0, 0.7);
     margin-left: 1vw;
@@ -105,18 +100,6 @@ body {
     cursor: pointer;
   }
   
-  
-  #contenedor {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    /*establece el ancho del elemento al 100% del ancho de su contenedor*/
-    height: 100vh;
-  }
-  
   .contenedor-gris {
     font-family: "Kavoon", serif;
     width: 76vw;
@@ -127,12 +110,13 @@ body {
     overflow-y: auto;
     font-size: 2vw;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.3);
-    margin-top: 10vw;
+    margin-top: 7vw;
   }
  
 
   table {
     border-collapse: collapse;
+    border: #000;
     margin: 20px auto;
     font-size: 24px;
     text-align: center;
@@ -140,10 +124,11 @@ body {
 th, td {
     width: 60px;
     height: 60px;
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
 th {
     background-color: #ff7300;
+    border: none;
 }
 button {
     display: block;
@@ -163,19 +148,24 @@ button {
 }
 
 .carton {
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #f9f9f9;
+  border: 1px solid #000000;
+  padding: 5px;
+  padding-top: 2px;
+  background-color: #ff7300;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .tueres{
   padding: 1vw;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   margin-left: 20vw;
+  margin-top: 1vw;
+  width: 30vw;
 }
 
 .flex{
   display: flex;
+
+  margin-top: -2vw;
 }
 
 .numero {
@@ -211,6 +201,7 @@ button {
 
 .modal-content-bolas {
   background-color:  rgb(255, 254, 207);;
+  font-family: "Kavoon", serif;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -247,6 +238,18 @@ button {
   margin-left: 63vw;
   cursor: pointer;
 
+}
+.verNumeeros{
+  margin-left: 22vw;
+  border-radius: 1rem;
+  font-size: 2vw;
+  background-color: #C0E780;
+}
+.apost{
+  margin-left: 46vw;
+  font-size: 2vw;
+  position: absolute;
+  margin-top: -2vw;
 }
   /*modificaciones para una pantalla vertical*/
   @media (orientation: portrait) {

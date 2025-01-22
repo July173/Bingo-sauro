@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let numero;
                 let clase = "numero";
                 if (fila === 2 && col === 2) {
-                    numero = 'LIBRE';
+                    numero = 'BINGO';
                     clase = "libre";
                 } else {
                     numero = carton[col][fila];

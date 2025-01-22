@@ -13,7 +13,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
 $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,17 +67,13 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
                 <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
             </div>
 
-
-
-
             <div class="contenedor-gris">
-                <h6>Tu eres un jugador </h6>
                 <button class="bingo">Bingo</button>
-                <div class="flex">
-                    <h1 style="text-align: center; background-color: white" class="tueres">Administrador:</h1>
-                    <p>Apostaste: dino-monedas</p>
+                <div class="flex" >
+                  <div>  <h3 id="primerNombre" style="text-align: center; background-color: white" class="tueres"></h3></div>
+                   <div id="monedasApostar" class="apost"></div> 
                 </div>
-                <button id="botonObtenerBola" class="verNumeeros">Ver numero mostrados</button>
+                <button id="botonObtenerBola" class="verNumeeros">Ver numeros mostrados</button>
                 <div id="contenedorCartones" class="contenedor-cartones"></div>
 
                 <div id="bolaOverlay"
@@ -126,6 +121,7 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
         <script src="js/verficar-estadia.js"></script>
         <script src="js/consultar_bolas.js"></script>
         <script src="js/modal_bolas.js"></script>
+        <script src="js/consulta.js"></script>
         <script>
             verificarUsuario()
         </script>

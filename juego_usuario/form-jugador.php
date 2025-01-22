@@ -75,15 +75,15 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             <div>
             <p>Ingresa la cantidad de monedas que vas a apostar:</p>
 
-                <label id="monedasMinimas" style="display: block; font-size: 12px; color: #666;"></label>
-                <input type="number" id="monedasApostar" placeholder="Ingresa las monedas ">
+                <label id="monedasMinimas" style="display: block; font-size: 12px; color: #666; margin-bottom: 1vw; ; "></label>
+                <input type="number" id="monedasApostar" placeholder="Ingresa las monedas " style="margin-bottom: 2vw;">
             </div>
 
             <!-- Para el campo de Cartones -->
             <div>
             <p>Ingresa numeros cartones:</p>
 
-                <label id="maximoCartones" style="display: block; font-size: 12px; color: #666;"></label>
+                <label id="maximoCartones" style="display: block; font-size: 12px; color: #666; margin-bottom: 1vw; ;"></label>
                 <input type="number" id="cartones" placeholder="Ingresa el número">
             </div>
 

@@ -127,6 +127,7 @@ body {
     cursor: pointer;
     box-shadow: 8px -2px 2px rgba(0, 0, 0, 0.7);
     margin-left: 43vw;
+    margin-top: -2vw;
   }
   
   .girar:hover {
@@ -170,6 +171,7 @@ body {
   .minimoMonedas{
     font-size: 2vw;
     margin-top: 2vw;
+    margin-bottom: -2vw;
   }
  
   .flecha{
