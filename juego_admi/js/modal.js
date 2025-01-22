@@ -11,7 +11,7 @@ openModal.addEventListener('click', () => {
 // Función para eliminar el código de la partida
 async function eliminarCodigoPartida(codigoPartida) {
     try {
-        const response = await fetch('./../crear_sala/php/eliminar_codigo.php', {
+        const response = await fetch('./php/eliminar_partida_bolas.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -57,9 +57,9 @@ noBtn.addEventListener('click', () => {
 });
 
 
-// Si no estás usando el `data-bs-dismiss="modal"`, puedes agregar este código para cerrar el modal al hacer clic en la X:
-document.getElementById('redirigirPerfil').addEventListener('click', function() {
-    const modal = new bootstrap.Modal(document.getElementById('modalNumerosSalidos'));
-    modal.hide();
-});
+// // Si no estás usando el `data-bs-dismiss="modal"`, puedes agregar este código para cerrar el modal al hacer clic en la X:
+// document.getElementById('redirigirPerfil').addEventListener('click', function() {
+//     const modal = new bootstrap.Modal(document.getElementById('modalNumerosSalidos'));
+//     modal.hide();
+// });
     

@@ -1,12 +1,8 @@
 document.getElementById('redirigirJuego').addEventListener('click', async () => {
-    // Obtener los valores de los campos
     const monedas = document.getElementById('monedasApostar').value;
     const cartones = document.getElementById('cartones').value;
-
-    // Obtener el código de la partida desde localStorage
     const codigo = localStorage.getItem('codigoPartida');
 
-    // Validar que ambos campos estén llenos y que el código esté presente
     if (!monedas || !cartones) {
         alert('Por favor, completa ambos campos antes de continuar.');
         return;
@@ -18,44 +14,44 @@ document.getElementById('redirigirJuego').addEventListener('click', async () => 
     }
 
     try {
-        // Obtener las monedas mínimas y los cartones máximos desde el servidor
-        const response = await fetch('./php/enviar_datos.php', { method: 'GET' });
+        // Solicitud GET para obtener restricciones
+        const response = await fetch(`./php/enviar_datos.php?codigo=${codigo}`, { method: 'GET' });
         const restricciones = await response.json();
 
-        const monedasMinimas = restricciones.monedas_minimas;
-        const maximoCartones = restricciones.maximo_cartones;
-        console.log(monedasMinimas);
-        console.log(maximoCartones);
-
-    
-        // Validar que las monedas sean suficientes y los cartones no excedan el límite
-        if (monedas < monedasMinimas) {
-            alert(`La cantidad mínima de monedas para apostar es ${monedasMinimas}.`);
+        if (!restricciones.success) {
+            alert(restricciones.error || 'Error al obtener restricciones.');
             return;
         }
 
-        if (cartones > maximoCartones) {
-            alert(`El número máximo de cartones es ${maximoCartones}.`);
+        const { monedas_minimas, maximo_cartones } = restricciones;
+
+        // Validaciones locales
+        if (monedas < monedas_minimas) {
+            alert(`La cantidad mínima de monedas para apostar es ${monedas_minimas}.`);
+            return;
+        }
+        if (cartones > maximo_cartones) {
+            alert(`El número máximo de cartones es ${maximo_cartones}.`);
             return;
         }
 
-        // Enviar los datos al servidor, incluyendo el código de partida
-        const serverResponse = await fetch('./php/enviar_datos.php', {
+        // Solicitud POST para enviar datos
+        const postResponse = await fetch('./php/enviar_datos.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ monedas, cartones, codigo }), // Aquí se incluye el código
+            body: JSON.stringify({ monedas, cartones, codigo }),
         });
 
-        const data = await serverResponse.json();
+        const postData = await postResponse.json();
 
-        if (data.success) {
-            alert(data.message); // Mostrar mensaje de éxito
-            window.location.href = './juego-usuario.php'; // Redirigir a la página deseada
+        if (postData.success) {
+            alert(postData.message);
+            window.location.href = './juego-usuario.php';
         } else {
-            alert(data.error || data.message); // Mostrar mensaje de error
+            alert(postData.error || 'Error al enviar los datos.');
         }
     } catch (error) {
         console.error('Error en la solicitud:', error);
-        alert('Error al enviar los datos.');
+        alert('Error en el proceso.');
     }
 });

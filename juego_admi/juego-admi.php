@@ -20,7 +20,6 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juego administrador</title>
   <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
   <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
   <link rel="stylesheet" href="../perfil/css/modales.css">
   <link rel="stylesheet" href="css/juego-admi.css">
@@ -62,45 +61,45 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
         cargarContenido();
       </script>
 
-        <div class="atras">
-          <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
+      <div class="atras">
+        <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
       </div>
 
-      
-<!-- Modal de salida  -->
-    <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-       aria-labelledby="exampleModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-sm">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
-           </div>
-           <div class="modal-body">
-             <div class="d-flex justify-content-center">
-               <button id="yesBtn" class="botones-modal">Sí</button>
-               <button id="noBtn" class="botones-modal">No</button>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-<!-- Modal bolas  -->
-<div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-       aria-labelledby="exampleModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-sm">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
-           </div>
-           <div class="modal-body">
-             <div class="d-flex justify-content-center">
-               <button id="yesBtn" class="botones-modal">Sí</button>
-               <button id="noBtn" class="botones-modal">No</button>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
+
+      <!-- Modal de salida  -->
+      <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-center">
+                <button id="yesBtn" class="botones-modal">Sí</button>
+                <button id="noBtn" class="botones-modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal bolas  -->
+      <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-center">
+                <button id="yesBtn" class="botones-modal">Sí</button>
+                <button id="noBtn" class="botones-modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       <div class="contenedor-gris">
@@ -109,10 +108,21 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
           <h4 class="nMaxCartones" id="cartonesMaximos">Cantidad maxima de cartones:</h4>
         </div>
         <div class="">
-          <button class="verNumeeros">Ver numeros mostrados </button>
-          <p class="minimoMonedas", id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
+          <button id="botonObtenerBola" class="verNumeeros">Ver numero mostrados</button>
+
+          <p class="minimoMonedas" , id="minimoMonedas">Minimo de dino-monedas para apostar:</p>
 
         </div>
+        <!-- Modal de números mostrados -->
+        <div id="modalBolas" class="modal">
+          <div class="modal-content-bolas">
+            <h2>Bolas Extraídas</h2>
+            <div id="cerrarModal"><img class="close-btn" width="48" height="48"
+            src="../generales/img/cerrar.png" alt="cross-mark-button-emoji" /></div>
+            <div id="contenedorBolas" class="bolas-container"></div>
+          </div>
+        </div>
+
         <div class="flex">
 
           <div class="cuadrodeabajo">
@@ -123,20 +133,22 @@ $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Usuario';
             </div>
           </div>
           <div class="ruleta">
-          <div class="balotera">
-                 <img id="baloteraImg" src="../Generales/img/boleteraQuieta.png" alt="balotera del bingo">
-          </div>
+            <div class="balotera">
+              <img id="baloteraImg" src="../Generales/img/boleteraQuieta.png" alt="balotera del bingo">
+            </div>
           </div>
         </div>
-        <button class="girar" onclick="girarBombo()">Girar bombo</button>        <p class="texto-pequeno">Por ser administrador obtendrás 7 dino-monedas</p>
+        <button class="girar" onclick="girarBombo()">Girar bombo</button>
+        <p class="texto-pequeno">Por ser administrador obtendrás 7 dino-monedas</p>
         <div id="bola-overlay">
-      <img id="bola-img" src="" alt="Bola de Bingo" style="max-width: 90%; max-height: 90%; cursor: pointer;">
-      </div>
+          <img id="bola-img" src="" alt="Bola de Bingo" style="max-width: 90%; max-height: 90%; cursor: pointer;">
+        </div>
 
-      <script src="../generales/musica/musica.js"></script>
+        <script src="../generales/musica/musica.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
         <script src="js/modal.js"></script>
         <script src="js/obtener_bola.js"></script>
+        <script src="js/ver_numero.js"></script>
         <script src="js/juego_admi.js"></script>
 
 </body>

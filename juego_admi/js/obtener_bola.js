@@ -12,8 +12,9 @@ const apiUrl = './php/get_bola_random.php';
 async function girarBombo() {
     const imagenOriginal = './../generales/img/boleteraQuieta.png';
     const imagenGirando = './../generales/img/boleteraMoviendose.png';
-    const codigo = localStorage.getItem('codigoPartida');
-    
+    const codigo  = localStorage.getItem('codigoPartida');
+    console.log(localStorage.getItem('codigoPartida')); // Asegúrate de que no sea null o undefined
+
     if (!codigo) {
       alert('Código de partida no encontrado. Intenta recargar la página.');
       return;
@@ -37,6 +38,12 @@ async function girarBombo() {
             body: JSON.stringify({codigo}), // Aquí se incluye el código
 
         });
+        console.log("Datos enviados al servidor:", { codigo });
+        
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
+    
 
         const data = await response.json();
 
@@ -62,7 +69,7 @@ async function girarBombo() {
                 bolaOverlay.style.display = 'none'; // Ocultar el overlay
                 bolaImg.src = ''; // Limpiar la imagen
             }, 500); // Coincide con la duración de la transición
-        }, 3000); // Duración visible antes de ocultar
+        }, 2000); // Duración visible antes de ocultar
     } catch (error) {
         console.error('Error en la solicitud:', error);
         alert('Hubo un error al obtener la bola. Intenta de nuevo.');

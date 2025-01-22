@@ -22,7 +22,6 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>crearsala</title>
     <link rel="stylesheet" href="../generales/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../generales/configuracion/pocision2.css">
     <link rel="stylesheet" href="../generales/monedas/css/monedas-trofeos.css">
     <link rel="stylesheet" href="css/juego-usuario.css">
     <link rel="stylesheet" href="../perfil/css/modales.css">
@@ -64,11 +63,11 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
                 cargarContenido();
             </script>
 
-          
-<div class="atras">
-          <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
-      </div>
-          
+
+            <div class="atras">
+                <img src="../generales/img/atras.png" alt="circulo-atras" id="openModal">
+            </div>
+
 
 
 
@@ -76,44 +75,60 @@ $id_usuario = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : '0';
                 <h6>Tu eres un jugador </h6>
                 <button class="bingo">Bingo</button>
                 <div class="flex">
-                <h1 style="text-align: center; background-color: white" class="tueres">Administrador:</h1>
-                <p>Apostaste: dino-monedas</p>
+                    <h1 style="text-align: center; background-color: white" class="tueres">Administrador:</h1>
+                    <p>Apostaste: dino-monedas</p>
                 </div>
-                <button onclick=>ver numeros salidos</button>
+                <button id="botonObtenerBola" class="verNumeeros">Ver numero mostrados</button>
                 <div id="contenedorCartones" class="contenedor-cartones"></div>
 
+                <div id="bolaOverlay"
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 9999;">
+                    <img id="bolaImg" src="" alt="Bola" style="width: 0; transition: width 0.5s;">
+                </div>
 
                 <div class="cuadroAmigos"></div>
-                
+
                 <img src="" alt="">
-                
+
+            </div>
+        </div>
+
+        <!-- Modal de números mostrados -->
+        <div id="modalBolas" class="modal">
+            <div class="modal-content-bolas">
+                <h2>Bolas Extraídas</h2>
+                <div id="cerrarModal"><img class="close-btn" width="48" height="48" src="../generales/img/cerrar.png"
+                        alt="cross-mark-button-emoji" /></div>
+                <div id="contenedorBolas" class="bolas-container"></div>
             </div>
         </div>
         <div class="modal fade" id="questionModal" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-       aria-labelledby="exampleModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-sm">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
-           </div>
-           <div class="modal-body">
-             <div class="d-flex justify-content-center">
-               <button id="yesBtn" class="botones-modal">Sí</button>
-               <button id="noBtn" class="botones-modal">No</button>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Seguro que quieres salir de la partida?</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center">
+                            <button id="yesBtn" class="botones-modal">Sí</button>
+                            <button id="noBtn" class="botones-modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="../generales/musica/musica.js"></script>
         <script src="js/juego-usuario.js"></script>
         <script src="../generales/monedas/js/obtener-monedas.js"></script>
         <script src="js/modal.js"></script>
         <script src="js/verficar-estadia.js"></script>
-      <script>
-         verificarUsuario()
-      </script>
+        <script src="js/consultar_bolas.js"></script>
+        <script src="js/modal_bolas.js"></script>
+        <script>
+            verificarUsuario()
+        </script>
 </body>
 
 </html>

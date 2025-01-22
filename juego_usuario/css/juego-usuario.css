@@ -120,7 +120,7 @@ body {
   .contenedor-gris {
     font-family: "Kavoon", serif;
     width: 76vw;
-    height: 30vw;
+    height: 40vw;
     background-color: rgb(204, 204, 192);
     border-radius: 1rem;
     padding: 1vw 3vw 3vw 1vw;
@@ -196,6 +196,57 @@ button {
   color: gray;
   text-align: center;
   padding: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-bolas {
+  background-color:  rgb(255, 254, 207);;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 70%;
+  max-height: 90vh; /* Limita la altura del modal al 90% del viewport */
+  overflow-y: auto; /* Habilita el scroll vertical */
+}
+
+.bolas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: center;
+}
+
+.bola {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.bola img {
+  width: 12vw;
+  height: 12vw;
+  object-fit: cover;
+}
+.pbola {
+  font-size: 2vw;
+  margin-bottom: -3vw;
+
+}
+.close-btn{
+  margin-left: 63vw;
+  cursor: pointer;
+
 }
   /*modificaciones para una pantalla vertical*/
   @media (orientation: portrait) {
